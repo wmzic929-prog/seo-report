@@ -354,6 +354,7 @@ function renderOverview(g) {
         <span style="font-size:10px;color:var(--gray-400)">${pct(cov)}</span>
       </td>
       <td>${s.content.total_articles}</td>
+      <td>${s.content.sports_articles > 0 ? s.content.sports_articles : '–'}</td>
       <td>${s.content.this_month}</td>
       <td><strong style="color:${cwvColor}">${s.cwv.score}</strong></td>
     </tr>`;
@@ -374,7 +375,7 @@ function renderOverview(g) {
         <thead><tr>
           <th>站點</th><th>類型</th><th>今日流量</th><th>30日流量</th>
           <th>GSC曝光(28d)</th><th>GSC點擊(28d)</th><th>平均排名</th>
-          <th>收錄 / Sitemap</th><th>文章總數</th><th>本月新發</th><th>CWV分數</th>
+          <th>收錄 / Sitemap</th><th>文章總數</th><th>體育新聞</th><th>本月新發</th><th>CWV分數</th>
         </tr></thead>
         <tbody>${rows}</tbody>
       </table>
@@ -454,8 +455,8 @@ function renderSite(domain, s, g) {
       <div class="kpi-grid" style="grid-template-columns:1fr 1fr;gap:10px">
         <div class="kcard c-purple"><div class="kl">文章總數</div><div class="kv">${s.content.total_articles}</div><div class="ks">已發佈</div></div>
         <div class="kcard c-purple"><div class="kl">本月新發</div><div class="kv">${s.content.this_month}</div><div class="ks">本月</div></div>
+        ${s.content.sports_articles > 0 ? `<div class="kcard c-blue"><div class="kl">體育新聞</div><div class="kv">${s.content.sports_articles}</div><div class="ks">已發佈</div></div>` : ''}
         <div class="kcard"><div class="kl">本週新發</div><div class="kv">${s.content.this_week}</div><div class="ks">本週</div></div>
-        <div class="kcard"><div class="kl">平均每週</div><div class="kv">${(s.content.total_articles/4).toFixed(1)}</div><div class="ks">文章/週</div></div>
       </div>
     </div>
   </div>
