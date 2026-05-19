@@ -370,6 +370,34 @@ function renderOverview(g) {
     <div class="kcard c-orange"><div class="kl">平均收錄率</div><div class="kv">${pct(avgCov)}</div><div class="ks">全站平均</div></div>
     <div class="kcard c-purple"><div class="kl">文章總數</div><div class="kv">${fmt(totArticles)}</div><div class="ks">全站發佈</div></div>
   </div>
+  <div class="sec-label">7日每日趨勢（全站合計）</div>
+  <div class="card">
+    <div class="tbl-wrap">
+      <table id="overview-7d-table">
+        <thead><tr>
+          <th>日期</th><th>GA4流量</th><th>GSC曝光</th><th>GSC點擊</th><th>CTA點擊</th><th>文章總數</th>
+        </tr></thead>
+        <tbody>${(function(){
+          const allSites = Object.values(g.sites);
+          const totArticles = allSites.reduce((a,s) => a + s.content.total_articles + (s.content.sports_articles||0), 0);
+          const len = allSites[0] && allSites[0].daily_7d ? allSites[0].daily_7d.length : 7;
+          let r = '';
+          for (let j = 0; j < len; j++) {
+            const date = allSites[0] && allSites[0].daily_7d ? allSites[0].daily_7d[j].date : '–';
+            const sessions = allSites.reduce((a,s) => a + ((s.daily_7d||[])[j]||{}).sessions||0, 0);
+            const gscImp = allSites.reduce((a,s) => { const v = ((s.daily_7d||[])[j]||{}).gsc_imp; return v !== null && v !== undefined ? a + v : a; }, 0);
+            const gscClk = allSites.reduce((a,s) => { const v = ((s.daily_7d||[])[j]||{}).gsc_clk; return v !== null && v !== undefined ? a + v : a; }, 0);
+            const cta = allSites.reduce((a,s) => a + ((s.daily_7d||[])[j]||{}).cta_clk||0, 0);
+            const hasGsc = allSites.some(s => ((s.daily_7d||[])[j]||{}).gsc_imp !== null && ((s.daily_7d||[])[j]||{}).gsc_imp !== undefined);
+            r += '<tr><td><strong>' + date + '</strong></td><td>' + fmt(sessions) + '</td><td>' + (hasGsc ? fmt(gscImp) : '<span style="color:var(--gray-300)">—</span>') + '</td><td>' + (hasGsc ? fmt(gscClk) : '<span style="color:var(--gray-300)">—</span>') + '</td><td>' + fmt(cta) + '</td><td>' + totArticles + '</td></tr>';
+          }
+          return r;
+        })()}</tbody>
+      </table>
+      <div style="font-size:10px;color:var(--gray-300);padding:4px 0">GSC 資料有 2-3 天延遲，最近 2-3 天顯示 —　　點擊各站標籤查看個別明細</div>
+    </div>
+  </div>
+
   <div class="sec-label">各站比較（點擊各站查看詳情）</div>
   <div class="card">
     <div class="tbl-wrap">
@@ -394,10 +422,33 @@ function renderSite(domain, s, g) {
     <td><span class="pos-badge ${posClass(k.pos)}">#${k.pos.toFixed(1)}</span></td>
     <td>${k.clicks}</td></tr>`).join('');
 
+  const d7 = s.daily_7d || [];
+  const d7rows = d7.map(r => `<tr>
+    <td><strong>${r.date}</strong></td>
+    <td>${fmt(r.sessions)}</td>
+    <td>${r.gsc_imp !== null ? fmt(r.gsc_imp) : '<span style="color:var(--gray-300)">—</span>'}</td>
+    <td>${r.gsc_clk !== null ? fmt(r.gsc_clk) : '<span style="color:var(--gray-300)">—</span>'}</td>
+    <td>${fmt(r.cta_clk)}</td>
+    <td>${s.content.total_articles + (s.content.sports_articles||0)}</td>
+  </tr>`).join('');
+
   return `
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap">
     <div style="font-size:18px;font-weight:800;color:var(--gray-800)">${domain}</div>
     <div style="font-size:11px;color:var(--gray-400)">${s.label} · ${roleLabel}</div>
+  </div>
+
+  <div class="sec-label">7日每日趨勢</div>
+  <div class="card">
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr>
+          <th>日期</th><th>GA4流量</th><th>GSC曝光</th><th>GSC點擊</th><th>CTA點擊</th><th>文章總數</th>
+        </tr></thead>
+        <tbody>${d7rows || '<tr><td colspan="6" style="text-align:center;color:var(--gray-300)">無資料</td></tr>'}</tbody>
+      </table>
+      <div style="font-size:10px;color:var(--gray-300);padding:4px 0">GSC 資料有 2-3 天延遲，最近 2-3 天顯示 —</div>
+    </div>
   </div>
 
   <div class="sec-label">流量指標</div>
