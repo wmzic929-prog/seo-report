@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO 效能儀表板</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:#f0f2f5;color:#1f2937;font-size:14px;line-height:1.5}
+:root{
+  --blue:#1a56db;--blue-l:#e8f0fe;
+  --green:#057a55;--green-l:#def7ec;
+  --orange:#c27803;--orange-l:#fdf6b2;
+  --red:#c81e1e;--red-l:#fde8e8;
+  --gray-50:#f9fafb;--gray-100:#f3f4f6;--gray-200:#e5e7eb;
+  --gray-400:#9ca3af;--gray-600:#6b7280;--gray-800:#1f2937;
+  --shadow:0 1px 3px rgba(0,0,0,.08);--radius:8px
+}
+
+/* ── Header ── */
+.hd{background:linear-gradient(135deg,#0f172a 0%,#1e40af 100%);color:#fff;padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+.hd-left{display:flex;align-items:center;gap:14px}
+.logo{font-size:16px;font-weight:800;letter-spacing:-0.5px;white-space:nowrap}
+.logo em{color:#93c5fd;font-style:normal}
+.group-sel{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:5px 12px;border-radius:6px;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:6px;white-space:nowrap}
+.group-sel select{background:none;border:none;color:#fff;font-size:12px;cursor:pointer;outline:none;padding-right:4px}
+.group-sel select option{background:#1e3a8a;color:#fff}
+.hd-right{font-size:11px;color:rgba(255,255,255,.65);text-align:right;line-height:1.6}
+.hd-right strong{color:#fff;font-size:12px}
+
+/* ── Site Tabs ── */
+.tabs-wrap{background:#fff;border-bottom:2px solid var(--gray-200);position:sticky;top:56px;z-index:190;overflow-x:auto}
+.tabs-wrap::-webkit-scrollbar{height:3px}
+.tabs-wrap::-webkit-scrollbar-thumb{background:var(--gray-200)}
+.tabs{display:flex;padding:0 16px;white-space:nowrap}
+.tb{padding:11px 16px;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;color:var(--gray-600);font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:color .15s,border-color .15s}
+.tb:hover{color:var(--blue)}
+.tb.act{color:var(--blue);border-bottom-color:var(--blue);font-weight:600}
+.tb-badge{font-size:10px;padding:1px 7px;border-radius:100px;background:var(--blue-l);color:var(--blue);font-weight:600}
+.tb-badge.main{background:#fef3c7;color:#92400e}
+
+/* ── Content ── */
+.content{padding:20px;max-width:1440px;margin:0 auto}
+.panel{display:none}.panel.act{display:block}
+
+/* ── Section label ── */
+.sec-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--gray-400);margin:20px 0 10px}
+
+/* ── KPI Cards ── */
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-bottom:4px}
+.kcard{background:#fff;border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);border:1px solid var(--gray-200);border-top:3px solid var(--gray-200)}
+.kcard.c-blue{border-top-color:var(--blue)}
+.kcard.c-green{border-top-color:var(--green)}
+.kcard.c-orange{border-top-color:var(--orange)}
+.kcard.c-red{border-top-color:var(--red)}
+.kcard.c-purple{border-top-color:#7c3aed}
+.kl{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--gray-400);margin-bottom:6px;font-weight:600}
+.kv{font-size:22px;font-weight:800;color:var(--gray-800);line-height:1}
+.ks{font-size:11px;color:var(--gray-400);margin-top:3px}
+
+/* ── Charts Row ── */
+.charts-row{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin:14px 0}
+.chart-card{background:#fff;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);border:1px solid var(--gray-200)}
+.chart-title{font-size:12px;font-weight:700;color:var(--gray-800);margin-bottom:14px;display:flex;align-items:center;gap:6px}
+.chart-title span{width:10px;height:10px;border-radius:2px;display:inline-block}
+
+/* ── Two-col section ── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.card{background:#fff;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);border:1px solid var(--gray-200)}
+.card-title{font-size:12px;font-weight:700;color:var(--gray-800);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.ci{width:22px;height:22px;border-radius:5px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.ci-blue{background:var(--blue-l);color:var(--blue)}
+.ci-green{background:var(--green-l);color:var(--green)}
+.ci-orange{background:var(--orange-l);color:var(--orange)}
+.ci-purple{background:#f5f3ff;color:#7c3aed}
+
+/* ── Coverage bar ── */
+.cov-item{margin-bottom:12px}
+.cov-row{display:flex;justify-content:space-between;font-size:11px;color:var(--gray-600);margin-bottom:4px}
+.cov-row strong{font-weight:700;color:var(--gray-800)}
+.bar-wrap{height:8px;background:var(--gray-100);border-radius:100px;overflow:hidden}
+.bar-fill{height:100%;border-radius:100px;transition:width .8s ease}
+.bar-g{background:var(--green)}.bar-w{background:var(--orange)}.bar-r{background:var(--red)}
+
+/* ── CWV ── */
+.cwv-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.cwv-item{text-align:center;padding:14px 8px;border-radius:6px;border:1px solid var(--gray-200)}
+.cwv-name{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--gray-400);font-weight:600}
+.cwv-val{font-size:20px;font-weight:800;margin:6px 0 4px}
+.cwv-unit{font-size:10px;color:var(--gray-400)}
+.badge{display:inline-block;padding:2px 8px;border-radius:100px;font-size:10px;font-weight:700}
+.bg{background:var(--green-l);color:var(--green)}
+.bw{background:var(--orange-l);color:var(--orange)}
+.br{background:var(--red-l);color:var(--red)}
+.cwv-score-wrap{display:flex;align-items:center;justify-content:space-between;margin-top:12px;padding-top:12px;border-top:1px solid var(--gray-100)}
+.cwv-score-label{font-size:11px;color:var(--gray-600)}
+.cwv-score-val{font-size:22px;font-weight:800;color:var(--green)}
+
+/* ── Table ── */
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{text-align:left;padding:8px 10px;background:var(--gray-50);color:var(--gray-400);font-size:10px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--gray-200);white-space:nowrap;font-weight:700}
+td{padding:9px 10px;border-bottom:1px solid var(--gray-100);color:var(--gray-800);white-space:nowrap}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--gray-50)}
+.pos-badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 7px;border-radius:100px}
+.pos-good{background:var(--green-l);color:var(--green)}
+.pos-mid{background:var(--blue-l);color:var(--blue)}
+.pos-low{background:var(--gray-100);color:var(--gray-600)}
+
+/* ── Overview comparison table ── */
+.ov-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.ov-title{font-size:13px;font-weight:700;color:var(--gray-800)}
+.site-role-main{background:#fef3c7;color:#92400e;font-size:10px;padding:1px 7px;border-radius:100px;font-weight:700}
+.site-role-sat{background:var(--blue-l);color:var(--blue);font-size:10px;padding:1px 7px;border-radius:100px;font-weight:700}
+.meter{display:inline-block;width:40px;height:5px;background:var(--gray-200);border-radius:100px;vertical-align:middle;position:relative;overflow:hidden}
+.meter-fill{position:absolute;left:0;top:0;height:100%;border-radius:100px}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  .charts-row{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr}
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .content{padding:12px}
+  .cwv-grid{grid-template-columns:1fr 1fr 1fr}
+}
+@media(max-width:480px){
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .cwv-grid{grid-template-columns:1fr}
+}
+
+/* ── Loading state ── */
+.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:200px;color:var(--gray-400);gap:12px;font-size:13px}
+.spinner{width:32px;height:32px;border:3px solid var(--gray-200);border-top-color:var(--blue);border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+
+<header class="hd">
+  <div class="hd-left">
+    <div class="logo">SEO <em>Dashboard</em></div>
+    <div class="group-sel">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      <select id="group-sel" onchange="switchGroup(this.value)"></select>
+    </div>
+  </div>
+  <div class="hd-right">
+    <strong id="hd-update">讀取中…</strong>
+    <div>每日 05:30 HKT 自動更新</div>
+  </div>
+</header>
+
+<div class="tabs-wrap">
+  <div class="tabs" id="tabs"></div>
+</div>
+
+<div class="content" id="content">
+  <div class="loading"><div class="spinner"></div>載入資料中…</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script>
+// ── Config ──────────────────────────────────────────
+const REAL_DATA_URL = 'https://raw.githubusercontent.com/wmzic929-prog/spheretap/main/seo-data/seo-report.json';
+
+// ── Mock Data ────────────────────────────────────────
+const MOCK = {
+  generated_at: '2026-05-19T05:30:00+08:00',
+  groups: {
+    spheretap: {
+      name: 'Spheretap 集團',
+      dates_30d: ['4/20','4/21','4/22','4/23','4/24','4/25','4/26','4/27','4/28','4/29','4/30','5/1','5/2','5/3','5/4','5/5','5/6','5/7','5/8','5/9','5/10','5/11','5/12','5/13','5/14','5/15','5/16','5/17','5/18','5/19'],
+      sites: {
+        'spheretap.com': {
+          label: 'Spheretap 主站', role: 'main',
+          traffic: { sessions_today: 18, sessions_7d: 89, sessions_30d: 320, series_30d: [8,12,9,15,11,14,18,10,13,16,14,19,11,17,22,13,18,21,15,24,19,23,16,20,25,3,5,8,11,18], bounce_rate: 0.61, avg_duration_sec: 178, mobile_pct: 0.69, sources: { organic: 0.42, direct: 0.28, social: 0.20, referral: 0.10 } },
+          cta: { clicks_today: 4, clicks_7d: 23, unique_clicks_7d: 19, conversions_today: 1, conversions_7d: 8 },
+          gsc: { impressions_28d: 4200, clicks_28d: 89, ctr: 0.0212, avg_position: 22.1, indexed_pages: 72, top_keywords: [{ kw: 'sports betting hk guide', pos: 8.2, clicks: 22 },{ kw: 'spheretap review', pos: 3.1, clicks: 18 },{ kw: 'online casino tips', pos: 14.5, clicks: 15 },{ kw: 'live casino strategy', pos: 28.4, clicks: 8 }] },
+          sitemap: { total_urls: 89 }, content: { total_articles: 67, this_month: 15, this_week: 4 },
+          cwv: { lcp: 1.8, cls: 0.04, inp: 145, score: 92 }
+        },
+        'matchvangtage.com': {
+          label: '體育博彩攻略', role: 'satellite',
+          traffic: { sessions_today: 2, sessions_7d: 8, sessions_30d: 11, series_30d: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,3,2,2], bounce_rate: 0.74, avg_duration_sec: 95, mobile_pct: 0.78, sources: { organic: 0.25, direct: 0.50, social: 0.15, referral: 0.10 } },
+          cta: { clicks_today: 0, clicks_7d: 2, unique_clicks_7d: 2, conversions_today: 0, conversions_7d: 0 },
+          gsc: { impressions_28d: 124, clicks_28d: 3, ctr: 0.0242, avg_position: 41.2, indexed_pages: 12, top_keywords: [{ kw: 'sports betting tips', pos: 35.1, clicks: 2 },{ kw: 'hk football odds', pos: 52.3, clicks: 1 }] },
+          sitemap: { total_urls: 28 }, content: { total_articles: 22, this_month: 22, this_week: 8 },
+          cwv: { lcp: 1.9, cls: 0.03, inp: 162, score: 91 }
+        },
+        'tableedge.org': {
+          label: '真人遊戲技術流', role: 'satellite',
+          traffic: { sessions_today: 1, sessions_7d: 5, sessions_30d: 7, series_30d: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,1,1], bounce_rate: 0.79, avg_duration_sec: 82, mobile_pct: 0.76, sources: { organic: 0.15, direct: 0.55, social: 0.20, referral: 0.10 } },
+          cta: { clicks_today: 0, clicks_7d: 1, unique_clicks_7d: 1, conversions_today: 0, conversions_7d: 0 },
+          gsc: { impressions_28d: 87, clicks_28d: 1, ctr: 0.0115, avg_position: 48.7, indexed_pages: 8, top_keywords: [{ kw: 'live baccarat strategy', pos: 42.1, clicks: 1 }] },
+          sitemap: { total_urls: 25 }, content: { total_articles: 19, this_month: 19, this_week: 6 },
+          cwv: { lcp: 2.1, cls: 0.06, inp: 198, score: 88 }
+        },
+        'turf-pulse.com': {
+          label: '香港賽馬技術分析', role: 'satellite',
+          traffic: { sessions_today: 4, sessions_7d: 15, sessions_30d: 18, series_30d: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,5,4,4], bounce_rate: 0.68, avg_duration_sec: 124, mobile_pct: 0.82, sources: { organic: 0.30, direct: 0.40, social: 0.20, referral: 0.10 } },
+          cta: { clicks_today: 1, clicks_7d: 4, unique_clicks_7d: 4, conversions_today: 0, conversions_7d: 1 },
+          gsc: { impressions_28d: 215, clicks_28d: 5, ctr: 0.0233, avg_position: 35.4, indexed_pages: 18, top_keywords: [{ kw: 'hkjc horse racing tips', pos: 28.3, clicks: 3 },{ kw: 'hong kong racing analysis', pos: 41.7, clicks: 2 }] },
+          sitemap: { total_urls: 31 }, content: { total_articles: 24, this_month: 24, this_week: 7 },
+          cwv: { lcp: 1.7, cls: 0.04, inp: 155, score: 93 }
+        },
+        'spin-metrics.com': {
+          label: '老虎機遊戲解析', role: 'satellite',
+          traffic: { sessions_today: 1, sessions_7d: 6, sessions_30d: 8, series_30d: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,2,1], bounce_rate: 0.76, avg_duration_sec: 88, mobile_pct: 0.75, sources: { organic: 0.20, direct: 0.52, social: 0.18, referral: 0.10 } },
+          cta: { clicks_today: 0, clicks_7d: 1, unique_clicks_7d: 1, conversions_today: 0, conversions_7d: 0 },
+          gsc: { impressions_28d: 98, clicks_28d: 2, ctr: 0.0204, avg_position: 44.1, indexed_pages: 10, top_keywords: [{ kw: 'slot rtp analysis', pos: 38.2, clicks: 2 }] },
+          sitemap: { total_urls: 23 }, content: { total_articles: 17, this_month: 17, this_week: 5 },
+          cwv: { lcp: 2.0, cls: 0.05, inp: 178, score: 89 }
+        },
+        'verifiedplays.com': {
+          label: '平台技術評測', role: 'satellite',
+          traffic: { sessions_today: 2, sessions_7d: 9, sessions_30d: 12, series_30d: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,3,3,2], bounce_rate: 0.72, avg_duration_sec: 103, mobile_pct: 0.71, sources: { organic: 0.28, direct: 0.45, social: 0.17, referral: 0.10 } },
+          cta: { clicks_today: 0, clicks_7d: 2, unique_clicks_7d: 2, conversions_today: 0, conversions_7d: 0 },
+          gsc: { impressions_28d: 143, clicks_28d: 4, ctr: 0.0280, avg_position: 38.9, indexed_pages: 15, top_keywords: [{ kw: 'licensed casino review', pos: 32.5, clicks: 3 },{ kw: 'casino platform comparison', pos: 45.1, clicks: 1 }] },
+          sitemap: { total_urls: 26 }, content: { total_articles: 20, this_month: 20, this_week: 6 },
+          cwv: { lcp: 1.9, cls: 0.04, inp: 167, score: 91 }
+        }
+      }
+    }
+  }
+};
+
+// ── State ────────────────────────────────────────────
+let DATA = null;
+let currentGroup = null;
+let currentSite = '__overview__';
+const charts = {};
+
+// ── Helpers ──────────────────────────────────────────
+const fmt = n => n >= 10000 ? (n/1000).toFixed(1)+'K' : n.toLocaleString();
+const pct = n => (n*100).toFixed(1)+'%';
+const sec2min = s => s >= 60 ? `${Math.floor(s/60)}m ${s%60}s` : `${s}s`;
+const posClass = p => p <= 10 ? 'pos-good' : p <= 30 ? 'pos-mid' : 'pos-low';
+const covClass = r => r >= 0.8 ? 'bar-g' : r >= 0.5 ? 'bar-w' : 'bar-r';
+const covBadge = r => r >= 0.8 ? 'bg' : r >= 0.5 ? 'bw' : 'br';
+const cwvStatus = (metric, val) => {
+  if (metric === 'lcp') return val <= 2.5 ? 'bg' : val <= 4 ? 'bw' : 'br';
+  if (metric === 'cls') return val <= 0.1 ? 'bg' : val <= 0.25 ? 'bw' : 'br';
+  if (metric === 'inp') return val <= 200 ? 'bg' : val <= 500 ? 'bw' : 'br';
+};
+const cwvLabel = (metric, val) => {
+  if (metric === 'lcp') return val <= 2.5 ? '良好' : val <= 4 ? '待改善' : '差';
+  if (metric === 'cls') return val <= 0.1 ? '良好' : val <= 0.25 ? '待改善' : '差';
+  if (metric === 'inp') return val <= 200 ? '良好' : val <= 500 ? '待改善' : '差';
+};
+const destroyChart = id => { if (charts[id]) { charts[id].destroy(); delete charts[id]; } };
+
+// ── Init ─────────────────────────────────────────────
+async function init() {
+  try {
+    const res = await fetch(REAL_DATA_URL, { cache: 'no-store' });
+    if (!res.ok) throw new Error('not found');
+    DATA = await res.json();
+  } catch {
+    DATA = MOCK;
+  }
+  buildGroupSel();
+  const firstGroup = Object.keys(DATA.groups)[0];
+  switchGroup(firstGroup);
+}
+
+function buildGroupSel() {
+  const sel = document.getElementById('group-sel');
+  sel.innerHTML = '';
+  for (const [gid, g] of Object.entries(DATA.groups)) {
+    const opt = document.createElement('option');
+    opt.value = gid;
+    opt.textContent = g.name;
+    sel.appendChild(opt);
+  }
+}
+
+function switchGroup(gid) {
+  currentGroup = gid;
+  document.getElementById('group-sel').value = gid;
+  const g = DATA.groups[gid];
+  const dt = new Date(DATA.generated_at);
+  document.getElementById('hd-update').textContent = `${dt.getMonth()+1}/${dt.getDate()} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')} HKT`;
+  buildTabs(gid);
+  switchSite('__overview__');
+}
+
+function buildTabs(gid) {
+  const g = DATA.groups[gid];
+  const tabsEl = document.getElementById('tabs');
+  tabsEl.innerHTML = '';
+  const all = [{ key: '__overview__', label: '總覽', role: 'ov' },
+    ...Object.entries(g.sites).map(([k,v]) => ({ key: k, label: k, role: v.role }))];
+  all.forEach(({ key, label, role }) => {
+    const btn = document.createElement('button');
+    btn.className = 'tb';
+    btn.dataset.key = key;
+    btn.onclick = () => switchSite(key);
+    if (role === 'ov') {
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> ${label}`;
+    } else {
+      const badge = role === 'main' ? `<span class="tb-badge main">主站</span>` : `<span class="tb-badge">衛星</span>`;
+      btn.innerHTML = `${label} ${badge}`;
+    }
+    tabsEl.appendChild(btn);
+  });
+}
+
+function switchSite(siteKey) {
+  currentSite = siteKey;
+  document.querySelectorAll('.tb').forEach(b => b.classList.toggle('act', b.dataset.key === siteKey));
+  renderContent(siteKey);
+}
+
+// ── Render ───────────────────────────────────────────
+function renderContent(siteKey) {
+  const g = DATA.groups[currentGroup];
+  const content = document.getElementById('content');
+  Object.values(charts).forEach(c => c.destroy());
+  Object.keys(charts).forEach(k => delete charts[k]);
+  content.innerHTML = siteKey === '__overview__' ? renderOverview(g) : renderSite(siteKey, g.sites[siteKey], g);
+  if (siteKey === '__overview__') return;
+  const s = g.sites[siteKey];
+  requestAnimationFrame(() => {
+    renderTrafficChart(siteKey, s, g.dates_30d);
+    renderSourcesChart(siteKey, s);
+  });
+}
+
+// ── Overview ─────────────────────────────────────────
+function renderOverview(g) {
+  const sites = Object.entries(g.sites);
+  const totSess30 = sites.reduce((a,[,s]) => a+s.traffic.sessions_30d, 0);
+  const totClicks = sites.reduce((a,[,s]) => a+s.gsc.clicks_28d, 0);
+  const totArticles = sites.reduce((a,[,s]) => a+s.content.total_articles, 0);
+  const avgCovArr = sites.map(([,s]) => s.gsc.indexed_pages / s.sitemap.total_urls);
+  const avgCov = avgCovArr.reduce((a,v) => a+v,0) / avgCovArr.length;
+
+  let rows = '';
+  sites.forEach(([domain, s]) => {
+    const cov = s.gsc.indexed_pages / s.sitemap.total_urls;
+    const roleHtml = s.role === 'main' ? `<span class="site-role-main">主站</span>` : `<span class="site-role-sat">衛星</span>`;
+    const cwvColor = s.cwv.score >= 90 ? 'var(--green)' : s.cwv.score >= 75 ? 'var(--orange)' : 'var(--red)';
+    rows += `<tr onclick="switchSite('${domain}')" style="cursor:pointer">
+      <td><strong>${domain}</strong><br><span style="font-size:10px;color:var(--gray-400)">${s.label}</span></td>
+      <td>${roleHtml}</td>
+      <td>${fmt(s.traffic.sessions_today)}</td>
+      <td>${fmt(s.traffic.sessions_30d)}</td>
+      <td>${fmt(s.gsc.impressions_28d)}</td>
+      <td>${fmt(s.gsc.clicks_28d)}</td>
+      <td>${s.gsc.avg_position.toFixed(1)}</td>
+      <td>${s.gsc.indexed_pages} / ${s.sitemap.total_urls}
+        <span class="meter"><span class="meter-fill" style="width:${cov*100}%;background:${cov>=.8?'var(--green)':cov>=.5?'var(--orange)':'var(--red)'}"></span></span>
+        <span style="font-size:10px;color:var(--gray-400)">${pct(cov)}</span>
+      </td>
+      <td>${s.content.total_articles}</td>
+      <td>${s.content.this_month}</td>
+      <td><strong style="color:${cwvColor}">${s.cwv.score}</strong></td>
+    </tr>`;
+  });
+
+  return `
+  <div class="sec-label">集團總覽</div>
+  <div class="kpi-grid">
+    <div class="kcard c-blue"><div class="kl">30日總流量</div><div class="kv">${fmt(totSess30)}</div><div class="ks">全站合計</div></div>
+    <div class="kcard c-green"><div class="kl">GSC 點擊 (28d)</div><div class="kv">${fmt(totClicks)}</div><div class="ks">搜尋來源</div></div>
+    <div class="kcard c-orange"><div class="kl">平均收錄率</div><div class="kv">${pct(avgCov)}</div><div class="ks">全站平均</div></div>
+    <div class="kcard c-purple"><div class="kl">文章總數</div><div class="kv">${fmt(totArticles)}</div><div class="ks">全站發佈</div></div>
+  </div>
+  <div class="sec-label">各站比較（點擊各站查看詳情）</div>
+  <div class="card">
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr>
+          <th>站點</th><th>類型</th><th>今日流量</th><th>30日流量</th>
+          <th>GSC曝光(28d)</th><th>GSC點擊(28d)</th><th>平均排名</th>
+          <th>收錄 / Sitemap</th><th>文章總數</th><th>本月新發</th><th>CWV分數</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  </div>`;
+}
+
+// ── Site Panel ────────────────────────────────────────
+function renderSite(domain, s, g) {
+  const cov = s.gsc.indexed_pages / s.sitemap.total_urls;
+  const roleLabel = s.role === 'main' ? '主站' : '衛星站';
+  let kwRows = s.gsc.top_keywords.map(k => `
+    <tr><td>${k.kw}</td>
+    <td><span class="pos-badge ${posClass(k.pos)}">#${k.pos.toFixed(1)}</span></td>
+    <td>${k.clicks}</td></tr>`).join('');
+
+  return `
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap">
+    <div style="font-size:18px;font-weight:800;color:var(--gray-800)">${domain}</div>
+    <div style="font-size:11px;color:var(--gray-400)">${s.label} · ${roleLabel}</div>
+  </div>
+
+  <div class="sec-label">流量指標</div>
+  <div class="kpi-grid">
+    <div class="kcard c-blue"><div class="kl">今日展期</div><div class="kv">${fmt(s.traffic.sessions_today)}</div><div class="ks">Sessions</div></div>
+    <div class="kcard c-blue"><div class="kl">7日展期</div><div class="kv">${fmt(s.traffic.sessions_7d)}</div><div class="ks">Sessions</div></div>
+    <div class="kcard c-blue"><div class="kl">30日展期</div><div class="kv">${fmt(s.traffic.sessions_30d)}</div><div class="ks">Sessions</div></div>
+    <div class="kcard"><div class="kl">跟出率</div><div class="kv">${pct(s.traffic.bounce_rate)}</div><div class="ks">越低越好</div></div>
+    <div class="kcard"><div class="kl">平均停留</div><div class="kv">${sec2min(s.traffic.avg_duration_sec)}</div><div class="ks">Avg. Duration</div></div>
+    <div class="kcard"><div class="kl">行動裝置</div><div class="kv">${pct(s.traffic.mobile_pct)}</div><div class="ks">Mobile Traffic</div></div>
+  </div>
+
+  <div class="charts-row">
+    <div class="chart-card">
+      <div class="chart-title"><span style="background:var(--blue)"></span>30日流量趨勢</div>
+      <canvas id="chart-traffic-${domain}" height="100"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title"><span style="background:var(--orange)"></span>流量來源分布</div>
+      <canvas id="chart-src-${domain}" height="100"></canvas>
+    </div>
+  </div>
+
+  <div class="sec-label">CTA 與轉換</div>
+  <div class="kpi-grid">
+    <div class="kcard c-orange"><div class="kl">CTA點擊 (今日)</div><div class="kv">${s.cta.clicks_today}</div><div class="ks">按鈕數</div></div>
+    <div class="kcard c-orange"><div class="kl">CTA點擊 (7d)</div><div class="kv">${s.cta.clicks_7d}</div><div class="ks">不重複: ${s.cta.unique_clicks_7d}</div></div>
+    <div class="kcard c-green"><div class="kl">頁面轉換 (今日)</div><div class="kv">${s.cta.conversions_today}</div><div class="ks">轉換數</div></div>
+    <div class="kcard c-green"><div class="kl">頁面轉換 (7d)</div><div class="kv">${s.cta.conversions_7d}</div><div class="ks">累積</div></div>
+  </div>
+
+  <div class="sec-label">GSC 搜尋表現</div>
+  <div class="kpi-grid">
+    <div class="kcard c-blue"><div class="kl">GSC曝光 (28d)</div><div class="kv">${fmt(s.gsc.impressions_28d)}</div><div class="ks">Impressions</div></div>
+    <div class="kcard c-blue"><div class="kl">GSC點擊 (28d)</div><div class="kv">${fmt(s.gsc.clicks_28d)}</div><div class="ks">Clicks</div></div>
+    <div class="kcard"><div class="kl">點擊率 CTR</div><div class="kv">${pct(s.gsc.ctr)}</div><div class="ks">點擊÷曝光</div></div>
+    <div class="kcard"><div class="kl">平均排名</div><div class="kv">${s.gsc.avg_position.toFixed(1)}</div><div class="ks">Avg. Position</div></div>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title"><span class="ci ci-green">&#128269;</span>Google 收錄狀態</div>
+      <div class="cov-item">
+        <div class="cov-row"><span>Sitemap 提交</span><strong>${s.sitemap.total_urls} 頁</strong></div>
+      </div>
+      <div class="cov-item">
+        <div class="cov-row"><span>Google 收錄</span><strong>${s.gsc.indexed_pages} 頁</strong></div>
+        <div class="bar-wrap"><div class="bar-fill ${covClass(cov)}" style="width:${Math.min(cov*100,100)}%"></div></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px solid var(--gray-100)">
+        <span style="font-size:12px;color:var(--gray-600)">收錄率</span>
+        <span class="badge ${covBadge(cov)}" style="font-size:14px;padding:4px 14px">${pct(cov)}</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="ci ci-purple">&#128196;</span>內容生產</div>
+      <div class="kpi-grid" style="grid-template-columns:1fr 1fr;gap:10px">
+        <div class="kcard c-purple"><div class="kl">文章總數</div><div class="kv">${s.content.total_articles}</div><div class="ks">已發佈</div></div>
+        <div class="kcard c-purple"><div class="kl">本月新發</div><div class="kv">${s.content.this_month}</div><div class="ks">本月</div></div>
+        <div class="kcard"><div class="kl">本週新發</div><div class="kv">${s.content.this_week}</div><div class="ks">本週</div></div>
+        <div class="kcard"><div class="kl">平均每週</div><div class="kv">${(s.content.total_articles/4).toFixed(1)}</div><div class="ks">文章/週</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-label">Core Web Vitals</div>
+  <div class="card">
+    <div class="cwv-grid">
+      <div class="cwv-item">
+        <div class="cwv-name">LCP</div>
+        <div class="cwv-val" style="color:${s.cwv.lcp<=2.5?'var(--green)':s.cwv.lcp<=4?'var(--orange)':'var(--red)'}">${s.cwv.lcp}s</div>
+        <div class="cwv-unit">Largest Contentful Paint</div>
+        <div style="margin-top:6px"><span class="badge ${cwvStatus('lcp',s.cwv.lcp)}">${cwvLabel('lcp',s.cwv.lcp)}</span></div>
+      </div>
+      <div class="cwv-item">
+        <div class="cwv-name">CLS</div>
+        <div class="cwv-val" style="color:${s.cwv.cls<=0.1?'var(--green)':s.cwv.cls<=0.25?'var(--orange)':'var(--red)'}">${s.cwv.cls}</div>
+        <div class="cwv-unit">Cumulative Layout Shift</div>
+        <div style="margin-top:6px"><span class="badge ${cwvStatus('cls',s.cwv.cls)}">${cwvLabel('cls',s.cwv.cls)}</span></div>
+      </div>
+      <div class="cwv-item">
+        <div class="cwv-name">INP</div>
+        <div class="cwv-val" style="color:${s.cwv.inp<=200?'var(--green)':s.cwv.inp<=500?'var(--orange)':'var(--red)'}">${s.cwv.inp}ms</div>
+        <div class="cwv-unit">Interaction to Next Paint</div>
+        <div style="margin-top:6px"><span class="badge ${cwvStatus('inp',s.cwv.inp)}">${cwvLabel('inp',s.cwv.inp)}</span></div>
+      </div>
+    </div>
+    <div class="cwv-score-wrap">
+      <span class="cwv-score-label">PageSpeed 整體分數</span>
+      <span class="cwv-score-val">${s.cwv.score}<span style="font-size:14px;color:var(--gray-400)">/100</span></span>
+    </div>
+  </div>
+
+  <div class="sec-label">GSC 高流量關鍵字</div>
+  <div class="card">
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>關鍵字</th><th>平均排名</th><th>點擊數 (28d)</th></tr></thead>
+        <tbody>${kwRows}</tbody>
+      </table>
+    </div>
+  </div>`;
+}
+
+// ── Chart Renderers ───────────────────────────────────
+function renderTrafficChart(domain, s, dates) {
+  const ctx = document.getElementById(`chart-traffic-${domain}`);
+  if (!ctx) return;
+  charts[`traffic-${domain}`] = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: [{
+        label: 'Sessions', data: s.traffic.series_30d,
+        borderColor: '#1a56db', backgroundColor: 'rgba(26,86,219,0.08)',
+        borderWidth: 2, fill: true, tension: 0.4, pointRadius: 2, pointHoverRadius: 4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 10 }, maxTicksLimit: 10 } },
+        y: { grid: { color: '#f0f0f0' }, ticks: { font: { size: 10 }, precision: 0 }, beginAtZero: true }
+      }
+    }
+  });
+}
+
+function renderSourcesChart(domain, s) {
+  const ctx = document.getElementById(`chart-src-${domain}`);
+  if (!ctx) return;
+  const src = s.traffic.sources;
+  charts[`src-${domain}`] = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['自然搜尋', '直接', '社群', '推薦'],
+      datasets: [{ data: [src.organic, src.direct, src.social, src.referral].map(v => Math.round(v*100)),
+        backgroundColor: ['#1a56db','#6b7280','#0d9488','#c27803'],
+        borderWidth: 0, hoverOffset: 4 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: true, cutout: '65%',
+      plugins: {
+        legend: { position: 'bottom', labels: { font: { size: 11 }, padding: 12, usePointStyle: true, pointStyleWidth: 8 } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw}%` } }
+      }
+    }
+  });
+}
+
+// ── Boot ─────────────────────────────────────────────
+init();
+</script>
+</body>
+</html>
