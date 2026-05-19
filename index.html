@@ -177,7 +177,7 @@ const MOCK = {
           traffic: { sessions_today: 18, sessions_7d: 89, sessions_30d: 320, series_30d: [8,12,9,15,11,14,18,10,13,16,14,19,11,17,22,13,18,21,15,24,19,23,16,20,25,3,5,8,11,18], bounce_rate: 0.61, avg_duration_sec: 178, mobile_pct: 0.69, sources: { organic: 0.42, direct: 0.28, social: 0.20, referral: 0.10 } },
           cta: { clicks_today: 4, clicks_7d: 23, unique_clicks_7d: 19, conversions_today: 1, conversions_7d: 8 },
           gsc: { impressions_28d: 4200, clicks_28d: 89, ctr: 0.0212, avg_position: 22.1, indexed_pages: 72, top_keywords: [{ kw: 'sports betting hk guide', pos: 8.2, clicks: 22 },{ kw: 'spheretap review', pos: 3.1, clicks: 18 },{ kw: 'online casino tips', pos: 14.5, clicks: 15 },{ kw: 'live casino strategy', pos: 28.4, clicks: 8 }] },
-          sitemap: { total_urls: 89 }, content: { total_articles: 67, this_month: 15, this_week: 4 },
+          sitemap: { total_urls: 89 }, content: { total_articles: 58, sports_articles: 28, this_month: 43, this_week: 32 },
           cwv: { lcp: 1.8, cls: 0.04, inp: 145, score: 92 }
         },
         'matchvangtage.com': {
@@ -332,7 +332,9 @@ function renderOverview(g) {
   const sites = Object.entries(g.sites);
   const totSess30 = sites.reduce((a,[,s]) => a+s.traffic.sessions_30d, 0);
   const totClicks = sites.reduce((a,[,s]) => a+s.gsc.clicks_28d, 0);
-  const totArticles = sites.reduce((a,[,s]) => a+s.content.total_articles, 0);
+  const totBlogArticles = sites.reduce((a,[,s]) => a+s.content.total_articles, 0);
+  const totSportsArticles = sites.reduce((a,[,s]) => a+(s.content.sports_articles||0), 0);
+  const totArticles = totBlogArticles + totSportsArticles;
   const avgCovArr = sites.map(([,s]) => s.sitemap.total_urls > 0 ? s.gsc.indexed_pages / s.sitemap.total_urls : 0);
   const avgCov = avgCovArr.length > 0 ? avgCovArr.reduce((a,v) => a+v,0) / avgCovArr.length : 0;
 
@@ -355,7 +357,7 @@ function renderOverview(g) {
         <span style="font-size:10px;color:var(--gray-400)">${pct(cov)}</span>
       </td>
       <td>${s.content.total_articles}</td>
-      <td>${s.content.sports_articles > 0 ? s.content.sports_articles : '–'}</td>
+      <td>${s.content.sports_articles > 0 ? s.content.sports_articles : '<span style="color:var(--gray-300)">–</span>'}</td>
       <td>${s.content.this_month}</td>
     </tr>`;
   });
@@ -366,7 +368,7 @@ function renderOverview(g) {
     <div class="kcard c-blue"><div class="kl">30日總流量</div><div class="kv">${fmt(totSess30)}</div><div class="ks">全站合計</div></div>
     <div class="kcard c-green"><div class="kl">GSC 點擊 (28d)</div><div class="kv">${fmt(totClicks)}</div><div class="ks">搜尋來源</div></div>
     <div class="kcard c-orange"><div class="kl">平均收錄率</div><div class="kv">${pct(avgCov)}</div><div class="ks">全站平均</div></div>
-    <div class="kcard c-purple"><div class="kl">文章總數</div><div class="kv">${fmt(totArticles)}</div><div class="ks">全站發佈</div></div>
+    <div class="kcard c-purple"><div class="kl">文章總數</div><div class="kv">${fmt(totArticles)}</div><div class="ks">Blog ${totBlogArticles} + 體育 ${totSportsArticles}</div></div>
   </div>
   <div class="sec-label">7日每日趨勢（全站合計）</div>
   <div class="card">
@@ -404,7 +406,7 @@ function renderOverview(g) {
         <thead><tr>
           <th>站點</th><th>類型</th><th>今日流量</th><th>30日流量</th>
           <th>GSC曝光(7d)</th><th>GSC點擊(7d)</th><th>GSC曝光(28d)</th><th>GSC點擊(28d)</th><th>平均排名</th>
-          <th>收錄 / Sitemap</th><th>文章總數</th><th>體育新聞</th><th>本月新發</th>
+          <th>收錄 / Sitemap</th><th>Blog 文章</th><th>體育新聞</th><th>本月新發</th>
         </tr></thead>
         <tbody>${rows}</tbody>
       </table>
@@ -494,9 +496,9 @@ function renderSite(domain, s, g) {
     <div class="card">
       <div class="card-title"><span class="ci ci-purple">&#128196;</span>內容生產</div>
       <div class="kpi-grid" style="grid-template-columns:1fr 1fr;gap:10px">
-        <div class="kcard c-purple"><div class="kl">文章總數</div><div class="kv">${s.content.total_articles}</div><div class="ks">已發佈</div></div>
+        <div class="kcard c-purple"><div class="kl">Blog 文章</div><div class="kv">${s.content.total_articles}</div><div class="ks">已發佈</div></div>
         <div class="kcard c-purple"><div class="kl">本月新發</div><div class="kv">${s.content.this_month}</div><div class="ks">本月</div></div>
-        ${s.content.sports_articles > 0 ? `<div class="kcard c-blue"><div class="kl">體育新聞</div><div class="kv">${s.content.sports_articles}</div><div class="ks">已發佈</div></div>` : ''}
+        ${s.role === 'main' || s.content.sports_articles > 0 ? `<div class="kcard c-blue"><div class="kl">體育新聞</div><div class="kv">${s.content.sports_articles||0}</div><div class="ks">已發佈</div></div>` : ''}
         <div class="kcard"><div class="kl">本週新發</div><div class="kv">${s.content.this_week}</div><div class="ks">本週</div></div>
       </div>
     </div>
