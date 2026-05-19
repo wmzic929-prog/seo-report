@@ -346,6 +346,8 @@ function renderOverview(g) {
       <td>${roleHtml}</td>
       <td>${fmt(s.traffic.sessions_today)}</td>
       <td>${fmt(s.traffic.sessions_30d)}</td>
+      <td>${fmt(s.gsc.impressions_7d||0)}</td>
+      <td>${fmt(s.gsc.clicks_7d||0)}</td>
       <td>${fmt(s.gsc.impressions_28d)}</td>
       <td>${fmt(s.gsc.clicks_28d)}</td>
       <td>${s.gsc.avg_position.toFixed(1)}</td>
@@ -374,7 +376,7 @@ function renderOverview(g) {
       <table>
         <thead><tr>
           <th>站點</th><th>類型</th><th>今日流量</th><th>30日流量</th>
-          <th>GSC曝光(28d)</th><th>GSC點擊(28d)</th><th>平均排名</th>
+          <th>GSC曝光(7d)</th><th>GSC點擊(7d)</th><th>GSC曝光(28d)</th><th>GSC點擊(28d)</th><th>平均排名</th>
           <th>收錄 / Sitemap</th><th>文章總數</th><th>體育新聞</th><th>本月新發</th><th>CWV分數</th>
         </tr></thead>
         <tbody>${rows}</tbody>
@@ -429,8 +431,10 @@ function renderSite(domain, s, g) {
 
   <div class="sec-label">GSC 搜尋表現</div>
   <div class="kpi-grid">
-    <div class="kcard c-blue"><div class="kl">GSC曝光 (28d)</div><div class="kv">${fmt(s.gsc.impressions_28d)}</div><div class="ks">Impressions</div></div>
-    <div class="kcard c-blue"><div class="kl">GSC點擊 (28d)</div><div class="kv">${fmt(s.gsc.clicks_28d)}</div><div class="ks">Clicks</div></div>
+    <div class="kcard c-blue"><div class="kl">GSC曝光 (7d)</div><div class="kv">${fmt(s.gsc.impressions_7d||0)}</div><div class="ks">近7天</div></div>
+    <div class="kcard c-blue"><div class="kl">GSC點擊 (7d)</div><div class="kv">${fmt(s.gsc.clicks_7d||0)}</div><div class="ks">近7天</div></div>
+    <div class="kcard c-green"><div class="kl">GSC曝光 (28d)</div><div class="kv">${fmt(s.gsc.impressions_28d)}</div><div class="ks">Impressions</div></div>
+    <div class="kcard c-green"><div class="kl">GSC點擊 (28d)</div><div class="kv">${fmt(s.gsc.clicks_28d)}</div><div class="ks">Clicks</div></div>
     <div class="kcard"><div class="kl">點擊率 CTR</div><div class="kv">${pct(s.gsc.ctr)}</div><div class="ks">點擊÷曝光</div></div>
     <div class="kcard"><div class="kl">平均排名</div><div class="kv">${s.gsc.avg_position.toFixed(1)}</div><div class="ks">Avg. Position</div></div>
   </div>
