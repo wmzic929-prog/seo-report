@@ -429,26 +429,13 @@ function renderSite(domain, s, g) {
     <td>${r.gsc_imp !== null ? fmt(r.gsc_imp) : '<span style="color:var(--gray-300)">—</span>'}</td>
     <td>${r.gsc_clk !== null ? fmt(r.gsc_clk) : '<span style="color:var(--gray-300)">—</span>'}</td>
     <td>${fmt(r.cta_clk)}</td>
-    <td>${s.content.total_articles + (s.content.sports_articles||0)}</td>
+    <td>${r.articles !== undefined ? fmt(r.articles) : fmt(s.content.total_articles + (s.content.sports_articles||0))}</td>
   </tr>`).join('');
 
   return `
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap">
     <div style="font-size:18px;font-weight:800;color:var(--gray-800)">${domain}</div>
     <div style="font-size:11px;color:var(--gray-400)">${s.label} · ${roleLabel}</div>
-  </div>
-
-  <div class="sec-label">7日每日趨勢</div>
-  <div class="card">
-    <div class="tbl-wrap">
-      <table>
-        <thead><tr>
-          <th>日期</th><th>GA4流量</th><th>GSC曝光</th><th>GSC點擊</th><th>CTA點擊</th><th>文章總數</th>
-        </tr></thead>
-        <tbody>${d7rows || '<tr><td colspan="6" style="text-align:center;color:var(--gray-300)">無資料</td></tr>'}</tbody>
-      </table>
-      <div style="font-size:10px;color:var(--gray-300);padding:4px 0">GSC 資料有 2-3 天延遲，最近 2-3 天顯示 —</div>
-    </div>
   </div>
 
   <div class="sec-label">流量指標</div>
@@ -513,6 +500,19 @@ function renderSite(domain, s, g) {
         ${s.content.sports_articles > 0 ? `<div class="kcard c-blue"><div class="kl">體育新聞</div><div class="kv">${s.content.sports_articles}</div><div class="ks">已發佈</div></div>` : ''}
         <div class="kcard"><div class="kl">本週新發</div><div class="kv">${s.content.this_week}</div><div class="ks">本週</div></div>
       </div>
+    </div>
+  </div>
+
+  <div class="sec-label">7日每日趨勢</div>
+  <div class="card">
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr>
+          <th>日期</th><th>GA4流量</th><th>GSC曝光</th><th>GSC點擊</th><th>CTA點擊</th><th>文章總數</th>
+        </tr></thead>
+        <tbody>${d7rows || '<tr><td colspan="6" style="text-align:center;color:var(--gray-300)">無資料</td></tr>'}</tbody>
+      </table>
+      <div style="font-size:10px;color:var(--gray-300);padding:4px 0">GSC 資料有 2-3 天延遲，最近 2-3 天顯示 —</div>
     </div>
   </div>
 
