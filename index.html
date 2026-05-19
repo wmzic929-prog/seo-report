@@ -333,12 +333,12 @@ function renderOverview(g) {
   const totSess30 = sites.reduce((a,[,s]) => a+s.traffic.sessions_30d, 0);
   const totClicks = sites.reduce((a,[,s]) => a+s.gsc.clicks_28d, 0);
   const totArticles = sites.reduce((a,[,s]) => a+s.content.total_articles, 0);
-  const avgCovArr = sites.map(([,s]) => s.gsc.indexed_pages / s.sitemap.total_urls);
-  const avgCov = avgCovArr.reduce((a,v) => a+v,0) / avgCovArr.length;
+  const avgCovArr = sites.map(([,s]) => s.sitemap.total_urls > 0 ? s.gsc.indexed_pages / s.sitemap.total_urls : 0);
+  const avgCov = avgCovArr.length > 0 ? avgCovArr.reduce((a,v) => a+v,0) / avgCovArr.length : 0;
 
   let rows = '';
   sites.forEach(([domain, s]) => {
-    const cov = s.gsc.indexed_pages / s.sitemap.total_urls;
+    const cov = s.sitemap.total_urls > 0 ? s.gsc.indexed_pages / s.sitemap.total_urls : 0;
     const roleHtml = s.role === 'main' ? `<span class="site-role-main">主站</span>` : `<span class="site-role-sat">衛星</span>`;
     const cwvColor = s.cwv.score >= 90 ? 'var(--green)' : s.cwv.score >= 75 ? 'var(--orange)' : 'var(--red)';
     rows += `<tr onclick="switchSite('${domain}')" style="cursor:pointer">
@@ -382,14 +382,15 @@ function renderOverview(g) {
           const totArticles = allSites.reduce((a,s) => a + s.content.total_articles + (s.content.sports_articles||0), 0);
           const len = allSites[0] && allSites[0].daily_7d ? allSites[0].daily_7d.length : 7;
           let r = '';
-          for (let j = 0; j < len; j++) {
+          for (let j = len - 1; j >= 0; j--) {
             const date = allSites[0] && allSites[0].daily_7d ? allSites[0].daily_7d[j].date : '–';
-            const sessions = allSites.reduce((a,s) => a + ((s.daily_7d||[])[j]||{}).sessions||0, 0);
+            const sessions = allSites.reduce((a,s) => a + (((s.daily_7d||[])[j]||{}).sessions||0), 0);
             const gscImp = allSites.reduce((a,s) => { const v = ((s.daily_7d||[])[j]||{}).gsc_imp; return v !== null && v !== undefined ? a + v : a; }, 0);
             const gscClk = allSites.reduce((a,s) => { const v = ((s.daily_7d||[])[j]||{}).gsc_clk; return v !== null && v !== undefined ? a + v : a; }, 0);
-            const cta = allSites.reduce((a,s) => a + ((s.daily_7d||[])[j]||{}).cta_clk||0, 0);
+            const cta = allSites.reduce((a,s) => a + (((s.daily_7d||[])[j]||{}).cta_clk||0), 0);
+            const rowArticles = allSites.reduce((a,s) => a + (((s.daily_7d||[])[j]||{}).articles||0), 0);
             const hasGsc = allSites.some(s => ((s.daily_7d||[])[j]||{}).gsc_imp !== null && ((s.daily_7d||[])[j]||{}).gsc_imp !== undefined);
-            r += '<tr><td><strong>' + date + '</strong></td><td>' + fmt(sessions) + '</td><td>' + (hasGsc ? fmt(gscImp) : '<span style="color:var(--gray-300)">—</span>') + '</td><td>' + (hasGsc ? fmt(gscClk) : '<span style="color:var(--gray-300)">—</span>') + '</td><td>' + fmt(cta) + '</td><td>' + totArticles + '</td></tr>';
+            r += '<tr><td><strong>' + date + '</strong></td><td>' + fmt(sessions) + '</td><td>' + (hasGsc ? fmt(gscImp) : '<span style="color:var(--gray-300)">—</span>') + '</td><td>' + (hasGsc ? fmt(gscClk) : '<span style="color:var(--gray-300)">—</span>') + '</td><td>' + fmt(cta) + '</td><td>' + fmt(rowArticles) + '</td></tr>';
           }
           return r;
         })()}</tbody>
@@ -415,14 +416,14 @@ function renderOverview(g) {
 
 // ── Site Panel ────────────────────────────────────────
 function renderSite(domain, s, g) {
-  const cov = s.gsc.indexed_pages / s.sitemap.total_urls;
+  const cov = s.sitemap.total_urls > 0 ? s.gsc.indexed_pages / s.sitemap.total_urls : 0;
   const roleLabel = s.role === 'main' ? '主站' : '衛星站';
   let kwRows = s.gsc.top_keywords.map(k => `
     <tr><td>${k.kw}</td>
     <td><span class="pos-badge ${posClass(k.pos)}">#${k.pos.toFixed(1)}</span></td>
     <td>${k.clicks}</td></tr>`).join('');
 
-  const d7 = s.daily_7d || [];
+  const d7 = [...(s.daily_7d || [])].reverse();
   const d7rows = d7.map(r => `<tr>
     <td><strong>${r.date}</strong></td>
     <td>${fmt(r.sessions)}</td>
