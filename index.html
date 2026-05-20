@@ -146,8 +146,9 @@ tr:hover td{background:var(--gray-50)}
     </div>
   </div>
   <div class="hd-right">
-    <strong id="hd-update">讀取中…</strong>
-    <div>每日 05:30 HKT 自動更新</div>
+    <strong id="hd-now">--:-- HKT</strong>
+    <div id="hd-update">資料更新: 讀取中…</div>
+    <div>每 12 小時更新 (05:30 / 17:30 HKT)</div>
   </div>
 </header>
 
@@ -262,6 +263,18 @@ async function init() {
   buildGroupSel();
   const firstGroup = Object.keys(DATA.groups)[0];
   switchGroup(firstGroup);
+  startClock();
+}
+
+function startClock() {
+  function tick() {
+    const now = new Date();
+    const hkt = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
+    document.getElementById('hd-now').textContent =
+      `${hkt.getMonth()+1}/${hkt.getDate()} ${String(hkt.getHours()).padStart(2,'0')}:${String(hkt.getMinutes()).padStart(2,'0')} HKT`;
+  }
+  tick();
+  setInterval(tick, 60000);
 }
 
 function buildGroupSel() {
@@ -280,7 +293,7 @@ function switchGroup(gid) {
   document.getElementById('group-sel').value = gid;
   const g = DATA.groups[gid];
   const dt = new Date(DATA.generated_at);
-  document.getElementById('hd-update').textContent = `${dt.getMonth()+1}/${dt.getDate()} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')} HKT`;
+  document.getElementById('hd-update').textContent = `資料更新: ${dt.getMonth()+1}/${dt.getDate()} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')} HKT`;
   buildTabs(gid);
   switchSite('__overview__');
 }
