@@ -129,6 +129,16 @@ tr:hover td{background:var(--gray-50)}
   .cwv-grid{grid-template-columns:1fr}
 }
 
+/* ── AI Crawler badges ── */
+.ai-badge{display:inline-block;padding:2px 7px;border-radius:100px;font-size:10px;font-weight:700;margin:1px 2px;white-space:nowrap}
+.ai-fresh{background:#d1fae5;color:#065f46}
+.ai-stale{background:#f3f4f6;color:#6b7280}
+.ai-none{color:var(--gray-300);font-size:11px}
+.ai-table{width:100%;border-collapse:collapse;font-size:12px}
+.ai-table th{text-align:left;padding:8px 10px;background:var(--gray-50);color:var(--gray-400);font-size:10px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--gray-200);font-weight:700}
+.ai-table td{padding:9px 10px;border-bottom:1px solid var(--gray-100);vertical-align:middle}
+.ai-table tr:last-child td{border-bottom:none}
+
 /* ── Loading state ── */
 .loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:200px;color:var(--gray-400);gap:12px;font-size:13px}
 .spinner{width:32px;height:32px;border:3px solid var(--gray-200);border-top-color:var(--blue);border-radius:50%;animation:spin .7s linear infinite}
@@ -179,7 +189,8 @@ const MOCK = {
           cta: { clicks_today: 4, clicks_7d: 23, unique_clicks_7d: 19, conversions_today: 1, conversions_7d: 8 },
           gsc: { impressions_28d: 4200, clicks_28d: 89, ctr: 0.0212, avg_position: 22.1, indexed_pages: 72, top_keywords: [{ kw: 'sports betting hk guide', pos: 8.2, clicks: 22 },{ kw: 'spheretap review', pos: 3.1, clicks: 18 },{ kw: 'online casino tips', pos: 14.5, clicks: 15 },{ kw: 'live casino strategy', pos: 28.4, clicks: 8 }] },
           sitemap: { total_urls: 89 }, content: { total_articles: 58, sports_articles: 28, this_month: 43, this_week: 32 },
-          cwv: { lcp: 1.8, cls: 0.04, inp: 145, score: 92 }
+          cwv: { lcp: 1.8, cls: 0.04, inp: 145, score: 92 },
+          ai_crawlers: { GPTBot: { last_seen: '2026-05-22T08:00:00+08:00', count_30d: 12 }, ClaudeBot: { last_seen: '2026-05-20T14:30:00+08:00', count_30d: 3 }, CCBot: { last_seen: '2026-05-18T06:00:00+08:00', count_30d: 8 } }
         },
         'matchvangtage.com': {
           label: '體育博彩攻略', role: 'satellite',
@@ -187,7 +198,8 @@ const MOCK = {
           cta: { clicks_today: 0, clicks_7d: 2, unique_clicks_7d: 2, conversions_today: 0, conversions_7d: 0 },
           gsc: { impressions_28d: 124, clicks_28d: 3, ctr: 0.0242, avg_position: 41.2, indexed_pages: 12, top_keywords: [{ kw: 'sports betting tips', pos: 35.1, clicks: 2 },{ kw: 'hk football odds', pos: 52.3, clicks: 1 }] },
           sitemap: { total_urls: 28 }, content: { total_articles: 22, this_month: 22, this_week: 8 },
-          cwv: { lcp: 1.9, cls: 0.03, inp: 162, score: 91 }
+          cwv: { lcp: 1.9, cls: 0.03, inp: 162, score: 91 },
+          ai_crawlers: { GPTBot: { last_seen: '2026-05-21T10:00:00+08:00', count_30d: 5 } }
         },
         'tableedge.org': {
           label: '真人遊戲技術流', role: 'satellite',
@@ -250,6 +262,22 @@ const cwvLabel = (metric, val) => {
   if (metric === 'inp') return val <= 200 ? '良好' : val <= 500 ? '待改善' : '差';
 };
 const destroyChart = id => { if (charts[id]) { charts[id].destroy(); delete charts[id]; } };
+
+const AI_CRAWLER_PRODUCTS = { GPTBot:'OpenAI / ChatGPT', ClaudeBot:'Anthropic / Claude', 'Google-Extended':'Gemini / Google AI', PerplexityBot:'Perplexity', CCBot:'Common Crawl', Bytespider:'ByteDance / TikTok', 'cohere-ai':'Cohere', YouBot:'You.com', Amazonbot:'Amazon AI' };
+const ALL_AI_CRAWLERS = Object.keys(AI_CRAWLER_PRODUCTS);
+function aiLastSeen(iso) {
+  if (!iso) return null;
+  const d = new Date(iso), now = new Date();
+  return Math.floor((now - d) / 864e5); // days ago
+}
+function renderAIBadges(ai) {
+  if (!ai || !Object.keys(ai).length) return '<span class="ai-none">–</span>';
+  return Object.entries(ai).map(([name, info]) => {
+    const days = aiLastSeen(info.last_seen);
+    const cls = days !== null && days <= 7 ? 'ai-fresh' : 'ai-stale';
+    return `<span class="ai-badge ${cls}">${name}</span>`;
+  }).join('');
+}
 
 // ── Init ─────────────────────────────────────────────
 async function init() {
@@ -351,6 +379,9 @@ function renderOverview(g) {
   const avgCovArr = sites.map(([,s]) => s.sitemap.total_urls > 0 ? s.gsc.indexed_pages / s.sitemap.total_urls : 0);
   const avgCov = avgCovArr.length > 0 ? avgCovArr.reduce((a,v) => a+v,0) / avgCovArr.length : 0;
 
+  const aiCoveredCount = sites.filter(([,s]) => s.ai_crawlers && Object.keys(s.ai_crawlers).length > 0).length;
+  const aiCrawlerTypes = new Set(sites.flatMap(([,s]) => Object.keys(s.ai_crawlers || {})));
+
   let rows = '';
   sites.forEach(([domain, s]) => {
     const cov = s.sitemap.total_urls > 0 ? s.gsc.indexed_pages / s.sitemap.total_urls : 0;
@@ -372,6 +403,7 @@ function renderOverview(g) {
       <td>${s.content.total_articles}</td>
       <td>${s.content.sports_articles > 0 ? s.content.sports_articles : '<span style="color:var(--gray-300)">–</span>'}</td>
       <td>${s.content.this_month}</td>
+      <td>${renderAIBadges(s.ai_crawlers)}</td>
     </tr>`;
   });
 
@@ -382,6 +414,7 @@ function renderOverview(g) {
     <div class="kcard c-green"><div class="kl">GSC 點擊 (28d)</div><div class="kv">${fmt(totClicks)}</div><div class="ks">搜尋來源</div></div>
     <div class="kcard c-orange"><div class="kl">平均收錄率</div><div class="kv">${pct(avgCov)}</div><div class="ks">全站平均</div></div>
     <div class="kcard c-purple"><div class="kl">文章總數</div><div class="kv">${fmt(totArticles)}</div><div class="ks">Blog ${totBlogArticles} + 體育 ${totSportsArticles}</div></div>
+    <div class="kcard" style="border-top-color:#0891b2"><div class="kl">AI 爬蟲覆蓋</div><div class="kv" style="color:#0891b2">${aiCoveredCount}/${sites.length} 站</div><div class="ks">${aiCrawlerTypes.size} 種爬蟲偵測到</div></div>
   </div>
   <div class="sec-label">7日每日趨勢（全站合計）</div>
   <div class="card">
@@ -419,7 +452,7 @@ function renderOverview(g) {
         <thead><tr>
           <th>站點</th><th>類型</th><th>昨日流量</th><th>30日流量</th>
           <th>GSC曝光(7d)</th><th>GSC點擊(7d)</th><th>GSC曝光(28d)</th><th>GSC點擊(28d)</th><th>平均排名</th>
-          <th>收錄 / Sitemap</th><th>Blog 文章</th><th>體育新聞</th><th>本月新發</th>
+          <th>收錄 / Sitemap</th><th>Blog 文章</th><th>體育新聞</th><th>本月新發</th><th>AI 爬蟲</th>
         </tr></thead>
         <tbody>${rows}</tbody>
       </table>
@@ -527,6 +560,36 @@ function renderSite(domain, s, g) {
         <tbody>${d7rows || '<tr><td colspan="6" style="text-align:center;color:var(--gray-300)">無資料</td></tr>'}</tbody>
       </table>
       <div style="font-size:10px;color:var(--gray-300);padding:4px 0">GSC 資料有 2-3 天延遲，最近 2-3 天顯示 —</div>
+    </div>
+  </div>
+
+  <div class="sec-label">AI 爬蟲訪問紀錄</div>
+  <div class="card">
+    <div class="tbl-wrap">
+      <table class="ai-table">
+        <thead><tr><th>爬蟲</th><th>最後訪問</th><th>30日次數</th><th>對應 AI 產品</th></tr></thead>
+        <tbody>${ALL_AI_CRAWLERS.map(name => {
+          const info = (s.ai_crawlers || {})[name];
+          const days = info ? aiLastSeen(info.last_seen) : null;
+          const isFresh = days !== null && days <= 7;
+          if (info) {
+            const dateStr = info.last_seen ? info.last_seen.slice(0,10) : '–';
+            const daysStr = days === 0 ? '今天' : days === 1 ? '1 天前' : days + ' 天前';
+            return `<tr>
+              <td><span class="ai-badge ${isFresh ? 'ai-fresh' : 'ai-stale'}">${name}</span></td>
+              <td style="color:var(--gray-800)">${dateStr} <span style="font-size:10px;color:var(--gray-400)">(${daysStr})</span></td>
+              <td style="font-weight:700">${info.count_30d || 0} 次</td>
+              <td style="color:var(--gray-600)">${AI_CRAWLER_PRODUCTS[name] || ''}</td>
+            </tr>`;
+          }
+          return `<tr style="opacity:.45">
+            <td><span class="ai-badge ai-stale">${name}</span></td>
+            <td style="color:var(--gray-300)">未偵測到</td>
+            <td style="color:var(--gray-300)">–</td>
+            <td style="color:var(--gray-400)">${AI_CRAWLER_PRODUCTS[name] || ''}</td>
+          </tr>`;
+        }).join('')}</tbody>
+      </table>
     </div>
   </div>
 
