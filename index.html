@@ -143,6 +143,8 @@ tr:hover td{background:var(--gray-50)}
 .loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:200px;color:var(--gray-400);gap:12px;font-size:13px}
 .spinner{width:32px;height:32px;border:3px solid var(--gray-200);border-top-color:var(--blue);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
+.ext-link{display:inline-flex;align-items:center;gap:2px;padding:2px 7px;background:var(--blue-l);color:var(--blue);text-decoration:none;border-radius:4px;font-size:10px;font-weight:600;vertical-align:middle;margin-left:4px;opacity:.8;transition:opacity .15s;white-space:nowrap}
+.ext-link:hover{opacity:1;background:#c7d7fd}
 </style>
 </head>
 <body>
@@ -174,6 +176,16 @@ tr:hover td{background:var(--gray-50)}
 <script>
 // ── Config ──────────────────────────────────────────
 const REAL_DATA_URL = 'https://raw.githubusercontent.com/wmzic929-prog/spheretap/main/seo-data/seo-report.json';
+
+// ── Phase 1 stub data generator ──────────────────────
+function p1stub(label) {
+  return { label, role: 'satellite',
+    traffic: { sessions_today:0, sessions_7d:0, sessions_30d:0, series_30d:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], bounce_rate:0, avg_duration_sec:0, mobile_pct:0.72, sources:{organic:0.25,direct:0.50,social:0.15,referral:0.10} },
+    cta: { clicks_today:0, clicks_7d:0, unique_clicks_7d:0, conversions_today:0, conversions_7d:0 },
+    gsc: { impressions_28d:0, impressions_7d:0, clicks_28d:0, clicks_7d:0, ctr:0, avg_position:0, indexed_pages:0, top_keywords:[] },
+    sitemap: { total_urls:12 }, content: { total_articles:0, this_month:0, this_week:0 },
+    cwv: { lcp:2.0, cls:0.05, inp:180, score:90 }, ai_crawlers:{} };
+}
 
 // ── Mock Data ────────────────────────────────────────
 const MOCK = {
@@ -233,6 +245,38 @@ const MOCK = {
           sitemap: { total_urls: 26 }, content: { total_articles: 20, this_month: 20, this_week: 6 },
           cwv: { lcp: 1.9, cls: 0.04, inp: 167, score: 91 }
         }
+      }
+    },
+    phase1_pages: {
+      name: 'Phase 1 — 博彩站群 (*.pages.dev)',
+      dates_30d: ['4/26','4/27','4/28','4/29','4/30','5/1','5/2','5/3','5/4','5/5','5/6','5/7','5/8','5/9','5/10','5/11','5/12','5/13','5/14','5/15','5/16','5/17','5/18','5/19','5/20','5/21','5/22','5/23','5/24','5/25'],
+      sites: {
+        'soccer-odds-hk.pages.dev': p1stub('足球賠率統計'),
+        'bet-stats-asia.pages.dev':  p1stub('亞洲博彩統計'),
+        'baccarat-data.pages.dev':   p1stub('百家樂數據分析'),
+        'live-table-lab.pages.dev':  p1stub('真人桌遊實驗室'),
+        'hkjc-analysis.pages.dev':   p1stub('HKJC 賽馬分析'),
+        'racing-odds-hk.pages.dev':  p1stub('香港賽馬賠率'),
+        'slot-rtp-data.pages.dev':   p1stub('老虎機 RTP 數據'),
+        'reel-metrics.pages.dev':    p1stub('轉輪遊戲指標'),
+        'casino-audit-hk.pages.dev': p1stub('博彩平台稽核'),
+        'game-review-lab.pages.dev': p1stub('遊戲評測實驗室')
+      }
+    },
+    phase1_domains: {
+      name: 'Phase 1 — 非博彩站群 (真實域名)',
+      dates_30d: ['4/26','4/27','4/28','4/29','4/30','5/1','5/2','5/3','5/4','5/5','5/6','5/7','5/8','5/9','5/10','5/11','5/12','5/13','5/14','5/15','5/16','5/17','5/18','5/19','5/20','5/21','5/22','5/23','5/24','5/25'],
+      sites: {
+        'matchdatalab.com':       p1stub('競技運動數據研究'),
+        'athlete-index.com':      p1stub('運動科學與表現'),
+        'esports-intel.com':      p1stub('電競產業研究'),
+        'proplayerstat.com':      p1stub('電競選手數據庫'),
+        'tilestrategist.com':     p1stub('棋牌博弈論研究院'),
+        'gamedesignhq.com':       p1stub('策略遊戲設計分析'),
+        'platformverdict.com':    p1stub('娛樂平台深度評測'),
+        'probdecision.com':       p1stub('概率與決策科學'),
+        'asiaesportculture.com':  p1stub('亞洲電競文化'),
+        'entertaintrendlab.com':  p1stub('數字娛樂消費研究')
       }
     }
   }
@@ -387,7 +431,7 @@ function renderOverview(g) {
     const cov = s.sitemap.total_urls > 0 ? s.gsc.indexed_pages / s.sitemap.total_urls : 0;
     const roleHtml = s.role === 'main' ? `<span class="site-role-main">主站</span>` : `<span class="site-role-sat">衛星</span>`;
     rows += `<tr onclick="switchSite('${domain}')" style="cursor:pointer">
-      <td><strong>${domain}</strong><br><span style="font-size:10px;color:var(--gray-400)">${s.label}</span></td>
+      <td><strong>${domain}</strong><a href="https://${domain}" target="_blank" rel="noopener" class="ext-link" onclick="event.stopPropagation()" title="開啟網站">↗</a><br><span style="font-size:10px;color:var(--gray-400)">${s.label}</span></td>
       <td>${roleHtml}</td>
       <td>${fmt(s.traffic.sessions_today)}</td>
       <td>${fmt(s.traffic.sessions_30d)}</td>
@@ -482,6 +526,7 @@ function renderSite(domain, s, g) {
   return `
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap">
     <div style="font-size:18px;font-weight:800;color:var(--gray-800)">${domain}</div>
+    <a href="https://${domain}" target="_blank" rel="noopener" class="ext-link" style="font-size:11px;padding:3px 10px">↗ 開啟網站</a>
     <div style="font-size:11px;color:var(--gray-400)">${s.label} · ${roleLabel}</div>
   </div>
 
