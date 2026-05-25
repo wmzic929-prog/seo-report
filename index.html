@@ -360,7 +360,7 @@ function renderAlertBanner(data) {
 }
 const destroyChart = id => { if (charts[id]) { charts[id].destroy(); delete charts[id]; } };
 
-const AI_CRAWLER_PRODUCTS = { GPTBot:'OpenAI / ChatGPT', ClaudeBot:'Anthropic / Claude', 'Google-Extended':'Gemini / Google AI', PerplexityBot:'Perplexity', CCBot:'Common Crawl', Bytespider:'ByteDance / TikTok', 'cohere-ai':'Cohere', YouBot:'You.com', Amazonbot:'Amazon AI' };
+const AI_CRAWLER_PRODUCTS = { GPTBot:'OpenAI / ChatGPT', ClaudeBot:'Anthropic / Claude', 'Claude-User':'Anthropic / Claude (瀏覽)', 'anthropic-ai':'Anthropic AI', 'Google-Extended':'Gemini / Google AI', PerplexityBot:'Perplexity', CCBot:'Common Crawl', Bytespider:'ByteDance / TikTok', 'cohere-ai':'Cohere', YouBot:'You.com', Amazonbot:'Amazon AI' };
 const ALL_AI_CRAWLERS = Object.keys(AI_CRAWLER_PRODUCTS);
 function aiLastSeen(iso) {
   if (!iso) return null;
