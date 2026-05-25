@@ -22,9 +22,18 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 .hd-left{display:flex;align-items:center;gap:14px}
 .logo{font-size:16px;font-weight:800;letter-spacing:-0.5px;white-space:nowrap}
 .logo em{color:#93c5fd;font-style:normal}
-.group-sel{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:5px 12px;border-radius:6px;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:6px;white-space:nowrap}
-.group-sel select{background:none;border:none;color:#fff;font-size:12px;cursor:pointer;outline:none;padding-right:4px}
-.group-sel select option{background:#1e3a8a;color:#fff}
+.group-label{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:5px 12px;border-radius:6px;font-size:12px;display:flex;align-items:center;gap:6px;white-space:nowrap;font-weight:600}
+/* ── Sub-tabs ── */
+.sub-tabs-wrap{background:#f0f4ff;border-bottom:2px solid #c7d7fd;position:sticky;top:98px;z-index:180;overflow-x:auto}
+.sub-tabs-wrap::-webkit-scrollbar{height:3px}
+.sub-tabs-wrap::-webkit-scrollbar-thumb{background:#c7d7fd}
+.sub-tabs-wrap .tabs{padding:0 16px}
+.sub-tabs-wrap .tb{font-size:12px;padding:8px 13px;color:#4b6aaa;border-bottom-color:transparent}
+.sub-tabs-wrap .tb:hover{color:var(--blue)}
+.sub-tabs-wrap .tb.act{color:var(--blue);border-bottom-color:var(--blue)}
+/* Phase tab badges */
+.tb-badge.p0{background:#fef3c7;color:#92400e}
+.tb-badge.p1{background:#d1fae5;color:#065f46}
 .hd-right{font-size:11px;color:rgba(255,255,255,.65);text-align:right;line-height:1.6}
 .hd-right strong{color:#fff;font-size:12px}
 
@@ -152,9 +161,9 @@ tr:hover td{background:var(--gray-50)}
 <header class="hd">
   <div class="hd-left">
     <div class="logo">SEO <em>Dashboard</em></div>
-    <div class="group-sel">
+    <div class="group-label">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-      <select id="group-sel" onchange="switchGroup(this.value)"></select>
+      Spheretap
     </div>
   </div>
   <div class="hd-right">
@@ -167,6 +176,9 @@ tr:hover td{background:var(--gray-50)}
 <div class="tabs-wrap">
   <div class="tabs" id="tabs"></div>
 </div>
+<div class="sub-tabs-wrap" id="sub-tabs-wrap" style="display:none">
+  <div class="tabs" id="sub-tabs"></div>
+</div>
 
 <div class="content" id="content">
   <div class="loading"><div class="spinner"></div>載入資料中…</div>
@@ -176,6 +188,19 @@ tr:hover td{background:var(--gray-50)}
 <script>
 // ── Config ──────────────────────────────────────────
 const REAL_DATA_URL = 'https://raw.githubusercontent.com/wmzic929-prog/spheretap/main/seo-data/seo-report.json';
+
+// ── Phase maps ───────────────────────────────────────
+const MOCK_PHASES = {
+  0: ['matchvangtage.com','tableedge.org','turf-pulse.com','spin-metrics.com','verifiedplays.com'],
+  1: ['matchdatalab.com','athlete-index.com','esports-intel.com','proplayerstat.com','tilestrategist.com','gamedesignhq.com','platformverdict.com','probdecision.com','asiaesportculture.com','entertaintrendlab.com']
+};
+const PHASE1_LABELS = {
+  'matchdatalab.com':'競技運動數據研究','athlete-index.com':'運動科學與表現',
+  'esports-intel.com':'電競產業研究','proplayerstat.com':'電競選手數據庫',
+  'tilestrategist.com':'棋牌博弈論研究院','gamedesignhq.com':'策略遊戲設計分析',
+  'platformverdict.com':'娛樂平台深度評測','probdecision.com':'概率與決策科學',
+  'asiaesportculture.com':'亞洲電競文化','entertaintrendlab.com':'數字娛樂消費研究'
+};
 
 // ── Phase 1 stub data generator ──────────────────────
 function p1stub(label) {
@@ -189,11 +214,12 @@ function p1stub(label) {
 
 // ── Mock Data ────────────────────────────────────────
 const MOCK = {
-  generated_at: '2026-05-19T05:30:00+08:00',
+  generated_at: '2026-05-25T05:30:00+08:00',
   groups: {
     spheretap: {
-      name: 'Spheretap 集團',
-      dates_30d: ['4/20','4/21','4/22','4/23','4/24','4/25','4/26','4/27','4/28','4/29','4/30','5/1','5/2','5/3','5/4','5/5','5/6','5/7','5/8','5/9','5/10','5/11','5/12','5/13','5/14','5/15','5/16','5/17','5/18','5/19'],
+      name: 'Spheretap',
+      phases: MOCK_PHASES,
+      dates_30d: ['4/26','4/27','4/28','4/29','4/30','5/1','5/2','5/3','5/4','5/5','5/6','5/7','5/8','5/9','5/10','5/11','5/12','5/13','5/14','5/15','5/16','5/17','5/18','5/19','5/20','5/21','5/22','5/23','5/24','5/25'],
       sites: {
         'spheretap.com': {
           label: 'Spheretap 主站', role: 'main',
@@ -244,48 +270,26 @@ const MOCK = {
           gsc: { impressions_28d: 143, clicks_28d: 4, ctr: 0.0280, avg_position: 38.9, indexed_pages: 15, top_keywords: [{ kw: 'licensed casino review', pos: 32.5, clicks: 3 },{ kw: 'casino platform comparison', pos: 45.1, clicks: 1 }] },
           sitemap: { total_urls: 26 }, content: { total_articles: 20, this_month: 20, this_week: 6 },
           cwv: { lcp: 1.9, cls: 0.04, inp: 167, score: 91 }
-        }
-      }
-    },
-    phase1_pages: {
-      name: 'Phase 1 — 博彩站群 (*.pages.dev)',
-      dates_30d: ['4/26','4/27','4/28','4/29','4/30','5/1','5/2','5/3','5/4','5/5','5/6','5/7','5/8','5/9','5/10','5/11','5/12','5/13','5/14','5/15','5/16','5/17','5/18','5/19','5/20','5/21','5/22','5/23','5/24','5/25'],
-      sites: {
-        'soccer-odds-hk.pages.dev': p1stub('足球賠率統計'),
-        'bet-stats-asia.pages.dev':  p1stub('亞洲博彩統計'),
-        'baccarat-data.pages.dev':   p1stub('百家樂數據分析'),
-        'live-table-lab.pages.dev':  p1stub('真人桌遊實驗室'),
-        'hkjc-analysis.pages.dev':   p1stub('HKJC 賽馬分析'),
-        'racing-odds-hk.pages.dev':  p1stub('香港賽馬賠率'),
-        'slot-rtp-data.pages.dev':   p1stub('老虎機 RTP 數據'),
-        'reel-metrics.pages.dev':    p1stub('轉輪遊戲指標'),
-        'casino-audit-hk.pages.dev': p1stub('博彩平台稽核'),
-        'game-review-lab.pages.dev': p1stub('遊戲評測實驗室')
-      }
-    },
-    phase1_domains: {
-      name: 'Phase 1 — 非博彩站群 (真實域名)',
-      dates_30d: ['4/26','4/27','4/28','4/29','4/30','5/1','5/2','5/3','5/4','5/5','5/6','5/7','5/8','5/9','5/10','5/11','5/12','5/13','5/14','5/15','5/16','5/17','5/18','5/19','5/20','5/21','5/22','5/23','5/24','5/25'],
-      sites: {
-        'matchdatalab.com':       p1stub('競技運動數據研究'),
-        'athlete-index.com':      p1stub('運動科學與表現'),
-        'esports-intel.com':      p1stub('電競產業研究'),
-        'proplayerstat.com':      p1stub('電競選手數據庫'),
-        'tilestrategist.com':     p1stub('棋牌博弈論研究院'),
-        'gamedesignhq.com':       p1stub('策略遊戲設計分析'),
-        'platformverdict.com':    p1stub('娛樂平台深度評測'),
-        'probdecision.com':       p1stub('概率與決策科學'),
-        'asiaesportculture.com':  p1stub('亞洲電競文化'),
-        'entertaintrendlab.com':  p1stub('數字娛樂消費研究')
+        },
+        // ── Phase 1 stubs ──
+        'matchdatalab.com':      p1stub('競技運動數據研究'),
+        'athlete-index.com':     p1stub('運動科學與表現'),
+        'esports-intel.com':     p1stub('電競產業研究'),
+        'proplayerstat.com':     p1stub('電競選手數據庫'),
+        'tilestrategist.com':    p1stub('棋牌博弈論研究院'),
+        'gamedesignhq.com':      p1stub('策略遊戲設計分析'),
+        'platformverdict.com':   p1stub('娛樂平台深度評測'),
+        'probdecision.com':      p1stub('概率與決策科學'),
+        'asiaesportculture.com': p1stub('亞洲電競文化'),
+        'entertaintrendlab.com': p1stub('數字娛樂消費研究')
       }
     }
   }
 };
-
 // ── State ────────────────────────────────────────────
 let DATA = null;
-let currentGroup = null;
-let currentSite = '__overview__';
+let currentTab = '__overview__';
+let currentSubSite = null;
 const charts = {};
 
 // ── Helpers ──────────────────────────────────────────
@@ -329,16 +333,22 @@ async function init() {
     const res = await fetch(REAL_DATA_URL, { cache: 'no-store' });
     if (!res.ok) throw new Error('not found');
     DATA = await res.json();
-    // Supplement real data with MOCK groups not yet tracked by aggregator (Phase 1 stubs)
-    for (const [gid, g] of Object.entries(MOCK.groups)) {
-      if (!DATA.groups[gid]) DATA.groups[gid] = g;
+    const sg = DATA.groups.spheretap;
+    if (sg) {
+      sg.name = 'Spheretap';
+      if (!sg.phases) sg.phases = MOCK_PHASES;
+      for (const [domain, label] of Object.entries(PHASE1_LABELS)) {
+        if (!sg.sites[domain]) sg.sites[domain] = p1stub(label);
+      }
     }
   } catch {
     DATA = MOCK;
   }
-  buildGroupSel();
-  const firstGroup = Object.keys(DATA.groups)[0];
-  switchGroup(firstGroup);
+  const dt = new Date(DATA.generated_at);
+  document.getElementById('hd-update').textContent =
+    `資料更新: ${dt.getMonth()+1}/${dt.getDate()} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')} HKT`;
+  buildTabs();
+  switchTab('__overview__');
   startClock();
 }
 
@@ -353,67 +363,88 @@ function startClock() {
   setInterval(tick, 60000);
 }
 
-function buildGroupSel() {
-  const sel = document.getElementById('group-sel');
-  sel.innerHTML = '';
-  for (const [gid, g] of Object.entries(DATA.groups)) {
-    const opt = document.createElement('option');
-    opt.value = gid;
-    opt.textContent = g.name;
-    sel.appendChild(opt);
+// ── Tab system ────────────────────────────────────────
+function buildTabs() {
+  const g = DATA.groups.spheretap;
+  const phases = g.phases || MOCK_PHASES;
+  const p0 = phases[0] || [], p1 = phases[1] || [];
+  const tabsEl = document.getElementById('tabs');
+  tabsEl.innerHTML = `
+    <button class="tb" data-key="__overview__" onclick="switchTab('__overview__')">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> 總覽
+    </button>
+    <button class="tb" data-key="spheretap.com" onclick="switchTab('spheretap.com')">
+      spheretap.com <span class="tb-badge main">主站</span>
+    </button>
+    <button class="tb" data-key="__phase0__" onclick="switchTab('__phase0__')">
+      衛星站群 Phase 0 <span class="tb-badge p0">×${p0.length}</span>
+    </button>
+    <button class="tb" data-key="__phase1__" onclick="switchTab('__phase1__')">
+      衛星站群 Phase 1 <span class="tb-badge p1">×${p1.length}</span>
+    </button>`;
+  updateTabActive();
+}
+
+function updateTabActive() {
+  document.querySelectorAll('#tabs .tb').forEach(b =>
+    b.classList.toggle('act', b.dataset.key === currentTab));
+}
+
+function switchTab(key) {
+  currentTab = key;
+  currentSubSite = null;
+  updateTabActive();
+  const subWrap = document.getElementById('sub-tabs-wrap');
+  if (key === '__overview__' || key === 'spheretap.com') {
+    subWrap.style.display = 'none';
+    document.getElementById('sub-tabs').innerHTML = '';
+    renderMain(key);
+  } else {
+    const phaseNum = parseInt(key.replace('__phase', ''));
+    buildSubTabs(phaseNum);
+    subWrap.style.display = '';
+    const g = DATA.groups.spheretap;
+    const phases = g.phases || MOCK_PHASES;
+    const sites = phases[phaseNum] || [];
+    if (sites.length) switchSubSite(sites[0]);
   }
 }
 
-function switchGroup(gid) {
-  currentGroup = gid;
-  document.getElementById('group-sel').value = gid;
-  const g = DATA.groups[gid];
-  const dt = new Date(DATA.generated_at);
-  document.getElementById('hd-update').textContent = `資料更新: ${dt.getMonth()+1}/${dt.getDate()} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')} HKT`;
-  buildTabs(gid);
-  switchSite('__overview__');
+function buildSubTabs(phaseNum) {
+  const g = DATA.groups.spheretap;
+  const phases = g.phases || MOCK_PHASES;
+  const sites = phases[phaseNum] || [];
+  document.getElementById('sub-tabs').innerHTML = sites.map(domain =>
+    `<button class="tb" data-subkey="${domain}" onclick="switchSubSite('${domain}')">${domain}</button>`
+  ).join('');
 }
 
-function buildTabs(gid) {
-  const g = DATA.groups[gid];
-  const tabsEl = document.getElementById('tabs');
-  tabsEl.innerHTML = '';
-  const all = [{ key: '__overview__', label: '總覽', role: 'ov' },
-    ...Object.entries(g.sites).map(([k,v]) => ({ key: k, label: k, role: v.role }))];
-  all.forEach(({ key, label, role }) => {
-    const btn = document.createElement('button');
-    btn.className = 'tb';
-    btn.dataset.key = key;
-    btn.onclick = () => switchSite(key);
-    if (role === 'ov') {
-      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> ${label}`;
-    } else {
-      const badge = role === 'main' ? `<span class="tb-badge main">主站</span>` : `<span class="tb-badge">衛星</span>`;
-      btn.innerHTML = `${label} ${badge}`;
-    }
-    tabsEl.appendChild(btn);
-  });
+function updateSubTabActive() {
+  document.querySelectorAll('#sub-tabs .tb').forEach(b =>
+    b.classList.toggle('act', b.dataset.subkey === currentSubSite));
 }
 
-function switchSite(siteKey) {
-  currentSite = siteKey;
-  document.querySelectorAll('.tb').forEach(b => b.classList.toggle('act', b.dataset.key === siteKey));
-  renderContent(siteKey);
+function switchSubSite(domain) {
+  currentSubSite = domain;
+  updateSubTabActive();
+  renderMain(domain);
 }
 
-// ── Render ───────────────────────────────────────────
-function renderContent(siteKey) {
-  const g = DATA.groups[currentGroup];
+// ── Render router ─────────────────────────────────────
+function renderMain(key) {
+  const g = DATA.groups.spheretap;
   const content = document.getElementById('content');
   Object.values(charts).forEach(c => c.destroy());
   Object.keys(charts).forEach(k => delete charts[k]);
-  content.innerHTML = siteKey === '__overview__' ? renderOverview(g) : renderSite(siteKey, g.sites[siteKey], g);
-  if (siteKey === '__overview__') return;
-  const s = g.sites[siteKey];
-  requestAnimationFrame(() => {
-    renderTrafficChart(siteKey, s, g.dates_30d);
-    renderSourcesChart(siteKey, s);
-  });
+  if (key === '__overview__') {
+    content.innerHTML = renderOverview(g);
+  } else if (g.sites[key]) {
+    content.innerHTML = renderSite(key, g.sites[key], g);
+    requestAnimationFrame(() => {
+      renderTrafficChart(key, g.sites[key], g.dates_30d);
+      renderSourcesChart(key, g.sites[key]);
+    });
+  }
 }
 
 // ── Overview ─────────────────────────────────────────
