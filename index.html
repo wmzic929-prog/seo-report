@@ -329,6 +329,10 @@ async function init() {
     const res = await fetch(REAL_DATA_URL, { cache: 'no-store' });
     if (!res.ok) throw new Error('not found');
     DATA = await res.json();
+    // Supplement real data with MOCK groups not yet tracked by aggregator (Phase 1 stubs)
+    for (const [gid, g] of Object.entries(MOCK.groups)) {
+      if (!DATA.groups[gid]) DATA.groups[gid] = g;
+    }
   } catch {
     DATA = MOCK;
   }
