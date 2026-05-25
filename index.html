@@ -209,7 +209,7 @@ function p1stub(label) {
     cta: { clicks_today:0, clicks_7d:0, unique_clicks_7d:0, conversions_today:0, conversions_7d:0 },
     gsc: { impressions_28d:0, impressions_7d:0, clicks_28d:0, clicks_7d:0, ctr:0, avg_position:0, indexed_pages:0, top_keywords:[] },
     sitemap: { total_urls:12 }, content: { total_articles:0, this_month:0, this_week:0 },
-    cwv: { lcp:2.0, cls:0.05, inp:180, score:90 }, ai_crawlers:{} };
+    cwv: { lcp:2000, cls:0.05, inp:180, score:90 }, ai_crawlers:{} };
 }
 
 // ── Mock Data ────────────────────────────────────────
@@ -227,7 +227,7 @@ const MOCK = {
           cta: { clicks_today: 4, clicks_7d: 23, unique_clicks_7d: 19, conversions_today: 1, conversions_7d: 8 },
           gsc: { impressions_28d: 4200, clicks_28d: 89, ctr: 0.0212, avg_position: 22.1, indexed_pages: 72, top_keywords: [{ kw: 'sports betting hk guide', pos: 8.2, clicks: 22 },{ kw: 'spheretap review', pos: 3.1, clicks: 18 },{ kw: 'online casino tips', pos: 14.5, clicks: 15 },{ kw: 'live casino strategy', pos: 28.4, clicks: 8 }] },
           sitemap: { total_urls: 89 }, content: { total_articles: 58, sports_articles: 28, this_month: 43, this_week: 32 },
-          cwv: { lcp: 1.8, cls: 0.04, inp: 145, score: 92 },
+          cwv: { lcp: 1800, cls: 0.04, inp: 145, score: 92 },
           ai_crawlers: { GPTBot: { last_seen: '2026-05-22T08:00:00+08:00', count_30d: 12 }, ClaudeBot: { last_seen: '2026-05-20T14:30:00+08:00', count_30d: 3 }, CCBot: { last_seen: '2026-05-18T06:00:00+08:00', count_30d: 8 } }
         },
         'matchvangtage.com': {
@@ -236,7 +236,7 @@ const MOCK = {
           cta: { clicks_today: 0, clicks_7d: 2, unique_clicks_7d: 2, conversions_today: 0, conversions_7d: 0 },
           gsc: { impressions_28d: 124, clicks_28d: 3, ctr: 0.0242, avg_position: 41.2, indexed_pages: 12, top_keywords: [{ kw: 'sports betting tips', pos: 35.1, clicks: 2 },{ kw: 'hk football odds', pos: 52.3, clicks: 1 }] },
           sitemap: { total_urls: 28 }, content: { total_articles: 22, this_month: 22, this_week: 8 },
-          cwv: { lcp: 1.9, cls: 0.03, inp: 162, score: 91 },
+          cwv: { lcp: 1900, cls: 0.03, inp: 162, score: 91 },
           ai_crawlers: { GPTBot: { last_seen: '2026-05-21T10:00:00+08:00', count_30d: 5 } }
         },
         'tableedge.org': {
@@ -245,7 +245,7 @@ const MOCK = {
           cta: { clicks_today: 0, clicks_7d: 1, unique_clicks_7d: 1, conversions_today: 0, conversions_7d: 0 },
           gsc: { impressions_28d: 87, clicks_28d: 1, ctr: 0.0115, avg_position: 48.7, indexed_pages: 8, top_keywords: [{ kw: 'live baccarat strategy', pos: 42.1, clicks: 1 }] },
           sitemap: { total_urls: 25 }, content: { total_articles: 19, this_month: 19, this_week: 6 },
-          cwv: { lcp: 2.1, cls: 0.06, inp: 198, score: 88 }
+          cwv: { lcp: 2100, cls: 0.06, inp: 198, score: 88 }
         },
         'turf-pulse.com': {
           label: '香港賽馬技術分析', role: 'satellite',
@@ -253,7 +253,7 @@ const MOCK = {
           cta: { clicks_today: 1, clicks_7d: 4, unique_clicks_7d: 4, conversions_today: 0, conversions_7d: 1 },
           gsc: { impressions_28d: 215, clicks_28d: 5, ctr: 0.0233, avg_position: 35.4, indexed_pages: 18, top_keywords: [{ kw: 'hkjc horse racing tips', pos: 28.3, clicks: 3 },{ kw: 'hong kong racing analysis', pos: 41.7, clicks: 2 }] },
           sitemap: { total_urls: 31 }, content: { total_articles: 24, this_month: 24, this_week: 7 },
-          cwv: { lcp: 1.7, cls: 0.04, inp: 155, score: 93 }
+          cwv: { lcp: 1700, cls: 0.04, inp: 155, score: 93 }
         },
         'spin-metrics.com': {
           label: '老虎機遊戲解析', role: 'satellite',
@@ -261,7 +261,7 @@ const MOCK = {
           cta: { clicks_today: 0, clicks_7d: 1, unique_clicks_7d: 1, conversions_today: 0, conversions_7d: 0 },
           gsc: { impressions_28d: 98, clicks_28d: 2, ctr: 0.0204, avg_position: 44.1, indexed_pages: 10, top_keywords: [{ kw: 'slot rtp analysis', pos: 38.2, clicks: 2 }] },
           sitemap: { total_urls: 23 }, content: { total_articles: 17, this_month: 17, this_week: 5 },
-          cwv: { lcp: 2.0, cls: 0.05, inp: 178, score: 89 }
+          cwv: { lcp: 2000, cls: 0.05, inp: 178, score: 89 }
         },
         'verifiedplays.com': {
           label: '平台技術評測', role: 'satellite',
@@ -269,7 +269,7 @@ const MOCK = {
           cta: { clicks_today: 0, clicks_7d: 2, unique_clicks_7d: 2, conversions_today: 0, conversions_7d: 0 },
           gsc: { impressions_28d: 143, clicks_28d: 4, ctr: 0.0280, avg_position: 38.9, indexed_pages: 15, top_keywords: [{ kw: 'licensed casino review', pos: 32.5, clicks: 3 },{ kw: 'casino platform comparison', pos: 45.1, clicks: 1 }] },
           sitemap: { total_urls: 26 }, content: { total_articles: 20, this_month: 20, this_week: 6 },
-          cwv: { lcp: 1.9, cls: 0.04, inp: 167, score: 91 }
+          cwv: { lcp: 1900, cls: 0.04, inp: 167, score: 91 }
         },
         // ── Phase 1 stubs ──
         'matchdatalab.com':      p1stub('競技運動數據研究'),
@@ -300,15 +300,64 @@ const posClass = p => p <= 10 ? 'pos-good' : p <= 30 ? 'pos-mid' : 'pos-low';
 const covClass = r => r >= 0.8 ? 'bar-g' : r >= 0.5 ? 'bar-w' : 'bar-r';
 const covBadge = r => r >= 0.8 ? 'bg' : r >= 0.5 ? 'bw' : 'br';
 const cwvStatus = (metric, val) => {
-  if (metric === 'lcp') return val <= 2.5 ? 'bg' : val <= 4 ? 'bw' : 'br';
+  if (metric === 'lcp') return val <= 1200 ? 'bg' : val <= 2500 ? 'bw' : 'br';
   if (metric === 'cls') return val <= 0.1 ? 'bg' : val <= 0.25 ? 'bw' : 'br';
   if (metric === 'inp') return val <= 200 ? 'bg' : val <= 500 ? 'bw' : 'br';
 };
 const cwvLabel = (metric, val) => {
-  if (metric === 'lcp') return val <= 2.5 ? '良好' : val <= 4 ? '待改善' : '差';
+  if (metric === 'lcp') return val <= 1200 ? '良好' : val <= 2500 ? '待改善' : '差';
   if (metric === 'cls') return val <= 0.1 ? '良好' : val <= 0.25 ? '待改善' : '差';
   if (metric === 'inp') return val <= 200 ? '良好' : val <= 500 ? '待改善' : '差';
 };
+
+// ── Task 1: CWV color helper ──────────────────────────
+function cwvColor(metric, value) {
+  const thresholds = {
+    lcp:   [1200, 2500],
+    cls:   [0.1,  0.25],
+    inp:   [200,  500],
+    score: [90,   50]
+  };
+  const t = thresholds[metric];
+  if (!t) return '#6b7280';
+  const [good, poor] = t;
+  if (metric === 'score') {
+    return value >= good ? '#22c55e' : value >= poor ? '#f59e0b' : '#ef4444';
+  }
+  return value <= good ? '#22c55e' : value <= poor ? '#f59e0b' : '#ef4444';
+}
+
+// ── Task 2: Search trend helper ───────────────────────
+function searchTrend(series7d) {
+  if (!series7d || !series7d.impressions || series7d.impressions.length < 6) return '';
+  const imp = series7d.impressions;
+  const first3 = (imp[0] + imp[1] + imp[2]) / 3;
+  const last3 = (imp[imp.length-3] + imp[imp.length-2] + imp[imp.length-1]) / 3;
+  if (first3 === 0) return '';
+  const change = (last3 - first3) / first3;
+  if (change > 0.1) return ' <span style="color:#22c55e">↑</span>';
+  if (change < -0.1) return ' <span style="color:#ef4444">↓</span>';
+  return ' <span style="color:#6b7280">→</span>';
+}
+
+// ── Task 3: Phase 1 badge helper ─────────────────────
+function gscPendingBadge() {
+  return '<span style="color:#94a3b8;font-size:0.75rem">⏳ 接入中</span>';
+}
+
+// ── Task 4: Alert banner ──────────────────────────────
+function renderAlertBanner(data) {
+  const alerts = data.alerts;
+  if (!alerts || alerts.length === 0) return;
+  // Remove existing banner if any
+  const existing = document.getElementById('alert-banner');
+  if (existing) existing.remove();
+  const banner = document.createElement('div');
+  banner.id = 'alert-banner';
+  banner.style.cssText = 'background:#7f1d1d;color:#fef2f2;padding:12px 20px;font-size:0.875rem;position:sticky;top:0;z-index:300;border-bottom:2px solid #ef4444';
+  banner.innerHTML = '⚠️ SEO 異常偵測 (' + alerts.length + ' 項)：' + alerts.map(a => a.message).join(' | ');
+  document.body.insertBefore(banner, document.body.firstChild);
+}
 const destroyChart = id => { if (charts[id]) { charts[id].destroy(); delete charts[id]; } };
 
 const AI_CRAWLER_PRODUCTS = { GPTBot:'OpenAI / ChatGPT', ClaudeBot:'Anthropic / Claude', 'Google-Extended':'Gemini / Google AI', PerplexityBot:'Perplexity', CCBot:'Common Crawl', Bytespider:'ByteDance / TikTok', 'cohere-ai':'Cohere', YouBot:'You.com', Amazonbot:'Amazon AI' };
@@ -349,6 +398,7 @@ async function init() {
     `資料更新: ${dt.getMonth()+1}/${dt.getDate()} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')} HKT`;
   buildTabs();
   switchTab('__overview__');
+  renderAlertBanner(DATA);
   startClock();
 }
 
@@ -470,12 +520,12 @@ function renderOverview(g) {
       <td>${roleHtml}</td>
       <td>${fmt(s.traffic.sessions_today)}</td>
       <td>${fmt(s.traffic.sessions_30d)}</td>
-      <td>${fmt(s.gsc.impressions_7d||0)}</td>
-      <td>${fmt(s.gsc.clicks_7d||0)}</td>
-      <td>${fmt(s.gsc.impressions_28d)}</td>
-      <td>${fmt(s.gsc.clicks_28d)}</td>
-      <td>${s.gsc.avg_position.toFixed(1)}</td>
-      <td>${s.gsc.indexed_pages} / ${s.sitemap.total_urls}
+      <td>${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.impressions_7d||0) + searchTrend(s.gsc.series_7d)}</td>
+      <td>${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.clicks_7d||0)}</td>
+      <td>${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.impressions_28d)}</td>
+      <td>${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.clicks_28d)}</td>
+      <td>${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : s.gsc.avg_position.toFixed(1)}</td>
+      <td>${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() + ' / ' + s.sitemap.total_urls : s.gsc.indexed_pages + ' / ' + s.sitemap.total_urls}
         <span class="meter"><span class="meter-fill" style="width:${cov*100}%;background:${cov>=.8?'var(--green)':cov>=.5?'var(--orange)':'var(--red)'}"></span></span>
         <span style="font-size:10px;color:var(--gray-400)">${pct(cov)}</span>
       </td>
@@ -596,12 +646,41 @@ function renderSite(domain, s, g) {
 
   <div class="sec-label">GSC 搜尋表現</div>
   <div class="kpi-grid">
-    <div class="kcard c-blue"><div class="kl">GSC曝光 (7d)</div><div class="kv">${fmt(s.gsc.impressions_7d||0)}</div><div class="ks">近7天</div></div>
-    <div class="kcard c-blue"><div class="kl">GSC點擊 (7d)</div><div class="kv">${fmt(s.gsc.clicks_7d||0)}</div><div class="ks">近7天</div></div>
-    <div class="kcard c-green"><div class="kl">GSC曝光 (28d)</div><div class="kv">${fmt(s.gsc.impressions_28d)}</div><div class="ks">Impressions</div></div>
-    <div class="kcard c-green"><div class="kl">GSC點擊 (28d)</div><div class="kv">${fmt(s.gsc.clicks_28d)}</div><div class="ks">Clicks</div></div>
-    <div class="kcard"><div class="kl">點擊率 CTR</div><div class="kv">${pct(s.gsc.ctr)}</div><div class="ks">點擊÷曝光</div></div>
-    <div class="kcard"><div class="kl">平均排名</div><div class="kv">${s.gsc.avg_position.toFixed(1)}</div><div class="ks">Avg. Position</div></div>
+    <div class="kcard c-blue"><div class="kl">GSC曝光 (7d)</div><div class="kv">${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.impressions_7d||0) + searchTrend(s.gsc.series_7d)}</div><div class="ks">近7天</div></div>
+    <div class="kcard c-blue"><div class="kl">GSC點擊 (7d)</div><div class="kv">${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.clicks_7d||0)}</div><div class="ks">近7天</div></div>
+    <div class="kcard c-green"><div class="kl">GSC曝光 (28d)</div><div class="kv">${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.impressions_28d)}</div><div class="ks">Impressions</div></div>
+    <div class="kcard c-green"><div class="kl">GSC點擊 (28d)</div><div class="kv">${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.clicks_28d)}</div><div class="ks">Clicks</div></div>
+    <div class="kcard"><div class="kl">點擊率 CTR</div><div class="kv">${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : pct(s.gsc.ctr)}</div><div class="ks">點擊÷曝光</div></div>
+    <div class="kcard"><div class="kl">平均排名</div><div class="kv">${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : s.gsc.avg_position.toFixed(1)}</div><div class="ks">Avg. Position</div></div>
+  </div>
+
+  <div class="sec-label">Core Web Vitals</div>
+  <div class="card">
+    ${(s.cwv && Object.keys(s.cwv).length > 0) ? `
+    <div class="cwv-grid">
+      <div class="cwv-item">
+        <div class="cwv-name">LCP</div>
+        <div class="cwv-val" style="color:${cwvColor('lcp', s.cwv.lcp)}">${s.cwv.lcp >= 1000 ? (s.cwv.lcp/1000).toFixed(1) : s.cwv.lcp}</div>
+        <div class="cwv-unit">秒</div>
+        <span class="badge ${cwvStatus('lcp', s.cwv.lcp)}">${cwvLabel('lcp', s.cwv.lcp)}</span>
+      </div>
+      <div class="cwv-item">
+        <div class="cwv-name">CLS</div>
+        <div class="cwv-val" style="color:${cwvColor('cls', s.cwv.cls)}">${s.cwv.cls.toFixed(2)}</div>
+        <div class="cwv-unit">位移分數</div>
+        <span class="badge ${cwvStatus('cls', s.cwv.cls)}">${cwvLabel('cls', s.cwv.cls)}</span>
+      </div>
+      <div class="cwv-item">
+        <div class="cwv-name">INP</div>
+        <div class="cwv-val" style="color:${cwvColor('inp', s.cwv.inp)}">${s.cwv.inp}</div>
+        <div class="cwv-unit">ms</div>
+        <span class="badge ${cwvStatus('inp', s.cwv.inp)}">${cwvLabel('inp', s.cwv.inp)}</span>
+      </div>
+    </div>
+    <div class="cwv-score-wrap">
+      <span class="cwv-score-label">Performance Score</span>
+      <span class="cwv-score-val" style="color:${cwvColor('score', s.cwv.score)}">${s.cwv.score}</span>
+    </div>` : '<div style="color:var(--gray-300);font-size:12px;text-align:center;padding:12px 0">無 CWV 數據</div>'}
   </div>
 
   <div class="two-col">
