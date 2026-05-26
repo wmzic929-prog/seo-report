@@ -1,0 +1,174 @@
+{
+  "groups": [
+    {
+      "id": "spheretap",
+      "name": "Spheretap 集團",
+      "main": {
+        "domain": "spheretap.com",
+        "label": "Spheretap 主站",
+        "ga4": "G-TQCSL891XL",
+        "gsc": "sc-domain:spheretap.com",
+        "github_repo": "wmzic929-prog/spheretap",
+        "blog_path": "blog",
+        "sitemap_url": "https://spheretap.com/sitemap.xml"
+      },
+      "satellites": [
+        {
+          "domain": "matchvangtage.com",
+          "label": "體育博彩攻略",
+          "ga4": "G-XDDRXTY3J8",
+          "gsc": "sc-domain:matchvangtage.com",
+          "github_repo": "wmzic929-prog/matchvantage",
+          "blog_path": "blog",
+          "sitemap_url": "https://matchvangtage.com/sitemap.xml"
+        },
+        {
+          "domain": "tableedge.org",
+          "label": "真人遊戲技術流",
+          "ga4": "G-15G4P3S2VE",
+          "gsc": "sc-domain:tableedge.org",
+          "github_repo": "wmzic929-prog/tableedge",
+          "blog_path": "blog",
+          "sitemap_url": "https://tableedge.org/sitemap.xml"
+        },
+        {
+          "domain": "turf-pulse.com",
+          "label": "香港賽馬技術分析",
+          "ga4": "G-QH57WCJ8KX",
+          "gsc": "sc-domain:turf-pulse.com",
+          "github_repo": "wmzic929-prog/turf-pulse",
+          "blog_path": "blog",
+          "sitemap_url": "https://turf-pulse.com/sitemap.xml"
+        },
+        {
+          "domain": "spin-metrics.com",
+          "label": "老虎機遊戲解析",
+          "ga4": "G-VFKZCMPPTD",
+          "gsc": "sc-domain:spin-metrics.com",
+          "github_repo": "wmzic929-prog/spin-metrics",
+          "blog_path": "blog",
+          "sitemap_url": "https://spin-metrics.com/sitemap.xml"
+        },
+        {
+          "domain": "verifiedplays.com",
+          "label": "平台技術評測",
+          "ga4": "G-P8KCW4DNJL",
+          "gsc": "sc-domain:verifiedplays.com",
+          "github_repo": "wmzic929-prog/verifiedplays",
+          "blog_path": "blog",
+          "sitemap_url": "https://verifiedplays.com/sitemap.xml"
+        },
+        {
+          "domain": "matchdatalab.com",
+          "label": "競技運動數據研究",
+          "ga4": "G-JG536KJ4VM",
+          "ga4_property_id": "538899166",
+          "gsc": null,
+          "github_repo": "wmzic929-prog/matchdatalab-com",
+          "blog_path": "blog",
+          "sitemap_url": null,
+          "phase": 1
+        },
+        {
+          "domain": "athlete-index.com",
+          "label": "運動科學與表現",
+          "ga4": "G-6XNN60G4TN",
+          "ga4_property_id": "538889268",
+          "gsc": null,
+          "github_repo": "wmzic929-prog/athlete-index-com",
+          "blog_path": "blog",
+          "sitemap_url": null,
+          "phase": 1
+        },
+        {
+          "domain": "esports-intel.com",
+          "label": "電競產業研究",
+          "ga4": "G-Q8PT394M6Y",
+          "ga4_property_id": "538917346",
+          "gsc": null,
+          "github_repo": "wmzic929-prog/esports-intel-com",
+          "blog_path": "blog",
+          "sitemap_url": null,
+          "phase": 1
+        },
+        {
+          "domain": "proplayerstat.com",
+          "label": "電競選手數據庫",
+          "ga4": "G-CYH0DM9H1W",
+          "ga4_property_id": "538862816",
+          "gsc": null,
+          "github_repo": "wmzic929-prog/proplayerstat-com",
+          "blog_path": "blog",
+          "sitemap_url": null,
+          "phase": 1
+        },
+        {
+          "domain": "tilestrategist.com",
+          "label": "棋牌博弈論研究院",
+          "ga4": "G-HG3QWEB23J",
+          "ga4_property_id": "538868124",
+          "gsc": null,
+          "github_repo": "wmzic929-prog/tilestrategist-com",
+          "blog_path": "blog",
+          "sitemap_url": null,
+          "phase": 1
+        },
+        {
+          "domain": "gamedesignhq.com",
+          "label": "策略遊戲設計分析",
+          "ga4": "G-239M26TTHQ",
+          "ga4_property_id": "538882745",
+          "gsc": null,
+          "github_repo": "wmzic929-prog/gamedesignhq-com",
+          "blog_path": "blog",
+          "sitemap_url": null,
+          "phase": 1
+        },
+        {
+          "domain": "platformverdict.com",
+          "label": "娛樂平台深度評測",
+          "ga4": "G-13M98F1D91",
+          "ga4_property_id": "538873640",
+          "gsc": null,
+          "github_repo": "wmzic929-prog/platformverdict-com",
+          "blog_path": "blog",
+          "sitemap_url": null,
+          "phase": 1
+        },
+        {
+          "domain": "probdecision.com",
+          "label": "概率與決策科學",
+          "ga4": "G-PVF0TQSFNP",
+          "ga4_property_id": "538861622",
+          "gsc": null,
+          "github_repo": "wmzic929-prog/probdecision-com",
+          "blog_path": "blog",
+          "sitemap_url": null,
+          "phase": 1
+        },
+        {
+          "domain": "asiaesportculture.com",
+          "label": "亞洲電競文化",
+          "ga4": "G-H7L2E4MGQM",
+          "ga4_property_id": "538918051",
+          "gsc": null,
+          "github_repo": "wmzic929-prog/asiaesportculture-com",
+          "blog_path": "blog",
+          "sitemap_url": null,
+          "phase": 1
+        },
+        {
+          "domain": "entertaintrendlab.com",
+          "label": "數字娛樂消費研究",
+          "ga4": "G-YSRZG43B7M",
+          "ga4_property_id": "538861326",
+          "gsc": null,
+          "github_repo": "wmzic929-prog/entertaintrendlab-com",
+          "blog_path": "blog",
+          "sitemap_url": null,
+          "phase": 1
+        }
+      ]
+    }
+  ]
+}
