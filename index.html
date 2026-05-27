@@ -14,7 +14,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
   --red:#c81e1e;--red-l:#fde8e8;
   --gray-50:#f9fafb;--gray-100:#f3f4f6;--gray-200:#e5e7eb;
   --gray-400:#9ca3af;--gray-600:#6b7280;--gray-800:#1f2937;
-  --shadow:0 1px 3px rgba(0,0,0,.08);--radius:8px
+  --shadow:0 1px 3px rgba(0,0,0,.08);--radius:8px;
+  --gx-tb-color:#1a56db
 }
 
 /* ── Header ── */
@@ -22,35 +23,44 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 .hd-left{display:flex;align-items:center;gap:14px}
 .logo{font-size:16px;font-weight:800;letter-spacing:-0.5px;white-space:nowrap}
 .logo em{color:#93c5fd;font-style:normal}
-.group-label{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:5px 12px;border-radius:6px;font-size:12px;display:flex;align-items:center;gap:6px;white-space:nowrap;font-weight:600}
-/* ── Sub-tabs ── */
-.sub-tabs-wrap{background:#f0f4ff;border-bottom:2px solid #c7d7fd;position:sticky;top:98px;z-index:180;overflow-x:auto}
-.sub-tabs-wrap::-webkit-scrollbar{height:3px}
-.sub-tabs-wrap::-webkit-scrollbar-thumb{background:#c7d7fd}
-.sub-tabs-wrap .tabs{padding:0 16px}
-.sub-tabs-wrap .tb{font-size:12px;padding:8px 13px;color:#4b6aaa;border-bottom-color:transparent}
-.sub-tabs-wrap .tb:hover{color:var(--blue)}
-.sub-tabs-wrap .tb.act{color:var(--blue);border-bottom-color:var(--blue)}
-/* Phase tab badges */
-.tb-badge.p0{background:#fef3c7;color:#92400e}
-.tb-badge.p1{background:#d1fae5;color:#065f46}
 .hd-right{font-size:11px;color:rgba(255,255,255,.65);text-align:right;line-height:1.6}
 .hd-right strong{color:#fff;font-size:12px}
 
-/* ── Site Tabs ── */
-.tabs-wrap{background:#fff;border-bottom:2px solid var(--gray-200);position:sticky;top:56px;z-index:190;overflow-x:auto}
+/* ── Galaxy Bar ── */
+.galaxy-bar{background:#0f172a;border-bottom:1px solid rgba(255,255,255,.1);position:sticky;top:56px;z-index:185;overflow-x:auto;display:flex;align-items:stretch;padding:0 8px;height:40px;white-space:nowrap}
+.galaxy-bar::-webkit-scrollbar{height:3px}
+.galaxy-bar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2)}
+.gx-tab{padding:0 14px;background:none;border:none;border-bottom:2px solid transparent;color:rgba(255,255,255,.5);font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:color .15s,border-color .15s;white-space:nowrap;font-weight:600}
+.gx-tab:hover{color:rgba(255,255,255,.9)}
+.gx-tab.act{color:#fff;border-bottom-color:var(--gx-act-color,#60a5fa)}
+.gx-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.gx-count{font-size:10px;background:rgba(255,255,255,.15);padding:1px 6px;border-radius:10px;font-weight:700}
+.gx-sep{width:1px;background:rgba(255,255,255,.1);margin:8px 4px;flex-shrink:0}
+
+/* ── Group Tabs (Level 1) ── */
+.tabs-wrap{background:#fff;border-bottom:2px solid var(--gray-200);position:sticky;top:96px;z-index:190;overflow-x:auto}
 .tabs-wrap::-webkit-scrollbar{height:3px}
 .tabs-wrap::-webkit-scrollbar-thumb{background:var(--gray-200)}
 .tabs{display:flex;padding:0 16px;white-space:nowrap}
 .tb{padding:11px 16px;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;color:var(--gray-600);font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:color .15s,border-color .15s}
-.tb:hover{color:var(--blue)}
-.tb.act{color:var(--blue);border-bottom-color:var(--blue);font-weight:600}
+.tb:hover{color:var(--gx-tb-color)}
+.tb.act{color:var(--gx-tb-color);border-bottom-color:var(--gx-tb-color);font-weight:600}
 .tb-badge{font-size:10px;padding:1px 7px;border-radius:100px;background:var(--blue-l);color:var(--blue);font-weight:600}
 .tb-badge.main{background:#fef3c7;color:#92400e}
+.tb-badge.p0{background:#fef3c7;color:#92400e}
+.tb-badge.p1{background:#d1fae5;color:#065f46}
+
+/* ── Sub-tabs (Level 2) ── */
+.sub-tabs-wrap{background:#f0f4ff;border-bottom:2px solid #c7d7fd;position:sticky;top:140px;z-index:180;overflow-x:auto}
+.sub-tabs-wrap::-webkit-scrollbar{height:3px}
+.sub-tabs-wrap::-webkit-scrollbar-thumb{background:#c7d7fd}
+.sub-tabs-wrap .tabs{padding:0 16px}
+.sub-tabs-wrap .tb{font-size:12px;padding:8px 13px;color:#4b6aaa;border-bottom-color:transparent}
+.sub-tabs-wrap .tb:hover{color:var(--gx-tb-color)}
+.sub-tabs-wrap .tb.act{color:var(--gx-tb-color);border-bottom-color:var(--gx-tb-color)}
 
 /* ── Content ── */
 .content{padding:20px;max-width:1440px;margin:0 auto}
-.panel{display:none}.panel.act{display:block}
 
 /* ── Section label ── */
 .sec-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--gray-400);margin:20px 0 10px}
@@ -67,13 +77,26 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 .kv{font-size:22px;font-weight:800;color:var(--gray-800);line-height:1}
 .ks{font-size:11px;color:var(--gray-400);margin-top:3px}
 
+/* ── Galaxy Overview Cards ── */
+.gx-cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-bottom:20px}
+.gx-card{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);border:1px solid var(--gray-200);border-top:3px solid #e5e7eb;cursor:pointer;transition:box-shadow .15s,transform .15s}
+.gx-card:hover{box-shadow:0 6px 20px rgba(0,0,0,.1);transform:translateY(-2px)}
+.gx-card-header{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.gx-card-name{font-size:15px;font-weight:800;color:var(--gray-800)}
+.gx-card-count{margin-left:auto;font-size:11px;color:var(--gray-400);background:var(--gray-100);padding:2px 8px;border-radius:10px}
+.gx-card-kpis{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.gx-kpi{padding:10px 12px;border-radius:6px;background:var(--gray-50);border:1px solid var(--gray-200)}
+.gx-kpi .kl{margin-bottom:3px}
+.gx-kpi .kv{font-size:18px}
+.gx-card-footer{margin-top:14px;padding-top:12px;border-top:1px solid var(--gray-100);text-align:right;font-size:12px;font-weight:600}
+
 /* ── Charts Row ── */
 .charts-row{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin:14px 0}
 .chart-card{background:#fff;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);border:1px solid var(--gray-200)}
 .chart-title{font-size:12px;font-weight:700;color:var(--gray-800);margin-bottom:14px;display:flex;align-items:center;gap:6px}
 .chart-title span{width:10px;height:10px;border-radius:2px;display:inline-block}
 
-/* ── Two-col section ── */
+/* ── Two-col ── */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
 .card{background:#fff;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);border:1px solid var(--gray-200)}
 .card-title{font-size:12px;font-weight:700;color:var(--gray-800);margin-bottom:14px;display:flex;align-items:center;gap:8px}
@@ -116,29 +139,12 @@ tr:hover td{background:var(--gray-50)}
 .pos-good{background:var(--green-l);color:var(--green)}
 .pos-mid{background:var(--blue-l);color:var(--blue)}
 .pos-low{background:var(--gray-100);color:var(--gray-600)}
-
-/* ── Overview comparison table ── */
-.ov-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-.ov-title{font-size:13px;font-weight:700;color:var(--gray-800)}
 .site-role-main{background:#fef3c7;color:#92400e;font-size:10px;padding:1px 7px;border-radius:100px;font-weight:700}
 .site-role-sat{background:var(--blue-l);color:var(--blue);font-size:10px;padding:1px 7px;border-radius:100px;font-weight:700}
 .meter{display:inline-block;width:40px;height:5px;background:var(--gray-200);border-radius:100px;vertical-align:middle;position:relative;overflow:hidden}
 .meter-fill{position:absolute;left:0;top:0;height:100%;border-radius:100px}
 
-/* ── Responsive ── */
-@media(max-width:900px){
-  .charts-row{grid-template-columns:1fr}
-  .two-col{grid-template-columns:1fr}
-  .kpi-grid{grid-template-columns:repeat(2,1fr)}
-  .content{padding:12px}
-  .cwv-grid{grid-template-columns:1fr 1fr 1fr}
-}
-@media(max-width:480px){
-  .kpi-grid{grid-template-columns:repeat(2,1fr)}
-  .cwv-grid{grid-template-columns:1fr}
-}
-
-/* ── AI Crawler badges ── */
+/* ── AI Crawler ── */
 .ai-badge{display:inline-block;padding:2px 7px;border-radius:100px;font-size:10px;font-weight:700;margin:1px 2px;white-space:nowrap}
 .ai-fresh{background:#d1fae5;color:#065f46}
 .ai-stale{background:#f3f4f6;color:#6b7280}
@@ -148,12 +154,26 @@ tr:hover td{background:var(--gray-50)}
 .ai-table td{padding:9px 10px;border-bottom:1px solid var(--gray-100);vertical-align:middle}
 .ai-table tr:last-child td{border-bottom:none}
 
-/* ── Loading state ── */
+/* ── Loading ── */
 .loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:200px;color:var(--gray-400);gap:12px;font-size:13px}
 .spinner{width:32px;height:32px;border:3px solid var(--gray-200);border-top-color:var(--blue);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .ext-link{display:inline-flex;align-items:center;gap:2px;padding:2px 7px;background:var(--blue-l);color:var(--blue);text-decoration:none;border-radius:4px;font-size:10px;font-weight:600;vertical-align:middle;margin-left:4px;opacity:.8;transition:opacity .15s;white-space:nowrap}
 .ext-link:hover{opacity:1;background:#c7d7fd}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  .charts-row{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr}
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .content{padding:12px}
+  .cwv-grid{grid-template-columns:1fr 1fr 1fr}
+  .gx-cards-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .cwv-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -161,10 +181,6 @@ tr:hover td{background:var(--gray-50)}
 <header class="hd">
   <div class="hd-left">
     <div class="logo">SEO <em>Dashboard</em></div>
-    <div class="group-label">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-      Spheretap
-    </div>
   </div>
   <div class="hd-right">
     <strong id="hd-now">--:-- HKT</strong>
@@ -173,9 +189,15 @@ tr:hover td{background:var(--gray-50)}
   </div>
 </header>
 
-<div class="tabs-wrap">
+<!-- Level 0: Galaxy Bar -->
+<div class="galaxy-bar" id="galaxy-bar"></div>
+
+<!-- Level 1: Group Tabs -->
+<div class="tabs-wrap" id="tabs-wrap">
   <div class="tabs" id="tabs"></div>
 </div>
+
+<!-- Level 2: Sub-site Tabs -->
 <div class="sub-tabs-wrap" id="sub-tabs-wrap" style="display:none">
   <div class="tabs" id="sub-tabs"></div>
 </div>
@@ -186,15 +208,21 @@ tr:hover td{background:var(--gray-50)}
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
 <script>
-// ── Config ──────────────────────────────────────────
+// ── Galaxy Config ─────────────────────────────────────
+const GALAXY_CONFIG = {
+  spheretap: { name: 'Spheretap',    color: '#1a56db', colorLight: '#e8f0fe', icon: '⚽', desc: '博彩衛星站群' },
+  bduk:      { name: 'BDUK 英國商目', color: '#059669', colorLight: '#d1fae5', icon: '🇬🇧', desc: '英國商業目錄站群' }
+};
+
+// ── Real data URL ─────────────────────────────────────
 const REAL_DATA_URL = 'https://raw.githubusercontent.com/wmzic929-prog/spheretap/main/seo-data/seo-report.json';
 
-// ── Phase maps ───────────────────────────────────────
-const MOCK_PHASES = {
+// ── Spheretap Phase maps ──────────────────────────────
+const SPHERETAP_PHASES = {
   0: ['matchvangtage.com','tableedge.org','turf-pulse.com','spin-metrics.com','verifiedplays.com'],
   1: ['matchdatalab.com','athlete-index.com','esports-intel.com','proplayerstat.com','tilestrategist.com','gamedesignhq.com','platformverdict.com','probdecision.com','asiaesportculture.com','entertaintrendlab.com']
 };
-const PHASE1_LABELS = {
+const SPHERETAP_P1_LABELS = {
   'matchdatalab.com':'競技運動數據研究','athlete-index.com':'運動科學與表現',
   'esports-intel.com':'電競產業研究','proplayerstat.com':'電競選手數據庫',
   'tilestrategist.com':'棋牌博弈論研究院','gamedesignhq.com':'策略遊戲設計分析',
@@ -202,267 +230,356 @@ const PHASE1_LABELS = {
   'asiaesportculture.com':'亞洲電競文化','entertaintrendlab.com':'數字娛樂消費研究'
 };
 
-// ── Phase 1 stub data generator ──────────────────────
-function p1stub(label) {
-  return { label, role: 'satellite',
-    traffic: { sessions_today:0, sessions_7d:0, sessions_30d:0, series_30d:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], bounce_rate:0, avg_duration_sec:0, mobile_pct:0.72, sources:{organic:0.25,direct:0.50,social:0.15,referral:0.10} },
+// ── BDUK Phase maps ───────────────────────────────────
+const BDUK_PHASES = {
+  0: ['bountifultriathlon.com','besedkibg.com','topbravi.com','dealer-index.com','ogradabg.com'],
+  1: ['track-index.com','reel-base.com','spin-vaults.com','feuerwehr-georgenhausen.com','platform-benchmark.com','abcosvetlenie.com','cryptocurrency-game.com','sports-analy.com','esports-index.com','clan-guide.com']
+};
+const BDUK_LABELS = {
+  'bountifultriathlon.com':      '博彩統計中心',
+  'besedkibg.com':               '比賽數據倉庫',
+  'topbravi.com':                '賭場數據區',
+  'dealer-index.com':            '桌遊實驗室',
+  'ogradabg.com':                '賽馬分析',
+  'track-index.com':             '賽道數據庫',
+  'reel-base.com':               '老虎機研究室',
+  'spin-vaults.com':             '老虎機索引',
+  'feuerwehr-georgenhausen.com': '賭場審計區',
+  'platform-benchmark.com':      '平台基準測試',
+  'abcosvetlenie.com':           '電競博彩數據',
+  'cryptocurrency-game.com':     '加密遊戲索引',
+  'sports-analy.com':            '賽事統計區',
+  'esports-index.com':           '電競成長實驗室',
+  'clan-guide.com':              '策略遊戲指南'
+};
+
+// ── Site stub generator ───────────────────────────────
+function siteStub(label, role) {
+  return { label, role: role || 'satellite',
+    traffic: { sessions_today:0, sessions_7d:0, sessions_30d:0,
+      series_30d:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      bounce_rate:0, avg_duration_sec:0, mobile_pct:0.72,
+      sources:{organic:0.25,direct:0.50,social:0.15,referral:0.10} },
     cta: { clicks_today:0, clicks_7d:0, unique_clicks_7d:0, conversions_today:0, conversions_7d:0 },
     gsc: { impressions_28d:0, impressions_7d:0, clicks_28d:0, clicks_7d:0, ctr:0, avg_position:0, indexed_pages:0, top_keywords:[] },
-    sitemap: { total_urls:12 }, content: { total_articles:0, this_month:0, this_week:0 },
-    cwv: { lcp:2000, cls:0.05, inp:180, score:90 }, ai_crawlers:{} };
+    sitemap: { total_urls:0 }, content: { total_articles:0, sports_articles:0, this_month:0, this_week:0 },
+    cwv: { lcp:0, cls:0, inp:0, score:0 }, ai_crawlers:{} };
 }
 
-// ── Mock Data ────────────────────────────────────────
+// ── DATES_30D helper ──────────────────────────────────
+function gen30dDates() {
+  const d = [], now = new Date();
+  for (let i = 29; i >= 0; i--) {
+    const t = new Date(now); t.setDate(t.getDate() - i);
+    d.push(`${t.getMonth()+1}/${t.getDate()}`);
+  }
+  return d;
+}
+
+// ── Mock Data ─────────────────────────────────────────
 const MOCK = {
-  generated_at: '2026-05-25T05:30:00+08:00',
+  generated_at: '2026-05-27T05:30:00+08:00',
   groups: {
     spheretap: {
-      name: 'Spheretap',
-      phases: MOCK_PHASES,
-      dates_30d: ['4/26','4/27','4/28','4/29','4/30','5/1','5/2','5/3','5/4','5/5','5/6','5/7','5/8','5/9','5/10','5/11','5/12','5/13','5/14','5/15','5/16','5/17','5/18','5/19','5/20','5/21','5/22','5/23','5/24','5/25'],
+      name: 'Spheretap', phases: SPHERETAP_PHASES,
+      dates_30d: ['4/27','4/28','4/29','4/30','5/1','5/2','5/3','5/4','5/5','5/6','5/7','5/8','5/9','5/10','5/11','5/12','5/13','5/14','5/15','5/16','5/17','5/18','5/19','5/20','5/21','5/22','5/23','5/24','5/25','5/26','5/27'],
       sites: {
         'spheretap.com': {
           label: 'Spheretap 主站', role: 'main',
-          traffic: { sessions_today: 18, sessions_7d: 89, sessions_30d: 320, series_30d: [8,12,9,15,11,14,18,10,13,16,14,19,11,17,22,13,18,21,15,24,19,23,16,20,25,3,5,8,11,18], bounce_rate: 0.61, avg_duration_sec: 178, mobile_pct: 0.69, sources: { organic: 0.42, direct: 0.28, social: 0.20, referral: 0.10 } },
-          cta: { clicks_today: 4, clicks_7d: 23, unique_clicks_7d: 19, conversions_today: 1, conversions_7d: 8 },
-          gsc: { impressions_28d: 4200, clicks_28d: 89, ctr: 0.0212, avg_position: 22.1, indexed_pages: 72, top_keywords: [{ kw: 'sports betting hk guide', pos: 8.2, clicks: 22 },{ kw: 'spheretap review', pos: 3.1, clicks: 18 },{ kw: 'online casino tips', pos: 14.5, clicks: 15 },{ kw: 'live casino strategy', pos: 28.4, clicks: 8 }] },
-          sitemap: { total_urls: 89 }, content: { total_articles: 58, sports_articles: 28, this_month: 43, this_week: 32 },
-          cwv: { lcp: 1800, cls: 0.04, inp: 145, score: 92 },
-          ai_crawlers: { GPTBot: { last_seen: '2026-05-22T08:00:00+08:00', count_30d: 12 }, ClaudeBot: { last_seen: '2026-05-20T14:30:00+08:00', count_30d: 3 }, CCBot: { last_seen: '2026-05-18T06:00:00+08:00', count_30d: 8 } }
+          traffic: { sessions_today:18, sessions_7d:89, sessions_30d:320,
+            series_30d:[8,12,9,15,11,14,18,10,13,16,14,19,11,17,22,13,18,21,15,24,19,23,16,20,25,3,5,8,11,18],
+            bounce_rate:0.61, avg_duration_sec:178, mobile_pct:0.69,
+            sources:{organic:0.42,direct:0.28,social:0.20,referral:0.10} },
+          cta: { clicks_today:4, clicks_7d:23, unique_clicks_7d:19, conversions_today:1, conversions_7d:8 },
+          gsc: { impressions_28d:4200, impressions_7d:980, clicks_28d:89, clicks_7d:22, ctr:0.0212, avg_position:22.1, indexed_pages:72,
+            top_keywords:[{kw:'sports betting hk guide',pos:8.2,clicks:22},{kw:'spheretap review',pos:3.1,clicks:18},{kw:'online casino tips',pos:14.5,clicks:15},{kw:'live casino strategy',pos:28.4,clicks:8}] },
+          sitemap:{total_urls:89}, content:{total_articles:58, sports_articles:28, this_month:43, this_week:32},
+          cwv:{lcp:1800,cls:0.04,inp:145,score:92},
+          ai_crawlers:{GPTBot:{last_seen:'2026-05-22T08:00:00+08:00',count_30d:12},ClaudeBot:{last_seen:'2026-05-20T14:30:00+08:00',count_30d:3},CCBot:{last_seen:'2026-05-18T06:00:00+08:00',count_30d:8}}
         },
         'matchvangtage.com': {
-          label: '體育博彩攻略', role: 'satellite',
-          traffic: { sessions_today: 2, sessions_7d: 8, sessions_30d: 11, series_30d: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,3,2,2], bounce_rate: 0.74, avg_duration_sec: 95, mobile_pct: 0.78, sources: { organic: 0.25, direct: 0.50, social: 0.15, referral: 0.10 } },
-          cta: { clicks_today: 0, clicks_7d: 2, unique_clicks_7d: 2, conversions_today: 0, conversions_7d: 0 },
-          gsc: { impressions_28d: 124, clicks_28d: 3, ctr: 0.0242, avg_position: 41.2, indexed_pages: 12, top_keywords: [{ kw: 'sports betting tips', pos: 35.1, clicks: 2 },{ kw: 'hk football odds', pos: 52.3, clicks: 1 }] },
-          sitemap: { total_urls: 28 }, content: { total_articles: 22, this_month: 22, this_week: 8 },
-          cwv: { lcp: 1900, cls: 0.03, inp: 162, score: 91 },
-          ai_crawlers: { GPTBot: { last_seen: '2026-05-21T10:00:00+08:00', count_30d: 5 } }
+          label:'體育博彩攻略', role:'satellite',
+          traffic:{sessions_today:2,sessions_7d:8,sessions_30d:11,series_30d:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,3,2,2],bounce_rate:0.74,avg_duration_sec:95,mobile_pct:0.78,sources:{organic:0.25,direct:0.50,social:0.15,referral:0.10}},
+          cta:{clicks_today:0,clicks_7d:2,unique_clicks_7d:2,conversions_today:0,conversions_7d:0},
+          gsc:{impressions_28d:124,impressions_7d:30,clicks_28d:3,clicks_7d:1,ctr:0.0242,avg_position:41.2,indexed_pages:12,top_keywords:[{kw:'sports betting tips',pos:35.1,clicks:2},{kw:'hk football odds',pos:52.3,clicks:1}]},
+          sitemap:{total_urls:28},content:{total_articles:22,sports_articles:0,this_month:22,this_week:8},
+          cwv:{lcp:1900,cls:0.03,inp:162,score:91},
+          ai_crawlers:{GPTBot:{last_seen:'2026-05-21T10:00:00+08:00',count_30d:5}}
         },
         'tableedge.org': {
-          label: '真人遊戲技術流', role: 'satellite',
-          traffic: { sessions_today: 1, sessions_7d: 5, sessions_30d: 7, series_30d: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,1,1], bounce_rate: 0.79, avg_duration_sec: 82, mobile_pct: 0.76, sources: { organic: 0.15, direct: 0.55, social: 0.20, referral: 0.10 } },
-          cta: { clicks_today: 0, clicks_7d: 1, unique_clicks_7d: 1, conversions_today: 0, conversions_7d: 0 },
-          gsc: { impressions_28d: 87, clicks_28d: 1, ctr: 0.0115, avg_position: 48.7, indexed_pages: 8, top_keywords: [{ kw: 'live baccarat strategy', pos: 42.1, clicks: 1 }] },
-          sitemap: { total_urls: 25 }, content: { total_articles: 19, this_month: 19, this_week: 6 },
-          cwv: { lcp: 2100, cls: 0.06, inp: 198, score: 88 }
+          label:'真人遊戲技術流', role:'satellite',
+          traffic:{sessions_today:1,sessions_7d:5,sessions_30d:7,series_30d:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,1,1],bounce_rate:0.79,avg_duration_sec:82,mobile_pct:0.76,sources:{organic:0.15,direct:0.55,social:0.20,referral:0.10}},
+          cta:{clicks_today:0,clicks_7d:1,unique_clicks_7d:1,conversions_today:0,conversions_7d:0},
+          gsc:{impressions_28d:87,impressions_7d:20,clicks_28d:1,clicks_7d:0,ctr:0.0115,avg_position:48.7,indexed_pages:8,top_keywords:[{kw:'live baccarat strategy',pos:42.1,clicks:1}]},
+          sitemap:{total_urls:25},content:{total_articles:19,sports_articles:0,this_month:19,this_week:6},
+          cwv:{lcp:2100,cls:0.06,inp:198,score:88},ai_crawlers:{}
         },
         'turf-pulse.com': {
-          label: '香港賽馬技術分析', role: 'satellite',
-          traffic: { sessions_today: 4, sessions_7d: 15, sessions_30d: 18, series_30d: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,5,4,4], bounce_rate: 0.68, avg_duration_sec: 124, mobile_pct: 0.82, sources: { organic: 0.30, direct: 0.40, social: 0.20, referral: 0.10 } },
-          cta: { clicks_today: 1, clicks_7d: 4, unique_clicks_7d: 4, conversions_today: 0, conversions_7d: 1 },
-          gsc: { impressions_28d: 215, clicks_28d: 5, ctr: 0.0233, avg_position: 35.4, indexed_pages: 18, top_keywords: [{ kw: 'hkjc horse racing tips', pos: 28.3, clicks: 3 },{ kw: 'hong kong racing analysis', pos: 41.7, clicks: 2 }] },
-          sitemap: { total_urls: 31 }, content: { total_articles: 24, this_month: 24, this_week: 7 },
-          cwv: { lcp: 1700, cls: 0.04, inp: 155, score: 93 }
+          label:'香港賽馬技術分析', role:'satellite',
+          traffic:{sessions_today:4,sessions_7d:15,sessions_30d:18,series_30d:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,5,4,4],bounce_rate:0.68,avg_duration_sec:124,mobile_pct:0.82,sources:{organic:0.30,direct:0.40,social:0.20,referral:0.10}},
+          cta:{clicks_today:1,clicks_7d:4,unique_clicks_7d:4,conversions_today:0,conversions_7d:1},
+          gsc:{impressions_28d:215,impressions_7d:55,clicks_28d:5,clicks_7d:2,ctr:0.0233,avg_position:35.4,indexed_pages:18,top_keywords:[{kw:'hkjc horse racing tips',pos:28.3,clicks:3},{kw:'hong kong racing analysis',pos:41.7,clicks:2}]},
+          sitemap:{total_urls:31},content:{total_articles:24,sports_articles:0,this_month:24,this_week:7},
+          cwv:{lcp:1700,cls:0.04,inp:155,score:93},ai_crawlers:{}
         },
         'spin-metrics.com': {
-          label: '老虎機遊戲解析', role: 'satellite',
-          traffic: { sessions_today: 1, sessions_7d: 6, sessions_30d: 8, series_30d: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,2,1], bounce_rate: 0.76, avg_duration_sec: 88, mobile_pct: 0.75, sources: { organic: 0.20, direct: 0.52, social: 0.18, referral: 0.10 } },
-          cta: { clicks_today: 0, clicks_7d: 1, unique_clicks_7d: 1, conversions_today: 0, conversions_7d: 0 },
-          gsc: { impressions_28d: 98, clicks_28d: 2, ctr: 0.0204, avg_position: 44.1, indexed_pages: 10, top_keywords: [{ kw: 'slot rtp analysis', pos: 38.2, clicks: 2 }] },
-          sitemap: { total_urls: 23 }, content: { total_articles: 17, this_month: 17, this_week: 5 },
-          cwv: { lcp: 2000, cls: 0.05, inp: 178, score: 89 }
+          label:'老虎機遊戲解析', role:'satellite',
+          traffic:{sessions_today:1,sessions_7d:6,sessions_30d:8,series_30d:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,2,1],bounce_rate:0.76,avg_duration_sec:88,mobile_pct:0.75,sources:{organic:0.20,direct:0.52,social:0.18,referral:0.10}},
+          cta:{clicks_today:0,clicks_7d:1,unique_clicks_7d:1,conversions_today:0,conversions_7d:0},
+          gsc:{impressions_28d:98,impressions_7d:25,clicks_28d:2,clicks_7d:1,ctr:0.0204,avg_position:44.1,indexed_pages:10,top_keywords:[{kw:'slot rtp analysis',pos:38.2,clicks:2}]},
+          sitemap:{total_urls:23},content:{total_articles:17,sports_articles:0,this_month:17,this_week:5},
+          cwv:{lcp:2000,cls:0.05,inp:178,score:89},ai_crawlers:{}
         },
         'verifiedplays.com': {
-          label: '平台技術評測', role: 'satellite',
-          traffic: { sessions_today: 2, sessions_7d: 9, sessions_30d: 12, series_30d: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,3,3,2], bounce_rate: 0.72, avg_duration_sec: 103, mobile_pct: 0.71, sources: { organic: 0.28, direct: 0.45, social: 0.17, referral: 0.10 } },
-          cta: { clicks_today: 0, clicks_7d: 2, unique_clicks_7d: 2, conversions_today: 0, conversions_7d: 0 },
-          gsc: { impressions_28d: 143, clicks_28d: 4, ctr: 0.0280, avg_position: 38.9, indexed_pages: 15, top_keywords: [{ kw: 'licensed casino review', pos: 32.5, clicks: 3 },{ kw: 'casino platform comparison', pos: 45.1, clicks: 1 }] },
-          sitemap: { total_urls: 26 }, content: { total_articles: 20, this_month: 20, this_week: 6 },
-          cwv: { lcp: 1900, cls: 0.04, inp: 167, score: 91 }
+          label:'平台技術評測', role:'satellite',
+          traffic:{sessions_today:2,sessions_7d:9,sessions_30d:12,series_30d:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,3,3,2],bounce_rate:0.72,avg_duration_sec:103,mobile_pct:0.71,sources:{organic:0.28,direct:0.45,social:0.17,referral:0.10}},
+          cta:{clicks_today:0,clicks_7d:2,unique_clicks_7d:2,conversions_today:0,conversions_7d:0},
+          gsc:{impressions_28d:143,impressions_7d:35,clicks_28d:4,clicks_7d:1,ctr:0.0280,avg_position:38.9,indexed_pages:15,top_keywords:[{kw:'licensed casino review',pos:32.5,clicks:3},{kw:'casino platform comparison',pos:45.1,clicks:1}]},
+          sitemap:{total_urls:26},content:{total_articles:20,sports_articles:0,this_month:20,this_week:6},
+          cwv:{lcp:1900,cls:0.04,inp:167,score:91},ai_crawlers:{}
         },
-        // ── Phase 1 stubs ──
-        'matchdatalab.com':      p1stub('競技運動數據研究'),
-        'athlete-index.com':     p1stub('運動科學與表現'),
-        'esports-intel.com':     p1stub('電競產業研究'),
-        'proplayerstat.com':     p1stub('電競選手數據庫'),
-        'tilestrategist.com':    p1stub('棋牌博弈論研究院'),
-        'gamedesignhq.com':      p1stub('策略遊戲設計分析'),
-        'platformverdict.com':   p1stub('娛樂平台深度評測'),
-        'probdecision.com':      p1stub('概率與決策科學'),
-        'asiaesportculture.com': p1stub('亞洲電競文化'),
-        'entertaintrendlab.com': p1stub('數字娛樂消費研究')
+        'matchdatalab.com':      siteStub('競技運動數據研究'),
+        'athlete-index.com':     siteStub('運動科學與表現'),
+        'esports-intel.com':     siteStub('電競產業研究'),
+        'proplayerstat.com':     siteStub('電競選手數據庫'),
+        'tilestrategist.com':    siteStub('棋牌博弈論研究院'),
+        'gamedesignhq.com':      siteStub('策略遊戲設計分析'),
+        'platformverdict.com':   siteStub('娛樂平台深度評測'),
+        'probdecision.com':      siteStub('概率與決策科學'),
+        'asiaesportculture.com': siteStub('亞洲電競文化'),
+        'entertaintrendlab.com': siteStub('數字娛樂消費研究')
+      }
+    },
+    bduk: {
+      name: 'BDUK 英國商目', phases: BDUK_PHASES,
+      dates_30d: gen30dDates(),
+      sites: {
+        'businessdirectory-uk.com': siteStub('BDUK 主站', 'main'),
+        'bountifultriathlon.com':      siteStub('博彩統計中心'),
+        'besedkibg.com':               siteStub('比賽數據倉庫'),
+        'topbravi.com':                siteStub('賭場數據區'),
+        'dealer-index.com':            siteStub('桌遊實驗室'),
+        'ogradabg.com':                siteStub('賽馬分析'),
+        'track-index.com':             siteStub('賽道數據庫'),
+        'reel-base.com':               siteStub('老虎機研究室'),
+        'spin-vaults.com':             siteStub('老虎機索引'),
+        'feuerwehr-georgenhausen.com': siteStub('賭場審計區'),
+        'platform-benchmark.com':      siteStub('平台基準測試'),
+        'abcosvetlenie.com':           siteStub('電競博彩數據'),
+        'cryptocurrency-game.com':     siteStub('加密遊戲索引'),
+        'sports-analy.com':            siteStub('賽事統計區'),
+        'esports-index.com':           siteStub('電競成長實驗室'),
+        'clan-guide.com':              siteStub('策略遊戲指南')
       }
     }
   }
 };
-// ── State ────────────────────────────────────────────
+
+// ── State ─────────────────────────────────────────────
 let DATA = null;
+let currentGalaxy = 'all'; // 'all' | galaxy key
 let currentTab = '__overview__';
 let currentSubSite = null;
 const charts = {};
 
-// ── Helpers ──────────────────────────────────────────
+// ── Helpers ───────────────────────────────────────────
 const fmt = n => n >= 10000 ? (n/1000).toFixed(1)+'K' : n.toLocaleString();
 const pct = n => (n*100).toFixed(1)+'%';
 const sec2min = s => s >= 60 ? `${Math.floor(s/60)}m ${s%60}s` : `${s}s`;
 const posClass = p => p <= 10 ? 'pos-good' : p <= 30 ? 'pos-mid' : 'pos-low';
 const covClass = r => r >= 0.8 ? 'bar-g' : r >= 0.5 ? 'bar-w' : 'bar-r';
 const covBadge = r => r >= 0.8 ? 'bg' : r >= 0.5 ? 'bw' : 'br';
-const cwvStatus = (metric, val) => {
-  if (metric === 'lcp') return val <= 1200 ? 'bg' : val <= 2500 ? 'bw' : 'br';
-  if (metric === 'cls') return val <= 0.1 ? 'bg' : val <= 0.25 ? 'bw' : 'br';
-  if (metric === 'inp') return val <= 200 ? 'bg' : val <= 500 ? 'bw' : 'br';
+const cwvStatus = (m, v) => {
+  if (m==='lcp') return v<=1200?'bg':v<=2500?'bw':'br';
+  if (m==='cls') return v<=0.1?'bg':v<=0.25?'bw':'br';
+  if (m==='inp') return v<=200?'bg':v<=500?'bw':'br';
 };
-const cwvLabel = (metric, val) => {
-  if (metric === 'lcp') return val <= 1200 ? '良好' : val <= 2500 ? '待改善' : '差';
-  if (metric === 'cls') return val <= 0.1 ? '良好' : val <= 0.25 ? '待改善' : '差';
-  if (metric === 'inp') return val <= 200 ? '良好' : val <= 500 ? '待改善' : '差';
+const cwvLabel = (m, v) => {
+  if (m==='lcp') return v<=1200?'良好':v<=2500?'待改善':'差';
+  if (m==='cls') return v<=0.1?'良好':v<=0.25?'待改善':'差';
+  if (m==='inp') return v<=200?'良好':v<=500?'待改善':'差';
 };
-
-// ── Task 1: CWV color helper ──────────────────────────
-function cwvColor(metric, value) {
-  const thresholds = {
-    lcp:   [1200, 2500],
-    cls:   [0.1,  0.25],
-    inp:   [200,  500],
-    score: [90,   50]
-  };
-  const t = thresholds[metric];
-  if (!t) return '#6b7280';
-  const [good, poor] = t;
-  if (metric === 'score') {
-    return value >= good ? '#22c55e' : value >= poor ? '#f59e0b' : '#ef4444';
-  }
-  return value <= good ? '#22c55e' : value <= poor ? '#f59e0b' : '#ef4444';
+function cwvColor(m, v) {
+  const t={lcp:[1200,2500],cls:[0.1,0.25],inp:[200,500],score:[90,50]};
+  const r=t[m]; if(!r) return '#6b7280';
+  const[good,poor]=r;
+  if(m==='score') return v>=good?'#22c55e':v>=poor?'#f59e0b':'#ef4444';
+  return v<=good?'#22c55e':v<=poor?'#f59e0b':'#ef4444';
 }
-
-// ── Task 2: Search trend helper ───────────────────────
 function searchTrend(series7d) {
-  if (!series7d || !series7d.impressions || series7d.impressions.length < 6) return '';
-  const imp = series7d.impressions;
-  const first3 = (imp[0] + imp[1] + imp[2]) / 3;
-  const last3 = (imp[imp.length-3] + imp[imp.length-2] + imp[imp.length-1]) / 3;
-  if (first3 === 0) return '';
-  const change = (last3 - first3) / first3;
-  if (change > 0.1) return ' <span style="color:#22c55e">↑</span>';
-  if (change < -0.1) return ' <span style="color:#ef4444">↓</span>';
-  return ' <span style="color:#6b7280">→</span>';
+  if (!series7d||!series7d.impressions||series7d.impressions.length<6) return '';
+  const imp=series7d.impressions, f3=(imp[0]+imp[1]+imp[2])/3, l3=(imp[imp.length-3]+imp[imp.length-2]+imp[imp.length-1])/3;
+  if (f3===0) return '';
+  const c=(l3-f3)/f3;
+  return c>0.1?' <span style="color:#22c55e">↑</span>':c<-0.1?' <span style="color:#ef4444">↓</span>':' <span style="color:#6b7280">→</span>';
 }
-
-// ── Task 3: GSC no-data placeholder ──────────────────
-function gscPendingBadge() {
-  return '<span style="color:var(--gray-300)">—</span>';
-}
-
-// ── Task 4: Alert banner ──────────────────────────────
+function gscPendingBadge() { return '<span style="color:var(--gray-300)">—</span>'; }
 function renderAlertBanner(data) {
-  const alerts = data.alerts;
-  if (!alerts || alerts.length === 0) return;
-  // Remove existing banner if any
-  const existing = document.getElementById('alert-banner');
-  if (existing) existing.remove();
-  const banner = document.createElement('div');
-  banner.id = 'alert-banner';
-  banner.style.cssText = 'background:#7f1d1d;color:#fef2f2;padding:12px 20px;font-size:0.875rem;position:sticky;top:0;z-index:300;border-bottom:2px solid #ef4444';
-  banner.innerHTML = '⚠️ SEO 異常偵測 (' + alerts.length + ' 項)：' + alerts.map(a => a.message).join(' | ');
-  document.body.insertBefore(banner, document.body.firstChild);
+  if (!data.alerts||!data.alerts.length) return;
+  const ex=document.getElementById('alert-banner'); if(ex) ex.remove();
+  const b=document.createElement('div'); b.id='alert-banner';
+  b.style.cssText='background:#7f1d1d;color:#fef2f2;padding:12px 20px;font-size:.875rem;position:sticky;top:0;z-index:300;border-bottom:2px solid #ef4444';
+  b.innerHTML='⚠️ SEO 異常偵測 ('+data.alerts.length+' 項)：'+data.alerts.map(a=>a.message).join(' | ');
+  document.body.insertBefore(b, document.body.firstChild);
 }
-const destroyChart = id => { if (charts[id]) { charts[id].destroy(); delete charts[id]; } };
+const destroyChart = id => { if(charts[id]){charts[id].destroy();delete charts[id];} };
 
-const AI_CRAWLER_PRODUCTS = { GPTBot:'OpenAI / ChatGPT', ClaudeBot:'Anthropic / Claude', 'Claude-User':'Anthropic / Claude (瀏覽)', 'anthropic-ai':'Anthropic AI', 'Google-Extended':'Gemini / Google AI', PerplexityBot:'Perplexity', CCBot:'Common Crawl', Bytespider:'ByteDance / TikTok', 'cohere-ai':'Cohere', YouBot:'You.com', Amazonbot:'Amazon AI', DeepSeekBot:'DeepSeek', Doubaobot:'ByteDance / 豆包', QuarkBot:'Alibaba / 夸克', YuanbaoBot:'Tencent / 元寶', TalkieBot:'Talkie AI' };
+const AI_CRAWLER_PRODUCTS = {GPTBot:'OpenAI / ChatGPT',ClaudeBot:'Anthropic / Claude','Claude-User':'Anthropic / Claude (瀏覽)','anthropic-ai':'Anthropic AI','Google-Extended':'Gemini / Google AI',PerplexityBot:'Perplexity',CCBot:'Common Crawl',Bytespider:'ByteDance / TikTok','cohere-ai':'Cohere',YouBot:'You.com',Amazonbot:'Amazon AI',DeepSeekBot:'DeepSeek',Doubaobot:'ByteDance / 豆包',QuarkBot:'Alibaba / 夸克',YuanbaoBot:'Tencent / 元寶',TalkieBot:'Talkie AI'};
 const ALL_AI_CRAWLERS = Object.keys(AI_CRAWLER_PRODUCTS);
-function aiLastSeen(iso) {
-  if (!iso) return null;
-  const d = new Date(iso), now = new Date();
-  return Math.floor((now - d) / 864e5); // days ago
-}
+function aiLastSeen(iso) { if(!iso) return null; return Math.floor((new Date()-new Date(iso))/864e5); }
 function renderAIBadges(ai) {
-  if (!ai || !Object.keys(ai).length) return '<span class="ai-none">–</span>';
-  return Object.entries(ai).map(([name, info]) => {
-    const days = aiLastSeen(info.last_seen);
-    const cls = days !== null && days <= 7 ? 'ai-fresh' : 'ai-stale';
+  if (!ai||!Object.keys(ai).length) return '<span class="ai-none">–</span>';
+  return Object.entries(ai).map(([name,info])=>{
+    const days=aiLastSeen(info.last_seen),cls=days!==null&&days<=7?'ai-fresh':'ai-stale';
     return `<span class="ai-badge ${cls}">${name}</span>`;
   }).join('');
 }
 
-// ── Init ─────────────────────────────────────────────
+// ── Init ──────────────────────────────────────────────
 async function init() {
   try {
-    const res = await fetch(REAL_DATA_URL, { cache: 'no-store' });
+    const res = await fetch(REAL_DATA_URL, { cache:'no-store' });
     if (!res.ok) throw new Error('not found');
     DATA = await res.json();
+    if (!DATA.groups) DATA.groups = {};
     const sg = DATA.groups.spheretap;
     if (sg) {
       sg.name = 'Spheretap';
-      if (!sg.phases) sg.phases = MOCK_PHASES;
-      for (const [domain, label] of Object.entries(PHASE1_LABELS)) {
-        if (!sg.sites[domain]) sg.sites[domain] = p1stub(label);
+      if (!sg.phases) sg.phases = SPHERETAP_PHASES;
+      if (!sg.dates_30d) sg.dates_30d = MOCK.groups.spheretap.dates_30d;
+      for (const [domain, label] of Object.entries(SPHERETAP_P1_LABELS)) {
+        if (!sg.sites[domain]) sg.sites[domain] = siteStub(label);
       }
     }
+    // Always inject BDUK from mock (no real data source yet)
+    DATA.groups.bduk = MOCK.groups.bduk;
   } catch {
     DATA = MOCK;
   }
   const dt = new Date(DATA.generated_at);
   document.getElementById('hd-update').textContent =
     `資料更新: ${dt.getMonth()+1}/${dt.getDate()} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')} HKT`;
-  buildTabs();
-  switchTab('__overview__');
-  renderAlertBanner(DATA);
+  buildGalaxyBar();
+  switchGalaxy('all');
+  if (DATA.alerts) renderAlertBanner(DATA);
   startClock();
 }
 
 function startClock() {
   function tick() {
-    const now = new Date();
-    const hkt = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Hong_Kong' }));
+    const hkt = new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Hong_Kong'}));
     document.getElementById('hd-now').textContent =
       `${hkt.getMonth()+1}/${hkt.getDate()} ${String(hkt.getHours()).padStart(2,'0')}:${String(hkt.getMinutes()).padStart(2,'0')} HKT`;
   }
-  tick();
-  setInterval(tick, 60000);
+  tick(); setInterval(tick, 60000);
 }
 
-// ── Tab system ────────────────────────────────────────
-function buildTabs() {
-  const g = DATA.groups.spheretap;
-  const phases = g.phases || MOCK_PHASES;
+// ── Level 0: Galaxy Bar ───────────────────────────────
+function buildGalaxyBar() {
+  const galaxies = Object.keys(DATA.groups);
+  const totalSites = galaxies.reduce((a,gk)=>a+Object.keys(DATA.groups[gk].sites).length, 0);
+  let html = `<button class="gx-tab" data-gx="all" onclick="switchGalaxy('all')">
+    ⬛ 全部星系 <span class="gx-count">${galaxies.length} 個 · ${totalSites} 站</span>
+  </button><div class="gx-sep"></div>`;
+  galaxies.forEach(gk => {
+    const g = DATA.groups[gk];
+    const cfg = GALAXY_CONFIG[gk] || { name:gk, color:'#6b7280' };
+    const cnt = Object.keys(g.sites).length;
+    html += `<button class="gx-tab" data-gx="${gk}" style="--gx-act-color:${cfg.color}" onclick="switchGalaxy('${gk}')">
+      <span class="gx-dot" style="background:${cfg.color}"></span>${cfg.name} <span class="gx-count">${cnt}</span>
+    </button>`;
+  });
+  document.getElementById('galaxy-bar').innerHTML = html;
+}
+
+function updateGalaxyActive() {
+  document.querySelectorAll('.gx-tab').forEach(b => b.classList.toggle('act', b.dataset.gx === currentGalaxy));
+}
+
+function switchGalaxy(gk) {
+  currentGalaxy = gk;
+  currentTab = '__overview__';
+  currentSubSite = null;
+  updateGalaxyActive();
+  document.getElementById('sub-tabs-wrap').style.display = 'none';
+  document.getElementById('sub-tabs').innerHTML = '';
+  // Update group tab accent color
+  const cfg = GALAXY_CONFIG[gk] || { color: '#1a56db' };
+  document.documentElement.style.setProperty('--gx-tb-color', gk === 'all' ? '#1a56db' : cfg.color);
+  if (gk === 'all') {
+    buildGroupTabs_All();
+    renderAllGalaxies();
+  } else {
+    buildGroupTabs(gk);
+    switchGroupTab('__overview__');
+  }
+}
+
+// ── Level 1: Group Tabs ───────────────────────────────
+function buildGroupTabs_All() {
+  document.getElementById('tabs').innerHTML = `
+    <button class="tb act" data-key="__overview__">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+      全部星系總覽
+    </button>`;
+}
+
+function buildGroupTabs(gk) {
+  const g = DATA.groups[gk];
+  const phases = g.phases || {};
   const p0 = phases[0] || [], p1 = phases[1] || [];
-  const tabsEl = document.getElementById('tabs');
-  tabsEl.innerHTML = `
-    <button class="tb" data-key="__overview__" onclick="switchTab('__overview__')">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> 總覽
-    </button>
-    <button class="tb" data-key="spheretap.com" onclick="switchTab('spheretap.com')">
-      spheretap.com <span class="tb-badge main">主站</span>
-    </button>
-    <button class="tb" data-key="__phase0__" onclick="switchTab('__phase0__')">
+  const mainDomain = Object.keys(g.sites).find(d => g.sites[d].role === 'main') || '';
+  let html = `<button class="tb" data-key="__overview__" onclick="switchGroupTab('__overview__')">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> 總覽
+  </button>`;
+  if (mainDomain) {
+    html += `<button class="tb" data-key="${mainDomain}" onclick="switchGroupTab('${mainDomain}')">
+      ${mainDomain} <span class="tb-badge main">主站</span>
+    </button>`;
+  }
+  if (p0.length) {
+    html += `<button class="tb" data-key="__phase0__" onclick="switchGroupTab('__phase0__')">
       衛星站群 Phase 0 <span class="tb-badge p0">×${p0.length}</span>
-    </button>
-    <button class="tb" data-key="__phase1__" onclick="switchTab('__phase1__')">
+    </button>`;
+  }
+  if (p1.length) {
+    html += `<button class="tb" data-key="__phase1__" onclick="switchGroupTab('__phase1__')">
       衛星站群 Phase 1 <span class="tb-badge p1">×${p1.length}</span>
     </button>`;
-  updateTabActive();
+  }
+  document.getElementById('tabs').innerHTML = html;
+  updateGroupTabActive();
 }
 
-function updateTabActive() {
-  document.querySelectorAll('#tabs .tb').forEach(b =>
-    b.classList.toggle('act', b.dataset.key === currentTab));
+function updateGroupTabActive() {
+  document.querySelectorAll('#tabs .tb').forEach(b => b.classList.toggle('act', b.dataset.key === currentTab));
 }
 
-function switchTab(key) {
+function switchGroupTab(key) {
   currentTab = key;
   currentSubSite = null;
-  updateTabActive();
+  updateGroupTabActive();
   const subWrap = document.getElementById('sub-tabs-wrap');
-  if (key === '__overview__' || key === 'spheretap.com') {
+  const g = DATA.groups[currentGalaxy];
+  const mainDomain = Object.keys(g.sites).find(d => g.sites[d].role === 'main') || '';
+  if (key === '__overview__' || key === mainDomain) {
     subWrap.style.display = 'none';
     document.getElementById('sub-tabs').innerHTML = '';
-    renderMain(key);
+    renderGalaxyMain(currentGalaxy, key);
   } else {
-    const phaseNum = parseInt(key.replace('__phase', ''));
-    buildSubTabs(phaseNum);
+    const phaseNum = parseInt(key.replace('__phase',''));
+    buildSubTabs(currentGalaxy, phaseNum);
     subWrap.style.display = '';
-    const g = DATA.groups.spheretap;
-    const phases = g.phases || MOCK_PHASES;
+    const phases = g.phases || {};
     const sites = phases[phaseNum] || [];
     if (sites.length) switchSubSite(sites[0]);
   }
 }
 
-function buildSubTabs(phaseNum) {
-  const g = DATA.groups.spheretap;
-  const phases = g.phases || MOCK_PHASES;
+// ── Level 2: Sub-site Tabs ────────────────────────────
+function buildSubTabs(gk, phaseNum) {
+  const g = DATA.groups[gk];
+  const phases = g.phases || {};
   const sites = phases[phaseNum] || [];
   document.getElementById('sub-tabs').innerHTML = sites.map(domain =>
     `<button class="tb" data-subkey="${domain}" onclick="switchSubSite('${domain}')">${domain}</button>`
@@ -470,26 +587,61 @@ function buildSubTabs(phaseNum) {
 }
 
 function updateSubTabActive() {
-  document.querySelectorAll('#sub-tabs .tb').forEach(b =>
-    b.classList.toggle('act', b.dataset.subkey === currentSubSite));
+  document.querySelectorAll('#sub-tabs .tb').forEach(b => b.classList.toggle('act', b.dataset.subkey === currentSubSite));
 }
 
 function switchSubSite(domain) {
   currentSubSite = domain;
   updateSubTabActive();
-  renderMain(domain);
+  renderGalaxyMain(currentGalaxy, domain);
 }
 
-// ── Render router ─────────────────────────────────────
-function renderMain(key) {
-  const g = DATA.groups.spheretap;
+// ── Click from overview table → jump to site ──────────
+function switchSite(domain) {
+  // If in 'all' view, first determine which galaxy owns this domain
+  let gk = currentGalaxy === 'all' ? findDomainGalaxy(domain) : currentGalaxy;
+  if (!gk) return;
+  if (currentGalaxy === 'all') {
+    currentGalaxy = gk;
+    updateGalaxyActive();
+    const cfg = GALAXY_CONFIG[gk] || { color:'#1a56db' };
+    document.documentElement.style.setProperty('--gx-tb-color', cfg.color);
+    buildGroupTabs(gk);
+  }
+  const g = DATA.groups[gk];
+  const mainDomain = Object.keys(g.sites).find(d => g.sites[d].role === 'main') || '';
+  if (domain === mainDomain) { switchGroupTab(domain); return; }
+  const phases = g.phases || {};
+  let phaseNum = null;
+  for (const [p, domains] of Object.entries(phases)) {
+    if (domains.includes(domain)) { phaseNum = parseInt(p); break; }
+  }
+  if (phaseNum !== null) {
+    currentTab = `__phase${phaseNum}__`;
+    updateGroupTabActive();
+    buildSubTabs(gk, phaseNum);
+    document.getElementById('sub-tabs-wrap').style.display = '';
+    switchSubSite(domain);
+  }
+}
+
+function findDomainGalaxy(domain) {
+  for (const [gk, g] of Object.entries(DATA.groups)) {
+    if (g.sites[domain]) return gk;
+  }
+  return null;
+}
+
+// ── Render Router ─────────────────────────────────────
+function renderGalaxyMain(gk, key) {
+  const g = DATA.groups[gk];
   const content = document.getElementById('content');
   Object.values(charts).forEach(c => c.destroy());
   Object.keys(charts).forEach(k => delete charts[k]);
   if (key === '__overview__') {
-    content.innerHTML = renderOverview(g);
+    content.innerHTML = renderOverview(g, gk);
   } else if (g.sites[key]) {
-    content.innerHTML = renderSite(key, g.sites[key], g);
+    content.innerHTML = renderSite(key, g.sites[key], g, gk);
     requestAnimationFrame(() => {
       renderTrafficChart(key, g.sites[key], g.dates_30d);
       renderSourcesChart(key, g.sites[key]);
@@ -497,93 +649,112 @@ function renderMain(key) {
   }
 }
 
-// ── Overview ─────────────────────────────────────────
-function renderOverview(g) {
+// ── All Galaxies Overview ─────────────────────────────
+function renderAllGalaxies() {
+  const content = document.getElementById('content');
+  Object.values(charts).forEach(c => c.destroy());
+  Object.keys(charts).forEach(k => delete charts[k]);
+  const galaxies = Object.entries(DATA.groups);
+  let totalSites=0, totalSess30=0, totalClicks28=0, totalArticles=0;
+  const summaries = galaxies.map(([gk, g]) => {
+    const cfg = GALAXY_CONFIG[gk] || { name:gk, color:'#6b7280', colorLight:'#f3f4f6' };
+    const sites = Object.entries(g.sites);
+    const siteCount = sites.length;
+    const mainDomain = sites.find(([,s])=>s.role==='main')?.[0] || '';
+    const sess30 = sites.reduce((a,[,s])=>a+s.traffic.sessions_30d, 0);
+    const clicks28 = sites.reduce((a,[,s])=>a+s.gsc.clicks_28d, 0);
+    const articles = sites.reduce((a,[,s])=>a+s.content.total_articles+(s.content.sports_articles||0), 0);
+    const indexed = sites.reduce((a,[,s])=>a+s.gsc.indexed_pages, 0);
+    const totalUrls = sites.reduce((a,[,s])=>a+s.sitemap.total_urls, 0);
+    totalSites+=siteCount; totalSess30+=sess30; totalClicks28+=clicks28; totalArticles+=articles;
+    return {gk,cfg,siteCount,mainDomain,sess30,clicks28,articles,indexed,totalUrls};
+  });
+  const cardsHtml = summaries.map(({gk,cfg,siteCount,mainDomain,sess30,clicks28,articles,indexed,totalUrls})=>`
+    <div class="gx-card" onclick="switchGalaxy('${gk}')" style="border-top-color:${cfg.color}">
+      <div class="gx-card-header">
+        <span class="gx-dot" style="background:${cfg.color};width:10px;height:10px;border-radius:50%;display:inline-block"></span>
+        <span class="gx-card-name">${cfg.name}</span>
+        <span class="gx-card-count">${siteCount} 站</span>
+      </div>
+      <div style="font-size:10px;color:var(--gray-400);margin-bottom:12px">${cfg.desc || ''} · 主站: ${mainDomain||'–'}</div>
+      <div class="gx-card-kpis">
+        <div class="gx-kpi"><div class="kl">30日流量</div><div class="kv" style="color:${cfg.color}">${fmt(sess30)}</div></div>
+        <div class="gx-kpi"><div class="kl">GSC點擊(28d)</div><div class="kv">${fmt(clicks28)}</div></div>
+        <div class="gx-kpi"><div class="kl">文章總數</div><div class="kv">${fmt(articles)}</div></div>
+        <div class="gx-kpi"><div class="kl">已收錄頁面</div><div class="kv">${indexed}<span style="font-size:11px;color:var(--gray-400)">/${totalUrls}</span></div></div>
+      </div>
+      <div class="gx-card-footer" style="color:${cfg.color}">進入詳情 →</div>
+    </div>
+  `).join('');
+  content.innerHTML = `
+    <div class="sec-label">跨星系匯總</div>
+    <div class="kpi-grid">
+      <div class="kcard c-blue"><div class="kl">星系總數</div><div class="kv">${galaxies.length}</div><div class="ks">已追蹤</div></div>
+      <div class="kcard c-blue"><div class="kl">站點總數</div><div class="kv">${totalSites}</div><div class="ks">全網合計</div></div>
+      <div class="kcard c-green"><div class="kl">30日總流量</div><div class="kv">${fmt(totalSess30)}</div><div class="ks">全星系合計</div></div>
+      <div class="kcard c-green"><div class="kl">GSC點擊 (28d)</div><div class="kv">${fmt(totalClicks28)}</div><div class="ks">全星系合計</div></div>
+      <div class="kcard c-purple"><div class="kl">文章總數</div><div class="kv">${fmt(totalArticles)}</div><div class="ks">全星系合計</div></div>
+    </div>
+    <div class="sec-label">星系一覽（點擊進入）</div>
+    <div class="gx-cards-grid">${cardsHtml}</div>
+    <div style="font-size:11px;color:var(--gray-400);padding:8px 0">點擊星系卡片可進入該星系詳細數據；或點選上方 Galaxy Bar 快速切換</div>`;
+}
+
+// ── Single Galaxy Overview ────────────────────────────
+function renderOverview(g, gk) {
+  const cfg = GALAXY_CONFIG[gk] || { color:'#1a56db', colorLight:'#e8f0fe' };
   const sites = Object.entries(g.sites);
-  const totSess30 = sites.reduce((a,[,s]) => a+s.traffic.sessions_30d, 0);
-  const totClicks = sites.reduce((a,[,s]) => a+s.gsc.clicks_28d, 0);
-  const totBlogArticles = sites.reduce((a,[,s]) => a+s.content.total_articles, 0);
-  const totSportsArticles = sites.reduce((a,[,s]) => a+(s.content.sports_articles||0), 0);
-  const totArticles = totBlogArticles + totSportsArticles;
-  const avgCovArr = sites.map(([,s]) => s.sitemap.total_urls > 0 ? s.gsc.indexed_pages / s.sitemap.total_urls : 0);
-  const avgCov = avgCovArr.length > 0 ? avgCovArr.reduce((a,v) => a+v,0) / avgCovArr.length : 0;
-
-  const aiCoveredCount = sites.filter(([,s]) => s.ai_crawlers && Object.keys(s.ai_crawlers).length > 0).length;
-  const aiCrawlerTypes = new Set(sites.flatMap(([,s]) => Object.keys(s.ai_crawlers || {})));
-
+  const totSess30 = sites.reduce((a,[,s])=>a+s.traffic.sessions_30d, 0);
+  const totClicks = sites.reduce((a,[,s])=>a+s.gsc.clicks_28d, 0);
+  const totBlog = sites.reduce((a,[,s])=>a+s.content.total_articles, 0);
+  const totSports = sites.reduce((a,[,s])=>a+(s.content.sports_articles||0), 0);
+  const avgCov = (() => {
+    const arr = sites.map(([,s])=>s.sitemap.total_urls>0?s.gsc.indexed_pages/s.sitemap.total_urls:0);
+    return arr.length>0?arr.reduce((a,v)=>a+v,0)/arr.length:0;
+  })();
+  const aiCoveredCount = sites.filter(([,s])=>s.ai_crawlers&&Object.keys(s.ai_crawlers).length>0).length;
+  const aiTypes = new Set(sites.flatMap(([,s])=>Object.keys(s.ai_crawlers||{})));
   let rows = '';
   sites.forEach(([domain, s]) => {
-    const cov = s.sitemap.total_urls > 0 ? s.gsc.indexed_pages / s.sitemap.total_urls : 0;
-    const roleHtml = s.role === 'main' ? `<span class="site-role-main">主站</span>` : `<span class="site-role-sat">衛星</span>`;
+    const cov = s.sitemap.total_urls>0?s.gsc.indexed_pages/s.sitemap.total_urls:0;
+    const roleHtml = s.role==='main'?`<span class="site-role-main">主站</span>`:`<span class="site-role-sat">衛星</span>`;
     rows += `<tr onclick="switchSite('${domain}')" style="cursor:pointer">
-      <td><strong>${domain}</strong><a href="https://${domain}" target="_blank" rel="noopener" class="ext-link" onclick="event.stopPropagation()" title="開啟網站">↗</a><br><span style="font-size:10px;color:var(--gray-400)">${s.label}</span></td>
+      <td><strong>${domain}</strong><a href="https://${domain}" target="_blank" rel="noopener" class="ext-link" onclick="event.stopPropagation()">↗</a><br><span style="font-size:10px;color:var(--gray-400)">${s.label}</span></td>
       <td>${roleHtml}</td>
       <td>${fmt(s.traffic.sessions_today)}</td>
       <td>${fmt(s.traffic.sessions_30d)}</td>
-      <td>${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.impressions_7d||0) + searchTrend(s.gsc.series_7d)}</td>
-      <td>${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.clicks_7d||0)}</td>
-      <td>${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.impressions_28d)}</td>
-      <td>${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.clicks_28d)}</td>
-      <td>${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : s.gsc.avg_position.toFixed(1)}</td>
-      <td>${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() + ' / ' + s.sitemap.total_urls : s.gsc.indexed_pages + ' / ' + s.sitemap.total_urls}
+      <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.impressions_7d||0)+searchTrend(s.gsc.series_7d)}</td>
+      <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.clicks_7d||0)}</td>
+      <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.impressions_28d)}</td>
+      <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.clicks_28d)}</td>
+      <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():s.gsc.avg_position.toFixed(1)}</td>
+      <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge()+' / '+s.sitemap.total_urls:s.gsc.indexed_pages+' / '+s.sitemap.total_urls}
         <span class="meter"><span class="meter-fill" style="width:${cov*100}%;background:${cov>=.8?'var(--green)':cov>=.5?'var(--orange)':'var(--red)'}"></span></span>
         <span style="font-size:10px;color:var(--gray-400)">${pct(cov)}</span>
       </td>
       <td>${s.content.total_articles}</td>
-      <td>${s.content.sports_articles > 0 ? s.content.sports_articles : '<span style="color:var(--gray-300)">–</span>'}</td>
+      <td>${s.content.sports_articles>0?s.content.sports_articles:'<span style="color:var(--gray-300)">–</span>'}</td>
       <td>${s.content.this_month}</td>
       <td>${renderAIBadges(s.ai_crawlers)}</td>
     </tr>`;
   });
-
   return `
-  <div class="sec-label">集團總覽</div>
+  <div class="sec-label" style="color:${cfg.color}">${g.name} · 集團總覽</div>
   <div class="kpi-grid">
-    <div class="kcard c-blue"><div class="kl">30日總流量</div><div class="kv">${fmt(totSess30)}</div><div class="ks">全站合計</div></div>
+    <div class="kcard" style="border-top-color:${cfg.color}"><div class="kl">30日總流量</div><div class="kv" style="color:${cfg.color}">${fmt(totSess30)}</div><div class="ks">全站合計</div></div>
     <div class="kcard c-green"><div class="kl">GSC 點擊 (28d)</div><div class="kv">${fmt(totClicks)}</div><div class="ks">搜尋來源</div></div>
     <div class="kcard c-orange"><div class="kl">平均收錄率</div><div class="kv">${pct(avgCov)}</div><div class="ks">全站平均</div></div>
-    <div class="kcard c-purple"><div class="kl">文章總數</div><div class="kv">${fmt(totArticles)}</div><div class="ks">Blog ${totBlogArticles} + 體育 ${totSportsArticles}</div></div>
-    <div class="kcard" style="border-top-color:#0891b2"><div class="kl">AI 爬蟲覆蓋</div><div class="kv" style="color:#0891b2">${aiCoveredCount}/${sites.length} 站</div><div class="ks">${aiCrawlerTypes.size} 種爬蟲偵測到</div></div>
+    <div class="kcard c-purple"><div class="kl">文章總數</div><div class="kv">${fmt(totBlog+totSports)}</div><div class="ks">Blog ${totBlog} + 體育 ${totSports}</div></div>
+    <div class="kcard" style="border-top-color:#0891b2"><div class="kl">AI 爬蟲覆蓋</div><div class="kv" style="color:#0891b2">${aiCoveredCount}/${sites.length} 站</div><div class="ks">${aiTypes.size} 種爬蟲</div></div>
   </div>
-  <div class="sec-label">7日每日趨勢（全站合計）</div>
-  <div class="card">
-    <div class="tbl-wrap">
-      <table id="overview-7d-table">
-        <thead><tr>
-          <th>日期</th><th>GA4流量</th><th>GSC曝光</th><th>GSC點擊</th><th>CTA點擊</th><th>文章總數</th>
-        </tr></thead>
-        <tbody>${(function(){
-          const allSites = Object.values(g.sites);
-          const totArticles = allSites.reduce((a,s) => a + s.content.total_articles + (s.content.sports_articles||0), 0);
-          const len = allSites[0] && allSites[0].daily_7d ? allSites[0].daily_7d.length : 7;
-          let r = '';
-          for (let j = len - 1; j >= 0; j--) {
-            const date = allSites[0] && allSites[0].daily_7d ? allSites[0].daily_7d[j].date : '–';
-            const sessions = allSites.reduce((a,s) => a + (((s.daily_7d||[])[j]||{}).sessions||0), 0);
-            const gscImp = allSites.reduce((a,s) => { const v = ((s.daily_7d||[])[j]||{}).gsc_imp; return v !== null && v !== undefined ? a + v : a; }, 0);
-            const gscClk = allSites.reduce((a,s) => { const v = ((s.daily_7d||[])[j]||{}).gsc_clk; return v !== null && v !== undefined ? a + v : a; }, 0);
-            const cta = allSites.reduce((a,s) => a + (((s.daily_7d||[])[j]||{}).cta_clk||0), 0);
-            const rowArticles = allSites.reduce((a,s) => a + (((s.daily_7d||[])[j]||{}).articles||0), 0);
-            const hasGsc = allSites.some(s => ((s.daily_7d||[])[j]||{}).gsc_imp !== null && ((s.daily_7d||[])[j]||{}).gsc_imp !== undefined);
-            const isPending = allSites.some(s => ((s.daily_7d||[])[j]||{}).gsc_pending === true);
-            const pendingCell = '<span title="GSC 資料處理中，非真實 0（Google 通常延遲 2-3 天）" style="cursor:help;color:var(--gray-300)">⏳</span>';
-            r += '<tr><td><strong>' + date + '</strong></td><td>' + fmt(sessions) + '</td><td>' + (hasGsc ? fmt(gscImp) : isPending ? pendingCell : '<span style="color:var(--gray-300)">—</span>') + '</td><td>' + (hasGsc ? fmt(gscClk) : isPending ? pendingCell : '<span style="color:var(--gray-300)">—</span>') + '</td><td>' + fmt(cta) + '</td><td>' + fmt(rowArticles) + '</td></tr>';
-          }
-          return r;
-        })()}</tbody>
-      </table>
-      <div style="font-size:10px;color:var(--gray-300);padding:4px 0">GSC 資料有 2-3 天延遲，最近 2-3 天顯示 ⏳（待更新，非真實 0）　　點擊各站標籤查看個別明細</div>
-    </div>
-  </div>
-
   <div class="sec-label">各站比較（點擊各站查看詳情）</div>
   <div class="card">
     <div class="tbl-wrap">
       <table>
         <thead><tr>
-          <th>站點</th><th>類型</th><th>昨日流量</th><th>30日流量</th>
+          <th>站點</th><th>類型</th><th>昨日</th><th>30日流量</th>
           <th>GSC曝光(7d)</th><th>GSC點擊(7d)</th><th>GSC曝光(28d)</th><th>GSC點擊(28d)</th><th>平均排名</th>
-          <th>收錄 / Sitemap</th><th>Blog 文章</th><th>體育新聞</th><th>本月新發</th><th>AI 爬蟲</th>
+          <th>收錄/Sitemap</th><th>Blog</th><th>體育</th><th>本月新發</th><th>AI爬蟲</th>
         </tr></thead>
         <tbody>${rows}</tbody>
       </table>
@@ -591,48 +762,50 @@ function renderOverview(g) {
   </div>`;
 }
 
-// ── Site Panel ────────────────────────────────────────
-function renderSite(domain, s, g) {
-  const cov = s.sitemap.total_urls > 0 ? s.gsc.indexed_pages / s.sitemap.total_urls : 0;
-  const roleLabel = s.role === 'main' ? '主站' : '衛星站';
-  let kwRows = s.gsc.top_keywords.map(k => `
+// ── Single Site Panel ─────────────────────────────────
+function renderSite(domain, s, g, gk) {
+  const cfg = GALAXY_CONFIG[gk] || { color:'#1a56db' };
+  const cov = s.sitemap.total_urls>0?s.gsc.indexed_pages/s.sitemap.total_urls:0;
+  const roleLabel = s.role==='main'?'主站':'衛星站';
+  const kwRows = s.gsc.top_keywords.map(k=>`
     <tr><td>${k.kw}</td>
     <td><span class="pos-badge ${posClass(k.pos)}">#${k.pos.toFixed(1)}</span></td>
     <td>${k.clicks}</td></tr>`).join('');
-
-  const d7 = [...(s.daily_7d || [])].reverse();
-  const d7rows = d7.map(r => {
-    const pendingCell = r.gsc_pending ? '<span title="GSC 資料處理中，非真實 0（Google 通常延遲 2-3 天）" style="cursor:help;color:var(--gray-300)">⏳</span>' : '<span style="color:var(--gray-300)">—</span>';
+  const d7 = [...(s.daily_7d||[])].reverse();
+  const d7rows = d7.map(r=>{
+    const pendingCell=r.gsc_pending?'<span title="GSC處理中" style="cursor:help;color:var(--gray-300)">⏳</span>':'<span style="color:var(--gray-300)">—</span>';
     return `<tr>
-    <td><strong>${r.date}</strong></td>
-    <td>${fmt(r.sessions)}</td>
-    <td>${r.gsc_imp !== null ? fmt(r.gsc_imp) : pendingCell}</td>
-    <td>${r.gsc_clk !== null ? fmt(r.gsc_clk) : pendingCell}</td>
-    <td>${fmt(r.cta_clk)}</td>
-    <td>${r.articles !== undefined ? fmt(r.articles) : fmt(s.content.total_articles + (s.content.sports_articles||0))}</td>
-  </tr>`;
+      <td><strong>${r.date}</strong></td><td>${fmt(r.sessions)}</td>
+      <td>${r.gsc_imp!==null?fmt(r.gsc_imp):pendingCell}</td>
+      <td>${r.gsc_clk!==null?fmt(r.gsc_clk):pendingCell}</td>
+      <td>${fmt(r.cta_clk)}</td>
+      <td>${r.articles!==undefined?fmt(r.articles):fmt(s.content.total_articles+(s.content.sports_articles||0))}</td>
+    </tr>`;
   }).join('');
+
+  const hasCWV = s.cwv && s.cwv.score > 0;
 
   return `
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap">
     <div style="font-size:18px;font-weight:800;color:var(--gray-800)">${domain}</div>
     <a href="https://${domain}" target="_blank" rel="noopener" class="ext-link" style="font-size:11px;padding:3px 10px">↗ 開啟網站</a>
     <div style="font-size:11px;color:var(--gray-400)">${s.label} · ${roleLabel}</div>
+    <span style="font-size:10px;padding:2px 8px;border-radius:10px;background:${cfg.colorLight||'#e8f0fe'};color:${cfg.color}">${(GALAXY_CONFIG[gk]||{}).name||gk}</span>
   </div>
 
   <div class="sec-label">流量指標</div>
   <div class="kpi-grid">
-    <div class="kcard c-blue"><div class="kl">昨日展期</div><div class="kv">${fmt(s.traffic.sessions_today)}</div><div class="ks">Sessions</div></div>
-    <div class="kcard c-blue"><div class="kl">7日展期</div><div class="kv">${fmt(s.traffic.sessions_7d)}</div><div class="ks">Sessions</div></div>
-    <div class="kcard c-blue"><div class="kl">30日展期</div><div class="kv">${fmt(s.traffic.sessions_30d)}</div><div class="ks">Sessions</div></div>
-    <div class="kcard"><div class="kl">跟出率</div><div class="kv">${pct(s.traffic.bounce_rate)}</div><div class="ks">越低越好</div></div>
-    <div class="kcard"><div class="kl">平均停留</div><div class="kv">${sec2min(s.traffic.avg_duration_sec)}</div><div class="ks">Avg. Duration</div></div>
-    <div class="kcard"><div class="kl">行動裝置</div><div class="kv">${pct(s.traffic.mobile_pct)}</div><div class="ks">Mobile Traffic</div></div>
+    <div class="kcard c-blue"><div class="kl">昨日</div><div class="kv">${fmt(s.traffic.sessions_today)}</div><div class="ks">Sessions</div></div>
+    <div class="kcard c-blue"><div class="kl">7日</div><div class="kv">${fmt(s.traffic.sessions_7d)}</div><div class="ks">Sessions</div></div>
+    <div class="kcard c-blue"><div class="kl">30日</div><div class="kv">${fmt(s.traffic.sessions_30d)}</div><div class="ks">Sessions</div></div>
+    <div class="kcard"><div class="kl">跳出率</div><div class="kv">${s.traffic.bounce_rate>0?pct(s.traffic.bounce_rate):'–'}</div><div class="ks">越低越好</div></div>
+    <div class="kcard"><div class="kl">平均停留</div><div class="kv">${s.traffic.avg_duration_sec>0?sec2min(s.traffic.avg_duration_sec):'–'}</div><div class="ks">Duration</div></div>
+    <div class="kcard"><div class="kl">行動裝置</div><div class="kv">${pct(s.traffic.mobile_pct)}</div><div class="ks">Mobile</div></div>
   </div>
 
   <div class="charts-row">
     <div class="chart-card">
-      <div class="chart-title"><span style="background:var(--blue)"></span>30日流量趨勢</div>
+      <div class="chart-title"><span style="background:${cfg.color}"></span>30日流量趨勢</div>
       <canvas id="chart-traffic-${domain}" height="100"></canvas>
     </div>
     <div class="chart-card">
@@ -643,57 +816,40 @@ function renderSite(domain, s, g) {
 
   <div class="sec-label">CTA 與轉換</div>
   <div class="kpi-grid">
-    <div class="kcard c-orange"><div class="kl">CTA點擊 (昨日)</div><div class="kv">${s.cta.clicks_today}</div><div class="ks">按鈕數</div></div>
+    <div class="kcard c-orange"><div class="kl">CTA點擊 (昨日)</div><div class="kv">${s.cta.clicks_today}</div></div>
     <div class="kcard c-orange"><div class="kl">CTA點擊 (7d)</div><div class="kv">${s.cta.clicks_7d}</div><div class="ks">不重複: ${s.cta.unique_clicks_7d}</div></div>
-    <div class="kcard c-green"><div class="kl">頁面轉換 (昨日)</div><div class="kv">${s.cta.conversions_today}</div><div class="ks">轉換數</div></div>
-    <div class="kcard c-green"><div class="kl">頁面轉換 (7d)</div><div class="kv">${s.cta.conversions_7d}</div><div class="ks">累積</div></div>
+    <div class="kcard c-green"><div class="kl">轉換 (昨日)</div><div class="kv">${s.cta.conversions_today}</div></div>
+    <div class="kcard c-green"><div class="kl">轉換 (7d)</div><div class="kv">${s.cta.conversions_7d}</div></div>
   </div>
 
   <div class="sec-label">GSC 搜尋表現</div>
   <div class="kpi-grid">
-    <div class="kcard c-blue"><div class="kl">GSC曝光 (7d)</div><div class="kv">${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.impressions_7d||0) + searchTrend(s.gsc.series_7d)}</div><div class="ks">近7天</div></div>
-    <div class="kcard c-blue"><div class="kl">GSC點擊 (7d)</div><div class="kv">${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.clicks_7d||0)}</div><div class="ks">近7天</div></div>
-    <div class="kcard c-green"><div class="kl">GSC曝光 (28d)</div><div class="kv">${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.impressions_28d)}</div><div class="ks">Impressions</div></div>
-    <div class="kcard c-green"><div class="kl">GSC點擊 (28d)</div><div class="kv">${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : fmt(s.gsc.clicks_28d)}</div><div class="ks">Clicks</div></div>
-    <div class="kcard"><div class="kl">點擊率 CTR</div><div class="kv">${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : pct(s.gsc.ctr)}</div><div class="ks">點擊÷曝光</div></div>
-    <div class="kcard"><div class="kl">平均排名</div><div class="kv">${(!s.gsc || s.gsc.avg_position === 0) ? gscPendingBadge() : s.gsc.avg_position.toFixed(1)}</div><div class="ks">Avg. Position</div></div>
+    <div class="kcard c-blue"><div class="kl">GSC曝光(7d)</div><div class="kv">${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.impressions_7d||0)}</div></div>
+    <div class="kcard c-blue"><div class="kl">GSC點擊(7d)</div><div class="kv">${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.clicks_7d||0)}</div></div>
+    <div class="kcard c-green"><div class="kl">GSC曝光(28d)</div><div class="kv">${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.impressions_28d)}</div></div>
+    <div class="kcard c-green"><div class="kl">GSC點擊(28d)</div><div class="kv">${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.clicks_28d)}</div></div>
+    <div class="kcard"><div class="kl">CTR</div><div class="kv">${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():pct(s.gsc.ctr)}</div></div>
+    <div class="kcard"><div class="kl">平均排名</div><div class="kv">${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():s.gsc.avg_position.toFixed(1)}</div></div>
   </div>
 
   <div class="sec-label">Core Web Vitals</div>
   <div class="card">
-    ${(s.cwv && Object.keys(s.cwv).length > 0) ? `
+    ${hasCWV ? `
     <div class="cwv-grid">
-      <div class="cwv-item">
-        <div class="cwv-name">LCP</div>
-        <div class="cwv-val" style="color:${cwvColor('lcp', s.cwv.lcp)}">${s.cwv.lcp >= 1000 ? (s.cwv.lcp/1000).toFixed(1) : s.cwv.lcp}</div>
-        <div class="cwv-unit">秒</div>
-        <span class="badge ${cwvStatus('lcp', s.cwv.lcp)}">${cwvLabel('lcp', s.cwv.lcp)}</span>
-      </div>
-      <div class="cwv-item">
-        <div class="cwv-name">CLS</div>
-        <div class="cwv-val" style="color:${cwvColor('cls', s.cwv.cls)}">${s.cwv.cls.toFixed(2)}</div>
-        <div class="cwv-unit">位移分數</div>
-        <span class="badge ${cwvStatus('cls', s.cwv.cls)}">${cwvLabel('cls', s.cwv.cls)}</span>
-      </div>
-      <div class="cwv-item">
-        <div class="cwv-name">INP</div>
-        <div class="cwv-val" style="color:${cwvColor('inp', s.cwv.inp)}">${s.cwv.inp}</div>
-        <div class="cwv-unit">ms</div>
-        <span class="badge ${cwvStatus('inp', s.cwv.inp)}">${cwvLabel('inp', s.cwv.inp)}</span>
-      </div>
+      <div class="cwv-item"><div class="cwv-name">LCP</div><div class="cwv-val" style="color:${cwvColor('lcp',s.cwv.lcp)}">${s.cwv.lcp>=1000?(s.cwv.lcp/1000).toFixed(1):s.cwv.lcp}</div><div class="cwv-unit">秒</div><span class="badge ${cwvStatus('lcp',s.cwv.lcp)}">${cwvLabel('lcp',s.cwv.lcp)}</span></div>
+      <div class="cwv-item"><div class="cwv-name">CLS</div><div class="cwv-val" style="color:${cwvColor('cls',s.cwv.cls)}">${s.cwv.cls.toFixed(2)}</div><div class="cwv-unit">位移分數</div><span class="badge ${cwvStatus('cls',s.cwv.cls)}">${cwvLabel('cls',s.cwv.cls)}</span></div>
+      <div class="cwv-item"><div class="cwv-name">INP</div><div class="cwv-val" style="color:${cwvColor('inp',s.cwv.inp)}">${s.cwv.inp}</div><div class="cwv-unit">ms</div><span class="badge ${cwvStatus('inp',s.cwv.inp)}">${cwvLabel('inp',s.cwv.inp)}</span></div>
     </div>
     <div class="cwv-score-wrap">
       <span class="cwv-score-label">Performance Score</span>
-      <span class="cwv-score-val" style="color:${cwvColor('score', s.cwv.score)}">${s.cwv.score}</span>
-    </div>` : '<div style="color:var(--gray-300);font-size:12px;text-align:center;padding:12px 0">無 CWV 數據</div>'}
+      <span class="cwv-score-val" style="color:${cwvColor('score',s.cwv.score)}">${s.cwv.score}</span>
+    </div>` : '<div style="color:var(--gray-300);font-size:12px;text-align:center;padding:12px 0">無 CWV 數據（尚未部署）</div>'}
   </div>
 
   <div class="two-col">
     <div class="card">
       <div class="card-title"><span class="ci ci-green">&#128269;</span>Google 收錄狀態</div>
-      <div class="cov-item">
-        <div class="cov-row"><span>Sitemap 提交</span><strong>${s.sitemap.total_urls} 頁</strong></div>
-      </div>
+      <div class="cov-item"><div class="cov-row"><span>Sitemap 提交</span><strong>${s.sitemap.total_urls} 頁</strong></div></div>
       <div class="cov-item">
         <div class="cov-row"><span>Google 收錄</span><strong>${s.gsc.indexed_pages} 頁</strong></div>
         <div class="bar-wrap"><div class="bar-fill ${covClass(cov)}" style="width:${Math.min(cov*100,100)}%"></div></div>
@@ -707,9 +863,9 @@ function renderSite(domain, s, g) {
       <div class="card-title"><span class="ci ci-purple">&#128196;</span>內容生產</div>
       <div class="kpi-grid" style="grid-template-columns:1fr 1fr;gap:10px">
         <div class="kcard c-purple"><div class="kl">Blog 文章</div><div class="kv">${s.content.total_articles}</div><div class="ks">已發佈</div></div>
-        <div class="kcard c-purple"><div class="kl">本月新發</div><div class="kv">${s.content.this_month}</div><div class="ks">本月</div></div>
-        ${s.role === 'main' || s.content.sports_articles > 0 ? `<div class="kcard c-blue"><div class="kl">體育新聞</div><div class="kv">${s.content.sports_articles||0}</div><div class="ks">已發佈</div></div>` : ''}
-        <div class="kcard"><div class="kl">本週新發</div><div class="kv">${s.content.this_week}</div><div class="ks">本週</div></div>
+        <div class="kcard c-purple"><div class="kl">本月新發</div><div class="kv">${s.content.this_month}</div></div>
+        ${(s.role==='main'||s.content.sports_articles>0)?`<div class="kcard c-blue"><div class="kl">體育新聞</div><div class="kv">${s.content.sports_articles||0}</div></div>`:''}
+        <div class="kcard"><div class="kl">本週新發</div><div class="kv">${s.content.this_week}</div></div>
       </div>
     </div>
   </div>
@@ -718,12 +874,10 @@ function renderSite(domain, s, g) {
   <div class="card">
     <div class="tbl-wrap">
       <table>
-        <thead><tr>
-          <th>日期</th><th>GA4流量</th><th>GSC曝光</th><th>GSC點擊</th><th>CTA點擊</th><th>文章總數</th>
-        </tr></thead>
-        <tbody>${d7rows || '<tr><td colspan="6" style="text-align:center;color:var(--gray-300)">無資料</td></tr>'}</tbody>
+        <thead><tr><th>日期</th><th>GA4流量</th><th>GSC曝光</th><th>GSC點擊</th><th>CTA點擊</th><th>文章總數</th></tr></thead>
+        <tbody>${d7rows||'<tr><td colspan="6" style="text-align:center;color:var(--gray-300)">無資料</td></tr>'}</tbody>
       </table>
-      <div style="font-size:10px;color:var(--gray-300);padding:4px 0">GSC 資料有 2-3 天延遲，最近 2-3 天顯示 ⏳（待更新，非真實 0）</div>
+      <div style="font-size:10px;color:var(--gray-300);padding:4px 0">GSC 資料有 2-3 天延遲</div>
     </div>
   </div>
 
@@ -732,26 +886,16 @@ function renderSite(domain, s, g) {
     <div class="tbl-wrap">
       <table class="ai-table">
         <thead><tr><th>爬蟲</th><th>最後訪問</th><th>30日次數</th><th>對應 AI 產品</th></tr></thead>
-        <tbody>${ALL_AI_CRAWLERS.map(name => {
-          const info = (s.ai_crawlers || {})[name];
-          const days = info ? aiLastSeen(info.last_seen) : null;
-          const isFresh = days !== null && days <= 7;
+        <tbody>${ALL_AI_CRAWLERS.map(name=>{
+          const info=(s.ai_crawlers||{})[name];
+          const days=info?aiLastSeen(info.last_seen):null;
+          const isFresh=days!==null&&days<=7;
           if (info) {
-            const dateStr = info.last_seen ? info.last_seen.slice(0,10) : '–';
-            const daysStr = days === 0 ? '今天' : days === 1 ? '1 天前' : days + ' 天前';
-            return `<tr>
-              <td><span class="ai-badge ${isFresh ? 'ai-fresh' : 'ai-stale'}">${name}</span></td>
-              <td style="color:var(--gray-800)">${dateStr} <span style="font-size:10px;color:var(--gray-400)">(${daysStr})</span></td>
-              <td style="font-weight:700">${info.count_30d || 0} 次</td>
-              <td style="color:var(--gray-600)">${AI_CRAWLER_PRODUCTS[name] || ''}</td>
-            </tr>`;
+            const dateStr=info.last_seen?info.last_seen.slice(0,10):'–';
+            const daysStr=days===0?'今天':days===1?'1 天前':days+' 天前';
+            return `<tr><td><span class="ai-badge ${isFresh?'ai-fresh':'ai-stale'}">${name}</span></td><td>${dateStr} <span style="font-size:10px;color:var(--gray-400)">(${daysStr})</span></td><td style="font-weight:700">${info.count_30d||0} 次</td><td style="color:var(--gray-600)">${AI_CRAWLER_PRODUCTS[name]||''}</td></tr>`;
           }
-          return `<tr style="opacity:.45">
-            <td><span class="ai-badge ai-stale">${name}</span></td>
-            <td style="color:var(--gray-300)">未偵測到</td>
-            <td style="color:var(--gray-300)">–</td>
-            <td style="color:var(--gray-400)">${AI_CRAWLER_PRODUCTS[name] || ''}</td>
-          </tr>`;
+          return `<tr style="opacity:.4"><td><span class="ai-badge ai-stale">${name}</span></td><td style="color:var(--gray-300)">未偵測到</td><td style="color:var(--gray-300)">–</td><td style="color:var(--gray-400)">${AI_CRAWLER_PRODUCTS[name]||''}</td></tr>`;
         }).join('')}</tbody>
       </table>
     </div>
@@ -762,7 +906,7 @@ function renderSite(domain, s, g) {
     <div class="tbl-wrap">
       <table>
         <thead><tr><th>關鍵字</th><th>平均排名</th><th>點擊數 (28d)</th></tr></thead>
-        <tbody>${kwRows}</tbody>
+        <tbody>${kwRows||'<tr><td colspan="3" style="text-align:center;color:var(--gray-300)">無資料</td></tr>'}</tbody>
       </table>
     </div>
   </div>`;
@@ -772,24 +916,17 @@ function renderSite(domain, s, g) {
 function renderTrafficChart(domain, s, dates) {
   const ctx = document.getElementById(`chart-traffic-${domain}`);
   if (!ctx) return;
+  const gk = currentGalaxy === 'all' ? findDomainGalaxy(domain) : currentGalaxy;
+  const color = (GALAXY_CONFIG[gk]||{}).color || '#1a56db';
   charts[`traffic-${domain}`] = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: dates,
-      datasets: [{
-        label: 'Sessions', data: s.traffic.series_30d,
-        borderColor: '#1a56db', backgroundColor: 'rgba(26,86,219,0.08)',
-        borderWidth: 2, fill: true, tension: 0.4, pointRadius: 2, pointHoverRadius: 4
-      }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: true,
-      plugins: { legend: { display: false } },
-      scales: {
-        x: { grid: { display: false }, ticks: { font: { size: 10 }, maxTicksLimit: 10 } },
-        y: { grid: { color: '#f0f0f0' }, ticks: { font: { size: 10 }, precision: 0 }, beginAtZero: true }
-      }
-    }
+    type:'line',
+    data:{ labels:dates||[], datasets:[{
+      label:'Sessions', data:s.traffic.series_30d,
+      borderColor:color, backgroundColor:color+'14',
+      borderWidth:2, fill:true, tension:0.4, pointRadius:2, pointHoverRadius:4
+    }]},
+    options:{responsive:true,maintainAspectRatio:true,plugins:{legend:{display:false}},
+      scales:{x:{grid:{display:false},ticks:{font:{size:10},maxTicksLimit:10}},y:{grid:{color:'#f0f0f0'},ticks:{font:{size:10},precision:0},beginAtZero:true}}}
   });
 }
 
@@ -798,24 +935,19 @@ function renderSourcesChart(domain, s) {
   if (!ctx) return;
   const src = s.traffic.sources;
   charts[`src-${domain}`] = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['自然搜尋', '直接', '社群', '推薦'],
-      datasets: [{ data: [src.organic, src.direct, src.social, src.referral].map(v => Math.round(v*100)),
-        backgroundColor: ['#1a56db','#6b7280','#0d9488','#c27803'],
-        borderWidth: 0, hoverOffset: 4 }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: true, cutout: '65%',
-      plugins: {
-        legend: { position: 'bottom', labels: { font: { size: 11 }, padding: 12, usePointStyle: true, pointStyleWidth: 8 } },
-        tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw}%` } }
-      }
-    }
+    type:'doughnut',
+    data:{labels:['自然搜尋','直接','社群','推薦'],datasets:[{
+      data:[src.organic,src.direct,src.social,src.referral].map(v=>Math.round(v*100)),
+      backgroundColor:['#1a56db','#6b7280','#0d9488','#c27803'],borderWidth:0,hoverOffset:4
+    }]},
+    options:{responsive:true,maintainAspectRatio:true,cutout:'65%',plugins:{
+      legend:{position:'bottom',labels:{font:{size:11},padding:12,usePointStyle:true,pointStyleWidth:8}},
+      tooltip:{callbacks:{label:c=>` ${c.label}: ${c.raw}%`}}
+    }}
   });
 }
 
-// ── Boot ─────────────────────────────────────────────
+// ── Boot ──────────────────────────────────────────────
 init();
 </script>
 </body>
