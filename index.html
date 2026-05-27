@@ -565,12 +565,14 @@ function renderOverview(g) {
             const cta = allSites.reduce((a,s) => a + (((s.daily_7d||[])[j]||{}).cta_clk||0), 0);
             const rowArticles = allSites.reduce((a,s) => a + (((s.daily_7d||[])[j]||{}).articles||0), 0);
             const hasGsc = allSites.some(s => ((s.daily_7d||[])[j]||{}).gsc_imp !== null && ((s.daily_7d||[])[j]||{}).gsc_imp !== undefined);
-            r += '<tr><td><strong>' + date + '</strong></td><td>' + fmt(sessions) + '</td><td>' + (hasGsc ? fmt(gscImp) : '<span style="color:var(--gray-300)">—</span>') + '</td><td>' + (hasGsc ? fmt(gscClk) : '<span style="color:var(--gray-300)">—</span>') + '</td><td>' + fmt(cta) + '</td><td>' + fmt(rowArticles) + '</td></tr>';
+            const isPending = allSites.some(s => ((s.daily_7d||[])[j]||{}).gsc_pending === true);
+            const pendingCell = '<span title="GSC 資料處理中，非真實 0（Google 通常延遲 2-3 天）" style="cursor:help;color:var(--gray-300)">⏳</span>';
+            r += '<tr><td><strong>' + date + '</strong></td><td>' + fmt(sessions) + '</td><td>' + (hasGsc ? fmt(gscImp) : isPending ? pendingCell : '<span style="color:var(--gray-300)">—</span>') + '</td><td>' + (hasGsc ? fmt(gscClk) : isPending ? pendingCell : '<span style="color:var(--gray-300)">—</span>') + '</td><td>' + fmt(cta) + '</td><td>' + fmt(rowArticles) + '</td></tr>';
           }
           return r;
         })()}</tbody>
       </table>
-      <div style="font-size:10px;color:var(--gray-300);padding:4px 0">GSC 資料有 1-2 天延遲，最近 1-2 天顯示 —　　點擊各站標籤查看個別明細</div>
+      <div style="font-size:10px;color:var(--gray-300);padding:4px 0">GSC 資料有 2-3 天延遲，最近 2-3 天顯示 ⏳（待更新，非真實 0）　　點擊各站標籤查看個別明細</div>
     </div>
   </div>
 
@@ -599,14 +601,17 @@ function renderSite(domain, s, g) {
     <td>${k.clicks}</td></tr>`).join('');
 
   const d7 = [...(s.daily_7d || [])].reverse();
-  const d7rows = d7.map(r => `<tr>
+  const d7rows = d7.map(r => {
+    const pendingCell = r.gsc_pending ? '<span title="GSC 資料處理中，非真實 0（Google 通常延遲 2-3 天）" style="cursor:help;color:var(--gray-300)">⏳</span>' : '<span style="color:var(--gray-300)">—</span>';
+    return `<tr>
     <td><strong>${r.date}</strong></td>
     <td>${fmt(r.sessions)}</td>
-    <td>${r.gsc_imp !== null ? fmt(r.gsc_imp) : '<span style="color:var(--gray-300)">—</span>'}</td>
-    <td>${r.gsc_clk !== null ? fmt(r.gsc_clk) : '<span style="color:var(--gray-300)">—</span>'}</td>
+    <td>${r.gsc_imp !== null ? fmt(r.gsc_imp) : pendingCell}</td>
+    <td>${r.gsc_clk !== null ? fmt(r.gsc_clk) : pendingCell}</td>
     <td>${fmt(r.cta_clk)}</td>
     <td>${r.articles !== undefined ? fmt(r.articles) : fmt(s.content.total_articles + (s.content.sports_articles||0))}</td>
-  </tr>`).join('');
+  </tr>`;
+  }).join('');
 
   return `
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap">
@@ -718,7 +723,7 @@ function renderSite(domain, s, g) {
         </tr></thead>
         <tbody>${d7rows || '<tr><td colspan="6" style="text-align:center;color:var(--gray-300)">無資料</td></tr>'}</tbody>
       </table>
-      <div style="font-size:10px;color:var(--gray-300);padding:4px 0">GSC 資料有 1-2 天延遲，最近 1-2 天顯示 —</div>
+      <div style="font-size:10px;color:var(--gray-300);padding:4px 0">GSC 資料有 2-3 天延遲，最近 2-3 天顯示 ⏳（待更新，非真實 0）</div>
     </div>
   </div>
 
