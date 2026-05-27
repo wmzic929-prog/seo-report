@@ -728,7 +728,7 @@ function renderOverview(g, gk) {
       <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.impressions_28d)}</td>
       <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.clicks_28d)}</td>
       <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():s.gsc.avg_position.toFixed(1)}</td>
-      <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge()+' / '+s.sitemap.total_urls:s.gsc.indexed_pages+' / '+s.sitemap.total_urls}
+      <td>${!s.gsc?gscPendingBadge()+' / '+s.sitemap.total_urls:s.gsc.indexed_pages+' / '+s.sitemap.total_urls}
         <span class="meter"><span class="meter-fill" style="width:${cov*100}%;background:${cov>=.8?'var(--green)':cov>=.5?'var(--orange)':'var(--red)'}"></span></span>
         <span style="font-size:10px;color:var(--gray-400)">${pct(cov)}</span>
       </td>
