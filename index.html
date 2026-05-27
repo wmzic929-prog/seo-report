@@ -725,8 +725,7 @@ function renderOverview(g, gk) {
       <td>${fmt(s.traffic.sessions_30d)}</td>
       <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.impressions_7d||0)+searchTrend(s.gsc.series_7d)}</td>
       <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.clicks_7d||0)}</td>
-      <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.impressions_28d)}</td>
-      <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.clicks_28d)}</td>
+      <td>${!s.gsc?gscPendingBadge():s.gsc.indexed_pages>0?s.gsc.indexed_pages:gscPendingBadge()}</td>
       <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():s.gsc.avg_position.toFixed(1)}</td>
       <td>${!s.gsc?gscPendingBadge()+' / '+s.sitemap.total_urls:s.gsc.indexed_pages+' / '+s.sitemap.total_urls}
         <span class="meter"><span class="meter-fill" style="width:${cov*100}%;background:${cov>=.8?'var(--green)':cov>=.5?'var(--orange)':'var(--red)'}"></span></span>
@@ -753,7 +752,7 @@ function renderOverview(g, gk) {
       <table>
         <thead><tr>
           <th>站點</th><th>類型</th><th>昨日</th><th>30日流量</th>
-          <th>GSC曝光(7d)</th><th>GSC點擊(7d)</th><th>GSC曝光(28d)</th><th>GSC點擊(28d)</th><th>平均排名</th>
+          <th>GSC曝光(7d)</th><th>GSC點擊(7d)</th><th>GSC索引</th><th>平均排名</th>
           <th>收錄/Sitemap</th><th>Blog</th><th>體育</th><th>本月新發</th><th>AI爬蟲</th>
         </tr></thead>
         <tbody>${rows}</tbody>
