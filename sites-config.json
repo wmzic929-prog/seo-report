@@ -38,28 +38,29 @@
       "main": {
         "domain": "businessdirectory-uk.com",
         "label": "BDUK 主站",
-        "ga4": "",
-        "gsc": "",
-        "github_repo": "",
+        "ga4": "G-Z96N8HQGP4",
+        "ga4_property_id": "539457824",
+        "gsc": "https://businessdirectory-uk.com/",
+        "github_repo": "slin41896-gif/businessdirectory-uk",
         "blog_path": "blog",
         "sitemap_url": "https://businessdirectory-uk.com/sitemap.xml"
       },
       "satellites": [
-        { "domain": "bountifultriathlon.com",      "label": "博彩統計中心", "site_key": "bet-stats-zone",     "phase": 0 },
-        { "domain": "besedkibg.com",               "label": "比賽數據倉庫", "site_key": "match-data-vault",   "phase": 0 },
-        { "domain": "topbravi.com",                "label": "賭場數據區",   "site_key": "casino-data-zone",   "phase": 0 },
-        { "domain": "dealer-index.com",            "label": "桌遊實驗室",   "site_key": "table-games-lab",    "phase": 0 },
-        { "domain": "ogradabg.com",                "label": "賽馬分析",     "site_key": "hk-race-analytics",  "phase": 0 },
-        { "domain": "track-index.com",             "label": "賽道數據庫",   "site_key": "racing-data-vault",  "phase": 1 },
-        { "domain": "reel-base.com",               "label": "老虎機研究室", "site_key": "reel-research-lab",  "phase": 1 },
-        { "domain": "spin-vaults.com",             "label": "老虎機索引",   "site_key": "slot-index-data",    "phase": 1 },
-        { "domain": "feuerwehr-georgenhausen.com", "label": "賭場審計區",   "site_key": "casino-audit-zone",  "phase": 1 },
-        { "domain": "platform-benchmark.com",      "label": "平台基準測試", "site_key": "platform-benchmark", "phase": 1 },
-        { "domain": "abcosvetlenie.com",           "label": "電競博彩數據", "site_key": "esports-bet-data",   "phase": 1 },
-        { "domain": "cryptocurrency-game.com",     "label": "加密遊戲索引", "site_key": "crypto-play-index",  "phase": 1 },
-        { "domain": "sports-analy.com",            "label": "賽事統計區",   "site_key": "match-stat-zone",    "phase": 1 },
-        { "domain": "esports-index.com",           "label": "電競成長實驗室","site_key": "esports-growth-lab", "phase": 1 },
-        { "domain": "clan-guide.com",              "label": "策略遊戲指南", "site_key": "strategy-game-lab",  "phase": 1 }
+        { "domain": "bountifultriathlon.com",      "label": "博彩統計中心",   "site_key": "bet-stats-zone",     "phase": 0, "ga4": "G-XLMSVQ7DR2", "ga4_property_id": "539472240", "gsc": "https://bountifultriathlon.com/",      "github_repo": "slin41896-gif/bountifultriathlon-com",      "blog_path": "blog", "sitemap_url": "https://bountifultriathlon.com/sitemap.xml" },
+        { "domain": "besedkibg.com",               "label": "比賽數據倉庫",   "site_key": "match-data-vault",   "phase": 0, "ga4": "G-DHHQJK9WK7", "ga4_property_id": "539472956", "gsc": "https://besedkibg.com/",               "github_repo": "slin41896-gif/besedkibg-com",               "blog_path": "blog", "sitemap_url": "https://besedkibg.com/sitemap.xml" },
+        { "domain": "topbravi.com",                "label": "賭場數據區",     "site_key": "casino-data-zone",   "phase": 0, "ga4": "G-CPWB0W1R59", "ga4_property_id": "539479785", "gsc": "https://topbravi.com/",                "github_repo": "slin41896-gif/topbravi-com",                "blog_path": "blog", "sitemap_url": "https://topbravi.com/sitemap.xml" },
+        { "domain": "dealer-index.com",            "label": "桌遊實驗室",     "site_key": "table-games-lab",    "phase": 0, "ga4": "G-2G3NBEWZR8", "ga4_property_id": "539463325", "gsc": "https://dealer-index.com/",            "github_repo": "slin41896-gif/dealer-index-com",            "blog_path": "blog", "sitemap_url": "https://dealer-index.com/sitemap.xml" },
+        { "domain": "ogradabg.com",                "label": "賽馬分析",       "site_key": "hk-race-analytics",  "phase": 0, "ga4": "G-TR28WSZ3KW", "ga4_property_id": "539496860", "gsc": "https://ogradabg.com/",                "github_repo": "slin41896-gif/ogradabg-com",                "blog_path": "blog", "sitemap_url": "https://ogradabg.com/sitemap.xml" },
+        { "domain": "track-index.com",             "label": "賽道數據庫",     "site_key": "racing-data-vault",  "phase": 1, "ga4": "G-DH00B3GW07", "ga4_property_id": "539496861", "gsc": "https://track-index.com/",             "github_repo": "slin41896-gif/track-index-com",             "blog_path": "blog", "sitemap_url": "https://track-index.com/sitemap.xml" },
+        { "domain": "reel-base.com",               "label": "老虎機研究室",   "site_key": "reel-research-lab",  "phase": 1, "ga4": "G-XY6LNGHRME", "ga4_property_id": "539494234", "gsc": "https://reel-base.com/",               "github_repo": "slin41896-gif/reel-base-com",               "blog_path": "blog", "sitemap_url": "https://reel-base.com/sitemap.xml" },
+        { "domain": "spin-vaults.com",             "label": "老虎機索引",     "site_key": "slot-index-data",    "phase": 1, "ga4": "G-CQMFPK9CXC", "ga4_property_id": "539457097", "gsc": "https://spin-vaults.com/",             "github_repo": "slin41896-gif/spin-vaults-com",             "blog_path": "blog", "sitemap_url": "https://spin-vaults.com/sitemap.xml" },
+        { "domain": "feuerwehr-georgenhausen.com", "label": "賭場審計區",     "site_key": "casino-audit-zone",  "phase": 1, "ga4": "G-J737N5M58X", "ga4_property_id": "539496758", "gsc": "https://feuerwehr-georgenhausen.com/", "github_repo": "slin41896-gif/feuerwehr-georgenhausen-com", "blog_path": "blog", "sitemap_url": "https://feuerwehr-georgenhausen.com/sitemap.xml" },
+        { "domain": "platform-benchmark.com",      "label": "平台基準測試",   "site_key": "platform-benchmark", "phase": 1, "ga4": "G-W8JQYKKJ1B", "ga4_property_id": "539465376", "gsc": "https://platform-benchmark.com/",      "github_repo": "slin41896-gif/platform-benchmark-com",      "blog_path": "blog", "sitemap_url": "https://platform-benchmark.com/sitemap.xml" },
+        { "domain": "abcosvetlenie.com",           "label": "電競博彩數據",   "site_key": "esports-bet-data",   "phase": 1, "ga4": "G-Y6N3CE9TJE", "ga4_property_id": "539476060", "gsc": "https://abcosvetlenie.com/",           "github_repo": "slin41896-gif/abcosvetlenie-com",           "blog_path": "blog", "sitemap_url": "https://abcosvetlenie.com/sitemap.xml" },
+        { "domain": "cryptocurrency-game.com",     "label": "加密遊戲索引",   "site_key": "crypto-play-index",  "phase": 1, "ga4": "G-PPLG0E8XNF", "ga4_property_id": "539467977", "gsc": "https://cryptocurrency-game.com/",     "github_repo": "slin41896-gif/cryptocurrency-game-com",     "blog_path": "blog", "sitemap_url": "https://cryptocurrency-game.com/sitemap.xml" },
+        { "domain": "sports-analy.com",            "label": "賽事統計區",     "site_key": "match-stat-zone",    "phase": 1, "ga4": "G-GV9BC2S815", "ga4_property_id": "539490709", "gsc": "https://sports-analy.com/",            "github_repo": "slin41896-gif/sports-analy-com",            "blog_path": "blog", "sitemap_url": "https://sports-analy.com/sitemap.xml" },
+        { "domain": "esports-index.com",           "label": "電競成長實驗室", "site_key": "esports-growth-lab", "phase": 1, "ga4": "G-P5SB6XY3MB", "ga4_property_id": "539472242", "gsc": "https://esports-index.com/",           "github_repo": "slin41896-gif/esports-index-com",           "blog_path": "blog", "sitemap_url": "https://esports-index.com/sitemap.xml" },
+        { "domain": "clan-guide.com",              "label": "策略遊戲指南",   "site_key": "strategy-game-lab",  "phase": 1, "ga4": "G-FMJBGLWMNB", "ga4_property_id": "539476061", "gsc": "https://clan-guide.com/",              "github_repo": "slin41896-gif/clan-guide-com",              "blog_path": "blog", "sitemap_url": "https://clan-guide.com/sitemap.xml" }
       ]
     }
   ]
