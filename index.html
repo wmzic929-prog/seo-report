@@ -451,8 +451,17 @@ async function init() {
         if (!sg.sites[domain]) sg.sites[domain] = siteStub(label);
       }
     }
-    // Always inject BDUK from mock (no real data source yet)
-    DATA.groups.bduk = MOCK.groups.bduk;
+    const bduk = DATA.groups.bduk;
+    if (bduk) {
+      bduk.name = 'BDUK';
+      if (!bduk.phases) bduk.phases = BDUK_PHASES;
+      if (!bduk.dates_30d) bduk.dates_30d = MOCK.groups.bduk.dates_30d;
+      for (const [domain, label] of Object.entries(BDUK_LABELS)) {
+        if (!bduk.sites[domain]) bduk.sites[domain] = siteStub(label);
+      }
+    } else {
+      DATA.groups.bduk = MOCK.groups.bduk;
+    }
   } catch {
     DATA = MOCK;
   }
