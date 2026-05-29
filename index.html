@@ -210,8 +210,8 @@ tr:hover td{background:var(--gray-50)}
 <script>
 // ── Galaxy Config ─────────────────────────────────────
 const GALAXY_CONFIG = {
-  spheretap: { name: 'Spheretap',    color: '#1a56db', colorLight: '#e8f0fe', icon: '⚽', desc: '博彩衛星站群' },
-  bduk:      { name: 'BDUK(KHG)',    color: '#059669', colorLight: '#d1fae5', icon: '🇬🇧', desc: '英國商業目錄站群' }
+  spheretap: { name: 'Spheretap(5站)',    color: '#1a56db', colorLight: '#e8f0fe', icon: '⚽', desc: '博彩衛星站群' },
+  bduk:      { name: 'BDUK(6站)',    color: '#059669', colorLight: '#d1fae5', icon: '🇬🇧', desc: '英國商業目錄站群' }
 };
 
 // ── Real data URL ─────────────────────────────────────
@@ -281,7 +281,7 @@ const MOCK = {
   generated_at: '2026-05-27T05:30:00+08:00',
   groups: {
     spheretap: {
-      name: 'Spheretap', phases: SPHERETAP_PHASES,
+      name: 'Spheretap(5站)', phases: SPHERETAP_PHASES,
       dates_30d: ['4/27','4/28','4/29','4/30','5/1','5/2','5/3','5/4','5/5','5/6','5/7','5/8','5/9','5/10','5/11','5/12','5/13','5/14','5/15','5/16','5/17','5/18','5/19','5/20','5/21','5/22','5/23','5/24','5/25','5/26','5/27'],
       sites: {
         'spheretap.com': {
@@ -351,7 +351,7 @@ const MOCK = {
       }
     },
     bduk: {
-      name: 'BDUK(KHG)',    phases: BDUK_PHASES,
+      name: 'BDUK(6站)',    phases: BDUK_PHASES,
       dates_30d: gen30dDates(),
       sites: {
         'businessdirectory-uk.com': siteStub('BDUK 主站', 'main'),
@@ -444,7 +444,7 @@ async function init() {
     if (!DATA.groups) DATA.groups = {};
     const sg = DATA.groups.spheretap;
     if (sg) {
-      sg.name = 'Spheretap';
+      sg.name = 'Spheretap(5站)';
       if (!sg.phases) sg.phases = SPHERETAP_PHASES;
       if (!sg.dates_30d) sg.dates_30d = MOCK.groups.spheretap.dates_30d;
       for (const [domain, label] of Object.entries(SPHERETAP_P1_LABELS)) {
