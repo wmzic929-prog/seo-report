@@ -470,7 +470,7 @@ async function init() {
     `資料更新: ${dt.getMonth()+1}/${dt.getDate()} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')} HKT`;
   buildGalaxyBar();
   switchGalaxy('all');
-  if (DATA.alerts) renderAlertBanner(DATA);
+  // if (DATA.alerts) renderAlertBanner(DATA); // disabled: alert banner turned off
   startClock();
 }
 
