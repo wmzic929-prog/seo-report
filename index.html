@@ -260,10 +260,10 @@ function siteStub(label, role) {
       series_30d:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
       bounce_rate:0, avg_duration_sec:0, mobile_pct:0.72,
       sources:{organic:0.25,direct:0.50,social:0.15,referral:0.10} },
-    cta: { clicks_today:0, clicks_7d:0, unique_clicks_7d:0, conversions_today:0, conversions_7d:0 },
+    cta: { clicks_today:0, clicks_7d:0, clicks_28d:0, unique_clicks_7d:0, conversions_today:0, conversions_7d:0 },
     gsc: { impressions_28d:0, impressions_7d:0, clicks_28d:0, clicks_7d:0, ctr:0, avg_position:0, indexed_pages:0, top_keywords:[] },
     sitemap: { total_urls:0 }, content: { total_articles:0, sports_articles:0, this_month:0, this_week:0 },
-    cwv: { lcp:0, cls:0, inp:0, score:0 }, ai_crawlers:{} };
+    cwv: { lcp:0, cls:0, inp:0, score:0 }, ai_crawlers:{}, social:{fb_posts:0} };
 }
 
 // ── DATES_30D helper ──────────────────────────────────
@@ -290,17 +290,18 @@ const MOCK = {
             series_30d:[8,12,9,15,11,14,18,10,13,16,14,19,11,17,22,13,18,21,15,24,19,23,16,20,25,3,5,8,11,18],
             bounce_rate:0.61, avg_duration_sec:178, mobile_pct:0.69,
             sources:{organic:0.42,direct:0.28,social:0.20,referral:0.10} },
-          cta: { clicks_today:4, clicks_7d:23, unique_clicks_7d:19, conversions_today:1, conversions_7d:8 },
+          cta: { clicks_today:4, clicks_7d:23, clicks_28d:68, unique_clicks_7d:19, conversions_today:1, conversions_7d:8 },
           gsc: { impressions_28d:4200, impressions_7d:980, clicks_28d:89, clicks_7d:22, ctr:0.0212, avg_position:22.1, indexed_pages:72,
             top_keywords:[{kw:'sports betting hk guide',pos:8.2,clicks:22},{kw:'spheretap review',pos:3.1,clicks:18},{kw:'online casino tips',pos:14.5,clicks:15},{kw:'live casino strategy',pos:28.4,clicks:8}] },
           sitemap:{total_urls:89}, content:{total_articles:58, sports_articles:28, this_month:43, this_week:32},
           cwv:{lcp:1800,cls:0.04,inp:145,score:92},
-          ai_crawlers:{GPTBot:{last_seen:'2026-05-22T08:00:00+08:00',count_30d:12},ClaudeBot:{last_seen:'2026-05-20T14:30:00+08:00',count_30d:3},CCBot:{last_seen:'2026-05-18T06:00:00+08:00',count_30d:8}}
+          ai_crawlers:{GPTBot:{last_seen:'2026-05-22T08:00:00+08:00',count_30d:12},ClaudeBot:{last_seen:'2026-05-20T14:30:00+08:00',count_30d:3},CCBot:{last_seen:'2026-05-18T06:00:00+08:00',count_30d:8}},
+          social:{fb_posts:45}
         },
         'matchvangtage.com': {
           label:'體育博彩攻略', role:'satellite',
           traffic:{sessions_today:2,sessions_7d:8,sessions_30d:11,series_30d:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,3,2,2],bounce_rate:0.74,avg_duration_sec:95,mobile_pct:0.78,sources:{organic:0.25,direct:0.50,social:0.15,referral:0.10}},
-          cta:{clicks_today:0,clicks_7d:2,unique_clicks_7d:2,conversions_today:0,conversions_7d:0},
+          cta:{clicks_today:0,clicks_7d:2,clicks_28d:5,unique_clicks_7d:2,conversions_today:0,conversions_7d:0},
           gsc:{impressions_28d:124,impressions_7d:30,clicks_28d:3,clicks_7d:1,ctr:0.0242,avg_position:41.2,indexed_pages:12,top_keywords:[{kw:'sports betting tips',pos:35.1,clicks:2},{kw:'hk football odds',pos:52.3,clicks:1}]},
           sitemap:{total_urls:28},content:{total_articles:22,sports_articles:0,this_month:22,this_week:8},
           cwv:{lcp:1900,cls:0.03,inp:162,score:91},
@@ -309,7 +310,7 @@ const MOCK = {
         'tableedge.org': {
           label:'真人遊戲技術流', role:'satellite',
           traffic:{sessions_today:1,sessions_7d:5,sessions_30d:7,series_30d:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,2,1,1],bounce_rate:0.79,avg_duration_sec:82,mobile_pct:0.76,sources:{organic:0.15,direct:0.55,social:0.20,referral:0.10}},
-          cta:{clicks_today:0,clicks_7d:1,unique_clicks_7d:1,conversions_today:0,conversions_7d:0},
+          cta:{clicks_today:0,clicks_7d:1,clicks_28d:3,unique_clicks_7d:1,conversions_today:0,conversions_7d:0},
           gsc:{impressions_28d:87,impressions_7d:20,clicks_28d:1,clicks_7d:0,ctr:0.0115,avg_position:48.7,indexed_pages:8,top_keywords:[{kw:'live baccarat strategy',pos:42.1,clicks:1}]},
           sitemap:{total_urls:25},content:{total_articles:19,sports_articles:0,this_month:19,this_week:6},
           cwv:{lcp:2100,cls:0.06,inp:198,score:88},ai_crawlers:{}
@@ -317,7 +318,7 @@ const MOCK = {
         'turf-pulse.com': {
           label:'香港賽馬技術分析', role:'satellite',
           traffic:{sessions_today:4,sessions_7d:15,sessions_30d:18,series_30d:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,5,4,4],bounce_rate:0.68,avg_duration_sec:124,mobile_pct:0.82,sources:{organic:0.30,direct:0.40,social:0.20,referral:0.10}},
-          cta:{clicks_today:1,clicks_7d:4,unique_clicks_7d:4,conversions_today:0,conversions_7d:1},
+          cta:{clicks_today:1,clicks_7d:4,clicks_28d:12,unique_clicks_7d:4,conversions_today:0,conversions_7d:1},
           gsc:{impressions_28d:215,impressions_7d:55,clicks_28d:5,clicks_7d:2,ctr:0.0233,avg_position:35.4,indexed_pages:18,top_keywords:[{kw:'hkjc horse racing tips',pos:28.3,clicks:3},{kw:'hong kong racing analysis',pos:41.7,clicks:2}]},
           sitemap:{total_urls:31},content:{total_articles:24,sports_articles:0,this_month:24,this_week:7},
           cwv:{lcp:1700,cls:0.04,inp:155,score:93},ai_crawlers:{}
@@ -325,7 +326,7 @@ const MOCK = {
         'spin-metrics.com': {
           label:'老虎機遊戲解析', role:'satellite',
           traffic:{sessions_today:1,sessions_7d:6,sessions_30d:8,series_30d:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,2,2,1],bounce_rate:0.76,avg_duration_sec:88,mobile_pct:0.75,sources:{organic:0.20,direct:0.52,social:0.18,referral:0.10}},
-          cta:{clicks_today:0,clicks_7d:1,unique_clicks_7d:1,conversions_today:0,conversions_7d:0},
+          cta:{clicks_today:0,clicks_7d:1,clicks_28d:4,unique_clicks_7d:1,conversions_today:0,conversions_7d:0},
           gsc:{impressions_28d:98,impressions_7d:25,clicks_28d:2,clicks_7d:1,ctr:0.0204,avg_position:44.1,indexed_pages:10,top_keywords:[{kw:'slot rtp analysis',pos:38.2,clicks:2}]},
           sitemap:{total_urls:23},content:{total_articles:17,sports_articles:0,this_month:17,this_week:5},
           cwv:{lcp:2000,cls:0.05,inp:178,score:89},ai_crawlers:{}
@@ -333,7 +334,7 @@ const MOCK = {
         'verifiedplays.com': {
           label:'平台技術評測', role:'satellite',
           traffic:{sessions_today:2,sessions_7d:9,sessions_30d:12,series_30d:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,3,3,2],bounce_rate:0.72,avg_duration_sec:103,mobile_pct:0.71,sources:{organic:0.28,direct:0.45,social:0.17,referral:0.10}},
-          cta:{clicks_today:0,clicks_7d:2,unique_clicks_7d:2,conversions_today:0,conversions_7d:0},
+          cta:{clicks_today:0,clicks_7d:2,clicks_28d:7,unique_clicks_7d:2,conversions_today:0,conversions_7d:0},
           gsc:{impressions_28d:143,impressions_7d:35,clicks_28d:4,clicks_7d:1,ctr:0.0280,avg_position:38.9,indexed_pages:15,top_keywords:[{kw:'licensed casino review',pos:32.5,clicks:3},{kw:'casino platform comparison',pos:45.1,clicks:1}]},
           sitemap:{total_urls:26},content:{total_articles:20,sports_articles:0,this_month:20,this_week:6},
           cwv:{lcp:1900,cls:0.04,inp:167,score:91},ai_crawlers:{}
@@ -723,6 +724,7 @@ function renderOverview(g, gk) {
   })();
   const aiCoveredCount = sites.filter(([,s])=>s.ai_crawlers&&Object.keys(s.ai_crawlers).length>0).length;
   const aiTypes = new Set(sites.flatMap(([,s])=>Object.keys(s.ai_crawlers||{})));
+  const totFbPosts = sites.reduce((a,[,s])=>a+(s.social&&s.social.fb_posts?s.social.fb_posts:0), 0);
   let rows = '';
   sites.forEach(([domain, s]) => {
     const cov = s.sitemap.total_urls>0?s.gsc.indexed_pages/s.sitemap.total_urls:0;
@@ -755,6 +757,16 @@ function renderOverview(g, gk) {
     <div class="kcard c-purple"><div class="kl">文章總數</div><div class="kv">${fmt(totBlog+totSports)}</div><div class="ks">Blog ${totBlog} + 體育 ${totSports}</div></div>
     <div class="kcard" style="border-top-color:#0891b2"><div class="kl">AI 爬蟲覆蓋</div><div class="kv" style="color:#0891b2">${aiCoveredCount}/${sites.length} 站</div><div class="ks">${aiTypes.size} 種爬蟲</div></div>
   </div>
+  ${gk==='spheretap'?`
+  <div class="sec-label">社群媒體</div>
+  <div class="card" style="margin-bottom:14px">
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+      <div style="width:30px;height:30px;border-radius:7px;background:#e7f0fe;display:inline-flex;align-items:center;justify-content:center;color:#1877f2;font-size:17px;font-weight:900;flex-shrink:0">f</div>
+      <div><div style="font-size:13px;font-weight:700;color:var(--gray-800)">Spheretap Facebook 粉絲頁</div><div style="font-size:11px;color:var(--gray-400)">官方社群帳號</div></div>
+      <a href="https://www.facebook.com/profile.php?id=61589942924015" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;padding:6px 14px;background:#1877f2;color:#fff;text-decoration:none;border-radius:6px;font-size:12px;font-weight:700">↗ 前往 FB 頁面</a>
+      ${totFbPosts>0?'<div><span style="font-size:20px;font-weight:800;color:#1877f2">'+totFbPosts+'</span><span style="font-size:11px;color:var(--gray-400);margin-left:4px">篇發文</span></div>':''}
+    </div>
+  </div>`:''}
   <div class="sec-label">各站比較（點擊各站查看詳情）</div>
   <div class="card">
     <div class="tbl-wrap">
@@ -826,6 +838,7 @@ function renderSite(domain, s, g, gk) {
   <div class="kpi-grid">
     <div class="kcard c-orange"><div class="kl">CTA點擊 (昨日)</div><div class="kv">${s.cta.clicks_today}</div></div>
     <div class="kcard c-orange"><div class="kl">CTA點擊 (7d)</div><div class="kv">${s.cta.clicks_7d}</div><div class="ks">不重複: ${s.cta.unique_clicks_7d}</div></div>
+    <div class="kcard c-orange"><div class="kl">CTA點擊 (28d)</div><div class="kv">${s.cta.clicks_28d||0}</div></div>
     <div class="kcard c-green"><div class="kl">轉換 (昨日)</div><div class="kv">${s.cta.conversions_today}</div></div>
     <div class="kcard c-green"><div class="kl">轉換 (7d)</div><div class="kv">${s.cta.conversions_7d}</div></div>
   </div>
@@ -877,6 +890,16 @@ function renderSite(domain, s, g, gk) {
       </div>
     </div>
   </div>
+
+  ${gk==='spheretap'?`
+  <div class="sec-label">社群媒體</div>
+  <div class="card" style="margin-bottom:0">
+    <div class="card-title"><span class="ci" style="background:#e7f0fe;color:#1877f2;font-size:15px;font-weight:900">f</span>Facebook 粉絲頁</div>
+    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+      <a href="https://www.facebook.com/profile.php?id=61589942924015" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;background:#1877f2;color:#fff;text-decoration:none;border-radius:6px;font-size:13px;font-weight:700">↗ 前往 FB 粉絲頁</a>
+      ${s.social&&s.social.fb_posts?'<div><span style="font-size:22px;font-weight:800;color:#1877f2">'+s.social.fb_posts+'</span><span style="font-size:11px;color:var(--gray-400);margin-left:4px">篇發文</span></div>':'<span style="font-size:12px;color:var(--gray-400)">發文數載入中…</span>'}
+    </div>
+  </div>`:''}
 
   <div class="sec-label">7日每日趨勢</div>
   <div class="card">
