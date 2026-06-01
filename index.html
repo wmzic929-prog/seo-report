@@ -466,6 +466,22 @@ async function init() {
   } catch {
     DATA = MOCK;
   }
+  // Back-fill cta summary from daily_7d / cta_series_7d when aggregator hasn't computed them yet
+  for (const g of Object.values(DATA.groups||{})) {
+    for (const site of Object.values(g.sites||{})) {
+      if (!site.cta) continue;
+      if (!site.cta.clicks_7d) {
+        if (site.daily_7d && site.daily_7d.length) {
+          site.cta.clicks_7d = site.daily_7d.reduce((a,r)=>a+(r.cta_clk||0), 0);
+          site.cta.clicks_today = site.daily_7d[site.daily_7d.length-1].cta_clk || 0;
+        } else if (site.traffic && site.traffic.cta_series_7d && site.traffic.cta_series_7d.length) {
+          const ser = site.traffic.cta_series_7d;
+          site.cta.clicks_7d = ser.reduce((a,v)=>a+v, 0);
+          site.cta.clicks_today = ser[ser.length-1] || 0;
+        }
+      }
+    }
+  }
   const dt = new Date(DATA.generated_at);
   document.getElementById('hd-update').textContent =
     `資料更新: ${dt.getMonth()+1}/${dt.getDate()} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')} HKT`;
