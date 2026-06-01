@@ -820,6 +820,12 @@ function renderSite(domain, s, g, gk) {
   }).join('');
 
   const hasCWV = s.cwv && s.cwv.score > 0;
+  // Dynamic content date labels based on data generation date
+  const genDt = DATA.generated_at ? new Date(DATA.generated_at) : new Date();
+  const genMonth = genDt.getMonth() + 1;
+  const weekStartDt = new Date(genDt); weekStartDt.setDate(weekStartDt.getDate() - 7);
+  const thisMonthLabel = genMonth + '月新發';
+  const thisWeekLabel = (weekStartDt.getMonth()+1) + '/' + weekStartDt.getDate() + '起';
 
   return `
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap">
@@ -850,13 +856,11 @@ function renderSite(domain, s, g, gk) {
     </div>
   </div>
 
-  <div class="sec-label">CTA 與轉換</div>
+  <div class="sec-label">CTA 點擊</div>
   <div class="kpi-grid">
     <div class="kcard c-orange"><div class="kl">CTA點擊 (昨日)</div><div class="kv">${s.cta.clicks_today}</div></div>
     <div class="kcard c-orange"><div class="kl">CTA點擊 (7d)</div><div class="kv">${s.cta.clicks_7d}</div><div class="ks">不重複: ${s.cta.unique_clicks_7d}</div></div>
     <div class="kcard c-orange"><div class="kl">CTA點擊 (28d)</div><div class="kv">${s.cta.clicks_28d||0}</div></div>
-    <div class="kcard c-green"><div class="kl">轉換 (昨日)</div><div class="kv">${s.cta.conversions_today}</div></div>
-    <div class="kcard c-green"><div class="kl">轉換 (7d)</div><div class="kv">${s.cta.conversions_7d}</div></div>
   </div>
 
   <div class="sec-label">GSC 搜尋表現</div>
@@ -900,9 +904,9 @@ function renderSite(domain, s, g, gk) {
       <div class="card-title"><span class="ci ci-purple">&#128196;</span>內容生產</div>
       <div class="kpi-grid" style="grid-template-columns:1fr 1fr;gap:10px">
         <div class="kcard c-purple"><div class="kl">Blog 文章</div><div class="kv">${s.content.total_articles}</div><div class="ks">已發佈</div></div>
-        <div class="kcard c-purple"><div class="kl">本月新發</div><div class="kv">${s.content.this_month}</div></div>
+        <div class="kcard c-purple"><div class="kl">${thisMonthLabel}</div><div class="kv">${s.content.this_month}</div></div>
         ${(s.role==='main'||s.content.sports_articles>0)?`<div class="kcard c-blue"><div class="kl">體育新聞</div><div class="kv">${s.content.sports_articles||0}</div></div>`:''}
-        <div class="kcard"><div class="kl">本週新發</div><div class="kv">${s.content.this_week}</div></div>
+        <div class="kcard"><div class="kl">${thisWeekLabel}</div><div class="kv">${s.content.this_week}</div></div>
       </div>
     </div>
   </div>
