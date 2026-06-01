@@ -482,6 +482,7 @@ async function init() {
       }
     }
   }
+  if (window.__WEEKLY_REPORT_MODE) return;
   const dt = new Date(DATA.generated_at);
   document.getElementById('hd-update').textContent =
     `資料更新: ${dt.getMonth()+1}/${dt.getDate()} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')} HKT`;
@@ -993,6 +994,439 @@ function renderSourcesChart(domain, s) {
 
 // ── Boot ──────────────────────────────────────────────
 init();
+</script>
+
+<!-- ══════════════════════════════════════════════════════════════════
+     客戶週報模式 (Weekly Report Mode)
+     觸發條件: URL 帶有 ?report=weekly
+     此區塊不影響現有儀表板任何功能
+     ══════════════════════════════════════════════════════════════════ -->
+<script>
+(function() {
+  'use strict';
+
+  // ── URL 參數偵測 ──────────────────────────────────────────
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('report') !== 'weekly') return; // 非週報模式，正常顯示儀表板
+
+  // 標記週報模式，防止原始 init() 寫入已消失的 DOM 元素
+  window.__WEEKLY_REPORT_MODE = true;
+
+  const galaxyId = params.get('galaxy') || 'spheretap';
+  const weekId   = params.get('week')   || getCurrentWeekId();
+
+  function getCurrentWeekId() {
+    const now = new Date();
+    const startOfYear = new Date(now.getFullYear(), 0, 1);
+    const dayOfYear   = Math.floor((now - startOfYear) / 86400000);
+    const weekNum     = Math.ceil((dayOfYear + startOfYear.getDay() + 1) / 7);
+    return now.getFullYear() + '-W' + String(weekNum).padStart(2, '0');
+  }
+
+  // ── Mock 資料 ──────────────────────────────────────────────
+  const MOCK_WEEKLY = {
+    week: "2026-W23",
+    week_label: "2026年6月第1週",
+    generated_at: "2026-06-01T18:00:00+08:00",
+    galaxies: {
+      spheretap: {
+        id: "spheretap",
+        name: "Spheretap",
+        color: "#1a56db",
+        metrics: {
+          organic_sessions_7d: 1234,
+          organic_sessions_wow_pct: 18.1,
+          impressions_7d: 12400,
+          impressions_wow_pct: 23.1,
+          avg_position: 4.2,
+          content_pages_total: 217,
+          content_pages_new_7d: 12,
+          sites_total: 16,
+          sites_active: 16
+        },
+        trend_4w: [800, 950, 1100, 1234],
+        trend_4w_labels: ["5/11週", "5/18週", "5/25週", "6/1週"],
+        top_sites: [
+          { domain: "matchvantage.com",  sessions_wow_pct: 32.1, highlight: "本週流量成長最快" },
+          { domain: "tableedge.org",     sessions_wow_pct: 21.5, highlight: "新內容帶動排名提升" },
+          { domain: "spin-metrics.com",  sessions_wow_pct: 15.8, highlight: "搜尋能見度持續擴大" }
+        ],
+        analysis_summary: "本週搜尋能見度大幅提升，整體流量維持強勁成長態勢，多個關鍵詞已進入 Google 搜尋結果前列。目前佈局方向正在發揮效果，品牌在目標搜尋市場的存在感持續加強。",
+        next_direction: [
+          {
+            title:  "深化搜尋主題覆蓋",
+            why:    "搜尋覆蓋越廣，潛在客戶找到您的機會越多，長期流量更穩定",
+            action: "持續針對相關搜尋需求建立內容陣地，擴大主題佈局廣度"
+          },
+          {
+            title:  "強化現有排名競爭力",
+            why:    "已出現在搜尋結果的頁面，是最有效率的點擊率提升切入點",
+            action: "集中資源優化表現較佳頁面的相關性，推動排名進一步前進"
+          },
+          {
+            title:  "建立主題權威基礎",
+            why:    "在特定主題有深度佈局的網站，享有更穩定的長期排名，不易受演算法影響",
+            action: "系統性補強核心主題知識體系，讓搜尋引擎認識您的專業定位"
+          }
+        ]
+      },
+      bduk: {
+        id: "bduk",
+        name: "BDUK",
+        color: "#059669",
+        metrics: {
+          organic_sessions_7d: 876,
+          organic_sessions_wow_pct: 12.3,
+          impressions_7d: 8900,
+          impressions_wow_pct: 15.7,
+          avg_position: 5.1,
+          content_pages_total: 198,
+          content_pages_new_7d: 8,
+          sites_total: 16,
+          sites_active: 16
+        },
+        trend_4w: [620, 710, 790, 876],
+        trend_4w_labels: ["5/11週", "5/18週", "5/25週", "6/1週"],
+        top_sites: [
+          { domain: "bountifultriathlon.com", sessions_wow_pct: 28.4, highlight: "本週流量成長最快" },
+          { domain: "dealer-index.com",       sessions_wow_pct: 18.9, highlight: "搜尋能見度顯著提升" },
+          { domain: "topbravi.com",           sessions_wow_pct: 14.2, highlight: "新內容帶動排名成長" }
+        ],
+        analysis_summary: "BDUK 生態系本週整體表現穩健，多站點搜尋能見度同步提升，顯示佈局方向正在被搜尋引擎認可。有機流量較上週成長 12.3%，成長動能持續累積中。",
+        next_direction: [
+          {
+            title:  "擴大地域搜尋覆蓋",
+            why:    "針對更多地區關鍵詞佈局，可觸及更廣泛的目標用戶群",
+            action: "持續在核心主題下拓展多角度內容，覆蓋更多搜尋場景"
+          },
+          {
+            title:  "提升內容相關性深度",
+            why:    "深度內容比淺層內容更容易獲得排名，也更能吸引精準用戶",
+            action: "針對已有排名的主題，加強內容的專業深度與完整性"
+          },
+          {
+            title:  "鞏固搜尋品牌信號",
+            why:    "持續的搜尋曝光有助建立品牌認知，帶動直接搜尋流量成長",
+            action: "加強核心頁面的搜尋相關性信號，提升品牌在目標主題的能見度"
+          }
+        ]
+      }
+    }
+  };
+
+  // ── 資料載入 ──────────────────────────────────────────────
+  async function loadWeeklyReport(gxId, wkId) {
+    let data = MOCK_WEEKLY;
+    try {
+      const url = 'https://raw.githubusercontent.com/wmzic929-prog/seo-report/main/weekly-report/' + wkId + '.json';
+      const res = await fetch(url);
+      if (res.ok) data = await res.json();
+    } catch(e) { /* 用 mock */ }
+
+    const galaxy = data.galaxies[gxId] || data.galaxies['spheretap'];
+    if (!galaxy) return;
+    renderWeeklyReport(galaxy, data.week_label, wkId, data.generated_at);
+  }
+
+  // ── WoW% 格式化 ───────────────────────────────────────────
+  function fmtWoW(pct) {
+    if (pct === null || pct === undefined || pct === 0) {
+      return '<span style="color:#6b7280">持平</span>';
+    }
+    if (pct > 0) {
+      return '<span style="color:#059669;font-weight:700">↑ ' + pct.toFixed(1) + '%</span>';
+    }
+    return '<span style="color:#dc2626;font-weight:700">↓ ' + Math.abs(pct).toFixed(1) + '%</span>';
+  }
+
+  // ── 數字格式化 ────────────────────────────────────────────
+  function fmtNum(n) {
+    return n.toLocaleString('zh-TW');
+  }
+
+  // ── SVG 折線圖 ────────────────────────────────────────────
+  function buildTrendSVG(values, labels, color) {
+    const W = 560, H = 140, PAD_L = 40, PAD_R = 20, PAD_T = 16, PAD_B = 36;
+    const pw = W - PAD_L - PAD_R;
+    const ph = H - PAD_T - PAD_B;
+    const minV = Math.min(...values);
+    const maxV = Math.max(...values);
+    const range = maxV - minV || 1;
+
+    function xOf(i) { return PAD_L + (i / (values.length - 1)) * pw; }
+    function yOf(v) { return PAD_T + ph - ((v - minV) / range) * ph; }
+
+    // polyline points
+    const pts = values.map((v, i) => xOf(i) + ',' + yOf(v)).join(' ');
+
+    // area fill path
+    const areaD = 'M' + xOf(0) + ',' + yOf(values[0]) +
+      ' L' + values.map((v, i) => xOf(i) + ',' + yOf(v)).join(' L') +
+      ' L' + xOf(values.length - 1) + ',' + (PAD_T + ph) +
+      ' L' + xOf(0) + ',' + (PAD_T + ph) + ' Z';
+
+    // y-axis guide lines (3 lines)
+    let guides = '';
+    for (let k = 0; k <= 2; k++) {
+      const yy = PAD_T + ph - (k / 2) * ph;
+      const val = Math.round(minV + (k / 2) * range);
+      guides += `<line x1="${PAD_L}" y1="${yy}" x2="${W - PAD_R}" y2="${yy}" stroke="#e5e7eb" stroke-width="1"/>`;
+      guides += `<text x="${PAD_L - 4}" y="${yy + 4}" text-anchor="end" font-size="10" fill="#9ca3af">${fmtNum(val)}</text>`;
+    }
+
+    // data points + labels
+    let dots = '';
+    let xlabels = '';
+    values.forEach((v, i) => {
+      const cx = xOf(i), cy = yOf(v);
+      dots += `<circle cx="${cx}" cy="${cy}" r="5" fill="${color}" stroke="#fff" stroke-width="2"/>`;
+      dots += `<text x="${cx}" y="${cy - 10}" text-anchor="middle" font-size="11" font-weight="700" fill="${color}">${fmtNum(v)}</text>`;
+      xlabels += `<text x="${cx}" y="${H - 4}" text-anchor="middle" font-size="11" fill="#6b7280">${labels[i]}</text>`;
+    });
+
+    const gradId = 'tg_' + Math.random().toString(36).slice(2, 7);
+
+    return `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto">
+  <defs>
+    <linearGradient id="${gradId}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${color}" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  ${guides}
+  <path d="${areaD}" fill="url(#${gradId})"/>
+  <polyline points="${pts}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+  ${dots}
+  ${xlabels}
+</svg>`;
+  }
+
+  // ── 主渲染 ────────────────────────────────────────────────
+  function renderWeeklyReport(galaxy, weekLabel, weekId, generatedAt) {
+    const color = galaxy.color;
+    const m     = galaxy.metrics;
+
+    // 下一份週報日期
+    function nextReportDate(wkId) {
+      try {
+        const [yr, wk] = wkId.split('-W').map(Number);
+        const jan1 = new Date(yr, 0, 1);
+        const dayOffset = (wk - 1) * 7 - jan1.getDay() + 1;
+        const monday = new Date(yr, 0, 1 + dayOffset);
+        const nextSunday = new Date(monday.getTime() + 13 * 86400000); // +13 = next week Sunday
+        return (nextSunday.getMonth() + 1) + '月' + nextSunday.getDate() + '日';
+      } catch(e) { return '下週'; }
+    }
+
+    // 生成時間格式化
+    function fmtGenAt(iso) {
+      try {
+        const d = new Date(iso);
+        return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' +
+               String(d.getDate()).padStart(2,'0') + ' ' +
+               String(d.getHours()).padStart(2,'0') + ':' +
+               String(d.getMinutes()).padStart(2,'0');
+      } catch(e) { return iso; }
+    }
+
+    const trendSVG = buildTrendSVG(galaxy.trend_4w, galaxy.trend_4w_labels, color);
+
+    const topSitesHTML = galaxy.top_sites.map(site => `
+      <div class="wr-site-item">
+        <div class="wr-site-domain">${site.domain}</div>
+        <div class="wr-site-meta">
+          <span class="wr-site-wow">${fmtWoW(site.sessions_wow_pct)}</span>
+          <span class="wr-site-highlight">${site.highlight}</span>
+        </div>
+      </div>`).join('');
+
+    const directionsHTML = galaxy.next_direction.map((d, i) => `
+      <div class="wr-dir-item">
+        <div class="wr-dir-num">${i + 1}</div>
+        <div class="wr-dir-body">
+          <div class="wr-dir-title">${d.title}</div>
+          <div class="wr-dir-why"><strong>為什麼重要：</strong>${d.why}</div>
+          <div class="wr-dir-action"><strong>我們正在做：</strong>${d.action}</div>
+        </div>
+      </div>`).join('');
+
+    const html = `<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${galaxy.name} SEO 週報 · ${weekLabel}</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;background:#f0f2f5;color:#1f2937;font-size:14px;line-height:1.6}
+
+/* ── 週報容器 ── */
+.wr-page{max-width:860px;margin:0 auto;padding:24px 16px 60px}
+
+/* ── 標題列 ── */
+.wr-header{background:linear-gradient(135deg,#0f172a 0%,#1e40af 100%);color:#fff;border-radius:12px;padding:24px 28px;margin-bottom:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.wr-header-left{}
+.wr-header-title{font-size:22px;font-weight:800;letter-spacing:-0.5px;margin-bottom:4px}
+.wr-header-week{font-size:13px;color:rgba(255,255,255,.7)}
+.wr-pdf-btn{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:background .15s;white-space:nowrap}
+.wr-pdf-btn:hover{background:rgba(255,255,255,.25)}
+
+/* ── 區塊通用 ── */
+.wr-section{background:#fff;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,.08);border:1px solid #e5e7eb;padding:24px;margin-bottom:20px}
+.wr-section-title{font-size:15px;font-weight:800;color:#1f2937;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.wr-section-icon{font-size:18px}
+
+/* ── KPI 卡片 ── */
+.wr-kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:600px){.wr-kpi-grid{grid-template-columns:1fr 1fr}}
+.wr-kpi{background:#f8faff;border:1px solid #e5e7eb;border-radius:8px;border-top:3px solid var(--kpi-color,#e5e7eb);padding:16px 14px}
+.wr-kpi-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:#6b7280;margin-bottom:8px}
+.wr-kpi-value{font-size:26px;font-weight:800;color:#111827;line-height:1;margin-bottom:6px}
+.wr-kpi-sub{font-size:12px;color:#6b7280}
+.wr-kpi-wow{font-size:13px;font-weight:700;margin-top:4px}
+
+/* ── 折線圖 ── */
+.wr-trend-wrap{padding:4px 0}
+
+/* ── 亮點站點 ── */
+.wr-site-item{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid #f3f4f6;flex-wrap:wrap;gap:4px}
+.wr-site-item:last-child{border-bottom:none}
+.wr-site-domain{font-weight:700;color:#1f2937;font-size:13px}
+.wr-site-meta{display:flex;align-items:center;gap:10px}
+.wr-site-wow{font-size:13px}
+.wr-site-highlight{font-size:12px;color:#6b7280;background:#f3f4f6;padding:2px 8px;border-radius:100px}
+
+/* ── AI 摘要 ── */
+.wr-summary-text{font-size:14px;line-height:1.8;color:#374151;background:#f8faff;border-left:3px solid;border-radius:0 6px 6px 0;padding:14px 16px}
+
+/* ── 下階段方向 ── */
+.wr-dir-item{display:flex;gap:16px;margin-bottom:20px}
+.wr-dir-item:last-child{margin-bottom:0}
+.wr-dir-num{width:28px;height:28px;border-radius:50%;color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.wr-dir-body{}
+.wr-dir-title{font-size:14px;font-weight:800;color:#111827;margin-bottom:6px}
+.wr-dir-why{font-size:13px;color:#374151;margin-bottom:4px;line-height:1.6}
+.wr-dir-action{font-size:13px;color:#374151;line-height:1.6}
+.wr-dir-why strong,.wr-dir-action strong{color:#111827}
+
+/* ── 頁尾 ── */
+.wr-footer{text-align:center;font-size:12px;color:#9ca3af;margin-top:32px;padding-top:20px;border-top:1px solid #e5e7eb;line-height:1.8}
+.wr-footer strong{color:#6b7280}
+
+/* ── 列印 CSS ── */
+@media print{
+  body{background:#fff}
+  .wr-pdf-btn{display:none}
+  .wr-page{max-width:100%;padding:0}
+  .wr-header{background:#1e3a8a!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;border-radius:4px}
+  .wr-section{box-shadow:none;border:1px solid #d1d5db;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="wr-page">
+
+  <!-- 標題列 -->
+  <div class="wr-header">
+    <div class="wr-header-left">
+      <div class="wr-header-title">${galaxy.name} SEO 週報</div>
+      <div class="wr-header-week">${weekLabel}</div>
+    </div>
+    <button class="wr-pdf-btn" onclick="window.print()">⬇ 下載 PDF</button>
+  </div>
+
+  <!-- 本週成果 KPI -->
+  <div class="wr-section">
+    <div class="wr-section-title">
+      <span class="wr-section-icon">📊</span>本週成果
+    </div>
+    <div class="wr-kpi-grid">
+      <div class="wr-kpi" style="--kpi-color:${color}">
+        <div class="wr-kpi-label">搜尋能見度</div>
+        <div class="wr-kpi-value">${fmtNum(m.impressions_7d)}</div>
+        <div class="wr-kpi-sub">在 Google 被看到的次數</div>
+        <div class="wr-kpi-wow">${fmtWoW(m.impressions_wow_pct)} vs 上週</div>
+      </div>
+      <div class="wr-kpi" style="--kpi-color:${color}">
+        <div class="wr-kpi-label">主動點擊進站</div>
+        <div class="wr-kpi-value">${fmtNum(m.organic_sessions_7d)}</div>
+        <div class="wr-kpi-sub">從搜尋結果點擊進來的人</div>
+        <div class="wr-kpi-wow">${fmtWoW(m.organic_sessions_wow_pct)} vs 上週</div>
+      </div>
+      <div class="wr-kpi" style="--kpi-color:${color}">
+        <div class="wr-kpi-label">內容主題覆蓋</div>
+        <div class="wr-kpi-value">${fmtNum(m.content_pages_total)}</div>
+        <div class="wr-kpi-sub">已佈局的搜尋主題頁面</div>
+        <div class="wr-kpi-wow" style="color:${color};font-weight:700">本週 +${m.content_pages_new_7d} 頁</div>
+      </div>
+      <div class="wr-kpi" style="--kpi-color:${color}">
+        <div class="wr-kpi-label">平均搜尋排名</div>
+        <div class="wr-kpi-value">第 ${m.avg_position} 名</div>
+        <div class="wr-kpi-sub">整體排名位置</div>
+        <div class="wr-kpi-wow" style="color:#6b7280">穩定維持中</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 四週成長趨勢 -->
+  <div class="wr-section">
+    <div class="wr-section-title">
+      <span class="wr-section-icon">📈</span>四週成長趨勢
+      <span style="font-size:12px;font-weight:400;color:#6b7280;margin-left:4px">— 有機點擊進站人數</span>
+    </div>
+    <div class="wr-trend-wrap">
+      ${trendSVG}
+    </div>
+  </div>
+
+  <!-- 本週亮點 -->
+  <div class="wr-section">
+    <div class="wr-section-title">
+      <span class="wr-section-icon">🏆</span>本週亮點站點
+    </div>
+    ${topSitesHTML}
+    <div class="wr-summary-text" style="border-left-color:${color};margin-top:16px">
+      ${galaxy.analysis_summary}
+    </div>
+  </div>
+
+  <!-- 下一階段方向 -->
+  <div class="wr-section">
+    <div class="wr-section-title">
+      <span class="wr-section-icon">🔮</span>下一階段方向
+    </div>
+    ${directionsHTML}
+  </div>
+
+  <!-- 頁尾 -->
+  <div class="wr-footer">
+    報告生成時間：<strong>${fmtGenAt(generatedAt)}</strong>&nbsp;&nbsp;|&nbsp;&nbsp;下一份：<strong>${nextReportDate(weekId)}</strong>
+  </div>
+
+</div>
+</body>
+</html>`;
+
+    // 覆蓋整個頁面
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  // ── 隱藏現有儀表板內容，顯示載入中 ─────────────────────
+  document.addEventListener('DOMContentLoaded', function() {
+    document.body.style.display = 'none';
+  });
+
+  // 立即隱藏（防止 FOUC）
+  if (document.readyState !== 'loading') {
+    document.body.style.display = 'none';
+  }
+
+  // ── 啟動 ──────────────────────────────────────────────────
+  loadWeeklyReport(galaxyId, weekId);
+
+})();
 </script>
 </body>
 </html>
