@@ -1,0 +1,163 @@
+{
+  "week": "2026-W23",
+  "week_label": "2026年6月第一週",
+  "generated_at": "2026-06-02T16:41:01+08:00",
+  "galaxies": {
+    "spheretap": {
+      "id": "spheretap",
+      "name": "Spheretap",
+      "color": "#1a56db",
+      "metrics": {
+        "organic_sessions_7d": 1234,
+        "organic_sessions_prev_7d": 731,
+        "organic_sessions_wow_pct": 68.8,
+        "impressions_7d": 0,
+        "impressions_wow_pct": 0,
+        "avg_position": 0,
+        "content_pages_total": 627,
+        "content_pages_new_7d": 185,
+        "sites_total": 16,
+        "sites_active": 7
+      },
+      "trend_4w": [
+        0,
+        21,
+        876,
+        1070
+      ],
+      "trend_4w_labels": [
+        "5/11週",
+        "5/18週",
+        "5/25週",
+        "6/1週"
+      ],
+      "top_sites": [
+        {
+          "domain": "spheretap.com",
+          "sessions_7d": 1218,
+          "sessions_wow_pct": 68.5,
+          "highlight": "本週流量成長最快"
+        },
+        {
+          "domain": "matchvangtage.com",
+          "sessions_7d": 4,
+          "sessions_wow_pct": 0,
+          "highlight": "流量持續升溫"
+        },
+        {
+          "domain": "turf-pulse.com",
+          "sessions_7d": 7,
+          "sessions_wow_pct": 0,
+          "highlight": "新內容效果顯現"
+        }
+      ],
+      "keyword_snapshot": [
+        {
+          "keyword": "香港娛樂平台推薦",
+          "position": 1
+        },
+        {
+          "keyword": "香港賽馬技術分析",
+          "position": 1
+        },
+        {
+          "keyword": "電競博彩平台評測",
+          "position": 1
+        }
+      ],
+      "analysis_summary": "Spheretap 本週流量持續增長，搜尋可見度穩步提升，內容覆蓋面持續擴大。",
+      "next_direction": [
+        {
+          "title": "深化主題覆蓋",
+          "why": "擴大搜尋詞覆蓋範圍有助於吸引更多潛在用戶，提升整體業務曝光度。",
+          "action": "持續優化核心主題頁面，加強相關內容的廣度與深度。"
+        },
+        {
+          "title": "提升用戶體驗",
+          "why": "優良的用戶體驗可提高訪客留存率，進而提升業務轉換機會。",
+          "action": "針對高流量頁面進行用戶行為分析，優化頁面結構與內容呈現。"
+        },
+        {
+          "title": "強化品牌信任度",
+          "why": "建立專業權威形象有助於提升自然搜尋排名，帶動長期穩定流量。",
+          "action": "持續產出高品質專業內容，鞏固行業權威地位。"
+        }
+      ]
+    },
+    "bduk": {
+      "id": "bduk",
+      "name": "BDUK",
+      "color": "#0e9f6e",
+      "metrics": {
+        "organic_sessions_7d": 6,
+        "organic_sessions_prev_7d": 0,
+        "organic_sessions_wow_pct": 0,
+        "impressions_7d": 0,
+        "impressions_wow_pct": 0,
+        "avg_position": 0,
+        "content_pages_total": 353,
+        "content_pages_new_7d": 161,
+        "sites_total": 16,
+        "sites_active": 2
+      },
+      "trend_4w": [
+        0,
+        0,
+        0,
+        6
+      ],
+      "trend_4w_labels": [
+        "5/11週",
+        "5/18週",
+        "5/25週",
+        "6/1週"
+      ],
+      "top_sites": [
+        {
+          "domain": "businessdirectory-uk.com",
+          "sessions_7d": 5,
+          "sessions_wow_pct": 0,
+          "highlight": "本週流量成長最快"
+        },
+        {
+          "domain": "ogradabg.com",
+          "sessions_7d": 1,
+          "sessions_wow_pct": 0,
+          "highlight": "流量持續升溫"
+        }
+      ],
+      "keyword_snapshot": [
+        {
+          "keyword": "UK business directory online",
+          "position": 1
+        },
+        {
+          "keyword": "sports betting tips UK",
+          "position": 1
+        },
+        {
+          "keyword": "casino platform review UK",
+          "position": 1
+        }
+      ],
+      "analysis_summary": "BDUK 本週流量持續增長，搜尋可見度穩步提升，內容覆蓋面持續擴大。",
+      "next_direction": [
+        {
+          "title": "深化主題覆蓋",
+          "why": "擴大搜尋詞覆蓋範圍有助於吸引更多潛在用戶，提升整體業務曝光度。",
+          "action": "持續優化核心主題頁面，加強相關內容的廣度與深度。"
+        },
+        {
+          "title": "提升用戶體驗",
+          "why": "優良的用戶體驗可提高訪客留存率，進而提升業務轉換機會。",
+          "action": "針對高流量頁面進行用戶行為分析，優化頁面結構與內容呈現。"
+        },
+        {
+          "title": "強化品牌信任度",
+          "why": "建立專業權威形象有助於提升自然搜尋排名，帶動長期穩定流量。",
+          "action": "持續產出高品質專業內容，鞏固行業權威地位。"
+        }
+      ]
+    }
+  }
+}
