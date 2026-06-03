@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T10:38:24+08:00",
+  "generated_at": "2026-06-03T10:54:41+08:00",
   "groups": {
     "spheretap": {
       "name": "Spheretap 集團",
@@ -94,7 +94,7 @@
               211,
               202,
               313,
-              256
+              265
             ],
             "cta_series_7d": [
               5,
@@ -587,7 +587,7 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-03T09:17:07.517Z",
+              "last_seen": "2026-06-03T09:17:07.518Z",
               "count_30d": 193,
               "dates": {
                 "2026-05-23": 4,
@@ -598,7 +598,7 @@
                 "2026-06-02": 14,
                 "2026-06-03": 9
               },
-              "last_write": "2026-06-03T09:17:07.517Z"
+              "last_write": "2026-06-03T09:17:07.518Z"
             },
             "GPTBot": {
               "last_seen": "2026-06-02T17:56:59.811Z",
@@ -846,8 +846,8 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-03T07:19:00.919Z",
-              "count_30d": 177,
+              "last_seen": "2026-06-03T10:48:15.953Z",
+              "count_30d": 178,
               "dates": {
                 "2026-05-24": 16,
                 "2026-05-25": 14,
@@ -858,9 +858,9 @@
                 "2026-05-31": 18,
                 "2026-06-01": 15,
                 "2026-06-02": 33,
-                "2026-06-03": 1
+                "2026-06-03": 2
               },
-              "last_write": "2026-06-03T07:19:00.919Z"
+              "last_write": "2026-06-03T10:48:15.953Z"
             },
             "GPTBot": {
               "last_seen": "2026-06-03T07:18:54.621Z",
@@ -4236,7 +4236,7 @@
               6,
               4,
               205,
-              198
+              199
             ],
             "cta_series_7d": [
               0,
@@ -4309,12 +4309,12 @@
             "total_urls": 0
           },
           "content": {
-            "total_articles": 160,
-            "this_month": 3,
-            "this_week": 34,
-            "this_28d": 55,
-            "sports_articles": 5,
-            "total_articles_inc_sports": 165
+            "total_articles": 172,
+            "this_month": 10,
+            "this_week": 40,
+            "this_28d": 61,
+            "sports_articles": 12,
+            "total_articles_inc_sports": 184
           },
           "cwv": {},
           "social": {
@@ -4345,7 +4345,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 2,
-              "articles": 28,
+              "articles": 27,
               "gsc_pending": false
             },
             {
@@ -4372,7 +4372,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 2,
+              "articles": 5,
               "gsc_pending": true
             },
             {
@@ -4381,7 +4381,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 1,
+              "articles": 5,
               "gsc_pending": true
             }
           ],
