@@ -36,6 +36,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 .gx-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .gx-count{font-size:10px;background:rgba(255,255,255,.15);padding:1px 6px;border-radius:10px;font-weight:700}
 .gx-sep{width:1px;background:rgba(255,255,255,.1);margin:8px 4px;flex-shrink:0}
+.gx-spacer{flex:1;min-width:8px}
+.gx-report-wrap{position:relative;display:flex;align-items:center;padding:0 6px;flex-shrink:0}
+.gx-report-btn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.9);font-size:11px;font-weight:700;padding:4px 11px;border-radius:6px;cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:background .15s;line-height:1}
+.gx-report-btn:hover{background:rgba(255,255,255,.22)}
+.gx-report-dd{position:fixed;background:#1e293b;border:1px solid rgba(255,255,255,.15);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.45);padding:6px;z-index:9999;display:none;min-width:200px}
+.gx-report-dd.open{display:block}
+.gx-report-dd-label{font-size:10px;color:rgba(255,255,255,.4);padding:5px 12px 3px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.gx-report-dd-item{display:flex;align-items:center;gap:8px;padding:8px 12px;color:rgba(255,255,255,.85);font-size:12px;text-decoration:none;border-radius:5px;font-weight:600;transition:background .12s;cursor:pointer}
+.gx-report-dd-item:hover{background:rgba(255,255,255,.1);color:#fff}
 
 /* ── Group Tabs (Level 1) ── */
 .tabs-wrap{background:#fff;border-bottom:2px solid var(--gray-200);position:sticky;top:96px;z-index:190;overflow-x:auto}
@@ -552,8 +561,41 @@ function buildGalaxyBar() {
       <span class="gx-dot" style="background:${cfg.color}"></span>${cfg.name} <span class="gx-count">${cnt}</span>
     </button>`;
   });
+  // ── 週報快捷按鈕 ──
+  const week = currentISOWeek();
+  const gKeys = Object.keys(DATA.groups);
+  let ddItems = `<div class="gx-report-dd-label">本週 ${week}</div>`;
+  gKeys.forEach(gk => {
+    const cfg = GALAXY_CONFIG[gk] || { name: gk, color: '#6b7280' };
+    const url = `?report=weekly&galaxy=${gk}&week=${week}`;
+    ddItems += `<a class="gx-report-dd-item" href="${url}" target="_blank"><span style="color:${cfg.color};font-size:9px">●</span>${cfg.name} 週報 PDF</a>`;
+  });
+  html += `<div class="gx-spacer"></div><div class="gx-report-wrap" id="wr-wrap">
+    <button class="gx-report-btn" id="wr-btn" onclick="toggleReportDD(event)">📄 本週週報 ▾</button>
+    <div class="gx-report-dd" id="wr-dd">${ddItems}</div>
+  </div>`;
   document.getElementById('galaxy-bar').innerHTML = html;
 }
+
+function currentISOWeek() {
+  const d = new Date();
+  d.setHours(0,0,0,0);
+  d.setDate(d.getDate() + 3 - (d.getDay() + 6) % 7);
+  const w1 = new Date(d.getFullYear(), 0, 4);
+  return d.getFullYear() + '-W' + String(1 + Math.round(((d - w1) / 86400000 - 3 + (w1.getDay() + 6) % 7) / 7)).padStart(2, '0');
+}
+
+function toggleReportDD(e) {
+  e.stopPropagation();
+  const btn = document.getElementById('wr-btn');
+  const dd = document.getElementById('wr-dd');
+  if (!btn || !dd) return;
+  const r = btn.getBoundingClientRect();
+  dd.style.top = (r.bottom + 4) + 'px';
+  dd.style.right = (window.innerWidth - r.right) + 'px';
+  dd.classList.toggle('open');
+}
+document.addEventListener('click', () => { const dd = document.getElementById('wr-dd'); if (dd) dd.classList.remove('open'); });
 
 function updateGalaxyActive() {
   document.querySelectorAll('.gx-tab').forEach(b => b.classList.toggle('act', b.dataset.gx === currentGalaxy));
