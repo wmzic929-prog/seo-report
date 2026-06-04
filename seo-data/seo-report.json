@@ -10221,5 +10221,17 @@
         }
       }
     }
-  }
+  },
+  "alerts": [
+    {
+      "type": "traffic_drop",
+      "domain": "matchvangtage.com",
+      "message": "7日流量下跌 33%（52→35）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "platformverdict.com",
+      "message": "7日流量下跌 33%（69→46）"
+    }
+  ]
 }
