@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T01:30:01+08:00",
+  "generated_at": "2026-06-04T02:26:03+08:00",
   "groups": {
     "spheretap": {
       "name": "Spheretap 集團",
@@ -94,7 +94,7 @@
               202,
               313,
               312,
-              1
+              18
             ],
             "cta_series_7d": [
               7,
@@ -508,7 +508,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 36
+            "total_urls": 57
           },
           "content": {
             "total_articles": 47,
@@ -768,7 +768,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 38
+            "total_urls": 56
           },
           "content": {
             "total_articles": 6,
@@ -849,8 +849,8 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-04T00:58:30.150Z",
-              "count_30d": 187,
+              "last_seen": "2026-06-04T02:11:27.763Z",
+              "count_30d": 188,
               "dates": {
                 "2026-05-24": 16,
                 "2026-05-25": 14,
@@ -862,9 +862,9 @@
                 "2026-06-01": 15,
                 "2026-06-02": 33,
                 "2026-06-03": 10,
-                "2026-06-04": 1
+                "2026-06-04": 2
               },
-              "last_write": "2026-06-04T00:58:30.150Z"
+              "last_write": "2026-06-04T02:11:27.763Z"
             },
             "GPTBot": {
               "last_seen": "2026-06-04T01:07:41.265Z",
@@ -893,13 +893,14 @@
               "last_write": "2026-06-03T07:18:59.143Z"
             },
             "Amazonbot": {
-              "last_seen": "2026-06-03T22:58:00.858Z",
-              "count_30d": 16,
+              "last_seen": "2026-06-04T02:08:58.527Z",
+              "count_30d": 17,
               "dates": {
                 "2026-06-02": 6,
-                "2026-06-03": 10
+                "2026-06-03": 10,
+                "2026-06-04": 1
               },
-              "last_write": "2026-06-03T22:58:00.858Z"
+              "last_write": "2026-06-04T02:08:58.527Z"
             },
             "cohere-ai": {
               "last_seen": "2026-06-03T07:18:59.055Z",
@@ -1064,7 +1065,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 40
+            "total_urls": 44
           },
           "content": {
             "total_articles": 45,
@@ -1145,8 +1146,8 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-04T00:33:50.862Z",
-              "count_30d": 248,
+              "last_seen": "2026-06-04T01:46:45.300Z",
+              "count_30d": 249,
               "dates": {
                 "2026-05-23": 31,
                 "2026-05-24": 18,
@@ -1160,9 +1161,9 @@
                 "2026-06-01": 18,
                 "2026-06-02": 19,
                 "2026-06-03": 16,
-                "2026-06-04": 1
+                "2026-06-04": 2
               },
-              "last_write": "2026-06-04T00:33:50.862Z"
+              "last_write": "2026-06-04T01:46:45.300Z"
             },
             "GPTBot": {
               "last_seen": "2026-06-04T01:07:43.289Z",
@@ -1347,7 +1348,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 25
+            "total_urls": 48
           },
           "content": {
             "total_articles": 34,
@@ -1428,8 +1429,8 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-04T00:55:22.863Z",
-              "count_30d": 190,
+              "last_seen": "2026-06-04T02:03:25.049Z",
+              "count_30d": 191,
               "dates": {
                 "2026-05-23": 13,
                 "2026-05-24": 19,
@@ -1443,9 +1444,9 @@
                 "2026-06-01": 8,
                 "2026-06-02": 13,
                 "2026-06-03": 14,
-                "2026-06-04": 1
+                "2026-06-04": 2
               },
-              "last_write": "2026-06-04T00:55:22.863Z"
+              "last_write": "2026-06-04T02:03:25.049Z"
             },
             "GPTBot": {
               "last_seen": "2026-06-04T01:08:02.837Z",
@@ -1639,7 +1640,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 41
+            "total_urls": 44
           },
           "content": {
             "total_articles": 38,
@@ -1720,8 +1721,8 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-04T00:56:02.562Z",
-              "count_30d": 290,
+              "last_seen": "2026-06-04T01:56:12.733Z",
+              "count_30d": 291,
               "dates": {
                 "2026-05-23": 17,
                 "2026-05-24": 25,
@@ -1735,9 +1736,9 @@
                 "2026-06-01": 21,
                 "2026-06-02": 16,
                 "2026-06-03": 15,
-                "2026-06-04": 1
+                "2026-06-04": 2
               },
-              "last_write": "2026-06-04T00:56:02.562Z"
+              "last_write": "2026-06-04T01:56:12.733Z"
             },
             "GPTBot": {
               "last_seen": "2026-06-04T01:07:41.365Z",
@@ -2112,7 +2113,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 26
+            "total_urls": 27
           },
           "content": {
             "total_articles": 25,
@@ -2358,7 +2359,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 24
+            "total_urls": 27
           },
           "content": {
             "total_articles": 25,
@@ -2626,7 +2627,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 24
+            "total_urls": 27
           },
           "content": {
             "total_articles": 25,
@@ -2866,7 +2867,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 22
+            "total_urls": 24
           },
           "content": {
             "total_articles": 4,
@@ -2964,8 +2965,8 @@
               "last_write": "2026-06-03T22:34:30.845Z"
             },
             "ClaudeBot": {
-              "last_seen": "2026-06-03T23:55:20.490Z",
-              "count_30d": 189,
+              "last_seen": "2026-06-04T01:50:28.818Z",
+              "count_30d": 190,
               "dates": {
                 "2026-05-26": 33,
                 "2026-05-27": 20,
@@ -2974,9 +2975,10 @@
                 "2026-05-31": 37,
                 "2026-06-01": 17,
                 "2026-06-02": 33,
-                "2026-06-03": 18
+                "2026-06-03": 18,
+                "2026-06-04": 1
               },
-              "last_write": "2026-06-03T23:55:20.490Z"
+              "last_write": "2026-06-04T01:50:28.818Z"
             },
             "CCBot": {
               "last_seen": "2026-06-03T20:10:08.512Z",
@@ -3152,7 +3154,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 8
+            "total_urls": 26
           },
           "content": {
             "total_articles": 24,
@@ -3431,7 +3433,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 24
+            "total_urls": 27
           },
           "content": {
             "total_articles": 25,
@@ -3707,7 +3709,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 22
+            "total_urls": 27
           },
           "content": {
             "total_articles": 25,
@@ -3945,7 +3947,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 26
+            "total_urls": 28
           },
           "content": {
             "total_articles": 26,
@@ -4026,8 +4028,8 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-03T23:41:24.493Z",
-              "count_30d": 150,
+              "last_seen": "2026-06-04T01:31:32.177Z",
+              "count_30d": 151,
               "dates": {
                 "2026-05-25": 23,
                 "2026-05-26": 22,
@@ -4037,9 +4039,10 @@
                 "2026-05-31": 17,
                 "2026-06-01": 7,
                 "2026-06-02": 30,
-                "2026-06-03": 2
+                "2026-06-03": 2,
+                "2026-06-04": 1
               },
-              "last_write": "2026-06-03T23:41:24.493Z"
+              "last_write": "2026-06-04T01:31:32.177Z"
             },
             "GPTBot": {
               "last_seen": "2026-06-03T22:34:30.871Z",
@@ -4194,7 +4197,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 26
+            "total_urls": 27
           },
           "content": {
             "total_articles": 25,
@@ -4428,7 +4431,7 @@
               4,
               207,
               221,
-              0
+              18
             ],
             "cta_series_7d": [
               0,
@@ -4498,7 +4501,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 176
           },
           "content": {
             "total_articles": 22,
@@ -4686,7 +4689,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 20
           },
           "content": {
             "total_articles": 13,
@@ -4804,7 +4807,7 @@
               0,
               0,
               0,
-              0
+              1
             ],
             "cta_series_7d": [
               0,
@@ -4874,7 +4877,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 13
           },
           "content": {
             "total_articles": 6,
@@ -5062,7 +5065,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 18
           },
           "content": {
             "total_articles": 12,
@@ -5250,7 +5253,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 20
           },
           "content": {
             "total_articles": 13,
@@ -5438,7 +5441,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 9
           },
           "content": {
             "total_articles": 3,
@@ -5556,7 +5559,7 @@
               0,
               7,
               14,
-              6
+              8
             ],
             "cta_series_7d": [
               0,
@@ -5626,7 +5629,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 17
           },
           "content": {
             "total_articles": 11,
@@ -5814,7 +5817,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 8
           },
           "content": {
             "total_articles": 3,
@@ -5968,7 +5971,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 2,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -6002,7 +6005,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 9
           },
           "content": {
             "total_articles": 4,
@@ -6120,7 +6123,7 @@
               0,
               0,
               10,
-              0
+              1
             ],
             "cta_series_7d": [
               0,
@@ -6190,7 +6193,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 22
           },
           "content": {
             "total_articles": 15,
@@ -6378,7 +6381,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 18
           },
           "content": {
             "total_articles": 11,
@@ -6532,7 +6535,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 2,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -6566,7 +6569,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 17
           },
           "content": {
             "total_articles": 11,
@@ -6754,7 +6757,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 22
           },
           "content": {
             "total_articles": 15,
@@ -6942,7 +6945,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 20
           },
           "content": {
             "total_articles": 14,
@@ -7130,7 +7133,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 19
           },
           "content": {
             "total_articles": 13,
@@ -7284,7 +7287,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 2,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -7318,7 +7321,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 8
           },
           "content": {
             "total_articles": 3,
@@ -7436,7 +7439,7 @@
               0,
               0,
               25,
-              4
+              9
             ],
             "cta_series_7d": [
               0,
@@ -7472,7 +7475,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -7812,7 +7815,7 @@
               0,
               0,
               12,
-              0
+              4
             ],
             "cta_series_7d": [
               0,
@@ -7848,7 +7851,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -7882,7 +7885,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 25
           },
           "content": {
             "total_articles": 21,
@@ -8036,7 +8039,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 4,
+            "indexed_pages": 2,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -8070,7 +8073,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 25
           },
           "content": {
             "total_articles": 21,
@@ -8224,7 +8227,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -8258,7 +8261,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 25
           },
           "content": {
             "total_articles": 21,
@@ -8376,7 +8379,7 @@
               0,
               0,
               9,
-              2
+              3
             ],
             "cta_series_7d": [
               0,
@@ -8446,7 +8449,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 25
           },
           "content": {
             "total_articles": 21,
@@ -8564,7 +8567,7 @@
               0,
               0,
               14,
-              5
+              6
             ],
             "cta_series_7d": [
               0,
@@ -8634,7 +8637,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 25
           },
           "content": {
             "total_articles": 21,
@@ -8752,7 +8755,7 @@
               0,
               0,
               7,
-              3
+              7
             ],
             "cta_series_7d": [
               0,
@@ -8822,7 +8825,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 25
           },
           "content": {
             "total_articles": 21,
@@ -8940,7 +8943,7 @@
               0,
               0,
               11,
-              8
+              9
             ],
             "cta_series_7d": [
               0,
@@ -9010,7 +9013,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 27
           },
           "content": {
             "total_articles": 23,
@@ -9128,7 +9131,7 @@
               0,
               0,
               12,
-              4
+              5
             ],
             "cta_series_7d": [
               0,
@@ -9198,7 +9201,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 25
           },
           "content": {
             "total_articles": 22,
@@ -9316,7 +9319,7 @@
               0,
               0,
               17,
-              6
+              7
             ],
             "cta_series_7d": [
               0,
@@ -9386,7 +9389,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 25
           },
           "content": {
             "total_articles": 22,
@@ -9574,7 +9577,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 26
           },
           "content": {
             "total_articles": 22,
@@ -9692,7 +9695,7 @@
               0,
               0,
               8,
-              1
+              2
             ],
             "cta_series_7d": [
               0,
@@ -9728,7 +9731,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 2,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -9762,7 +9765,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 26
           },
           "content": {
             "total_articles": 22,
@@ -9880,7 +9883,7 @@
               0,
               0,
               10,
-              2
+              4
             ],
             "cta_series_7d": [
               0,
@@ -9916,7 +9919,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -9950,7 +9953,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 25
           },
           "content": {
             "total_articles": 21,
@@ -10138,7 +10141,7 @@
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 26
           },
           "content": {
             "total_articles": 22,
@@ -10221,17 +10224,5 @@
         }
       }
     }
-  },
-  "alerts": [
-    {
-      "type": "traffic_drop",
-      "domain": "matchvangtage.com",
-      "message": "7日流量下跌 33%（52→35）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "platformverdict.com",
-      "message": "7日流量下跌 33%（69→46）"
-    }
-  ]
+  }
 }
