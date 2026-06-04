@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T09:53:04+08:00",
+  "generated_at": "2026-06-04T09:55:09+08:00",
   "groups": {
     "spheretap": {
       "name": "Spheretap 集團",
@@ -1903,13 +1903,13 @@
             "conversions_7d": 0
           },
           "gsc": {
-            "impressions_28d": 6,
-            "clicks_28d": 1,
-            "impressions_7d": 6,
-            "clicks_7d": 1,
-            "ctr": 0.1667,
-            "avg_position": 1.2,
-            "indexed_pages": 3,
+            "impressions_28d": 0,
+            "clicks_28d": 0,
+            "impressions_7d": 0,
+            "clicks_7d": 0,
+            "ctr": 0,
+            "avg_position": 0,
+            "indexed_pages": 8,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -1922,8 +1922,8 @@
               ],
               "impressions": [
                 0,
-                4,
-                2,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -1931,7 +1931,7 @@
               ],
               "clicks": [
                 0,
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -1961,7 +1961,7 @@
             {
               "date": "5/28",
               "sessions": 12,
-              "gsc_imp": 2,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 0,
@@ -2142,13 +2142,13 @@
             "conversions_7d": 0
           },
           "gsc": {
-            "impressions_28d": 10,
+            "impressions_28d": 0,
             "clicks_28d": 0,
-            "impressions_7d": 10,
+            "impressions_7d": 0,
             "clicks_7d": 0,
             "ctr": 0,
-            "avg_position": 5.4,
-            "indexed_pages": 2,
+            "avg_position": 0,
+            "indexed_pages": 3,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -2161,12 +2161,12 @@
               ],
               "impressions": [
                 0,
-                3,
-                2,
-                1,
-                2,
-                1,
-                1
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
               ],
               "clicks": [
                 0,
@@ -2200,7 +2200,7 @@
             {
               "date": "5/28",
               "sessions": 12,
-              "gsc_imp": 2,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -2209,7 +2209,7 @@
             {
               "date": "5/29",
               "sessions": 7,
-              "gsc_imp": 1,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -2218,7 +2218,7 @@
             {
               "date": "5/30",
               "sessions": 2,
-              "gsc_imp": 2,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -2227,7 +2227,7 @@
             {
               "date": "5/31",
               "sessions": 4,
-              "gsc_imp": 1,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -2236,7 +2236,7 @@
             {
               "date": "6/1",
               "sessions": 4,
-              "gsc_imp": 1,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 2,
@@ -2390,13 +2390,13 @@
             "conversions_7d": 0
           },
           "gsc": {
-            "impressions_28d": 11,
+            "impressions_28d": 0,
             "clicks_28d": 0,
-            "impressions_7d": 11,
+            "impressions_7d": 0,
             "clicks_7d": 0,
             "ctr": 0,
-            "avg_position": 15.1,
-            "indexed_pages": 2,
+            "avg_position": 0,
+            "indexed_pages": 10,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -2409,12 +2409,12 @@
               ],
               "impressions": [
                 0,
-                3,
-                4,
-                2,
                 0,
-                1,
-                1
+                0,
+                0,
+                0,
+                0,
+                0
               ],
               "clicks": [
                 0,
@@ -2426,13 +2426,7 @@
                 0
               ]
             },
-            "top_keywords": [
-              {
-                "kw": "電競市場",
-                "pos": 26.8,
-                "impressions": 6
-              }
-            ],
+            "top_keywords": [],
             "data_cutoff": "2026-06-01"
           },
           "sitemap": {
@@ -2454,7 +2448,7 @@
             {
               "date": "5/28",
               "sessions": 12,
-              "gsc_imp": 4,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -2463,7 +2457,7 @@
             {
               "date": "5/29",
               "sessions": 15,
-              "gsc_imp": 2,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -2481,7 +2475,7 @@
             {
               "date": "5/31",
               "sessions": 2,
-              "gsc_imp": 1,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -2490,7 +2484,7 @@
             {
               "date": "6/1",
               "sessions": 1,
-              "gsc_imp": 1,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 2,
@@ -2672,13 +2666,13 @@
             "conversions_7d": 0
           },
           "gsc": {
-            "impressions_28d": 10,
+            "impressions_28d": 0,
             "clicks_28d": 0,
-            "impressions_7d": 10,
+            "impressions_7d": 0,
             "clicks_7d": 0,
             "ctr": 0,
-            "avg_position": 4.9,
-            "indexed_pages": 1,
+            "avg_position": 0,
+            "indexed_pages": 7,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -2691,12 +2685,12 @@
               ],
               "impressions": [
                 0,
-                5,
-                2,
                 0,
-                2,
                 0,
-                1
+                0,
+                0,
+                0,
+                0
               ],
               "clicks": [
                 0,
@@ -2730,7 +2724,7 @@
             {
               "date": "5/28",
               "sessions": 8,
-              "gsc_imp": 2,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -2748,7 +2742,7 @@
             {
               "date": "5/30",
               "sessions": 1,
-              "gsc_imp": 2,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -2766,7 +2760,7 @@
             {
               "date": "6/1",
               "sessions": 3,
-              "gsc_imp": 1,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 2,
@@ -2920,13 +2914,13 @@
             "conversions_7d": 0
           },
           "gsc": {
-            "impressions_28d": 5,
+            "impressions_28d": 0,
             "clicks_28d": 0,
-            "impressions_7d": 5,
+            "impressions_7d": 0,
             "clicks_7d": 0,
             "ctr": 0,
-            "avg_position": 1,
-            "indexed_pages": 2,
+            "avg_position": 0,
+            "indexed_pages": 6,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -2939,8 +2933,8 @@
               ],
               "impressions": [
                 0,
-                3,
-                2,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -2978,7 +2972,7 @@
             {
               "date": "5/28",
               "sessions": 11,
-              "gsc_imp": 2,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 0,
@@ -3216,13 +3210,13 @@
             "conversions_7d": 0
           },
           "gsc": {
-            "impressions_28d": 10,
+            "impressions_28d": 0,
             "clicks_28d": 0,
-            "impressions_7d": 10,
+            "impressions_7d": 0,
             "clicks_7d": 0,
             "ctr": 0,
-            "avg_position": 3.9,
-            "indexed_pages": 5,
+            "avg_position": 0,
+            "indexed_pages": 8,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -3235,12 +3229,12 @@
               ],
               "impressions": [
                 0,
-                3,
-                2,
-                1,
                 0,
-                1,
-                3
+                0,
+                0,
+                0,
+                0,
+                0
               ],
               "clicks": [
                 0,
@@ -3274,7 +3268,7 @@
             {
               "date": "5/28",
               "sessions": 12,
-              "gsc_imp": 2,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -3283,7 +3277,7 @@
             {
               "date": "5/29",
               "sessions": 10,
-              "gsc_imp": 1,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -3301,7 +3295,7 @@
             {
               "date": "5/31",
               "sessions": 2,
-              "gsc_imp": 1,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -3310,7 +3304,7 @@
             {
               "date": "6/1",
               "sessions": 2,
-              "gsc_imp": 3,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 1,
@@ -3504,13 +3498,13 @@
             "conversions_7d": 0
           },
           "gsc": {
-            "impressions_28d": 6,
+            "impressions_28d": 0,
             "clicks_28d": 0,
-            "impressions_7d": 6,
+            "impressions_7d": 0,
             "clicks_7d": 0,
             "ctr": 0,
-            "avg_position": 1,
-            "indexed_pages": 4,
+            "avg_position": 0,
+            "indexed_pages": 10,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -3523,11 +3517,11 @@
               ],
               "impressions": [
                 0,
-                3,
-                2,
                 0,
                 0,
-                1,
+                0,
+                0,
+                0,
                 0
               ],
               "clicks": [
@@ -3562,7 +3556,7 @@
             {
               "date": "5/28",
               "sessions": 13,
-              "gsc_imp": 2,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -3589,7 +3583,7 @@
             {
               "date": "5/31",
               "sessions": 3,
-              "gsc_imp": 1,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -3788,13 +3782,13 @@
             "conversions_7d": 0
           },
           "gsc": {
-            "impressions_28d": 5,
+            "impressions_28d": 0,
             "clicks_28d": 0,
-            "impressions_7d": 5,
+            "impressions_7d": 0,
             "clicks_7d": 0,
             "ctr": 0,
-            "avg_position": 1,
-            "indexed_pages": 2,
+            "avg_position": 0,
+            "indexed_pages": 5,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -3807,8 +3801,8 @@
               ],
               "impressions": [
                 0,
-                3,
-                2,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -3846,7 +3840,7 @@
             {
               "date": "5/28",
               "sessions": 14,
-              "gsc_imp": 2,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -4034,13 +4028,13 @@
             "conversions_7d": 0
           },
           "gsc": {
-            "impressions_28d": 12,
-            "clicks_28d": 1,
-            "impressions_7d": 12,
-            "clicks_7d": 1,
-            "ctr": 0.0833,
-            "avg_position": 4.1,
-            "indexed_pages": 3,
+            "impressions_28d": 0,
+            "clicks_28d": 0,
+            "impressions_7d": 0,
+            "clicks_7d": 0,
+            "ctr": 0,
+            "avg_position": 0,
+            "indexed_pages": 10,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -4053,12 +4047,12 @@
               ],
               "impressions": [
                 0,
-                3,
-                2,
-                1,
-                1,
-                2,
-                3
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
               ],
               "clicks": [
                 0,
@@ -4067,7 +4061,7 @@
                 0,
                 0,
                 0,
-                1
+                0
               ]
             },
             "top_keywords": [],
@@ -4092,7 +4086,7 @@
             {
               "date": "5/28",
               "sessions": 13,
-              "gsc_imp": 2,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -4101,7 +4095,7 @@
             {
               "date": "5/29",
               "sessions": 8,
-              "gsc_imp": 1,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -4110,7 +4104,7 @@
             {
               "date": "5/30",
               "sessions": 2,
-              "gsc_imp": 1,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -4119,7 +4113,7 @@
             {
               "date": "5/31",
               "sessions": 4,
-              "gsc_imp": 2,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -4128,8 +4122,8 @@
             {
               "date": "6/1",
               "sessions": 4,
-              "gsc_imp": 3,
-              "gsc_clk": 1,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 2,
               "gsc_pending": false
@@ -4293,13 +4287,13 @@
             "conversions_7d": 0
           },
           "gsc": {
-            "impressions_28d": 13,
+            "impressions_28d": 0,
             "clicks_28d": 0,
-            "impressions_7d": 13,
+            "impressions_7d": 0,
             "clicks_7d": 0,
             "ctr": 0,
-            "avg_position": 6.3,
-            "indexed_pages": 7,
+            "avg_position": 0,
+            "indexed_pages": 10,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -4312,12 +4306,12 @@
               ],
               "impressions": [
                 0,
-                3,
-                4,
                 0,
                 0,
-                4,
-                2
+                0,
+                0,
+                0,
+                0
               ],
               "clicks": [
                 0,
@@ -4351,7 +4345,7 @@
             {
               "date": "5/28",
               "sessions": 9,
-              "gsc_imp": 4,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -4378,7 +4372,7 @@
             {
               "date": "5/31",
               "sessions": 3,
-              "gsc_imp": 4,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
@@ -4387,7 +4381,7 @@
             {
               "date": "6/1",
               "sessions": 3,
-              "gsc_imp": 2,
+              "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 2,
@@ -4649,12 +4643,12 @@
             "total_urls": 176
           },
           "content": {
-            "total_articles": 163,
-            "this_month": 2,
-            "this_week": 31,
-            "this_28d": 52,
+            "total_articles": 169,
+            "this_month": 6,
+            "this_week": 37,
+            "this_28d": 58,
             "sports_articles": 0,
-            "total_articles_inc_sports": 163
+            "total_articles_inc_sports": 169
           },
           "cwv": {},
           "social": {
@@ -4676,7 +4670,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 2,
-              "articles": 28,
+              "articles": 30,
               "gsc_pending": false
             },
             {
@@ -4703,7 +4697,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": false
             },
             {
@@ -4712,7 +4706,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": true
             },
             {
@@ -4837,12 +4831,12 @@
             "total_urls": 21
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 14,
+            "this_month": 7,
+            "this_week": 14,
+            "this_28d": 14,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 14
           },
           "cwv": {},
           "social": {
@@ -4864,7 +4858,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": false
             },
             {
@@ -4873,7 +4867,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": false
             },
             {
@@ -4882,7 +4876,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": false
             },
             {
@@ -4891,7 +4885,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": false
             },
             {
@@ -4900,7 +4894,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": true
             },
             {
@@ -4909,7 +4903,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": true
             }
           ],
@@ -5025,12 +5019,12 @@
             "total_urls": 14
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 7,
+            "this_month": 5,
+            "this_week": 7,
+            "this_28d": 7,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 7
           },
           "cwv": {},
           "social": {
@@ -5052,7 +5046,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -5061,7 +5055,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -5079,7 +5073,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": false
             },
             {
@@ -5097,7 +5091,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": true
             }
           ],
@@ -5176,7 +5170,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -5213,12 +5207,12 @@
             "total_urls": 19
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 12,
+            "this_month": 7,
+            "this_week": 12,
+            "this_28d": 12,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 12
           },
           "cwv": {},
           "social": {
@@ -5240,7 +5234,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -5249,7 +5243,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -5258,7 +5252,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": false
             },
             {
@@ -5267,7 +5261,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -5276,7 +5270,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": true
             },
             {
@@ -5285,7 +5279,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": true
             }
           ],
@@ -5364,7 +5358,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 5,
+            "indexed_pages": 6,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -5401,12 +5395,12 @@
             "total_urls": 21
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 14,
+            "this_month": 8,
+            "this_week": 14,
+            "this_28d": 14,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 14
           },
           "cwv": {},
           "social": {
@@ -5428,7 +5422,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -5437,7 +5431,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": false
             },
             {
@@ -5446,7 +5440,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": false
             },
             {
@@ -5455,7 +5449,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -5464,7 +5458,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": true
             },
             {
@@ -5473,7 +5467,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": true
             }
           ],
@@ -5552,7 +5546,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 3,
+            "indexed_pages": 2,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -5589,12 +5583,12 @@
             "total_urls": 9
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 3,
+            "this_month": 3,
+            "this_week": 3,
+            "this_28d": 3,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 3
           },
           "cwv": {},
           "social": {
@@ -5652,7 +5646,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": true
             },
             {
@@ -5661,7 +5655,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": true
             }
           ],
@@ -5777,12 +5771,12 @@
             "total_urls": 18
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 11,
+            "this_month": 6,
+            "this_week": 11,
+            "this_28d": 11,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 11
           },
           "cwv": {},
           "social": {
@@ -5813,7 +5807,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": false
             },
             {
@@ -5822,7 +5816,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": false
             },
             {
@@ -5831,7 +5825,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -5840,7 +5834,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": true
             },
             {
@@ -5849,7 +5843,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": true
             }
           ],
@@ -5965,12 +5959,12 @@
             "total_urls": 20
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 14,
+            "this_month": 14,
+            "this_week": 14,
+            "this_28d": 14,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 14
           },
           "cwv": {},
           "social": {
@@ -6028,7 +6022,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": true
             },
             {
@@ -6037,7 +6031,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": true
             }
           ],
@@ -6116,7 +6110,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 2,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -6153,12 +6147,12 @@
             "total_urls": 20
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 14,
+            "this_month": 14,
+            "this_week": 14,
+            "this_28d": 14,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 14
           },
           "cwv": {},
           "social": {
@@ -6216,7 +6210,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": true
             },
             {
@@ -6225,7 +6219,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": true
             }
           ],
@@ -6304,7 +6298,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 2,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -6341,12 +6335,12 @@
             "total_urls": 23
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 16,
+            "this_month": 9,
+            "this_week": 16,
+            "this_28d": 16,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 16
           },
           "cwv": {},
           "social": {
@@ -6368,7 +6362,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -6377,7 +6371,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": false
             },
             {
@@ -6386,7 +6380,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": false
             },
             {
@@ -6395,7 +6389,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": false
             },
             {
@@ -6404,7 +6398,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": true
             },
             {
@@ -6413,7 +6407,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": true
             }
           ],
@@ -6492,7 +6486,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 2,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -6529,12 +6523,12 @@
             "total_urls": 19
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 12,
+            "this_month": 7,
+            "this_week": 12,
+            "this_28d": 12,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 12
           },
           "cwv": {},
           "social": {
@@ -6565,7 +6559,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": false
             },
             {
@@ -6574,7 +6568,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": false
             },
             {
@@ -6583,7 +6577,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -6592,7 +6586,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": true
             },
             {
@@ -6601,7 +6595,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": true
             }
           ],
@@ -6717,12 +6711,12 @@
             "total_urls": 18
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 11,
+            "this_month": 7,
+            "this_week": 11,
+            "this_28d": 11,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 11
           },
           "cwv": {},
           "social": {
@@ -6744,7 +6738,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -6753,7 +6747,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -6762,7 +6756,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": false
             },
             {
@@ -6771,7 +6765,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -6780,7 +6774,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": true
             },
             {
@@ -6789,7 +6783,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": true
             }
           ],
@@ -6868,7 +6862,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -6905,12 +6899,12 @@
             "total_urls": 23
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 16,
+            "this_month": 9,
+            "this_week": 16,
+            "this_28d": 16,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 16
           },
           "cwv": {},
           "social": {
@@ -6932,7 +6926,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -6941,7 +6935,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": false
             },
             {
@@ -6950,7 +6944,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": false
             },
             {
@@ -6959,7 +6953,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": false
             },
             {
@@ -6968,7 +6962,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": true
             },
             {
@@ -6977,7 +6971,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": true
             }
           ],
@@ -7056,7 +7050,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 4,
+            "indexed_pages": 3,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -7093,12 +7087,12 @@
             "total_urls": 21
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 14,
+            "this_month": 9,
+            "this_week": 14,
+            "this_28d": 14,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 14
           },
           "cwv": {},
           "social": {
@@ -7129,7 +7123,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": false
             },
             {
@@ -7138,7 +7132,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": false
             },
             {
@@ -7147,7 +7141,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": false
             },
             {
@@ -7156,7 +7150,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": true
             },
             {
@@ -7165,7 +7159,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": true
             }
           ],
@@ -7281,12 +7275,12 @@
             "total_urls": 20
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 13,
+            "this_month": 7,
+            "this_week": 13,
+            "this_28d": 13,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 13
           },
           "cwv": {},
           "social": {
@@ -7308,7 +7302,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -7317,7 +7311,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": false
             },
             {
@@ -7326,7 +7320,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 3,
               "gsc_pending": false
             },
             {
@@ -7335,7 +7329,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": false
             },
             {
@@ -7344,7 +7338,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": true
             },
             {
@@ -7353,7 +7347,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": true
             }
           ],
@@ -7469,12 +7463,12 @@
             "total_urls": 19
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 13,
+            "this_month": 13,
+            "this_week": 13,
+            "this_28d": 13,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 13
           },
           "cwv": {},
           "social": {
@@ -7532,7 +7526,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": true
             },
             {
@@ -7541,7 +7535,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": true
             }
           ],
@@ -7657,12 +7651,12 @@
             "total_urls": 28
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 3,
+            "this_month": 3,
+            "this_week": 3,
+            "this_28d": 3,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 3
           },
           "cwv": {},
           "social": {
@@ -8560,7 +8554,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -9124,7 +9118,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -9161,12 +9155,12 @@
             "total_urls": 27
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 2,
+            "this_month": 2,
+            "this_week": 2,
+            "this_28d": 2,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 2
           },
           "cwv": {},
           "social": {
@@ -9233,7 +9227,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 2,
               "gsc_pending": true
             }
           ],
@@ -9500,7 +9494,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -9725,12 +9719,12 @@
             "total_urls": 26
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 1,
+            "this_month": 1,
+            "this_week": 1,
+            "this_28d": 1,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 1
           },
           "cwv": {},
           "social": {
@@ -9797,7 +9791,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": true
             }
           ],
@@ -9913,12 +9907,12 @@
             "total_urls": 26
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 1,
+            "this_month": 1,
+            "this_week": 1,
+            "this_28d": 1,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 1
           },
           "cwv": {},
           "social": {
@@ -9985,7 +9979,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": true
             }
           ],
@@ -10289,12 +10283,12 @@
             "total_urls": 26
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 1,
+            "this_month": 1,
+            "this_week": 1,
+            "this_28d": 1,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 1
           },
           "cwv": {},
           "social": {
@@ -10361,7 +10355,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": true
             }
           ],
