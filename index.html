@@ -762,7 +762,7 @@ function renderOverview(g, gk) {
       </td>
       <td>${s.content.total_articles}</td>
       <td>${s.content.sports_articles>0?s.content.sports_articles:'<span style="color:var(--gray-300)">–</span>'}</td>
-      <td>${s.content.this_month}</td>
+      <td>${s.content.this_28d!=null?s.content.this_28d:s.content.this_month}</td>
       <td>${renderAIBadges(s.ai_crawlers)}</td>
     </tr>`;
   });
@@ -793,7 +793,7 @@ function renderOverview(g, gk) {
           <thead style="position:sticky;top:0;z-index:2;background:#f9fafb;box-shadow:0 1px 2px rgba(0,0,0,.07)"><tr>
             <th>站點</th><th>類型</th><th>昨日</th><th>30日流量</th>
             <th>GSC曝光(7d)</th><th>GSC點擊(7d)</th><th>GSC索引</th><th>平均排名</th>
-            <th>收錄/Sitemap</th><th>Blog</th><th>體育</th><th>本月新發</th><th>AI爬蟲</th>
+            <th>收錄/Sitemap</th><th>Blog</th><th>體育</th><th>28日新發</th><th>AI爬蟲</th>
           </tr></thead>
           <tbody>${rows}</tbody>
         </table>
