@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T02:26:03+08:00",
+  "generated_at": "2026-06-04T02:37:36+08:00",
   "groups": {
     "spheretap": {
       "name": "Spheretap 集團",
@@ -94,7 +94,7 @@
               202,
               313,
               312,
-              18
+              23
             ],
             "cta_series_7d": [
               7,
@@ -164,27 +164,52 @@
               {
                 "kw": "100米香港紀錄",
                 "pos": 64,
-                "clicks": 0
+                "impressions": 1
               },
               {
                 "kw": "2026 英超 冠軍",
                 "pos": 12,
-                "clicks": 0
+                "impressions": 1
               },
               {
                 "kw": "2026英超冠軍",
                 "pos": 11,
-                "clicks": 0
+                "impressions": 1
               },
               {
                 "kw": "3小時過數",
                 "pos": 19,
-                "clicks": 0
+                "impressions": 1
               },
               {
                 "kw": "birthday bonus",
                 "pos": 1,
-                "clicks": 0
+                "impressions": 1
+              },
+              {
+                "kw": "dembele 受傷",
+                "pos": 6.1,
+                "impressions": 14
+              },
+              {
+                "kw": "hk sport news",
+                "pos": 56,
+                "impressions": 1
+              },
+              {
+                "kw": "siu cheong hung",
+                "pos": 11,
+                "impressions": 1
+              },
+              {
+                "kw": "vip系統",
+                "pos": 48.5,
+                "impressions": 2
+              },
+              {
+                "kw": "wembanyama 合約",
+                "pos": 12,
+                "impressions": 1
               }
             ],
             "data_cutoff": "2026-06-01"
@@ -482,27 +507,32 @@
               {
                 "kw": "nba讓分",
                 "pos": 42.8,
-                "clicks": 0
+                "impressions": 4
               },
               {
                 "kw": "nba讓分盤",
                 "pos": 42,
-                "clicks": 0
+                "impressions": 1
               },
               {
                 "kw": "波盘攻略",
                 "pos": 22.3,
-                "clicks": 0
+                "impressions": 4
               },
               {
                 "kw": "波胆赔率",
                 "pos": 23,
-                "clicks": 0
+                "impressions": 1
               },
               {
                 "kw": "足球盤口",
                 "pos": 67.8,
-                "clicks": 0
+                "impressions": 6
+              },
+              {
+                "kw": "足球赔率分析",
+                "pos": 37,
+                "impressions": 1
               }
             ],
             "data_cutoff": "2026-06-01"
@@ -1059,7 +1089,7 @@
               {
                 "kw": "賽馬 分析",
                 "pos": 78,
-                "clicks": 0
+                "impressions": 1
               }
             ],
             "data_cutoff": "2026-06-01"
@@ -2353,7 +2383,7 @@
               {
                 "kw": "電競市場",
                 "pos": 26.8,
-                "clicks": 0
+                "impressions": 6
               }
             ],
             "data_cutoff": "2026-06-01"
@@ -4431,7 +4461,7 @@
               4,
               207,
               221,
-              18
+              23
             ],
             "cta_series_7d": [
               0,
@@ -5595,7 +5625,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 3,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -6347,7 +6377,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -6535,7 +6565,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 2,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -6911,7 +6941,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 3,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -7287,7 +7317,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 2,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -8039,7 +8069,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 2,
+            "indexed_pages": 4,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -8227,7 +8257,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -8979,7 +9009,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -9355,7 +9385,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -9919,7 +9949,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/26",
