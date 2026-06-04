@@ -847,8 +847,7 @@ function renderSite(domain, s, g, gk) {
   const roleLabel = s.role==='main'?'主站':'衛星站';
   const kwRows = s.gsc.top_keywords.map(k=>`
     <tr><td>${k.kw}</td>
-    <td><span class="pos-badge ${posClass(k.pos)}">#${k.pos.toFixed(1)}</span></td>
-    <td>${k.clicks}</td></tr>`).join('');
+    <td><span class="pos-badge ${posClass(k.pos)}">#${k.pos.toFixed(1)}</span></td></tr>`).join('');
   const d7 = [...(s.daily_7d||[])].reverse();
   const d7rows = d7.map(r=>{
     const pendingCell=r.gsc_pending?'<span title="GSC處理中" style="cursor:help;color:var(--gray-300)">⏳</span>':'<span style="color:var(--gray-300)">—</span>';
@@ -987,12 +986,12 @@ function renderSite(domain, s, g, gk) {
     </div>
   </div>
 
-  <div class="sec-label">GSC 高流量關鍵字</div>
+  <div class="sec-label">GSC查詢關鍵字</div>
   <div class="card">
     <div class="tbl-wrap">
       <table>
-        <thead><tr><th>關鍵字</th><th>平均排名</th><th>點擊數 (28d)</th></tr></thead>
-        <tbody>${kwRows||'<tr><td colspan="3" style="text-align:center;color:var(--gray-300)">無資料</td></tr>'}</tbody>
+        <thead><tr><th>查詢關鍵字</th><th>平均排名 (28d)</th></tr></thead>
+        <tbody>${kwRows||'<tr><td colspan="2" style="text-align:center;color:var(--gray-300)">無資料</td></tr>'}</tbody>
       </table>
     </div>
   </div>`;
