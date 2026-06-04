@@ -36,15 +36,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 .gx-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .gx-count{font-size:10px;background:rgba(255,255,255,.15);padding:1px 6px;border-radius:10px;font-weight:700}
 .gx-sep{width:1px;background:rgba(255,255,255,.1);margin:8px 4px;flex-shrink:0}
-.gx-spacer{flex:1;min-width:8px}
-.gx-report-wrap{position:relative;display:flex;align-items:center;padding:0 6px;flex-shrink:0}
-.gx-report-btn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.9);font-size:11px;font-weight:700;padding:4px 11px;border-radius:6px;cursor:pointer;display:flex;align-items:center;gap:5px;white-space:nowrap;transition:background .15s;line-height:1}
-.gx-report-btn:hover{background:rgba(255,255,255,.22)}
-.gx-report-dd{position:fixed;background:#1e293b;border:1px solid rgba(255,255,255,.15);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.45);padding:6px;z-index:9999;display:none;min-width:200px}
-.gx-report-dd.open{display:block}
-.gx-report-dd-label{font-size:10px;color:rgba(255,255,255,.4);padding:5px 12px 3px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
-.gx-report-dd-item{display:flex;align-items:center;gap:8px;padding:8px 12px;color:rgba(255,255,255,.85);font-size:12px;text-decoration:none;border-radius:5px;font-weight:600;transition:background .12s;cursor:pointer}
-.gx-report-dd-item:hover{background:rgba(255,255,255,.1);color:#fff}
 
 /* ── Group Tabs (Level 1) ── */
 .tabs-wrap{background:#fff;border-bottom:2px solid var(--gray-200);position:sticky;top:96px;z-index:190;overflow-x:auto}
@@ -58,7 +49,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 .tb-badge.main{background:#fef3c7;color:#92400e}
 .tb-badge.p0{background:#fef3c7;color:#92400e}
 .tb-badge.p1{background:#d1fae5;color:#065f46}
-.tb-badge.p2{background:#dbeafe;color:#1e40af}
 
 /* ── Sub-tabs (Level 2) ── */
 .sub-tabs-wrap{background:#f0f4ff;border-bottom:2px solid #c7d7fd;position:sticky;top:140px;z-index:180;overflow-x:auto}
@@ -243,8 +233,7 @@ const SPHERETAP_P1_LABELS = {
 // ── BDUK Phase maps ───────────────────────────────────
 const BDUK_PHASES = {
   0: ['bountifultriathlon.com','besedkibg.com','topbravi.com','dealer-index.com','ogradabg.com'],
-  1: ['track-index.com','reel-base.com','spin-vaults.com','feuerwehr-georgenhausen.com','platform-benchmark.com','abcosvetlenie.com','cryptocurrency-game.com','sports-analy.com','esports-index.com','clan-guide.com'],
-  2: ['world-cup-2026.world','premier-leagueodds.online','formulaone.site','uk-horse-racing.site','tennis-grandslam.site','golfodds.site','boxingmma.site','rugbyunion.site','dartsodds.site','snookerodds.site','cricketodds.site','bjstrategy.site','pokerstrategy.site','accumulator-guide.site','live-inplay-odds.site']
+  1: ['track-index.com','reel-base.com','spin-vaults.com','feuerwehr-georgenhausen.com','platform-benchmark.com','abcosvetlenie.com','cryptocurrency-game.com','sports-analy.com','esports-index.com','clan-guide.com']
 };
 const BDUK_LABELS = {
   'bountifultriathlon.com':      '博彩統計中心',
@@ -261,22 +250,7 @@ const BDUK_LABELS = {
   'cryptocurrency-game.com':     '加密遊戲索引',
   'sports-analy.com':            '賽事統計區',
   'esports-index.com':           '電競成長實驗室',
-  'clan-guide.com':              '策略遊戲指南',
-  'world-cup-2026.world':        'FIFA世界盃2026賠率分析',
-  'premier-leagueodds.online':   '英超讓球盤口研究',
-  'formulaone.site':             'F1賠率研究',
-  'uk-horse-racing.site':        '英國賽馬分析',
-  'tennis-grandslam.site':       '大滿貫網球賠率',
-  'golfodds.site':               '高爾夫大賽賠率',
-  'boxingmma.site':              '拳擊MMA賠率',
-  'rugbyunion.site':             '橄欖球聯賽賠率',
-  'dartsodds.site':              'PDC飛鏢賠率',
-  'snookerodds.site':            '斯諾克賠率',
-  'cricketodds.site':            '板球投注分析',
-  'bjstrategy.site':             '21點基礎策略',
-  'pokerstrategy.site':          '德州撲克策略',
-  'accumulator-guide.site':      '串關策略',
-  'live-inplay-odds.site':       '即時投注策略'
+  'clan-guide.com':              '策略遊戲指南'
 };
 
 // ── Site stub generator ───────────────────────────────
@@ -396,22 +370,7 @@ const MOCK = {
         'cryptocurrency-game.com':     siteStub('加密遊戲索引'),
         'sports-analy.com':            siteStub('賽事統計區'),
         'esports-index.com':           siteStub('電競成長實驗室'),
-        'clan-guide.com':              siteStub('策略遊戲指南'),
-        'world-cup-2026.world':        siteStub('FIFA世界盃2026賠率分析'),
-        'premier-leagueodds.online':   siteStub('英超讓球盤口研究'),
-        'formulaone.site':             siteStub('F1賠率研究'),
-        'uk-horse-racing.site':        siteStub('英國賽馬分析'),
-        'tennis-grandslam.site':       siteStub('大滿貫網球賠率'),
-        'golfodds.site':               siteStub('高爾夫大賽賠率'),
-        'boxingmma.site':              siteStub('拳擊MMA賠率'),
-        'rugbyunion.site':             siteStub('橄欖球聯賽賠率'),
-        'dartsodds.site':              siteStub('PDC飛鏢賠率'),
-        'snookerodds.site':            siteStub('斯諾克賠率'),
-        'cricketodds.site':            siteStub('板球投注分析'),
-        'bjstrategy.site':             siteStub('21點基礎策略'),
-        'pokerstrategy.site':          siteStub('德州撲克策略'),
-        'accumulator-guide.site':      siteStub('串關策略'),
-        'live-inplay-odds.site':       siteStub('即時投注策略')
+        'clan-guide.com':              siteStub('策略遊戲指南')
       }
     }
   }
@@ -497,10 +456,6 @@ async function init() {
     if (bduk) {
       bduk.name = 'BDUK';
       if (!bduk.phases) bduk.phases = BDUK_PHASES;
-      else {
-        // Merge phase 2 if aggregator hasn't pushed it yet
-        if (!bduk.phases[2]) bduk.phases[2] = BDUK_PHASES[2];
-      }
       if (!bduk.dates_30d) bduk.dates_30d = MOCK.groups.bduk.dates_30d;
       for (const [domain, label] of Object.entries(BDUK_LABELS)) {
         if (!bduk.sites[domain]) bduk.sites[domain] = siteStub(label);
@@ -561,41 +516,8 @@ function buildGalaxyBar() {
       <span class="gx-dot" style="background:${cfg.color}"></span>${cfg.name} <span class="gx-count">${cnt}</span>
     </button>`;
   });
-  // ── 週報快捷按鈕 ──
-  const week = currentISOWeek();
-  const gKeys = Object.keys(DATA.groups);
-  let ddItems = `<div class="gx-report-dd-label">本週 ${week}</div>`;
-  gKeys.forEach(gk => {
-    const cfg = GALAXY_CONFIG[gk] || { name: gk, color: '#6b7280' };
-    const url = `?report=weekly&galaxy=${gk}&week=${week}`;
-    ddItems += `<a class="gx-report-dd-item" href="${url}" target="_blank"><span style="color:${cfg.color};font-size:9px">●</span>${cfg.name} 週報 PDF</a>`;
-  });
-  html += `<div class="gx-spacer"></div><div class="gx-report-wrap" id="wr-wrap">
-    <button class="gx-report-btn" id="wr-btn" onclick="toggleReportDD(event)">📄 本週週報 ▾</button>
-    <div class="gx-report-dd" id="wr-dd">${ddItems}</div>
-  </div>`;
   document.getElementById('galaxy-bar').innerHTML = html;
 }
-
-function currentISOWeek() {
-  const d = new Date();
-  d.setHours(0,0,0,0);
-  d.setDate(d.getDate() + 3 - (d.getDay() + 6) % 7);
-  const w1 = new Date(d.getFullYear(), 0, 4);
-  return d.getFullYear() + '-W' + String(1 + Math.round(((d - w1) / 86400000 - 3 + (w1.getDay() + 6) % 7) / 7)).padStart(2, '0');
-}
-
-function toggleReportDD(e) {
-  e.stopPropagation();
-  const btn = document.getElementById('wr-btn');
-  const dd = document.getElementById('wr-dd');
-  if (!btn || !dd) return;
-  const r = btn.getBoundingClientRect();
-  dd.style.top = (r.bottom + 4) + 'px';
-  dd.style.right = (window.innerWidth - r.right) + 'px';
-  dd.classList.toggle('open');
-}
-document.addEventListener('click', () => { const dd = document.getElementById('wr-dd'); if (dd) dd.classList.remove('open'); });
 
 function updateGalaxyActive() {
   document.querySelectorAll('.gx-tab').forEach(b => b.classList.toggle('act', b.dataset.gx === currentGalaxy));
@@ -632,7 +554,7 @@ function buildGroupTabs_All() {
 function buildGroupTabs(gk) {
   const g = DATA.groups[gk];
   const phases = g.phases || {};
-  const p0 = phases[0] || [], p1 = phases[1] || [], p2 = phases[2] || [];
+  const p0 = phases[0] || [], p1 = phases[1] || [];
   const mainDomain = Object.keys(g.sites).find(d => g.sites[d].role === 'main') || '';
   let html = `<button class="tb" data-key="__overview__" onclick="switchGroupTab('__overview__')">
     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> 總覽
@@ -650,11 +572,6 @@ function buildGroupTabs(gk) {
   if (p1.length) {
     html += `<button class="tb" data-key="__phase1__" onclick="switchGroupTab('__phase1__')">
       衛星站群 Phase 1 <span class="tb-badge p1">×${p1.length}</span>
-    </button>`;
-  }
-  if (p2.length) {
-    html += `<button class="tb" data-key="__phase2__" onclick="switchGroupTab('__phase2__')">
-      衛星站群 Phase 2 <span class="tb-badge p2">×${p2.length}</span>
     </button>`;
   }
   document.getElementById('tabs').innerHTML = html;
@@ -750,6 +667,7 @@ function renderGalaxyMain(gk, key) {
   Object.keys(charts).forEach(k => delete charts[k]);
   if (key === '__overview__') {
     content.innerHTML = renderOverview(g, gk);
+    loadOverviewExtras(gk);
   } else if (g.sites[key]) {
     content.innerHTML = renderSite(key, g.sites[key], g, gk);
     requestAnimationFrame(() => {
@@ -868,18 +786,109 @@ function renderOverview(g, gk) {
     </div>
   </div>`:''}
   <div class="sec-label">各站比較（點擊各站查看詳情）</div>
-  <div class="card">
-    <div class="tbl-wrap">
-      <table>
-        <thead><tr>
-          <th>站點</th><th>類型</th><th>昨日</th><th>30日流量</th>
-          <th>GSC曝光(7d)</th><th>GSC點擊(7d)</th><th>GSC索引</th><th>平均排名</th>
-          <th>收錄/Sitemap</th><th>Blog</th><th>體育</th><th>本月新發</th><th>AI爬蟲</th>
-        </tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
+  <div class="card" style="padding:0;overflow:hidden">
+    <div style="max-height:350px;overflow:auto">
+      <div class="tbl-wrap">
+        <table>
+          <thead style="position:sticky;top:0;z-index:2;background:#f9fafb;box-shadow:0 1px 2px rgba(0,0,0,.07)"><tr>
+            <th>站點</th><th>類型</th><th>昨日</th><th>30日流量</th>
+            <th>GSC曝光(7d)</th><th>GSC點擊(7d)</th><th>GSC索引</th><th>平均排名</th>
+            <th>收錄/Sitemap</th><th>Blog</th><th>體育</th><th>本月新發</th><th>AI爬蟲</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
     </div>
-  </div>`;
+  </div>
+  <div class="sec-label">最近一次週報概覽</div>
+  <div id="wr-preview-${gk}" class="card" style="min-height:80px;display:flex;align-items:center;justify-content:center"><span style="color:#9ca3af;font-size:13px">載入中…</span></div>
+  <div class="sec-label">週報歸檔（點擊查看 / 匯出 PDF）</div>
+  <div id="wr-archive-${gk}" class="card" style="min-height:60px;display:flex;align-items:center;justify-content:center"><span style="color:#9ca3af;font-size:13px">載入中…</span></div>`;
+}
+
+// ── Weekly report print helper ─────────────────────────
+function wrPrint(url) {
+  var w = window.open(url, '_blank');
+  setTimeout(function() { try { if (w) w.print(); } catch(e) {} }, 3000);
+}
+
+// ── Overview extras: latest weekly preview + archive ───
+async function loadOverviewExtras(gk) {
+  var previewEl = document.getElementById('wr-preview-' + gk);
+  var archiveEl = document.getElementById('wr-archive-' + gk);
+  if (!previewEl || !archiveEl) return;
+  var cfg = GALAXY_CONFIG[gk] || { color: '#1a56db', name: gk };
+
+  var weeks = [], latestData = null;
+  try {
+    var r = await fetch('https://api.github.com/repos/wmzic929-prog/seo-report/contents/weekly-report');
+    if (r.ok) {
+      var files = await r.json();
+      weeks = Array.isArray(files)
+        ? files.filter(function(f){ return /^\d{4}-W\d{2}\.json$/.test(f.name); })
+               .map(function(f){ return f.name.replace('.json',''); })
+               .sort().reverse()
+        : [];
+    }
+  } catch(e) {}
+
+  if (weeks.length > 0) {
+    try {
+      var r2 = await fetch('https://raw.githubusercontent.com/wmzic929-prog/seo-report/main/weekly-report/' + weeks[0] + '.json');
+      if (r2.ok) latestData = await r2.json();
+    } catch(e) {}
+  }
+
+  var fmtWow = function(v) {
+    if (!v) return '<span style="color:#6b7280;font-size:11px">持平</span>';
+    return v > 0
+      ? '<span style="color:#059669;font-size:11px;font-weight:700">↑' + v.toFixed(1) + '%</span>'
+      : '<span style="color:#dc2626;font-size:11px;font-weight:700">↓' + Math.abs(v).toFixed(1) + '%</span>';
+  };
+
+  // ── Preview ──
+  if (!latestData) {
+    previewEl.innerHTML = '<span style="color:#9ca3af;font-size:13px">尚無週報資料</span>';
+    previewEl.style.cssText = 'min-height:80px;display:flex;align-items:center;justify-content:center';
+  } else {
+    var galaxy = latestData.galaxies[gk] || latestData.galaxies['spheretap'];
+    var m = (galaxy && galaxy.metrics) || {};
+    var wk0 = weeks[0];
+    var wkUrlA = '?report=weekly&amp;galaxy=' + gk + '&amp;week=' + wk0;
+    previewEl.style.display = 'block';
+    previewEl.innerHTML =
+      '<div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap">'
+      + '<div style="font-size:14px;font-weight:700;color:' + cfg.color + '">' + (latestData.week_label || wk0) + '</div>'
+      + '<span style="font-size:11px;color:#9ca3af">生成於 ' + (latestData.generated_at || '').slice(0,16).replace('T',' ') + '</span>'
+      + '<a href="' + wkUrlA + '" target="_blank" style="margin-left:auto;padding:6px 14px;background:' + cfg.color + ';color:#fff;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap">查看完整週報 ↗</a>'
+      + '</div>'
+      + '<div class="kpi-grid">'
+      + '<div class="kcard" style="border-top-color:' + cfg.color + '"><div class="kl">有機流量 (7d)</div><div class="kv" style="color:' + cfg.color + '">' + (m.organic_sessions_7d || 0).toLocaleString() + '</div><div class="ks">' + fmtWow(m.organic_sessions_wow_pct) + '</div></div>'
+      + '<div class="kcard c-green"><div class="kl">搜尋曝光 (7d)</div><div class="kv">' + (m.impressions_7d || 0).toLocaleString() + '</div><div class="ks">' + fmtWow(m.impressions_wow_pct) + '</div></div>'
+      + '<div class="kcard c-orange"><div class="kl">平均排名</div><div class="kv">' + (m.avg_position > 0 ? m.avg_position.toFixed(1) : '–') + '</div><div class="ks">搜尋位置</div></div>'
+      + '<div class="kcard c-purple"><div class="kl">內容總頁數</div><div class="kv">' + (m.content_pages_total || 0).toLocaleString() + '</div><div class="ks">本週新增 ' + (m.content_pages_new_7d || 0) + ' 頁</div></div>'
+      + '</div>'
+      + (galaxy && galaxy.analysis_summary
+          ? '<div style="margin-top:12px;padding:12px 16px;background:#f8fafc;border-radius:8px;font-size:13px;color:#374151;line-height:1.7">' + galaxy.analysis_summary + '</div>'
+          : '');
+  }
+
+  // ── Archive ──
+  if (weeks.length === 0) {
+    archiveEl.innerHTML = '<span style="color:#9ca3af;font-size:13px">尚無週報歸檔</span>';
+    archiveEl.style.cssText = 'min-height:60px;display:flex;align-items:center;justify-content:center';
+    return;
+  }
+  archiveEl.style.display = 'block';
+  archiveEl.innerHTML = '<div style="font-size:11px;color:#9ca3af;margin-bottom:8px">共 ' + weeks.length + ' 份 · 按 PDF 後在新視窗列印即可匯出</div>'
+    + weeks.map(function(wk) {
+        var vu = '?report=weekly&amp;galaxy=' + gk + '&amp;week=' + wk;
+        return '<div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #f3f4f6;flex-wrap:wrap">'
+          + '<span style="font-size:13px;font-weight:600;color:#374151;min-width:110px">' + wk + '</span>'
+          + '<a href="' + vu + '" target="_blank" style="padding:5px 14px;background:' + cfg.color + ';color:#fff;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none">查看</a>'
+          + '<button data-wr-url="' + vu + '" onclick="wrPrint(this.dataset.wrUrl)" style="padding:5px 14px;background:#f3f4f6;color:#374151;border:1px solid #e5e7eb;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer">⬇ PDF</button>'
+          + '</div>';
+      }).join('');
 }
 
 // ── Single Site Panel ─────────────────────────────────
@@ -889,7 +898,8 @@ function renderSite(domain, s, g, gk) {
   const roleLabel = s.role==='main'?'主站':'衛星站';
   const kwRows = s.gsc.top_keywords.map(k=>`
     <tr><td>${k.kw}</td>
-    <td><span class="pos-badge ${posClass(k.pos)}">#${k.pos.toFixed(1)}</span></td></tr>`).join('');
+    <td><span class="pos-badge ${posClass(k.pos)}">#${k.pos.toFixed(1)}</span></td>
+    <td>${k.clicks}</td></tr>`).join('');
   const d7 = [...(s.daily_7d||[])].reverse();
   const d7rows = d7.map(r=>{
     const pendingCell=r.gsc_pending?'<span title="GSC處理中" style="cursor:help;color:var(--gray-300)">⏳</span>':'<span style="color:var(--gray-300)">—</span>';
@@ -1028,12 +1038,12 @@ function renderSite(domain, s, g, gk) {
     </div>
   </div>
 
-  <div class="sec-label">GSC查詢關鍵字</div>
+  <div class="sec-label">GSC 高流量關鍵字</div>
   <div class="card">
     <div class="tbl-wrap">
       <table>
-        <thead><tr><th>查詢關鍵字</th><th>平均排名 (28d)</th></tr></thead>
-        <tbody>${kwRows||'<tr><td colspan="2" style="text-align:center;color:var(--gray-300)">無資料</td></tr>'}</tbody>
+        <thead><tr><th>關鍵字</th><th>平均排名</th><th>點擊數 (28d)</th></tr></thead>
+        <tbody>${kwRows||'<tr><td colspan="3" style="text-align:center;color:var(--gray-300)">無資料</td></tr>'}</tbody>
       </table>
     </div>
   </div>`;
