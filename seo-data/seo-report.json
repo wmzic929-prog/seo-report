@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T02:37:36+08:00",
+  "generated_at": "2026-06-04T02:42:48+08:00",
   "groups": {
     "spheretap": {
       "name": "Spheretap 集團",
@@ -94,7 +94,7 @@
               202,
               313,
               312,
-              23
+              25
             ],
             "cta_series_7d": [
               7,
@@ -162,6 +162,16 @@
             },
             "top_keywords": [
               {
+                "kw": "dembele 受傷",
+                "pos": 6.1,
+                "impressions": 14
+              },
+              {
+                "kw": "vip系統",
+                "pos": 48.5,
+                "impressions": 2
+              },
+              {
                 "kw": "100米香港紀錄",
                 "pos": 64,
                 "impressions": 1
@@ -187,11 +197,6 @@
                 "impressions": 1
               },
               {
-                "kw": "dembele 受傷",
-                "pos": 6.1,
-                "impressions": 14
-              },
-              {
                 "kw": "hk sport news",
                 "pos": 56,
                 "impressions": 1
@@ -200,11 +205,6 @@
                 "kw": "siu cheong hung",
                 "pos": 11,
                 "impressions": 1
-              },
-              {
-                "kw": "vip系統",
-                "pos": 48.5,
-                "impressions": 2
               },
               {
                 "kw": "wembanyama 合約",
@@ -505,8 +505,18 @@
             },
             "top_keywords": [
               {
+                "kw": "足球盤口",
+                "pos": 67.8,
+                "impressions": 6
+              },
+              {
                 "kw": "nba讓分",
                 "pos": 42.8,
+                "impressions": 4
+              },
+              {
+                "kw": "波盘攻略",
+                "pos": 22.3,
                 "impressions": 4
               },
               {
@@ -515,19 +525,9 @@
                 "impressions": 1
               },
               {
-                "kw": "波盘攻略",
-                "pos": 22.3,
-                "impressions": 4
-              },
-              {
                 "kw": "波胆赔率",
                 "pos": 23,
                 "impressions": 1
-              },
-              {
-                "kw": "足球盤口",
-                "pos": 67.8,
-                "impressions": 6
               },
               {
                 "kw": "足球赔率分析",
@@ -619,8 +619,8 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-04T00:14:25.013Z",
-              "count_30d": 201,
+              "last_seen": "2026-06-04T02:39:44.754Z",
+              "count_30d": 202,
               "dates": {
                 "2026-05-23": 4,
                 "2026-05-29": 109,
@@ -629,9 +629,9 @@
                 "2026-06-01": 8,
                 "2026-06-02": 14,
                 "2026-06-03": 16,
-                "2026-06-04": 1
+                "2026-06-04": 2
               },
-              "last_write": "2026-06-04T00:14:25.013Z"
+              "last_write": "2026-06-04T02:39:44.754Z"
             },
             "GPTBot": {
               "last_seen": "2026-06-02T17:56:59.811Z",
@@ -1600,7 +1600,7 @@
               2,
               0,
               7,
-              0
+              1
             ],
             "cta_series_7d": [
               4,
@@ -4461,7 +4461,7 @@
               4,
               207,
               221,
-              23
+              24
             ],
             "cta_series_7d": [
               0,
@@ -5061,7 +5061,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -5625,7 +5625,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 3,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -6377,7 +6377,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -6565,7 +6565,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -6941,7 +6941,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 3,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -7317,7 +7317,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 2,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -7505,7 +7505,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -8257,7 +8257,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -8633,7 +8633,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -9009,7 +9009,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/26",
@@ -9197,7 +9197,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 3,
+            "indexed_pages": 2,
             "series_7d": {
               "dates": [
                 "5/26",
