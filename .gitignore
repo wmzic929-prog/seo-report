@@ -1,0 +1,4 @@
+credentials.js
+.env*
+*.log
+node_modules/
