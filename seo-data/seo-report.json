@@ -10393,5 +10393,12 @@
         }
       }
     }
-  }
+  },
+  "alerts": [
+    {
+      "type": "traffic_drop",
+      "domain": "probdecision.com",
+      "message": "7日流量下跌 39%（36→22）"
+    }
+  ]
 }
