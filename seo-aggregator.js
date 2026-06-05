@@ -553,6 +553,7 @@ const GH_PATH = process.env.GH_PATH || _creds.GH_PATH || 'seo-data/seo-report.js
 const GSC_CLIENT_ID = process.env.GSC_CLIENT_ID || _creds.GSC_CLIENT_ID;
 const GSC_CLIENT_SECRET = process.env.GSC_CLIENT_SECRET || _creds.GSC_CLIENT_SECRET;
 const GSC_REFRESH_TOKEN = process.env.GSC_REFRESH_TOKEN || _creds.GSC_REFRESH_TOKEN;
+const GA4_REFRESH_TOKEN = process.env.GA4_REFRESH_TOKEN || _creds.GA4_REFRESH_TOKEN;
 const CF_ACCOUNT_ID = process.env.CF_ACCOUNT_ID || _creds.CF_ACCOUNT_ID;
 const CF_API_TOKEN = process.env.CF_API_TOKEN || _creds.CF_API_TOKEN;
 const CF_KV_NS_ID = process.env.CF_KV_NS_ID || _creds.CF_KV_NS_ID;
@@ -634,6 +635,8 @@ const GROUPS_CONFIG = [
 // ===== MAIN =====
 let gscToken;
 try { gscToken = await refreshOAuth(GSC_CLIENT_ID, GSC_CLIENT_SECRET, GSC_REFRESH_TOKEN); } catch(e) { console.error('GSC token:', e.message); }
+let ga4Token;
+try { ga4Token = GA4_REFRESH_TOKEN ? await refreshOAuth(GSC_CLIENT_ID, GSC_CLIENT_SECRET, GA4_REFRESH_TOKEN) : gscToken; } catch(e) { console.error('GA4 token:', e.message); ga4Token = gscToken; }
 
 const now = new Date();
 const genAt = now.toISOString().replace(/\.\d+Z$/, '+08:00');
@@ -660,9 +663,9 @@ for (const group of GROUPS_CONFIG) {
         try { const g = await fetchGSC(site.gsc, gscToken); Object.assign(siteData.gsc, g); } catch(e) { console.error('GSC', site.domain, e.message); }
         try { const s = await fetchSitemapData(site.gsc, site.sitemap, gscToken); siteData.sitemap.total_urls = s.total_urls; siteData.gsc.indexed_pages = s.indexed_pages; } catch(e) { console.error('sitemapData', site.domain, e.message); }
       }
-      if (site.ga4_id) {
+      if (site.ga4_id && ga4Token) {
         try {
-          const ga4 = await fetchGA4(site.ga4_id, gscToken);
+          const ga4 = await fetchGA4(site.ga4_id, ga4Token);
           if (ga4) {
             siteData.cta.clicks_28d = ga4.cta_clicks_28d || 0;
             delete ga4.cta_clicks_28d;
