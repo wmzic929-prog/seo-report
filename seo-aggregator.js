@@ -675,6 +675,19 @@ for (const group of GROUPS_CONFIG) {
       }
     }
 
+    // Channel 5 fallback (no token needed): direct sitemap.xml fetch for total_urls.
+    // Runs even when gscToken is unavailable so total_urls is populated regardless of OAuth state.
+    if (!siteData.sitemap.total_urls && site.sitemap) {
+      try {
+        const smUrl5 = new URL(site.sitemap);
+        const xml5 = await httpsReq({ hostname: smUrl5.hostname, path: smUrl5.pathname + (smUrl5.search || ''), method: 'GET', headers: { 'User-Agent': 'SEO-Aggregator/1.0', 'Accept': 'application/xml,text/xml,*/*' } }, null);
+        if (typeof xml5.data === 'string' && xml5.status === 200) {
+          const locs5 = xml5.data.match(/<loc>/g);
+          if (locs5) siteData.sitemap.total_urls = locs5.length;
+        }
+      } catch(e) {}
+    }
+
     try { const gh = await fetchGitHubBlogCount(site.repo, ghPat); Object.assign(siteData.content, gh); } catch(e) { console.error('githubBlog', site.domain, e.message); }
     if (site.sports_dir) {
       try {
