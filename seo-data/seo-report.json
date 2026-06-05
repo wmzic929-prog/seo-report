@@ -10831,5 +10831,237 @@
         }
       }
     }
-  }
+  },
+  "alerts": [
+    {
+      "type": "traffic_drop",
+      "domain": "spheretap.com",
+      "message": "7日流量下跌 100%（1800→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "matchvangtage.com",
+      "message": "7日流量下跌 100%（32→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "tableedge.org",
+      "message": "7日流量下跌 100%（47→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "turf-pulse.com",
+      "message": "7日流量下跌 100%（30→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "spin-metrics.com",
+      "message": "7日流量下跌 100%（52→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "verifiedplays.com",
+      "message": "7日流量下跌 100%（30→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "matchdatalab.com",
+      "message": "7日流量下跌 100%（44→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "athlete-index.com",
+      "message": "7日流量下跌 100%（46→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "esports-intel.com",
+      "message": "7日流量下跌 100%（39→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "proplayerstat.com",
+      "message": "7日流量下跌 100%（31→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "tilestrategist.com",
+      "message": "7日流量下跌 100%（31→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "gamedesignhq.com",
+      "message": "7日流量下跌 100%（30→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "platformverdict.com",
+      "message": "7日流量下跌 100%（35→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "probdecision.com",
+      "message": "7日流量下跌 100%（22→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "asiaesportculture.com",
+      "message": "7日流量下跌 100%（34→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "entertaintrendlab.com",
+      "message": "7日流量下跌 100%（47→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "businessdirectory-uk.com",
+      "message": "7日流量下跌 100%（698→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "bountifultriathlon.com",
+      "message": "7日流量下跌 100%（14→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "besedkibg.com",
+      "message": "7日流量下跌 100%（12→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "topbravi.com",
+      "message": "7日流量下跌 100%（46→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "dealer-index.com",
+      "message": "7日流量下跌 100%（31→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "ogradabg.com",
+      "message": "7日流量下跌 100%（34→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "track-index.com",
+      "message": "7日流量下跌 100%（72→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "reel-base.com",
+      "message": "7日流量下跌 100%（96→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "spin-vaults.com",
+      "message": "7日流量下跌 100%（20→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "feuerwehr-georgenhausen.com",
+      "message": "7日流量下跌 100%（13→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "platform-benchmark.com",
+      "message": "7日流量下跌 100%（22→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "abcosvetlenie.com",
+      "message": "7日流量下跌 100%（22→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "cryptocurrency-game.com",
+      "message": "7日流量下跌 100%（11→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "sports-analy.com",
+      "message": "7日流量下跌 100%（85→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "esports-index.com",
+      "message": "7日流量下跌 100%（43→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "clan-guide.com",
+      "message": "7日流量下跌 100%（11→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "world-cup-2026.world",
+      "message": "7日流量下跌 100%（36→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "formulaone.site",
+      "message": "7日流量下跌 100%（22→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "uk-horse-racing.site",
+      "message": "7日流量下跌 100%（30→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "tennis-grandslam.site",
+      "message": "7日流量下跌 100%（30→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "golfodds.site",
+      "message": "7日流量下跌 100%（13→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "boxingmma.site",
+      "message": "7日流量下跌 100%（26→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "rugbyunion.site",
+      "message": "7日流量下跌 100%（24→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "dartsodds.site",
+      "message": "7日流量下跌 100%（28→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "snookerodds.site",
+      "message": "7日流量下跌 100%（25→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "cricketodds.site",
+      "message": "7日流量下跌 100%（32→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "bjstrategy.site",
+      "message": "7日流量下跌 100%（29→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "pokerstrategy.site",
+      "message": "7日流量下跌 100%（16→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "accumulator-guide.site",
+      "message": "7日流量下跌 100%（19→0）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "live-inplay-odds.site",
+      "message": "7日流量下跌 100%（23→0）"
+    }
+  ]
 }
