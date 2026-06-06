@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T13:30:01+08:00",
+  "generated_at": "2026-06-06T01:30:02+08:00",
   "groups": {
     "spheretap": {
       "name": "Spheretap 集團",
@@ -25,7 +25,6 @@
         ]
       },
       "dates_30d": [
-        "5/7",
         "5/8",
         "5/9",
         "5/10",
@@ -54,7 +53,8 @@
         "6/2",
         "6/3",
         "6/4",
-        "6/5"
+        "6/5",
+        "6/6"
       ],
       "sites": {
         "spheretap.com": {
@@ -126,37 +126,37 @@
           "gsc": {
             "impressions_28d": 605,
             "clicks_28d": 51,
-            "impressions_7d": 379,
-            "clicks_7d": 10,
+            "impressions_7d": 344,
+            "clicks_7d": 8,
             "ctr": 0.0843,
             "avg_position": 9.1,
             "indexed_pages": 133,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
-                35,
                 49,
                 64,
                 153,
                 45,
                 33,
+                0,
                 0
               ],
               "clicks": [
-                2,
                 0,
                 2,
                 3,
                 1,
                 2,
+                0,
                 0
               ]
             },
@@ -212,7 +212,7 @@
                 "impressions": 1
               }
             ],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 202
@@ -220,7 +220,7 @@
           "content": {
             "total_articles": 3,
             "this_month": 19,
-            "this_week": 23,
+            "this_week": 21,
             "this_28d": 130,
             "sports_articles": 127,
             "total_articles_inc_sports": 130
@@ -230,15 +230,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 64,
-              "gsc_clk": 2,
-              "cta_clk": 0,
-              "articles": 2,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -278,14 +269,23 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 4,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
+            },
+            {
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -296,8 +296,8 @@
           ],
           "ai_crawlers": {
             "GPTBot": {
-              "last_seen": "2026-06-05T10:08:03.744Z",
-              "count_30d": 575,
+              "last_seen": "2026-06-05T23:21:25.111Z",
+              "count_30d": 576,
               "dates": {
                 "2026-05-23": 20,
                 "2026-05-24": 29,
@@ -312,9 +312,9 @@
                 "2026-06-02": 65,
                 "2026-06-03": 9,
                 "2026-06-04": 1,
-                "2026-06-05": 2
+                "2026-06-05": 3
               },
-              "last_write": "2026-06-05T10:08:03.744Z"
+              "last_write": "2026-06-05T23:21:25.111Z"
             },
             "Claude-User": {
               "last_seen": "2026-06-05T04:17:46.026Z",
@@ -329,53 +329,59 @@
               "last_write": "2026-06-05T04:17:46.026Z"
             },
             "DeepSeekBot": {
-              "last_seen": "2026-05-30T14:43:21.524Z",
-              "count_30d": 3,
+              "last_seen": "2026-06-05T23:21:25.493Z",
+              "count_30d": 4,
               "dates": {
                 "2026-05-27": 2,
-                "2026-05-30": 1
-              }
+                "2026-05-30": 1,
+                "2026-06-05": 1
+              },
+              "last_write": "2026-06-05T23:21:25.493Z"
             },
             "ClaudeBot": {
-              "last_seen": "2026-06-05T12:28:30.240Z",
-              "count_30d": 247,
+              "last_seen": "2026-06-06T00:50:03.840Z",
+              "count_30d": 256,
               "dates": {
                 "2026-05-29": 225,
                 "2026-05-30": 11,
                 "2026-06-03": 5,
-                "2026-06-05": 6
+                "2026-06-05": 14,
+                "2026-06-06": 1
               },
-              "last_write": "2026-06-05T12:28:30.240Z"
+              "last_write": "2026-06-06T00:50:03.840Z"
             },
             "PerplexityBot": {
-              "last_seen": "2026-06-03T23:42:58.310Z",
-              "count_30d": 32,
+              "last_seen": "2026-06-05T23:21:32.032Z",
+              "count_30d": 35,
               "dates": {
                 "2026-05-30": 10,
                 "2026-05-31": 11,
                 "2026-06-01": 6,
                 "2026-06-02": 3,
-                "2026-06-03": 2
+                "2026-06-03": 2,
+                "2026-06-05": 3
               },
-              "last_write": "2026-06-03T23:42:58.310Z"
+              "last_write": "2026-06-05T23:21:32.032Z"
             },
             "CCBot": {
-              "last_seen": "2026-06-03T02:31:18.068Z",
-              "count_30d": 4,
+              "last_seen": "2026-06-05T23:21:31.302Z",
+              "count_30d": 5,
               "dates": {
                 "2026-05-30": 1,
-                "2026-06-03": 3
-              }
+                "2026-06-03": 3,
+                "2026-06-05": 1
+              },
+              "last_write": "2026-06-05T23:21:31.302Z"
             },
             "Amazonbot": {
-              "last_seen": "2026-06-05T12:36:41.955Z",
-              "count_30d": 28,
+              "last_seen": "2026-06-05T23:56:21.711Z",
+              "count_30d": 36,
               "dates": {
                 "2026-06-03": 5,
                 "2026-06-04": 14,
-                "2026-06-05": 9
+                "2026-06-05": 17
               },
-              "last_write": "2026-06-05T12:36:41.955Z"
+              "last_write": "2026-06-05T23:56:21.711Z"
             },
             "Bytespider": {
               "last_seen": "2026-06-03T02:31:20.213Z",
@@ -476,28 +482,28 @@
           "gsc": {
             "impressions_28d": 31,
             "clicks_28d": 0,
-            "impressions_7d": 31,
+            "impressions_7d": 25,
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 29.2,
             "indexed_pages": 4,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
-                6,
                 3,
                 1,
                 14,
                 5,
                 2,
+                0,
                 0
               ],
               "clicks": [
@@ -542,7 +548,7 @@
                 "impressions": 1
               }
             ],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 36
@@ -550,7 +556,7 @@
           "content": {
             "total_articles": 46,
             "this_month": 4,
-            "this_week": 12,
+            "this_week": 9,
             "this_28d": 46,
             "sports_articles": 0,
             "total_articles_inc_sports": 46
@@ -560,15 +566,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 1,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 3,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -608,11 +605,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 1,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -622,12 +619,21 @@
               "cta_clk": 0,
               "articles": 2,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T12:51:20.572Z",
-              "count_30d": 220,
+              "last_seen": "2026-06-06T00:55:22.419Z",
+              "count_30d": 226,
               "dates": {
                 "2026-05-23": 4,
                 "2026-05-29": 109,
@@ -637,9 +643,10 @@
                 "2026-06-02": 14,
                 "2026-06-03": 16,
                 "2026-06-04": 12,
-                "2026-06-05": 8
+                "2026-06-05": 13,
+                "2026-06-06": 1
               },
-              "last_write": "2026-06-05T12:51:20.572Z"
+              "last_write": "2026-06-06T00:55:22.419Z"
             },
             "GPTBot": {
               "last_seen": "2026-06-04T05:05:29.580Z",
@@ -665,13 +672,13 @@
               }
             },
             "Amazonbot": {
-              "last_seen": "2026-06-05T11:09:20.765Z",
-              "count_30d": 4,
+              "last_seen": "2026-06-05T23:01:01.590Z",
+              "count_30d": 7,
               "dates": {
                 "2026-06-01": 2,
-                "2026-06-05": 2
+                "2026-06-05": 5
               },
-              "last_write": "2026-06-05T11:09:20.765Z"
+              "last_write": "2026-06-05T23:01:01.590Z"
             },
             "Bytespider": {
               "last_seen": "2026-06-02T17:56:58.536Z",
@@ -774,27 +781,27 @@
           "gsc": {
             "impressions_28d": 8,
             "clicks_28d": 0,
-            "impressions_7d": 8,
+            "impressions_7d": 5,
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 4.1,
             "indexed_pages": 2,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
-                3,
                 2,
                 0,
                 0,
                 3,
+                0,
                 0,
                 0
               ],
@@ -809,33 +816,24 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 38
           },
           "content": {
-            "total_articles": 8,
-            "this_month": 8,
-            "this_week": 8,
-            "this_28d": 8,
+            "total_articles": 12,
+            "this_month": 12,
+            "this_week": 12,
+            "this_28d": 12,
             "sports_articles": 0,
-            "total_articles_inc_sports": 8
+            "total_articles_inc_sports": 12
           },
           "cwv": {},
           "social": {
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -875,11 +873,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 5,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -887,14 +885,23 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 3,
+              "articles": 0,
+              "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 7,
               "gsc_pending": true
             }
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T11:56:26.902Z",
-              "count_30d": 203,
+              "last_seen": "2026-06-05T22:24:43.965Z",
+              "count_30d": 207,
               "dates": {
                 "2026-05-24": 16,
                 "2026-05-25": 14,
@@ -907,9 +914,9 @@
                 "2026-06-02": 33,
                 "2026-06-03": 10,
                 "2026-06-04": 11,
-                "2026-06-05": 6
+                "2026-06-05": 10
               },
-              "last_write": "2026-06-05T11:56:26.902Z"
+              "last_write": "2026-06-05T22:24:43.965Z"
             },
             "GPTBot": {
               "last_seen": "2026-06-05T11:15:15.904Z",
@@ -939,15 +946,15 @@
               "last_write": "2026-06-03T07:18:59.143Z"
             },
             "Amazonbot": {
-              "last_seen": "2026-06-05T11:46:11.971Z",
-              "count_30d": 36,
+              "last_seen": "2026-06-05T23:32:04.224Z",
+              "count_30d": 42,
               "dates": {
                 "2026-06-02": 6,
                 "2026-06-03": 10,
                 "2026-06-04": 15,
-                "2026-06-05": 5
+                "2026-06-05": 11
               },
-              "last_write": "2026-06-05T11:46:11.971Z"
+              "last_write": "2026-06-05T23:32:04.224Z"
             },
             "cohere-ai": {
               "last_seen": "2026-06-03T07:18:59.055Z",
@@ -1069,32 +1076,32 @@
           "gsc": {
             "impressions_28d": 72,
             "clicks_28d": 1,
-            "impressions_7d": 62,
-            "clicks_7d": 1,
+            "impressions_7d": 61,
+            "clicks_7d": 0,
             "ctr": 0.0139,
             "avg_position": 12.7,
             "indexed_pages": 7,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
-                1,
                 3,
                 3,
                 25,
                 20,
                 10,
+                0,
                 0
               ],
               "clicks": [
-                1,
+                0,
                 0,
                 0,
                 0,
@@ -1110,7 +1117,7 @@
                 "impressions": 1
               }
             ],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 47
@@ -1118,7 +1125,7 @@
           "content": {
             "total_articles": 44,
             "this_month": 6,
-            "this_week": 16,
+            "this_week": 12,
             "this_28d": 44,
             "sports_articles": 0,
             "total_articles_inc_sports": 44
@@ -1128,15 +1135,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 3,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 4,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -1176,11 +1174,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 2,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -1190,12 +1188,21 @@
               "cta_clk": 0,
               "articles": 2,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T11:59:54.385Z",
-              "count_30d": 267,
+              "last_seen": "2026-06-06T01:14:17.973Z",
+              "count_30d": 273,
               "dates": {
                 "2026-05-23": 31,
                 "2026-05-24": 18,
@@ -1210,13 +1217,14 @@
                 "2026-06-02": 19,
                 "2026-06-03": 16,
                 "2026-06-04": 14,
-                "2026-06-05": 6
+                "2026-06-05": 11,
+                "2026-06-06": 1
               },
-              "last_write": "2026-06-05T11:59:54.385Z"
+              "last_write": "2026-06-06T01:14:17.973Z"
             },
             "GPTBot": {
-              "last_seen": "2026-06-04T07:44:48.712Z",
-              "count_30d": 135,
+              "last_seen": "2026-06-06T01:25:52.669Z",
+              "count_30d": 136,
               "dates": {
                 "2026-05-25": 11,
                 "2026-05-26": 8,
@@ -1227,22 +1235,23 @@
                 "2026-06-01": 1,
                 "2026-06-02": 7,
                 "2026-06-03": 2,
-                "2026-06-04": 3
+                "2026-06-04": 3,
+                "2026-06-06": 1
               },
-              "last_write": "2026-06-04T07:44:48.712Z"
+              "last_write": "2026-06-06T01:25:52.669Z"
             },
             "PerplexityBot": {
-              "last_seen": "2026-06-05T08:43:57.278Z",
-              "count_30d": 29,
+              "last_seen": "2026-06-05T15:56:50.152Z",
+              "count_30d": 31,
               "dates": {
                 "2026-05-30": 8,
                 "2026-05-31": 11,
                 "2026-06-01": 2,
                 "2026-06-02": 5,
                 "2026-06-03": 2,
-                "2026-06-05": 1
+                "2026-06-05": 3
               },
-              "last_write": "2026-06-05T08:43:57.278Z"
+              "last_write": "2026-06-05T15:56:50.152Z"
             },
             "CCBot": {
               "last_seen": "2026-06-02T23:53:48.646Z",
@@ -1253,15 +1262,15 @@
               }
             },
             "Amazonbot": {
-              "last_seen": "2026-06-05T13:24:18.741Z",
-              "count_30d": 37,
+              "last_seen": "2026-06-05T23:07:59.397Z",
+              "count_30d": 39,
               "dates": {
                 "2026-06-02": 8,
                 "2026-06-03": 7,
                 "2026-06-04": 15,
-                "2026-06-05": 7
+                "2026-06-05": 9
               },
-              "last_write": "2026-06-05T13:24:18.741Z"
+              "last_write": "2026-06-05T23:07:59.397Z"
             },
             "cohere-ai": {
               "last_seen": "2026-06-02T23:54:02.390Z",
@@ -1370,24 +1379,24 @@
           "gsc": {
             "impressions_28d": 8,
             "clicks_28d": 0,
-            "impressions_7d": 8,
+            "impressions_7d": 5,
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 2.8,
             "indexed_pages": 3,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
-                3,
                 5,
+                0,
                 0,
                 0,
                 0,
@@ -1405,7 +1414,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 25
@@ -1423,15 +1432,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -1471,11 +1471,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 4,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -1485,12 +1485,21 @@
               "cta_clk": 0,
               "articles": 30,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T12:00:01.916Z",
-              "count_30d": 204,
+              "last_seen": "2026-06-05T23:50:37.686Z",
+              "count_30d": 210,
               "dates": {
                 "2026-05-23": 13,
                 "2026-05-24": 19,
@@ -1505,13 +1514,13 @@
                 "2026-06-02": 13,
                 "2026-06-03": 14,
                 "2026-06-04": 9,
-                "2026-06-05": 6
+                "2026-06-05": 12
               },
-              "last_write": "2026-06-05T12:00:01.916Z"
+              "last_write": "2026-06-05T23:50:37.686Z"
             },
             "GPTBot": {
-              "last_seen": "2026-06-05T11:15:18.124Z",
-              "count_30d": 105,
+              "last_seen": "2026-06-05T23:50:37.472Z",
+              "count_30d": 106,
               "dates": {
                 "2026-05-25": 31,
                 "2026-05-26": 8,
@@ -1524,36 +1533,39 @@
                 "2026-06-02": 2,
                 "2026-06-03": 4,
                 "2026-06-04": 3,
-                "2026-06-05": 1
+                "2026-06-05": 2
               },
-              "last_write": "2026-06-05T11:15:18.124Z"
+              "last_write": "2026-06-05T23:50:37.472Z"
             },
             "PerplexityBot": {
-              "last_seen": "2026-06-03T04:57:32.436Z",
+              "last_seen": "2026-06-05T23:50:37.432Z",
+              "count_30d": 3,
+              "dates": {
+                "2026-05-31": 1,
+                "2026-06-03": 1,
+                "2026-06-05": 1
+              },
+              "last_write": "2026-06-05T23:50:37.432Z"
+            },
+            "DeepSeekBot": {
+              "last_seen": "2026-06-05T23:50:36.369Z",
               "count_30d": 2,
               "dates": {
                 "2026-05-31": 1,
-                "2026-06-03": 1
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-03T04:57:32.436Z"
-            },
-            "DeepSeekBot": {
-              "last_seen": "2026-05-31T05:17:22.922Z",
-              "count_30d": 1,
-              "dates": {
-                "2026-05-31": 1
-              }
+              "last_write": "2026-06-05T23:50:36.369Z"
             },
             "Amazonbot": {
-              "last_seen": "2026-06-05T12:32:58.144Z",
-              "count_30d": 30,
+              "last_seen": "2026-06-05T22:20:42.822Z",
+              "count_30d": 33,
               "dates": {
                 "2026-06-02": 5,
                 "2026-06-03": 8,
                 "2026-06-04": 12,
-                "2026-06-05": 5
+                "2026-06-05": 8
               },
-              "last_write": "2026-06-05T12:32:58.144Z"
+              "last_write": "2026-06-05T22:20:42.822Z"
             },
             "Google-Extended": {
               "last_seen": "2026-06-03T04:57:27.009Z",
@@ -1564,11 +1576,12 @@
               }
             },
             "CCBot": {
-              "last_seen": "2026-06-03T04:57:35.807Z",
-              "last_write": "2026-06-03T04:57:35.807Z",
-              "count_30d": 1,
+              "last_seen": "2026-06-05T23:50:36.556Z",
+              "last_write": "2026-06-05T23:50:36.556Z",
+              "count_30d": 2,
               "dates": {
-                "2026-06-03": 1
+                "2026-06-03": 1,
+                "2026-06-05": 1
               }
             },
             "anthropic-ai": {
@@ -1674,24 +1687,24 @@
           "gsc": {
             "impressions_28d": 7,
             "clicks_28d": 0,
-            "impressions_7d": 7,
+            "impressions_7d": 4,
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 2.9,
             "indexed_pages": 1,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
-                3,
                 4,
+                0,
                 0,
                 0,
                 0,
@@ -1709,7 +1722,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 41
@@ -1717,7 +1730,7 @@
           "content": {
             "total_articles": 37,
             "this_month": 4,
-            "this_week": 9,
+            "this_week": 7,
             "this_28d": 37,
             "sports_articles": 0,
             "total_articles_inc_sports": 37
@@ -1727,15 +1740,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 2,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -1775,14 +1779,23 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 2,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
+            },
+            {
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -1793,8 +1806,8 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T13:17:14.194Z",
-              "count_30d": 317,
+              "last_seen": "2026-06-06T01:04:16.629Z",
+              "count_30d": 323,
               "dates": {
                 "2026-05-23": 17,
                 "2026-05-24": 25,
@@ -1809,9 +1822,10 @@
                 "2026-06-02": 16,
                 "2026-06-03": 15,
                 "2026-06-04": 17,
-                "2026-06-05": 11
+                "2026-06-05": 16,
+                "2026-06-06": 1
               },
-              "last_write": "2026-06-05T13:17:14.194Z"
+              "last_write": "2026-06-06T01:04:16.629Z"
             },
             "GPTBot": {
               "last_seen": "2026-06-05T11:15:02.614Z",
@@ -1841,15 +1855,16 @@
               "last_write": "2026-06-04T19:51:29.126Z"
             },
             "Amazonbot": {
-              "last_seen": "2026-06-05T11:50:48.114Z",
-              "count_30d": 38,
+              "last_seen": "2026-06-06T01:15:53.291Z",
+              "count_30d": 46,
               "dates": {
                 "2026-06-02": 9,
                 "2026-06-03": 10,
                 "2026-06-04": 13,
-                "2026-06-05": 6
+                "2026-06-05": 13,
+                "2026-06-06": 1
               },
-              "last_write": "2026-06-05T11:50:48.114Z"
+              "last_write": "2026-06-06T01:15:53.291Z"
             },
             "Claude-User": {
               "last_seen": "2026-06-04T03:24:18.092Z",
@@ -1953,13 +1968,13 @@
             "indexed_pages": 10,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -1981,7 +1996,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -1989,7 +2004,7 @@
           "content": {
             "total_articles": 15,
             "this_month": 5,
-            "this_week": 12,
+            "this_week": 11,
             "this_28d": 15,
             "sports_articles": 0,
             "total_articles_inc_sports": 15
@@ -1999,15 +2014,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 1,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -2047,6 +2053,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -2054,7 +2069,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -2065,8 +2080,8 @@
           ],
           "ai_crawlers": {
             "GPTBot": {
-              "last_seen": "2026-06-04T22:47:29.693Z",
-              "count_30d": 50,
+              "last_seen": "2026-06-05T22:49:18.724Z",
+              "count_30d": 51,
               "dates": {
                 "2026-05-25": 20,
                 "2026-05-26": 3,
@@ -2078,9 +2093,10 @@
                 "2026-06-01": 1,
                 "2026-06-02": 1,
                 "2026-06-03": 2,
-                "2026-06-04": 2
+                "2026-06-04": 2,
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-04T22:47:29.693Z"
+              "last_write": "2026-06-05T22:49:18.724Z"
             },
             "PerplexityBot": {
               "last_seen": "2026-05-26T20:53:59.332Z",
@@ -2189,16 +2205,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 5,
+            "indexed_pages": 7,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -2220,7 +2236,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -2228,7 +2244,7 @@
           "content": {
             "total_articles": 24,
             "this_month": 7,
-            "this_week": 16,
+            "this_week": 13,
             "this_28d": 24,
             "sports_articles": 0,
             "total_articles_inc_sports": 24
@@ -2238,15 +2254,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 3,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -2286,11 +2293,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 2,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -2300,12 +2307,21 @@
               "cta_clk": 0,
               "articles": 3,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
           "ai_crawlers": {
             "GPTBot": {
-              "last_seen": "2026-06-04T22:51:43.529Z",
-              "count_30d": 50,
+              "last_seen": "2026-06-05T22:56:22.555Z",
+              "count_30d": 51,
               "dates": {
                 "2026-05-25": 16,
                 "2026-05-26": 2,
@@ -2317,9 +2333,10 @@
                 "2026-06-01": 1,
                 "2026-06-02": 1,
                 "2026-06-03": 2,
-                "2026-06-04": 1
+                "2026-06-04": 1,
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-04T22:51:43.529Z"
+              "last_write": "2026-06-05T22:56:22.555Z"
             },
             "CCBot": {
               "last_seen": "2026-06-03T19:45:21.813Z",
@@ -2441,13 +2458,13 @@
             "indexed_pages": 10,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -2469,7 +2486,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -2477,7 +2494,7 @@
           "content": {
             "total_articles": 24,
             "this_month": 7,
-            "this_week": 16,
+            "this_week": 13,
             "this_28d": 24,
             "sports_articles": 0,
             "total_articles_inc_sports": 24
@@ -2487,15 +2504,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 3,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -2535,11 +2543,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 2,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -2549,12 +2557,21 @@
               "cta_clk": 0,
               "articles": 3,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
           "ai_crawlers": {
             "GPTBot": {
-              "last_seen": "2026-06-04T22:53:42.913Z",
-              "count_30d": 118,
+              "last_seen": "2026-06-05T22:58:39.960Z",
+              "count_30d": 119,
               "dates": {
                 "2026-05-25": 16,
                 "2026-05-26": 2,
@@ -2566,19 +2583,21 @@
                 "2026-06-01": 1,
                 "2026-06-02": 12,
                 "2026-06-03": 2,
-                "2026-06-04": 1
+                "2026-06-04": 1,
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-04T22:53:42.913Z"
+              "last_write": "2026-06-05T22:58:39.960Z"
             },
             "CCBot": {
-              "last_seen": "2026-06-03T19:51:07.808Z",
-              "count_30d": 7,
+              "last_seen": "2026-06-05T19:31:39.686Z",
+              "count_30d": 8,
               "dates": {
                 "2026-05-26": 3,
                 "2026-06-02": 3,
-                "2026-06-03": 1
+                "2026-06-03": 1,
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-03T19:51:07.808Z"
+              "last_write": "2026-06-05T19:31:39.686Z"
             },
             "ClaudeBot": {
               "last_seen": "2026-06-03T19:51:08.439Z",
@@ -2597,11 +2616,13 @@
               }
             },
             "PerplexityBot": {
-              "last_seen": "2026-06-02T03:59:02.744Z",
-              "count_30d": 3,
+              "last_seen": "2026-06-05T19:31:38.157Z",
+              "count_30d": 4,
               "dates": {
-                "2026-06-02": 3
-              }
+                "2026-06-02": 3,
+                "2026-06-05": 1
+              },
+              "last_write": "2026-06-05T19:31:38.157Z"
             },
             "Bytespider": {
               "last_seen": "2026-06-02T03:59:06.061Z",
@@ -2625,11 +2646,12 @@
               }
             },
             "DeepSeekBot": {
-              "last_seen": "2026-06-03T19:51:08.865Z",
-              "last_write": "2026-06-03T19:51:08.865Z",
-              "count_30d": 1,
+              "last_seen": "2026-06-05T19:31:38.546Z",
+              "last_write": "2026-06-05T19:31:38.546Z",
+              "count_30d": 2,
               "dates": {
-                "2026-06-03": 1
+                "2026-06-03": 1,
+                "2026-06-05": 1
               }
             },
             "Claude-User": {
@@ -2718,13 +2740,13 @@
             "indexed_pages": 10,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -2746,7 +2768,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -2754,7 +2776,7 @@
           "content": {
             "total_articles": 24,
             "this_month": 7,
-            "this_week": 16,
+            "this_week": 13,
             "this_28d": 24,
             "sports_articles": 0,
             "total_articles_inc_sports": 24
@@ -2764,15 +2786,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 3,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -2812,11 +2825,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 2,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -2826,12 +2839,21 @@
               "cta_clk": 0,
               "articles": 3,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
           "ai_crawlers": {
             "GPTBot": {
-              "last_seen": "2026-06-04T22:52:42.158Z",
-              "count_30d": 50,
+              "last_seen": "2026-06-05T22:55:22.179Z",
+              "count_30d": 52,
               "dates": {
                 "2026-05-25": 16,
                 "2026-05-26": 2,
@@ -2843,42 +2865,48 @@
                 "2026-06-01": 1,
                 "2026-06-02": 1,
                 "2026-06-03": 2,
-                "2026-06-04": 1
+                "2026-06-04": 1,
+                "2026-06-05": 2
               },
-              "last_write": "2026-06-04T22:52:42.158Z"
+              "last_write": "2026-06-05T22:55:22.179Z"
             },
             "ClaudeBot": {
-              "last_seen": "2026-06-03T20:04:03.354Z",
-              "count_30d": 2,
+              "last_seen": "2026-06-05T17:41:22.266Z",
+              "count_30d": 3,
               "dates": {
                 "2026-05-26": 1,
-                "2026-06-03": 1
+                "2026-06-03": 1,
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-03T20:04:03.354Z"
+              "last_write": "2026-06-05T17:41:22.266Z"
             },
             "PerplexityBot": {
-              "last_seen": "2026-05-29T02:24:43.600Z",
-              "count_30d": 2,
+              "last_seen": "2026-06-05T17:41:19.463Z",
+              "count_30d": 3,
               "dates": {
                 "2026-05-26": 1,
-                "2026-05-29": 1
-              }
+                "2026-05-29": 1,
+                "2026-06-05": 1
+              },
+              "last_write": "2026-06-05T17:41:19.463Z"
             },
             "CCBot": {
-              "last_seen": "2026-06-03T20:04:04.751Z",
-              "count_30d": 2,
+              "last_seen": "2026-06-05T17:41:27.346Z",
+              "count_30d": 3,
               "dates": {
                 "2026-05-26": 1,
-                "2026-06-03": 1
+                "2026-06-03": 1,
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-03T20:04:04.751Z"
+              "last_write": "2026-06-05T17:41:27.346Z"
             },
             "DeepSeekBot": {
-              "last_seen": "2026-06-03T20:04:03.980Z",
-              "last_write": "2026-06-03T20:04:03.980Z",
-              "count_30d": 1,
+              "last_seen": "2026-06-05T17:41:23.307Z",
+              "last_write": "2026-06-05T17:41:23.307Z",
+              "count_30d": 2,
               "dates": {
-                "2026-06-03": 1
+                "2026-06-03": 1,
+                "2026-06-05": 1
               }
             },
             "Claude-User": {
@@ -2967,13 +2995,13 @@
             "indexed_pages": 6,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -2995,7 +3023,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -3013,15 +3041,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -3061,14 +3080,23 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 4,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
+            },
+            {
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -3079,8 +3107,8 @@
           ],
           "ai_crawlers": {
             "GPTBot": {
-              "last_seen": "2026-06-04T22:47:06.437Z",
-              "count_30d": 93,
+              "last_seen": "2026-06-05T22:47:33.678Z",
+              "count_30d": 95,
               "dates": {
                 "2026-05-25": 16,
                 "2026-05-26": 3,
@@ -3092,13 +3120,14 @@
                 "2026-06-01": 1,
                 "2026-06-02": 9,
                 "2026-06-03": 4,
-                "2026-06-04": 2
+                "2026-06-04": 2,
+                "2026-06-05": 2
               },
-              "last_write": "2026-06-04T22:47:06.437Z"
+              "last_write": "2026-06-05T22:47:33.678Z"
             },
             "ClaudeBot": {
-              "last_seen": "2026-06-04T19:12:18.057Z",
-              "count_30d": 199,
+              "last_seen": "2026-06-05T18:52:38.100Z",
+              "count_30d": 200,
               "dates": {
                 "2026-05-26": 33,
                 "2026-05-27": 20,
@@ -3108,18 +3137,20 @@
                 "2026-06-01": 17,
                 "2026-06-02": 33,
                 "2026-06-03": 18,
-                "2026-06-04": 10
+                "2026-06-04": 10,
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-04T19:12:18.057Z"
+              "last_write": "2026-06-05T18:52:38.100Z"
             },
             "CCBot": {
-              "last_seen": "2026-06-03T20:10:08.512Z",
-              "count_30d": 5,
+              "last_seen": "2026-06-05T18:52:39.094Z",
+              "count_30d": 6,
               "dates": {
                 "2026-05-26": 2,
-                "2026-06-03": 3
+                "2026-06-03": 3,
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-03T20:10:08.512Z"
+              "last_write": "2026-06-05T18:52:39.094Z"
             },
             "Bytespider": {
               "last_seen": "2026-06-03T09:04:23.770Z",
@@ -3130,11 +3161,12 @@
               }
             },
             "PerplexityBot": {
-              "last_seen": "2026-06-03T20:10:07.940Z",
-              "last_write": "2026-06-03T20:10:07.940Z",
-              "count_30d": 2,
+              "last_seen": "2026-06-05T18:52:35.212Z",
+              "last_write": "2026-06-05T18:52:35.212Z",
+              "count_30d": 3,
               "dates": {
-                "2026-06-03": 2
+                "2026-06-03": 2,
+                "2026-06-05": 1
               }
             },
             "anthropic-ai": {
@@ -3263,13 +3295,13 @@
             "indexed_pages": 10,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -3291,7 +3323,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -3299,7 +3331,7 @@
           "content": {
             "total_articles": 23,
             "this_month": 6,
-            "this_week": 15,
+            "this_week": 12,
             "this_28d": 23,
             "sports_articles": 0,
             "total_articles_inc_sports": 23
@@ -3309,15 +3341,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 3,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -3357,11 +3380,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 2,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -3371,12 +3394,21 @@
               "cta_clk": 0,
               "articles": 3,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
           "ai_crawlers": {
             "GPTBot": {
-              "last_seen": "2026-06-05T13:07:10.048Z",
-              "count_30d": 80,
+              "last_seen": "2026-06-05T19:40:45.401Z",
+              "count_30d": 81,
               "dates": {
                 "2026-05-26": 19,
                 "2026-05-27": 1,
@@ -3388,40 +3420,43 @@
                 "2026-06-02": 2,
                 "2026-06-03": 2,
                 "2026-06-04": 2,
-                "2026-06-05": 1
+                "2026-06-05": 2
               },
-              "last_write": "2026-06-05T13:07:10.048Z"
+              "last_write": "2026-06-05T19:40:45.401Z"
             },
             "CCBot": {
-              "last_seen": "2026-06-03T19:52:29.272Z",
-              "count_30d": 6,
+              "last_seen": "2026-06-05T19:40:45.496Z",
+              "count_30d": 7,
               "dates": {
                 "2026-05-26": 1,
                 "2026-06-02": 4,
-                "2026-06-03": 1
+                "2026-06-03": 1,
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-03T19:52:29.272Z"
+              "last_write": "2026-06-05T19:40:45.496Z"
             },
             "ClaudeBot": {
-              "last_seen": "2026-06-03T19:52:29.497Z",
-              "count_30d": 9,
+              "last_seen": "2026-06-05T19:40:44.653Z",
+              "count_30d": 10,
               "dates": {
                 "2026-05-26": 1,
                 "2026-06-02": 7,
-                "2026-06-03": 1
+                "2026-06-03": 1,
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-03T19:52:29.497Z"
+              "last_write": "2026-06-05T19:40:44.653Z"
             },
             "PerplexityBot": {
-              "last_seen": "2026-06-03T19:52:30.064Z",
-              "count_30d": 15,
+              "last_seen": "2026-06-05T19:40:48.483Z",
+              "count_30d": 16,
               "dates": {
                 "2026-05-26": 2,
                 "2026-06-01": 4,
                 "2026-06-02": 8,
-                "2026-06-03": 1
+                "2026-06-03": 1,
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-03T19:52:30.064Z"
+              "last_write": "2026-06-05T19:40:48.483Z"
             },
             "cohere-ai": {
               "last_seen": "2026-06-02T05:27:28.554Z",
@@ -3459,11 +3494,12 @@
               }
             },
             "DeepSeekBot": {
-              "last_seen": "2026-06-03T19:52:28.633Z",
-              "last_write": "2026-06-03T19:52:28.633Z",
-              "count_30d": 1,
+              "last_seen": "2026-06-05T19:40:44.814Z",
+              "last_write": "2026-06-05T19:40:44.814Z",
+              "count_30d": 2,
               "dates": {
-                "2026-06-03": 1
+                "2026-06-03": 1,
+                "2026-06-05": 1
               }
             },
             "Claude-User": {
@@ -3552,13 +3588,13 @@
             "indexed_pages": 10,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -3580,7 +3616,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -3588,7 +3624,7 @@
           "content": {
             "total_articles": 24,
             "this_month": 7,
-            "this_week": 16,
+            "this_week": 13,
             "this_28d": 24,
             "sports_articles": 0,
             "total_articles_inc_sports": 24
@@ -3598,15 +3634,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 3,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -3646,11 +3673,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 2,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -3660,12 +3687,21 @@
               "cta_clk": 0,
               "articles": 3,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
           "ai_crawlers": {
             "GPTBot": {
-              "last_seen": "2026-06-04T22:55:13.143Z",
-              "count_30d": 116,
+              "last_seen": "2026-06-05T22:55:30.126Z",
+              "count_30d": 118,
               "dates": {
                 "2026-05-25": 20,
                 "2026-05-26": 2,
@@ -3677,28 +3713,31 @@
                 "2026-06-01": 9,
                 "2026-06-02": 3,
                 "2026-06-03": 2,
-                "2026-06-04": 2
+                "2026-06-04": 2,
+                "2026-06-05": 2
               },
-              "last_write": "2026-06-04T22:55:13.143Z"
+              "last_write": "2026-06-05T22:55:30.126Z"
             },
             "PerplexityBot": {
-              "last_seen": "2026-06-03T20:03:30.031Z",
-              "count_30d": 5,
+              "last_seen": "2026-06-05T15:59:54.688Z",
+              "count_30d": 6,
               "dates": {
                 "2026-05-26": 1,
                 "2026-06-02": 3,
-                "2026-06-03": 1
+                "2026-06-03": 1,
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-03T20:03:30.031Z"
+              "last_write": "2026-06-05T15:59:54.688Z"
             },
             "ClaudeBot": {
-              "last_seen": "2026-06-03T20:03:29.464Z",
-              "count_30d": 5,
+              "last_seen": "2026-06-05T15:59:56.027Z",
+              "count_30d": 6,
               "dates": {
                 "2026-06-02": 4,
-                "2026-06-03": 1
+                "2026-06-03": 1,
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-03T20:03:29.464Z"
+              "last_write": "2026-06-05T15:59:56.027Z"
             },
             "Amazonbot": {
               "last_seen": "2026-06-02T23:21:27.431Z",
@@ -3722,11 +3761,13 @@
               }
             },
             "CCBot": {
-              "last_seen": "2026-06-02T23:21:29.746Z",
-              "count_30d": 2,
+              "last_seen": "2026-06-05T15:59:53.047Z",
+              "count_30d": 3,
               "dates": {
-                "2026-06-02": 2
-              }
+                "2026-06-02": 2,
+                "2026-06-05": 1
+              },
+              "last_write": "2026-06-05T15:59:53.047Z"
             },
             "Google-Extended": {
               "last_seen": "2026-06-02T23:21:29.115Z",
@@ -3743,11 +3784,12 @@
               }
             },
             "DeepSeekBot": {
-              "last_seen": "2026-06-03T20:03:29.143Z",
-              "last_write": "2026-06-03T20:03:29.143Z",
-              "count_30d": 1,
+              "last_seen": "2026-06-05T15:59:54.944Z",
+              "last_write": "2026-06-05T15:59:54.944Z",
+              "count_30d": 2,
               "dates": {
-                "2026-06-03": 1
+                "2026-06-03": 1,
+                "2026-06-05": 1
               }
             },
             "Claude-User": {
@@ -3836,13 +3878,13 @@
             "indexed_pages": 6,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -3864,7 +3906,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -3872,7 +3914,7 @@
           "content": {
             "total_articles": 24,
             "this_month": 7,
-            "this_week": 16,
+            "this_week": 13,
             "this_28d": 24,
             "sports_articles": 0,
             "total_articles_inc_sports": 24
@@ -3882,15 +3924,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 3,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -3930,11 +3963,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 2,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -3944,12 +3977,21 @@
               "cta_clk": 0,
               "articles": 3,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
           "ai_crawlers": {
             "GPTBot": {
-              "last_seen": "2026-06-05T08:25:26.639Z",
-              "count_30d": 51,
+              "last_seen": "2026-06-05T23:00:36.883Z",
+              "count_30d": 52,
               "dates": {
                 "2026-05-25": 17,
                 "2026-05-26": 2,
@@ -3962,9 +4004,9 @@
                 "2026-06-02": 1,
                 "2026-06-03": 2,
                 "2026-06-04": 1,
-                "2026-06-05": 1
+                "2026-06-05": 2
               },
-              "last_write": "2026-06-05T08:25:26.639Z"
+              "last_write": "2026-06-05T23:00:36.883Z"
             },
             "CCBot": {
               "last_seen": "2026-06-03T20:03:58.772Z",
@@ -4088,13 +4130,13 @@
             "indexed_pages": 10,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -4116,7 +4158,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -4124,7 +4166,7 @@
           "content": {
             "total_articles": 25,
             "this_month": 8,
-            "this_week": 17,
+            "this_week": 14,
             "this_28d": 25,
             "sports_articles": 0,
             "total_articles_inc_sports": 25
@@ -4134,15 +4176,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 3,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -4182,11 +4215,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 3,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -4196,12 +4229,21 @@
               "cta_clk": 0,
               "articles": 3,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T12:52:29.393Z",
-              "count_30d": 171,
+              "last_seen": "2026-06-05T21:40:08.351Z",
+              "count_30d": 176,
               "dates": {
                 "2026-05-25": 23,
                 "2026-05-26": 22,
@@ -4213,13 +4255,13 @@
                 "2026-06-02": 30,
                 "2026-06-03": 2,
                 "2026-06-04": 13,
-                "2026-06-05": 8
+                "2026-06-05": 13
               },
-              "last_write": "2026-06-05T12:52:29.393Z"
+              "last_write": "2026-06-05T21:40:08.351Z"
             },
             "GPTBot": {
-              "last_seen": "2026-06-04T22:51:38.638Z",
-              "count_30d": 72,
+              "last_seen": "2026-06-05T22:52:42.528Z",
+              "count_30d": 73,
               "dates": {
                 "2026-05-25": 16,
                 "2026-05-26": 6,
@@ -4231,9 +4273,10 @@
                 "2026-06-01": 1,
                 "2026-06-02": 13,
                 "2026-06-03": 1,
-                "2026-06-04": 3
+                "2026-06-04": 3,
+                "2026-06-05": 1
               },
-              "last_write": "2026-06-04T22:51:38.638Z"
+              "last_write": "2026-06-05T22:52:42.528Z"
             },
             "PerplexityBot": {
               "last_seen": "2026-06-03T19:45:14.647Z",
@@ -4348,13 +4391,13 @@
             "indexed_pages": 10,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -4376,7 +4419,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -4384,7 +4427,7 @@
           "content": {
             "total_articles": 24,
             "this_month": 7,
-            "this_week": 16,
+            "this_week": 13,
             "this_28d": 24,
             "sports_articles": 0,
             "total_articles_inc_sports": 24
@@ -4394,15 +4437,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 3,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -4442,11 +4476,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 2,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -4455,6 +4489,15 @@
               "gsc_clk": null,
               "cta_clk": 0,
               "articles": 3,
+              "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
               "gsc_pending": true
             }
           ],
@@ -4554,7 +4597,6 @@
         ]
       },
       "dates_30d": [
-        "5/7",
         "5/8",
         "5/9",
         "5/10",
@@ -4583,7 +4625,8 @@
         "6/2",
         "6/3",
         "6/4",
-        "6/5"
+        "6/5",
+        "6/6"
       ],
       "sites": {
         "businessdirectory-uk.com": {
@@ -4662,13 +4705,13 @@
             "indexed_pages": 10,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -4690,7 +4733,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -4708,15 +4751,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -4756,6 +4790,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -4763,7 +4806,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -4774,19 +4817,20 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T13:10:26.041Z",
-              "last_write": "2026-06-05T13:10:26.041Z",
-              "count_30d": 4,
+              "last_seen": "2026-06-05T23:53:56.986Z",
+              "last_write": "2026-06-05T23:53:56.986Z",
+              "count_30d": 10,
               "dates": {
-                "2026-06-05": 4
+                "2026-06-05": 10
               }
             },
             "Amazonbot": {
-              "last_seen": "2026-06-05T13:12:20.908Z",
-              "last_write": "2026-06-05T13:12:20.908Z",
-              "count_30d": 4,
+              "last_seen": "2026-06-06T00:57:20.632Z",
+              "last_write": "2026-06-06T00:57:20.632Z",
+              "count_30d": 12,
               "dates": {
-                "2026-06-05": 4
+                "2026-06-05": 11,
+                "2026-06-06": 1
               }
             },
             "Claude-User": {
@@ -4798,11 +4842,12 @@
               }
             },
             "GPTBot": {
-              "last_seen": "2026-06-05T13:21:07.023Z",
-              "last_write": "2026-06-05T13:21:07.023Z",
-              "count_30d": 2,
+              "last_seen": "2026-06-06T01:25:49.715Z",
+              "last_write": "2026-06-06T01:25:49.715Z",
+              "count_30d": 3,
               "dates": {
-                "2026-06-05": 2
+                "2026-06-05": 2,
+                "2026-06-06": 1
               }
             },
             "Bytespider": {
@@ -4931,13 +4976,13 @@
             "indexed_pages": 5,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -4959,7 +5004,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -4977,15 +5022,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -5025,6 +5061,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -5032,7 +5077,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -5043,11 +5088,12 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T11:48:59.493Z",
-              "last_write": "2026-06-05T11:48:59.493Z",
-              "count_30d": 2,
+              "last_seen": "2026-06-06T01:02:08.093Z",
+              "last_write": "2026-06-06T01:02:08.093Z",
+              "count_30d": 7,
               "dates": {
-                "2026-06-05": 2
+                "2026-06-05": 6,
+                "2026-06-06": 1
               }
             }
           }
@@ -5125,16 +5171,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -5156,7 +5202,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -5174,15 +5220,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -5222,6 +5259,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -5229,7 +5275,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -5248,11 +5294,12 @@
               }
             },
             "ClaudeBot": {
-              "last_seen": "2026-06-05T12:54:44.810Z",
-              "last_write": "2026-06-05T12:54:44.810Z",
-              "count_30d": 2,
+              "last_seen": "2026-06-06T00:58:54.695Z",
+              "last_write": "2026-06-06T00:58:54.695Z",
+              "count_30d": 8,
               "dates": {
-                "2026-06-05": 2
+                "2026-06-05": 7,
+                "2026-06-06": 1
               }
             },
             "GPTBot": {
@@ -5341,13 +5388,13 @@
             "indexed_pages": 1,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -5369,7 +5416,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -5387,15 +5434,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -5435,6 +5473,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -5442,7 +5489,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -5453,19 +5500,21 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T12:04:49.478Z",
-              "last_write": "2026-06-05T12:04:49.478Z",
-              "count_30d": 3,
+              "last_seen": "2026-06-06T01:27:25.839Z",
+              "last_write": "2026-06-06T01:27:25.839Z",
+              "count_30d": 8,
               "dates": {
-                "2026-06-05": 3
+                "2026-06-05": 6,
+                "2026-06-06": 2
               }
             },
             "Bytespider": {
-              "last_seen": "2026-06-05T11:46:54.331Z",
-              "last_write": "2026-06-05T11:46:54.331Z",
-              "count_30d": 1,
+              "last_seen": "2026-06-06T00:04:34.293Z",
+              "last_write": "2026-06-06T00:04:34.293Z",
+              "count_30d": 3,
               "dates": {
-                "2026-06-05": 1
+                "2026-06-05": 2,
+                "2026-06-06": 1
               }
             }
           }
@@ -5546,13 +5595,13 @@
             "indexed_pages": 6,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -5574,7 +5623,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -5592,15 +5641,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -5640,6 +5680,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -5647,7 +5696,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -5772,16 +5821,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 3,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -5803,7 +5852,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -5821,15 +5870,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -5869,6 +5909,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -5876,7 +5925,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -5887,11 +5936,11 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T13:11:46.374Z",
-              "last_write": "2026-06-05T13:11:46.374Z",
-              "count_30d": 4,
+              "last_seen": "2026-06-05T22:56:18.542Z",
+              "last_write": "2026-06-05T22:56:18.542Z",
+              "count_30d": 9,
               "dates": {
-                "2026-06-05": 4
+                "2026-06-05": 9
               }
             }
           }
@@ -5969,16 +6018,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 4,
+            "indexed_pages": 6,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -6000,7 +6049,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -6018,15 +6067,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -6066,6 +6106,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -6073,7 +6122,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -6084,11 +6133,11 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T13:28:18.819Z",
-              "last_write": "2026-06-05T13:28:18.819Z",
-              "count_30d": 3,
+              "last_seen": "2026-06-05T22:58:25.372Z",
+              "last_write": "2026-06-05T22:58:25.372Z",
+              "count_30d": 7,
               "dates": {
-                "2026-06-05": 3
+                "2026-06-05": 7
               }
             },
             "PerplexityBot": {
@@ -6177,13 +6226,13 @@
             "indexed_pages": 1,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -6205,7 +6254,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -6223,15 +6272,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -6271,6 +6311,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -6278,7 +6327,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -6289,11 +6338,44 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T11:58:45.958Z",
-              "last_write": "2026-06-05T11:58:45.958Z",
-              "count_30d": 3,
+              "last_seen": "2026-06-06T01:06:43.518Z",
+              "last_write": "2026-06-06T01:06:43.518Z",
+              "count_30d": 9,
               "dates": {
-                "2026-06-05": 3
+                "2026-06-05": 8,
+                "2026-06-06": 1
+              }
+            },
+            "GPTBot": {
+              "last_seen": "2026-06-05T14:53:11.940Z",
+              "last_write": "2026-06-05T14:53:11.940Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "PerplexityBot": {
+              "last_seen": "2026-06-05T14:53:12.332Z",
+              "last_write": "2026-06-05T14:53:12.332Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "CCBot": {
+              "last_seen": "2026-06-05T14:53:12.837Z",
+              "last_write": "2026-06-05T14:53:12.837Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "DeepSeekBot": {
+              "last_seen": "2026-06-05T14:53:13.169Z",
+              "last_write": "2026-06-05T14:53:13.169Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
               }
             }
           }
@@ -6374,13 +6456,13 @@
             "indexed_pages": 2,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -6402,7 +6484,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -6420,15 +6502,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -6468,11 +6541,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 0,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -6482,9 +6555,59 @@
               "cta_clk": 0,
               "articles": 0,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
-          "ai_crawlers": {}
+          "ai_crawlers": {
+            "DeepSeekBot": {
+              "last_seen": "2026-06-05T23:50:58.550Z",
+              "last_write": "2026-06-05T23:50:58.550Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "GPTBot": {
+              "last_seen": "2026-06-05T23:50:58.939Z",
+              "last_write": "2026-06-05T23:50:58.939Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "PerplexityBot": {
+              "last_seen": "2026-06-05T23:50:59.296Z",
+              "last_write": "2026-06-05T23:50:59.296Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "ClaudeBot": {
+              "last_seen": "2026-06-05T23:50:59.506Z",
+              "last_write": "2026-06-05T23:50:59.506Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "CCBot": {
+              "last_seen": "2026-06-05T23:50:59.676Z",
+              "last_write": "2026-06-05T23:50:59.676Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            }
+          }
         },
         "feuerwehr-georgenhausen.com": {
           "label": "賭場審計區",
@@ -6559,16 +6682,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 2,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -6590,7 +6713,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -6608,15 +6731,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -6656,6 +6770,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -6663,7 +6786,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -6674,11 +6797,12 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T11:30:22.029Z",
-              "last_write": "2026-06-05T11:30:22.029Z",
-              "count_30d": 2,
+              "last_seen": "2026-06-06T00:10:10.754Z",
+              "last_write": "2026-06-06T00:10:10.754Z",
+              "count_30d": 9,
               "dates": {
-                "2026-06-05": 2
+                "2026-06-05": 8,
+                "2026-06-06": 1
               }
             }
           }
@@ -6756,16 +6880,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 5,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -6787,7 +6911,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -6805,15 +6929,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -6853,11 +6968,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 0,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -6867,9 +6982,67 @@
               "cta_clk": 0,
               "articles": 0,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
-          "ai_crawlers": {}
+          "ai_crawlers": {
+            "Amazonbot": {
+              "last_seen": "2026-06-05T20:50:32.540Z",
+              "last_write": "2026-06-05T20:50:32.540Z",
+              "count_30d": 2,
+              "dates": {
+                "2026-06-05": 2
+              }
+            },
+            "DeepSeekBot": {
+              "last_seen": "2026-06-05T15:53:59.623Z",
+              "last_write": "2026-06-05T15:53:59.623Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "PerplexityBot": {
+              "last_seen": "2026-06-05T15:54:04.116Z",
+              "last_write": "2026-06-05T15:54:04.116Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "GPTBot": {
+              "last_seen": "2026-06-05T15:54:04.543Z",
+              "last_write": "2026-06-05T15:54:04.543Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "CCBot": {
+              "last_seen": "2026-06-05T15:54:05.380Z",
+              "last_write": "2026-06-05T15:54:05.380Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "ClaudeBot": {
+              "last_seen": "2026-06-05T15:54:06.183Z",
+              "last_write": "2026-06-05T15:54:06.183Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            }
+          }
         },
         "abcosvetlenie.com": {
           "label": "電競博彩數據",
@@ -6944,16 +7117,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 2,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -6975,7 +7148,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -6993,15 +7166,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -7041,6 +7205,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -7048,7 +7221,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -7059,19 +7232,21 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T11:56:10.344Z",
-              "last_write": "2026-06-05T11:56:10.344Z",
-              "count_30d": 3,
+              "last_seen": "2026-06-06T01:25:16.705Z",
+              "last_write": "2026-06-06T01:25:16.705Z",
+              "count_30d": 10,
               "dates": {
-                "2026-06-05": 3
+                "2026-06-05": 8,
+                "2026-06-06": 2
               }
             },
             "GPTBot": {
-              "last_seen": "2026-06-05T11:37:42.260Z",
-              "last_write": "2026-06-05T11:37:42.260Z",
-              "count_30d": 1,
+              "last_seen": "2026-06-06T00:23:49.998Z",
+              "last_write": "2026-06-06T00:23:49.998Z",
+              "count_30d": 2,
               "dates": {
-                "2026-06-05": 1
+                "2026-06-05": 1,
+                "2026-06-06": 1
               }
             }
           }
@@ -7152,13 +7327,13 @@
             "indexed_pages": 1,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -7180,7 +7355,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -7198,15 +7373,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -7246,6 +7412,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -7253,7 +7428,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -7340,13 +7515,13 @@
             "indexed_pages": 5,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -7368,7 +7543,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -7386,15 +7561,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -7434,6 +7600,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -7441,7 +7616,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -7452,11 +7627,12 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T13:16:51.119Z",
-              "last_write": "2026-06-05T13:16:51.119Z",
-              "count_30d": 3,
+              "last_seen": "2026-06-06T01:16:15.912Z",
+              "last_write": "2026-06-06T01:16:15.912Z",
+              "count_30d": 9,
               "dates": {
-                "2026-06-05": 3
+                "2026-06-05": 8,
+                "2026-06-06": 1
               }
             },
             "GPTBot": {
@@ -7542,16 +7718,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -7573,7 +7749,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -7591,15 +7767,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -7639,11 +7806,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 0,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -7653,9 +7820,43 @@
               "cta_clk": 0,
               "articles": 0,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
-          "ai_crawlers": {}
+          "ai_crawlers": {
+            "ClaudeBot": {
+              "last_seen": "2026-06-05T19:31:37.885Z",
+              "last_write": "2026-06-05T19:31:37.885Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "DeepSeekBot": {
+              "last_seen": "2026-06-05T19:31:38.140Z",
+              "last_write": "2026-06-05T19:31:38.140Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "PerplexityBot": {
+              "last_seen": "2026-06-05T19:31:38.389Z",
+              "last_write": "2026-06-05T19:31:38.389Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            }
+          }
         },
         "clan-guide.com": {
           "label": "策略遊戲指南",
@@ -7730,16 +7931,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 2,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -7761,7 +7962,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -7779,15 +7980,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -7827,6 +8019,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -7834,7 +8035,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -7845,11 +8046,11 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T12:50:22.695Z",
-              "last_write": "2026-06-05T12:50:22.695Z",
-              "count_30d": 3,
+              "last_seen": "2026-06-05T23:05:03.146Z",
+              "last_write": "2026-06-05T23:05:03.146Z",
+              "count_30d": 9,
               "dates": {
-                "2026-06-05": 3
+                "2026-06-05": 9
               }
             },
             "GPTBot": {
@@ -7858,6 +8059,22 @@
               "count_30d": 1,
               "dates": {
                 "2026-06-05": 1
+              }
+            },
+            "Bytespider": {
+              "last_seen": "2026-06-05T19:15:17.908Z",
+              "last_write": "2026-06-05T19:15:17.908Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "CCBot": {
+              "last_seen": "2026-06-05T23:20:34.401Z",
+              "last_write": "2026-06-05T23:20:34.401Z",
+              "count_30d": 2,
+              "dates": {
+                "2026-06-05": 2
               }
             }
           }
@@ -7938,13 +8155,13 @@
             "indexed_pages": 1,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -7966,7 +8183,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -7984,15 +8201,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -8032,6 +8240,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -8039,7 +8256,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -8050,11 +8267,11 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T11:52:55.731Z",
-              "last_write": "2026-06-05T11:52:55.731Z",
-              "count_30d": 2,
+              "last_seen": "2026-06-05T23:41:56.897Z",
+              "last_write": "2026-06-05T23:41:56.897Z",
+              "count_30d": 8,
               "dates": {
-                "2026-06-05": 2
+                "2026-06-05": 8
               }
             }
           }
@@ -8135,13 +8352,13 @@
             "indexed_pages": 0,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -8163,7 +8380,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -8181,15 +8398,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -8229,6 +8437,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -8236,7 +8453,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -8323,13 +8540,13 @@
             "indexed_pages": 1,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -8351,7 +8568,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -8369,15 +8586,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -8417,6 +8625,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -8424,7 +8641,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -8435,11 +8652,27 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T11:45:48.764Z",
-              "last_write": "2026-06-05T11:45:48.764Z",
-              "count_30d": 2,
+              "last_seen": "2026-06-05T23:56:32.848Z",
+              "last_write": "2026-06-05T23:56:32.848Z",
+              "count_30d": 8,
               "dates": {
-                "2026-06-05": 2
+                "2026-06-05": 8
+              }
+            },
+            "Amazonbot": {
+              "last_seen": "2026-06-05T16:55:57.619Z",
+              "last_write": "2026-06-05T16:55:57.619Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "GPTBot": {
+              "last_seen": "2026-06-05T16:55:59.207Z",
+              "last_write": "2026-06-05T16:55:59.207Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
               }
             }
           }
@@ -8520,13 +8753,13 @@
             "indexed_pages": 4,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -8548,7 +8781,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -8566,15 +8799,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -8614,6 +8838,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -8621,7 +8854,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -8640,11 +8873,12 @@
               }
             },
             "ClaudeBot": {
-              "last_seen": "2026-06-05T12:44:18.348Z",
-              "last_write": "2026-06-05T12:44:18.348Z",
-              "count_30d": 3,
+              "last_seen": "2026-06-06T00:09:25.475Z",
+              "last_write": "2026-06-06T00:09:25.475Z",
+              "count_30d": 8,
               "dates": {
-                "2026-06-05": 3
+                "2026-06-05": 7,
+                "2026-06-06": 1
               }
             }
           }
@@ -8722,16 +8956,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -8753,7 +8987,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -8771,15 +9005,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -8819,6 +9044,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -8826,7 +9060,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -8837,16 +9071,24 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T13:00:32.912Z",
-              "last_write": "2026-06-05T13:00:32.912Z",
-              "count_30d": 4,
+              "last_seen": "2026-06-05T23:52:20.630Z",
+              "last_write": "2026-06-05T23:52:20.630Z",
+              "count_30d": 10,
               "dates": {
-                "2026-06-05": 4
+                "2026-06-05": 10
               }
             },
             "GPTBot": {
               "last_seen": "2026-06-05T11:01:31.046Z",
               "last_write": "2026-06-05T11:01:31.046Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "Amazonbot": {
+              "last_seen": "2026-06-05T18:34:12.979Z",
+              "last_write": "2026-06-05T18:34:12.979Z",
               "count_30d": 1,
               "dates": {
                 "2026-06-05": 1
@@ -8927,16 +9169,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -8958,7 +9200,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -8976,15 +9218,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -9024,6 +9257,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -9031,7 +9273,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -9042,16 +9284,25 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T13:29:43.782Z",
-              "last_write": "2026-06-05T13:29:43.782Z",
-              "count_30d": 3,
+              "last_seen": "2026-06-06T01:29:43.979Z",
+              "last_write": "2026-06-06T01:29:43.979Z",
+              "count_30d": 9,
               "dates": {
-                "2026-06-05": 3
+                "2026-06-05": 8,
+                "2026-06-06": 1
               }
             },
             "GPTBot": {
-              "last_seen": "2026-06-05T11:00:53.327Z",
-              "last_write": "2026-06-05T11:00:53.327Z",
+              "last_seen": "2026-06-05T17:02:57.856Z",
+              "last_write": "2026-06-05T17:02:57.856Z",
+              "count_30d": 2,
+              "dates": {
+                "2026-06-05": 2
+              }
+            },
+            "Amazonbot": {
+              "last_seen": "2026-06-05T17:03:03.756Z",
+              "last_write": "2026-06-05T17:03:03.756Z",
               "count_30d": 1,
               "dates": {
                 "2026-06-05": 1
@@ -9132,16 +9383,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -9163,7 +9414,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -9181,15 +9432,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -9229,6 +9471,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -9236,7 +9487,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -9247,19 +9498,20 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T12:49:25.288Z",
-              "last_write": "2026-06-05T12:49:25.288Z",
-              "count_30d": 4,
+              "last_seen": "2026-06-05T23:55:16.163Z",
+              "last_write": "2026-06-05T23:55:16.163Z",
+              "count_30d": 9,
               "dates": {
-                "2026-06-05": 4
+                "2026-06-05": 9
               }
             },
             "GPTBot": {
-              "last_seen": "2026-06-05T10:56:10.041Z",
-              "last_write": "2026-06-05T10:56:10.041Z",
-              "count_30d": 1,
+              "last_seen": "2026-06-06T01:24:46.339Z",
+              "last_write": "2026-06-06T01:24:46.339Z",
+              "count_30d": 2,
               "dates": {
-                "2026-06-05": 1
+                "2026-06-05": 1,
+                "2026-06-06": 1
               }
             }
           }
@@ -9340,13 +9592,13 @@
             "indexed_pages": 2,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -9368,7 +9620,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -9386,15 +9638,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -9434,6 +9677,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -9441,7 +9693,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -9452,19 +9704,20 @@
           ],
           "ai_crawlers": {
             "GPTBot": {
-              "last_seen": "2026-06-05T10:58:46.850Z",
-              "last_write": "2026-06-05T10:58:46.850Z",
-              "count_30d": 1,
+              "last_seen": "2026-06-05T18:14:48.612Z",
+              "last_write": "2026-06-05T18:14:48.612Z",
+              "count_30d": 2,
               "dates": {
-                "2026-06-05": 1
+                "2026-06-05": 2
               }
             },
             "ClaudeBot": {
-              "last_seen": "2026-06-05T11:11:58.425Z",
-              "last_write": "2026-06-05T11:11:58.425Z",
-              "count_30d": 1,
+              "last_seen": "2026-06-06T00:23:01.326Z",
+              "last_write": "2026-06-06T00:23:01.326Z",
+              "count_30d": 8,
               "dates": {
-                "2026-06-05": 1
+                "2026-06-05": 7,
+                "2026-06-06": 1
               }
             }
           }
@@ -9545,13 +9798,13 @@
             "indexed_pages": 1,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -9573,7 +9826,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -9591,15 +9844,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -9639,6 +9883,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -9646,7 +9899,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -9657,8 +9910,25 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T12:04:59.639Z",
-              "last_write": "2026-06-05T12:04:59.639Z",
+              "last_seen": "2026-06-06T01:12:20.558Z",
+              "last_write": "2026-06-06T01:12:20.558Z",
+              "count_30d": 9,
+              "dates": {
+                "2026-06-05": 8,
+                "2026-06-06": 1
+              }
+            },
+            "Amazonbot": {
+              "last_seen": "2026-06-05T16:38:04.156Z",
+              "last_write": "2026-06-05T16:38:04.156Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            },
+            "GPTBot": {
+              "last_seen": "2026-06-05T19:03:22.149Z",
+              "last_write": "2026-06-05T19:03:22.149Z",
               "count_30d": 2,
               "dates": {
                 "2026-06-05": 2
@@ -9739,16 +10009,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 3,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -9770,7 +10040,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -9788,15 +10058,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -9836,11 +10097,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 0,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -9850,9 +10111,27 @@
               "cta_clk": 0,
               "articles": 0,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
-          "ai_crawlers": {}
+          "ai_crawlers": {
+            "GPTBot": {
+              "last_seen": "2026-06-06T01:29:10.349Z",
+              "last_write": "2026-06-06T01:29:10.349Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-06": 1
+              }
+            }
+          }
         },
         "cricketodds.site": {
           "label": "板球投注分析",
@@ -9930,13 +10209,13 @@
             "indexed_pages": 1,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -9958,7 +10237,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -9976,15 +10255,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -10024,11 +10294,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 0,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -10038,9 +10308,27 @@
               "cta_clk": 0,
               "articles": 0,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
-          "ai_crawlers": {}
+          "ai_crawlers": {
+            "GPTBot": {
+              "last_seen": "2026-06-05T16:35:32.214Z",
+              "last_write": "2026-06-05T16:35:32.214Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            }
+          }
         },
         "bjstrategy.site": {
           "label": "21點基礎策略",
@@ -10118,13 +10406,13 @@
             "indexed_pages": 5,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -10146,7 +10434,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -10164,15 +10452,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -10212,6 +10491,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -10219,7 +10507,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -10230,8 +10518,17 @@
           ],
           "ai_crawlers": {
             "GPTBot": {
-              "last_seen": "2026-06-05T10:57:36.983Z",
-              "last_write": "2026-06-05T10:57:36.983Z",
+              "last_seen": "2026-06-06T01:27:38.662Z",
+              "last_write": "2026-06-06T01:27:38.662Z",
+              "count_30d": 2,
+              "dates": {
+                "2026-06-05": 1,
+                "2026-06-06": 1
+              }
+            },
+            "ClaudeBot": {
+              "last_seen": "2026-06-05T16:19:48.860Z",
+              "last_write": "2026-06-05T16:19:48.860Z",
               "count_30d": 1,
               "dates": {
                 "2026-06-05": 1
@@ -10312,16 +10609,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 2,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -10343,7 +10640,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -10361,15 +10658,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -10409,6 +10697,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -10416,7 +10713,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -10427,16 +10724,25 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T13:05:59.690Z",
-              "last_write": "2026-06-05T13:05:59.690Z",
-              "count_30d": 3,
+              "last_seen": "2026-06-06T01:00:19.884Z",
+              "last_write": "2026-06-06T01:00:19.884Z",
+              "count_30d": 10,
               "dates": {
-                "2026-06-05": 3
+                "2026-06-05": 9,
+                "2026-06-06": 1
               }
             },
             "PerplexityBot": {
-              "last_seen": "2026-06-05T12:35:06.893Z",
-              "last_write": "2026-06-05T12:35:06.893Z",
+              "last_seen": "2026-06-05T17:01:36.916Z",
+              "last_write": "2026-06-05T17:01:36.916Z",
+              "count_30d": 2,
+              "dates": {
+                "2026-06-05": 2
+              }
+            },
+            "Amazonbot": {
+              "last_seen": "2026-06-05T18:02:37.775Z",
+              "last_write": "2026-06-05T18:02:37.775Z",
               "count_30d": 1,
               "dates": {
                 "2026-06-05": 1
@@ -10517,16 +10823,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 1,
+            "indexed_pages": 0,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -10548,7 +10854,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -10566,15 +10872,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -10614,11 +10911,11 @@
             {
               "date": "6/3",
               "sessions": 0,
-              "gsc_imp": null,
-              "gsc_clk": null,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
               "cta_clk": 0,
               "articles": 0,
-              "gsc_pending": true
+              "gsc_pending": false
             },
             {
               "date": "6/4",
@@ -10628,9 +10925,27 @@
               "cta_clk": 0,
               "articles": 0,
               "gsc_pending": true
+            },
+            {
+              "date": "6/5",
+              "sessions": 0,
+              "gsc_imp": null,
+              "gsc_clk": null,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": true
             }
           ],
-          "ai_crawlers": {}
+          "ai_crawlers": {
+            "ClaudeBot": {
+              "last_seen": "2026-06-05T16:02:20.040Z",
+              "last_write": "2026-06-05T16:02:20.040Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-05": 1
+              }
+            }
+          }
         },
         "live-inplay-odds.site": {
           "label": "即時投注策略",
@@ -10705,16 +11020,16 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
-                "5/27",
                 "5/28",
                 "5/29",
                 "5/30",
                 "5/31",
                 "6/1",
-                "6/2"
+                "6/2",
+                "6/3"
               ],
               "impressions": [
                 0,
@@ -10736,7 +11051,7 @@
               ]
             },
             "top_keywords": [],
-            "data_cutoff": "2026-06-02"
+            "data_cutoff": "2026-06-03"
           },
           "sitemap": {
             "total_urls": 0
@@ -10754,15 +11069,6 @@
             "fb_posts": 0
           },
           "daily_7d": [
-            {
-              "date": "5/29",
-              "sessions": 0,
-              "gsc_imp": 0,
-              "gsc_clk": 0,
-              "cta_clk": 0,
-              "articles": 0,
-              "gsc_pending": false
-            },
             {
               "date": "5/30",
               "sessions": 0,
@@ -10802,6 +11108,15 @@
             {
               "date": "6/3",
               "sessions": 0,
+              "gsc_imp": 0,
+              "gsc_clk": 0,
+              "cta_clk": 0,
+              "articles": 0,
+              "gsc_pending": false
+            },
+            {
+              "date": "6/4",
+              "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
@@ -10809,7 +11124,7 @@
               "gsc_pending": true
             },
             {
-              "date": "6/4",
+              "date": "6/5",
               "sessions": 0,
               "gsc_imp": null,
               "gsc_clk": null,
@@ -10820,248 +11135,25 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-05T11:54:40.958Z",
-              "last_write": "2026-06-05T11:54:40.958Z",
-              "count_30d": 2,
+              "last_seen": "2026-06-06T00:45:00.417Z",
+              "last_write": "2026-06-06T00:45:00.417Z",
+              "count_30d": 9,
               "dates": {
-                "2026-06-05": 2
+                "2026-06-05": 8,
+                "2026-06-06": 1
+              }
+            },
+            "GPTBot": {
+              "last_seen": "2026-06-06T01:25:46.120Z",
+              "last_write": "2026-06-06T01:25:46.120Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-06": 1
               }
             }
           }
         }
       }
     }
-  },
-  "alerts": [
-    {
-      "type": "traffic_drop",
-      "domain": "spheretap.com",
-      "message": "7日流量下跌 100%（1800→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "matchvangtage.com",
-      "message": "7日流量下跌 100%（32→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "tableedge.org",
-      "message": "7日流量下跌 100%（47→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "turf-pulse.com",
-      "message": "7日流量下跌 100%（30→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "spin-metrics.com",
-      "message": "7日流量下跌 100%（52→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "verifiedplays.com",
-      "message": "7日流量下跌 100%（30→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "matchdatalab.com",
-      "message": "7日流量下跌 100%（44→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "athlete-index.com",
-      "message": "7日流量下跌 100%（46→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "esports-intel.com",
-      "message": "7日流量下跌 100%（39→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "proplayerstat.com",
-      "message": "7日流量下跌 100%（31→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "tilestrategist.com",
-      "message": "7日流量下跌 100%（31→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "gamedesignhq.com",
-      "message": "7日流量下跌 100%（30→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "platformverdict.com",
-      "message": "7日流量下跌 100%（35→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "probdecision.com",
-      "message": "7日流量下跌 100%（22→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "asiaesportculture.com",
-      "message": "7日流量下跌 100%（34→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "entertaintrendlab.com",
-      "message": "7日流量下跌 100%（47→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "businessdirectory-uk.com",
-      "message": "7日流量下跌 100%（698→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "bountifultriathlon.com",
-      "message": "7日流量下跌 100%（14→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "besedkibg.com",
-      "message": "7日流量下跌 100%（12→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "topbravi.com",
-      "message": "7日流量下跌 100%（46→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "dealer-index.com",
-      "message": "7日流量下跌 100%（31→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "ogradabg.com",
-      "message": "7日流量下跌 100%（34→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "track-index.com",
-      "message": "7日流量下跌 100%（72→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "reel-base.com",
-      "message": "7日流量下跌 100%（96→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "spin-vaults.com",
-      "message": "7日流量下跌 100%（20→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "feuerwehr-georgenhausen.com",
-      "message": "7日流量下跌 100%（13→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "platform-benchmark.com",
-      "message": "7日流量下跌 100%（22→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "abcosvetlenie.com",
-      "message": "7日流量下跌 100%（22→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "cryptocurrency-game.com",
-      "message": "7日流量下跌 100%（11→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "sports-analy.com",
-      "message": "7日流量下跌 100%（85→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "esports-index.com",
-      "message": "7日流量下跌 100%（43→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "clan-guide.com",
-      "message": "7日流量下跌 100%（11→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "world-cup-2026.world",
-      "message": "7日流量下跌 100%（36→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "formulaone.site",
-      "message": "7日流量下跌 100%（22→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "uk-horse-racing.site",
-      "message": "7日流量下跌 100%（30→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "tennis-grandslam.site",
-      "message": "7日流量下跌 100%（30→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "golfodds.site",
-      "message": "7日流量下跌 100%（13→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "boxingmma.site",
-      "message": "7日流量下跌 100%（26→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "rugbyunion.site",
-      "message": "7日流量下跌 100%（24→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "dartsodds.site",
-      "message": "7日流量下跌 100%（28→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "snookerodds.site",
-      "message": "7日流量下跌 100%（25→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "cricketodds.site",
-      "message": "7日流量下跌 100%（32→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "bjstrategy.site",
-      "message": "7日流量下跌 100%（29→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "pokerstrategy.site",
-      "message": "7日流量下跌 100%（16→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "accumulator-guide.site",
-      "message": "7日流量下跌 100%（19→0）"
-    },
-    {
-      "type": "traffic_drop",
-      "domain": "live-inplay-odds.site",
-      "message": "7日流量下跌 100%（23→0）"
-    }
-  ]
+  }
 }
