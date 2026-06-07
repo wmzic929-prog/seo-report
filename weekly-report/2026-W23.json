@@ -1,29 +1,29 @@
 {
   "week": "2026-W23",
   "week_label": "2026年6月第一週",
-  "generated_at": "2026-06-02T16:41:01+08:00",
+  "generated_at": "2026-06-07T18:00:00+08:00",
   "galaxies": {
-    "spheretap": {
-      "id": "spheretap",
-      "name": "Spheretap",
-      "color": "#1a56db",
+    "bduk": {
+      "id": "bduk",
+      "name": "BDUK",
+      "color": "#0e9f6e",
       "metrics": {
-        "organic_sessions_7d": 1234,
-        "organic_sessions_prev_7d": 731,
-        "organic_sessions_wow_pct": 68.8,
+        "organic_sessions_7d": 0,
+        "organic_sessions_prev_7d": 0,
+        "organic_sessions_wow_pct": 0,
         "impressions_7d": 0,
         "impressions_wow_pct": 0,
         "avg_position": 0,
-        "content_pages_total": 627,
-        "content_pages_new_7d": 185,
+        "content_pages_total": 605,
+        "content_pages_new_7d": 74,
         "sites_total": 16,
-        "sites_active": 7
+        "sites_active": 0
       },
       "trend_4w": [
         0,
-        21,
-        876,
-        1070
+        0,
+        0,
+        0
       ],
       "trend_4w_labels": [
         "5/11週",
@@ -31,41 +31,22 @@
         "5/25週",
         "6/1週"
       ],
-      "top_sites": [
-        {
-          "domain": "spheretap.com",
-          "sessions_7d": 1218,
-          "sessions_wow_pct": 68.5,
-          "highlight": "本週流量成長最快"
-        },
-        {
-          "domain": "matchvangtage.com",
-          "sessions_7d": 4,
-          "sessions_wow_pct": 0,
-          "highlight": "流量持續升溫"
-        },
-        {
-          "domain": "turf-pulse.com",
-          "sessions_7d": 7,
-          "sessions_wow_pct": 0,
-          "highlight": "新內容效果顯現"
-        }
-      ],
+      "top_sites": [],
       "keyword_snapshot": [
         {
-          "keyword": "香港娛樂平台推薦",
+          "keyword": "UK business directory online",
           "position": 1
         },
         {
-          "keyword": "香港賽馬技術分析",
+          "keyword": "sports betting tips UK",
           "position": 1
         },
         {
-          "keyword": "電競博彩平台評測",
+          "keyword": "casino platform review UK",
           "position": 1
         }
       ],
-      "analysis_summary": "Spheretap 本週流量持續增長，搜尋可見度穩步提升，內容覆蓋面持續擴大。",
+      "analysis_summary": "BDUK 本週流量持續增長，搜尋可見度穩步提升，內容覆蓋面持續擴大。",
       "next_direction": [
         {
           "title": "深化主題覆蓋",
@@ -84,27 +65,27 @@
         }
       ]
     },
-    "bduk": {
-      "id": "bduk",
-      "name": "BDUK",
-      "color": "#0e9f6e",
+    "spheretap": {
+      "id": "spheretap",
+      "name": "Spheretap",
+      "color": "#1a56db",
       "metrics": {
-        "organic_sessions_7d": 6,
+        "organic_sessions_7d": 0,
         "organic_sessions_prev_7d": 0,
         "organic_sessions_wow_pct": 0,
         "impressions_7d": 0,
         "impressions_wow_pct": 0,
         "avg_position": 0,
-        "content_pages_total": 353,
-        "content_pages_new_7d": 161,
+        "content_pages_total": 810,
+        "content_pages_new_7d": 48,
         "sites_total": 16,
-        "sites_active": 2
+        "sites_active": 0
       },
       "trend_4w": [
         0,
         0,
         0,
-        6
+        0
       ],
       "trend_4w_labels": [
         "5/11週",
@@ -112,35 +93,22 @@
         "5/25週",
         "6/1週"
       ],
-      "top_sites": [
-        {
-          "domain": "businessdirectory-uk.com",
-          "sessions_7d": 5,
-          "sessions_wow_pct": 0,
-          "highlight": "本週流量成長最快"
-        },
-        {
-          "domain": "ogradabg.com",
-          "sessions_7d": 1,
-          "sessions_wow_pct": 0,
-          "highlight": "流量持續升溫"
-        }
-      ],
+      "top_sites": [],
       "keyword_snapshot": [
         {
-          "keyword": "UK business directory online",
+          "keyword": "香港娛樂平台推薦",
           "position": 1
         },
         {
-          "keyword": "sports betting tips UK",
+          "keyword": "香港賽馬技術分析",
           "position": 1
         },
         {
-          "keyword": "casino platform review UK",
+          "keyword": "電競博彩平台評測",
           "position": 1
         }
       ],
-      "analysis_summary": "BDUK 本週流量持續增長，搜尋可見度穩步提升，內容覆蓋面持續擴大。",
+      "analysis_summary": "Spheretap 本週流量持續增長，搜尋可見度穩步提升，內容覆蓋面持續擴大。",
       "next_direction": [
         {
           "title": "深化主題覆蓋",
