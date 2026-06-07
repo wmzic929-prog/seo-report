@@ -9063,5 +9063,12 @@
         }
       }
     }
-  }
+  },
+  "alerts": [
+    {
+      "type": "traffic_drop",
+      "domain": "topbravi.com",
+      "message": "7日流量下跌 30%（46→32）"
+    }
+  ]
 }
