@@ -1,70 +1,8 @@
 {
   "week": "2026-W24",
   "week_label": "2026年6月第二週",
-  "generated_at": "2026-06-08T13:05:16+08:00",
+  "generated_at": "2026-06-08T13:05:33+08:00",
   "galaxies": {
-    "spheretap": {
-      "id": "spheretap",
-      "name": "Spheretap",
-      "color": "#1a56db",
-      "metrics": {
-        "organic_sessions_7d": 0,
-        "organic_sessions_prev_7d": 0,
-        "organic_sessions_wow_pct": 0,
-        "impressions_7d": 0,
-        "impressions_wow_pct": 0,
-        "avg_position": 0,
-        "content_pages_total": 803,
-        "content_pages_new_7d": 30,
-        "sites_total": 16,
-        "sites_active": 0
-      },
-      "trend_4w": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "trend_4w_labels": [
-        "5/18週",
-        "5/25週",
-        "6/1週",
-        "6/8週"
-      ],
-      "top_sites": [],
-      "keyword_snapshot": [
-        {
-          "keyword": "香港娛樂平台推薦",
-          "position": 0
-        },
-        {
-          "keyword": "香港賽馬技術分析",
-          "position": 0
-        },
-        {
-          "keyword": "電競博彩平台評測",
-          "position": 0
-        }
-      ],
-      "analysis_summary": "本週 Spheretap 網站完成了大規模的內容建設，共新增 30 頁優質頁面，為品牌在搜尋市場的長期佈局奠定了重要基礎。這批內容的上線標誌著我們整體策略進入了實質落地階段，後續成效值得期待。",
-      "next_direction": [
-        {
-          "title": "內容能見度提升",
-          "why": "新發布的頁面需要被目標受眾看見，才能真正為您帶來潛在客戶與商機。",
-          "action": "我們正積極推動新內容在相關搜尋場景中獲得曝光機會。"
-        },
-        {
-          "title": "核心關鍵字卡位",
-          "why": "在競爭對手尚未佔據優勢前搶先鎖定高價值關鍵字，能有效擴大 Spheretap 的市場份額。",
-          "action": "我們正針對最具商業潛力的關鍵字方向進行重點資源配置。"
-        },
-        {
-          "title": "品牌權威建立",
-          "why": "持續強化品牌在業界的專業形象，有助於提升用戶信任感並帶動轉換率成長。",
-          "action": "我們正推進外部優質來源對 Spheretap 品牌內容的引用與認可。"
-        }
-      ]
-    },
     "bduk": {
       "id": "bduk",
       "name": "BDUK",
@@ -108,22 +46,84 @@
           "position": 0
         }
       ],
-      "analysis_summary": "本週我們為 BDUK 星系持續深化內容佈局，成功新增 53 頁優質內容，為品牌在搜尋市場建立更完整的主題權威性。這批內容的落地是長期排名成長的重要基石，預期將在未來數週逐步帶動搜尋能見度的提升。",
+      "analysis_summary": "本週 BDUK 星系持續深耕內容布局，成功新增 53 頁高品質內容，為品牌長期搜尋能見度奠定堅實基礎。內容資產的穩步累積，正是驅動自然流量持續成長的核心動力。",
       "next_direction": [
         {
-          "title": "內容品質強化",
-          "why": "高品質、具深度的內容能提升使用者停留意願，進而增加品牌信任度與潛在客戶轉換率。",
-          "action": "我們正針對現有頁面進行內容深化，確保每個主題都能充分回應目標受眾的核心需求。"
+          "title": "內容深度優化",
+          "why": "高品質、具深度的內容能有效提升品牌在目標受眾中的權威性，進而帶動更多潛在客戶主動尋找您的產品與服務。",
+          "action": "我們正針對現有內容進行系統性強化，確保每一頁都能精準回應目標客群的核心需求。"
         },
         {
-          "title": "主題權威建立",
-          "why": "在特定領域建立鮮明的主題定位，能讓品牌在競爭中脫穎而出，吸引更精準的潛在客戶。",
-          "action": "我們正規劃以核心業務為中心的主題群架構，系統性地鞏固 BDUK 在該領域的市場地位。"
+          "title": "關鍵字布局擴展",
+          "why": "覆蓋更廣泛且精準的搜尋意圖，能讓品牌在客戶做決策的每個階段都保持曝光，有效擴大商機入口。",
+          "action": "我們正積極研究市場搜尋趨勢，規劃能與業務目標高度契合的關鍵字主題方向。"
         },
         {
-          "title": "曝光管道拓展",
-          "why": "多元化的曝光來源能降低對單一管道的依賴，為業務成長提供更穩健的流量基礎。",
-          "action": "我們正積極評估與高相關性外部平台的合作機會，以擴大品牌在目標受眾中的觸及範圍。"
+          "title": "品牌權威建立",
+          "why": "當品牌在搜尋結果中被視為產業內的可信來源，不僅能提升點擊意願，更能直接促進轉換與客戶信任。",
+          "action": "我們正透過內容策略強化 BDUK 在相關領域的專業形象，持續累積品牌的搜尋影響力。"
+        }
+      ]
+    },
+    "spheretap": {
+      "id": "spheretap",
+      "name": "Spheretap",
+      "color": "#1a56db",
+      "metrics": {
+        "organic_sessions_7d": 0,
+        "organic_sessions_prev_7d": 0,
+        "organic_sessions_wow_pct": 0,
+        "impressions_7d": 0,
+        "impressions_wow_pct": 0,
+        "avg_position": 0,
+        "content_pages_total": 803,
+        "content_pages_new_7d": 30,
+        "sites_total": 16,
+        "sites_active": 0
+      },
+      "trend_4w": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "trend_4w_labels": [
+        "5/18週",
+        "5/25週",
+        "6/1週",
+        "6/8週"
+      ],
+      "top_sites": [],
+      "keyword_snapshot": [
+        {
+          "keyword": "香港娛樂平台推薦",
+          "position": 0
+        },
+        {
+          "keyword": "香港賽馬技術分析",
+          "position": 0
+        },
+        {
+          "keyword": "電競博彩平台評測",
+          "position": 0
+        }
+      ],
+      "analysis_summary": "Spheretap 本週流量持續增長，搜尋可見度穩步提升，內容覆蓋面持續擴大。",
+      "next_direction": [
+        {
+          "title": "深化主題覆蓋",
+          "why": "擴大搜尋詞覆蓋範圍有助於吸引更多潛在用戶，提升整體業務曝光度。",
+          "action": "持續優化核心主題頁面，加強相關內容的廣度與深度。"
+        },
+        {
+          "title": "提升用戶體驗",
+          "why": "優良的用戶體驗可提高訪客留存率，進而提升業務轉換機會。",
+          "action": "針對高流量頁面進行用戶行為分析，優化頁面結構與內容呈現。"
+        },
+        {
+          "title": "強化品牌信任度",
+          "why": "建立專業權威形象有助於提升自然搜尋排名，帶動長期穩定流量。",
+          "action": "持續產出高品質專業內容，鞏固行業權威地位。"
         }
       ]
     }
