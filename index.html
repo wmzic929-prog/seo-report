@@ -1127,10 +1127,12 @@ init();
 
   function getCurrentWeekId() {
     const now = new Date();
-    const startOfYear = new Date(now.getFullYear(), 0, 1);
-    const dayOfYear   = Math.floor((now - startOfYear) / 86400000);
-    const weekNum     = Math.ceil((dayOfYear + startOfYear.getDay() + 1) / 7);
-    return now.getFullYear() + '-W' + String(weekNum).padStart(2, '0');
+    const hkt = new Date(now.getTime() + 8 * 3600 * 1000);
+    const d = new Date(Date.UTC(hkt.getUTCFullYear(), hkt.getUTCMonth(), hkt.getUTCDate()));
+    d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
+    const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+    const week = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+    return d.getUTCFullYear() + '-W' + String(week).padStart(2, '0');
   }
 
   // ── Mock 資料 ──────────────────────────────────────────────
