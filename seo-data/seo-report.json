@@ -9063,5 +9063,17 @@
         }
       }
     }
-  }
+  },
+  "alerts": [
+    {
+      "type": "traffic_drop",
+      "domain": "topbravi.com",
+      "message": "7日流量下跌 41%（32→19）"
+    },
+    {
+      "type": "traffic_drop",
+      "domain": "esports-index.com",
+      "message": "7日流量下跌 43%（28→16）"
+    }
+  ]
 }
