@@ -233,7 +233,8 @@ const SPHERETAP_P1_LABELS = {
 // ── BDUK Phase maps ───────────────────────────────────
 const BDUK_PHASES = {
   0: ['bountifultriathlon.com','besedkibg.com','topbravi.com','dealer-index.com','ogradabg.com'],
-  1: ['track-index.com','reel-base.com','spin-vaults.com','feuerwehr-georgenhausen.com','platform-benchmark.com','abcosvetlenie.com','cryptocurrency-game.com','sports-analy.com','esports-index.com','clan-guide.com']
+  1: ['track-index.com','reel-base.com','spin-vaults.com','feuerwehr-georgenhausen.com','platform-benchmark.com','abcosvetlenie.com','cryptocurrency-game.com','sports-analy.com','esports-index.com','clan-guide.com'],
+  2: ['world-cup-2026.world','premier-leagueodds.online','formulaone.site','uk-horse-racing.site','tennis-grandslam.site','golfodds.site','boxingmma.site','rugbyunion.site','dartsodds.site','snookerodds.site','cricketodds.site','bjstrategy.site','pokerstrategy.site','accumulator-guide.site','live-inplay-odds.site']
 };
 const BDUK_LABELS = {
   'bountifultriathlon.com':      '博彩統計中心',
@@ -250,7 +251,22 @@ const BDUK_LABELS = {
   'cryptocurrency-game.com':     '加密遊戲索引',
   'sports-analy.com':            '賽事統計區',
   'esports-index.com':           '電競成長實驗室',
-  'clan-guide.com':              '策略遊戲指南'
+  'clan-guide.com':              '策略遊戲指南',
+  'world-cup-2026.world':       'FIFA世界盃2026賠率分析',
+  'premier-leagueodds.online':  '英超讓球盤口研究',
+  'formulaone.site':            'F1賠率研究',
+  'uk-horse-racing.site':       '英國賽馬分析',
+  'tennis-grandslam.site':      '大滿貫網球賠率',
+  'golfodds.site':              '高爾夫大賽賠率',
+  'boxingmma.site':             '拳擊MMA賠率',
+  'rugbyunion.site':            '橄欖球聯賽賠率',
+  'dartsodds.site':             'PDC飛鏢賠率',
+  'snookerodds.site':           '斯諾克賠率',
+  'cricketodds.site':           '板球投注分析',
+  'bjstrategy.site':            '21點基礎策略',
+  'pokerstrategy.site':         '德州撲克策略',
+  'accumulator-guide.site':     '串關策略',
+  'live-inplay-odds.site':      '即時投注策略'
 };
 
 // ── Site stub generator ───────────────────────────────
@@ -746,16 +762,17 @@ function renderOverview(g, gk) {
   let rows = '';
   sites.forEach(([domain, s]) => {
     const cov = s.sitemap.total_urls>0?s.gsc.indexed_pages/s.sitemap.total_urls:0;
+    const gscPending = !s.gsc || (s.gsc.avg_position===0 && s.gsc.impressions_7d===0 && s.gsc.clicks_7d===0);
     const roleHtml = s.role==='main'?`<span class="site-role-main">主站</span>`:`<span class="site-role-sat">衛星</span>`;
     rows += `<tr onclick="switchSite('${domain}')" style="cursor:pointer">
       <td><strong>${domain}</strong><a href="https://${domain}" target="_blank" rel="noopener" class="ext-link" onclick="event.stopPropagation()">↗</a><br><span style="font-size:10px;color:var(--gray-400)">${s.label}</span></td>
       <td>${roleHtml}</td>
       <td>${fmt(s.traffic.sessions_today)}</td>
       <td>${fmt(s.traffic.sessions_30d)}</td>
-      <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.impressions_7d||0)+searchTrend(s.gsc.series_7d)}</td>
-      <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.clicks_7d||0)}</td>
-      <td>${!s.gsc?gscPendingBadge():s.gsc.indexed_pages>0?s.gsc.indexed_pages:gscPendingBadge()}</td>
-      <td>${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():s.gsc.avg_position.toFixed(1)}</td>
+      <td>${gscPending?gscPendingBadge():fmt(s.gsc.impressions_7d||0)+searchTrend(s.gsc.series_7d)}</td>
+      <td>${gscPending?gscPendingBadge():fmt(s.gsc.clicks_7d||0)}</td>
+      <td>${gscPending?gscPendingBadge():(s.gsc?s.gsc.indexed_pages:0)}</td>
+      <td>${gscPending?gscPendingBadge():s.gsc.avg_position.toFixed(1)}</td>
       <td>${!s.gsc?gscPendingBadge()+' / '+s.sitemap.total_urls:s.gsc.indexed_pages+' / '+s.sitemap.total_urls}
         <span class="meter"><span class="meter-fill" style="width:${cov*100}%;background:${cov>=.8?'var(--green)':cov>=.5?'var(--orange)':'var(--red)'}"></span></span>
         <span style="font-size:10px;color:var(--gray-400)">${pct(cov)}</span>
@@ -773,7 +790,7 @@ function renderOverview(g, gk) {
     <div class="kcard c-green"><div class="kl">GSC 點擊 (28d)</div><div class="kv">${fmt(totClicks)}</div><div class="ks">搜尋來源</div></div>
     <div class="kcard c-orange"><div class="kl">平均收錄率</div><div class="kv">${pct(avgCov)}</div><div class="ks">全站平均</div></div>
     <div class="kcard c-purple"><div class="kl">文章總數</div><div class="kv">${fmt(totBlog+totSports)}</div><div class="ks">Blog ${totBlog} + 體育 ${totSports}</div></div>
-    <div class="kcard" style="border-top-color:#0891b2"><div class="kl">AI 爬蟲覆蓋</div><div class="kv" style="color:#0891b2">${aiCoveredCount}/${sites.length} 站</div><div class="ks">${aiTypes.size} 種爬蟲</div></div>
+    <div class="kcard" style="border-top-color:#0891b2"><div class="kl">AI 爬蟲覆蓋</div><div class="kv" style="color:#0891b2">${aiCoveredCount}/${sites.length} 站</div><div class="ks">${(aiTypes.size===0&&aiCoveredCount===0)?'<span style="color:var(--orange)">⚠ 待確認</span>':aiTypes.size+' 種爬蟲'}</div></div>
   </div>
   ${gk==='spheretap'?`
   <div class="sec-label">社群媒體</div>
@@ -896,6 +913,7 @@ function renderSite(domain, s, g, gk) {
   const cfg = GALAXY_CONFIG[gk] || { color:'#1a56db' };
   const cov = s.sitemap.total_urls>0?s.gsc.indexed_pages/s.sitemap.total_urls:0;
   const roleLabel = s.role==='main'?'主站':'衛星站';
+  const gscPending = !s.gsc || (s.gsc.avg_position===0 && s.gsc.impressions_7d===0 && s.gsc.clicks_7d===0);
   const kwRows = s.gsc.top_keywords.map(k=>`
     <tr><td>${k.kw}</td>
     <td><span class="pos-badge ${posClass(k.pos)}">#${k.pos.toFixed(1)}</span></td>
@@ -908,7 +926,7 @@ function renderSite(domain, s, g, gk) {
       <td>${r.gsc_imp!==null?fmt(r.gsc_imp):pendingCell}</td>
       <td>${r.gsc_clk!==null?fmt(r.gsc_clk):pendingCell}</td>
       <td>${fmt(r.cta_clk)}</td>
-      <td>${r.articles!==undefined?fmt(r.articles):fmt(s.content.total_articles+(s.content.sports_articles||0))}</td>
+      <td>${r.articles!==undefined?fmt(r.articles):'<span style="color:var(--gray-300)">–</span>'}</td>
     </tr>`;
   }).join('');
 
@@ -951,12 +969,12 @@ function renderSite(domain, s, g, gk) {
 
   <div class="sec-label">GSC 搜尋表現</div>
   <div class="kpi-grid">
-    <div class="kcard c-blue"><div class="kl">GSC曝光(7d)</div><div class="kv">${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.impressions_7d||0)}</div></div>
-    <div class="kcard c-blue"><div class="kl">GSC點擊(7d)</div><div class="kv">${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.clicks_7d||0)}</div></div>
-    <div class="kcard c-green"><div class="kl">GSC曝光(28d)</div><div class="kv">${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.impressions_28d)}</div></div>
-    <div class="kcard c-green"><div class="kl">GSC點擊(28d)</div><div class="kv">${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():fmt(s.gsc.clicks_28d)}</div></div>
-    <div class="kcard"><div class="kl">CTR</div><div class="kv">${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():pct(s.gsc.ctr)}</div></div>
-    <div class="kcard"><div class="kl">平均排名</div><div class="kv">${(!s.gsc||s.gsc.avg_position===0)?gscPendingBadge():s.gsc.avg_position.toFixed(1)}</div></div>
+    <div class="kcard c-blue"><div class="kl">GSC曝光(7d)</div><div class="kv">${gscPending?gscPendingBadge():fmt(s.gsc.impressions_7d||0)}</div></div>
+    <div class="kcard c-blue"><div class="kl">GSC點擊(7d)</div><div class="kv">${gscPending?gscPendingBadge():fmt(s.gsc.clicks_7d||0)}</div></div>
+    <div class="kcard c-green"><div class="kl">GSC曝光(28d)</div><div class="kv">${gscPending?gscPendingBadge():fmt(s.gsc.impressions_28d)}</div></div>
+    <div class="kcard c-green"><div class="kl">GSC點擊(28d)</div><div class="kv">${gscPending?gscPendingBadge():fmt(s.gsc.clicks_28d)}</div></div>
+    <div class="kcard"><div class="kl">CTR</div><div class="kv">${gscPending?gscPendingBadge():pct(s.gsc.ctr)}</div></div>
+    <div class="kcard"><div class="kl">平均排名</div><div class="kv">${gscPending?gscPendingBadge():s.gsc.avg_position.toFixed(1)}</div></div>
   </div>
 
   <div class="sec-label">Core Web Vitals</div>
