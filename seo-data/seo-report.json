@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T03:53:50+08:00",
+  "generated_at": "2026-06-08T03:59:17+08:00",
   "groups": {
     "spheretap": {
       "name": "Spheretap 集團",
@@ -94,7 +94,7 @@
               348,
               335,
               243,
-              133
+              135
             ],
             "cta_series_7d": [
               7,
@@ -377,17 +377,17 @@
               "last_write": "2026-06-05T23:21:31.302Z"
             },
             "Amazonbot": {
-              "last_seen": "2026-06-08T02:51:17.727Z",
-              "count_30d": 76,
+              "last_seen": "2026-06-08T03:58:09.984Z",
+              "count_30d": 77,
               "dates": {
                 "2026-06-03": 5,
                 "2026-06-04": 14,
                 "2026-06-05": 17,
                 "2026-06-06": 18,
                 "2026-06-07": 20,
-                "2026-06-08": 2
+                "2026-06-08": 3
               },
-              "last_write": "2026-06-08T02:51:17.727Z"
+              "last_write": "2026-06-08T03:58:09.984Z"
             },
             "Bytespider": {
               "last_seen": "2026-06-03T02:31:20.213Z",
@@ -4640,7 +4640,7 @@
         ],
         "2": [
           "world-cup-2026.world",
-          "premier-leagueodds.online",
+          "premier-league-odds.online",
           "formulaone.site",
           "uk-horse-racing.site",
           "tennis-grandslam.site",
@@ -4762,7 +4762,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 10,
             "series_7d": {
               "dates": [
                 "5/30",
@@ -6279,14 +6279,14 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-08T02:59:23.789Z",
-              "last_write": "2026-06-08T02:59:23.789Z",
-              "count_30d": 31,
+              "last_seen": "2026-06-08T03:59:24.883Z",
+              "last_write": "2026-06-08T03:59:24.883Z",
+              "count_30d": 32,
               "dates": {
                 "2026-06-05": 7,
                 "2026-06-06": 11,
                 "2026-06-07": 10,
-                "2026-06-08": 3
+                "2026-06-08": 4
               }
             },
             "PerplexityBot": {
@@ -7497,7 +7497,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/30",
@@ -7833,14 +7833,14 @@
           ],
           "ai_crawlers": {
             "ClaudeBot": {
-              "last_seen": "2026-06-08T02:06:02.495Z",
-              "last_write": "2026-06-08T02:06:02.495Z",
-              "count_30d": 34,
+              "last_seen": "2026-06-08T03:54:31.600Z",
+              "last_write": "2026-06-08T03:54:31.600Z",
+              "count_30d": 35,
               "dates": {
                 "2026-06-05": 8,
                 "2026-06-06": 11,
                 "2026-06-07": 13,
-                "2026-06-08": 2
+                "2026-06-08": 3
               }
             },
             "GPTBot": {
@@ -8165,7 +8165,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 2,
             "series_7d": {
               "dates": [
                 "5/30",
@@ -8519,7 +8519,7 @@
             }
           }
         },
-        "premier-leagueodds.online": {
+        "premier-league-odds.online": {
           "label": "英超讓球盤口研究",
           "role": "satellite",
           "traffic": {
@@ -8592,7 +8592,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/30",
@@ -8626,15 +8626,15 @@
             "data_cutoff": "2026-06-05"
           },
           "sitemap": {
-            "total_urls": 0
+            "total_urls": 29
           },
           "content": {
-            "total_articles": 0,
-            "this_month": 0,
-            "this_week": 0,
-            "this_28d": 0,
+            "total_articles": 4,
+            "this_month": 4,
+            "this_week": 4,
+            "this_28d": 4,
             "sports_articles": 0,
-            "total_articles_inc_sports": 0
+            "total_articles_inc_sports": 4
           },
           "cwv": {},
           "social": {
@@ -8674,7 +8674,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -8683,7 +8683,7 @@
               "gsc_imp": 0,
               "gsc_clk": 0,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": false
             },
             {
@@ -8692,7 +8692,7 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": true
             },
             {
@@ -8701,11 +8701,20 @@
               "gsc_imp": null,
               "gsc_clk": null,
               "cta_clk": 0,
-              "articles": 0,
+              "articles": 1,
               "gsc_pending": true
             }
           ],
-          "ai_crawlers": {}
+          "ai_crawlers": {
+            "Google-Extended": {
+              "last_seen": "2026-06-07T08:32:33.475Z",
+              "last_write": "2026-06-07T08:32:33.475Z",
+              "count_30d": 1,
+              "dates": {
+                "2026-06-07": 1
+              }
+            }
+          }
         },
         "formulaone.site": {
           "label": "F1賠率研究",
@@ -9120,14 +9129,14 @@
               }
             },
             "ClaudeBot": {
-              "last_seen": "2026-06-08T01:52:04.320Z",
-              "last_write": "2026-06-08T01:52:04.320Z",
-              "count_30d": 28,
+              "last_seen": "2026-06-08T03:55:19.996Z",
+              "last_write": "2026-06-08T03:55:19.996Z",
+              "count_30d": 29,
               "dates": {
                 "2026-06-05": 7,
                 "2026-06-06": 10,
                 "2026-06-07": 10,
-                "2026-06-08": 1
+                "2026-06-08": 2
               }
             }
           }
@@ -9423,7 +9432,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/30",
@@ -10474,7 +10483,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 1,
             "series_7d": {
               "dates": [
                 "5/30",
@@ -10671,7 +10680,7 @@
             "clicks_7d": 0,
             "ctr": 0,
             "avg_position": 0,
-            "indexed_pages": 0,
+            "indexed_pages": 6,
             "series_7d": {
               "dates": [
                 "5/30",
