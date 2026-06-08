@@ -1,89 +1,8 @@
 {
   "week": "2026-W24",
   "week_label": "2026年6月第二週",
-  "generated_at": "2026-06-08T13:18:39+08:00",
+  "generated_at": "2026-06-08T13:20:00+08:00",
   "galaxies": {
-    "spheretap": {
-      "id": "spheretap",
-      "name": "Spheretap",
-      "color": "#1a56db",
-      "metrics": {
-        "organic_sessions_7d": 1474,
-        "organic_sessions_prev_7d": 1242,
-        "organic_sessions_wow_pct": 18.7,
-        "impressions_7d": 0,
-        "impressions_wow_pct": 0,
-        "avg_position": 0,
-        "content_pages_total": 804,
-        "content_pages_new_7d": 30,
-        "sites_total": 16,
-        "sites_active": 7
-      },
-      "trend_4w": [
-        3,
-        732,
-        1232,
-        1300
-      ],
-      "trend_4w_labels": [
-        "5/18週",
-        "5/25週",
-        "6/1週",
-        "6/8週"
-      ],
-      "top_sites": [
-        {
-          "domain": "verifiedplays.com",
-          "sessions_7d": 5,
-          "sessions_wow_pct": 66.7,
-          "highlight": "本週流量成長最快"
-        },
-        {
-          "domain": "spheretap.com",
-          "sessions_7d": 1463,
-          "sessions_wow_pct": 20,
-          "highlight": "流量持續升溫"
-        },
-        {
-          "domain": "athlete-index.com",
-          "sessions_7d": 1,
-          "sessions_wow_pct": 0,
-          "highlight": "新內容效果顯現"
-        }
-      ],
-      "keyword_snapshot": [
-        {
-          "keyword": "香港娛樂平台推薦",
-          "position": 0
-        },
-        {
-          "keyword": "香港賽馬技術分析",
-          "position": 0
-        },
-        {
-          "keyword": "電競博彩平台評測",
-          "position": 0
-        }
-      ],
-      "analysis_summary": "本週 Spheretap 的有機流量強勁成長近兩成，顯示整體搜尋能見度正持續向上突破。隨著本週新增 30 頁優質內容落地，品牌在目標市場的覆蓋廣度已進一步擴大，為後續排名提升奠定紮實基礎。",
-      "next_direction": [
-        {
-          "title": "內容深度強化",
-          "why": "深度且具權威性的內容能有效提升用戶信任感，吸引更高品質的潛在客戶主動找上門。",
-          "action": "我們正針對核心業務主題，系統性地補強現有頁面的內容豐富度與專業深度。"
-        },
-        {
-          "title": "目標關鍵字布局",
-          "why": "精準切入高商業意圖的搜尋詞，能讓品牌直接出現在最有可能轉換的受眾面前。",
-          "action": "我們正根據您的業務優先級，重新梳理並聚焦最具商業價值的關鍵字方向。"
-        },
-        {
-          "title": "品牌權重提升",
-          "why": "來自外部優質來源的品牌引用與推薦，能顯著加速搜尋引擎對 Spheretap 的信任建立。",
-          "action": "我們正積極開拓與品牌定位相符的外部曝光管道，強化整體品牌在市場的聲量。"
-        }
-      ]
-    },
     "bduk": {
       "id": "bduk",
       "name": "BDUK",
@@ -146,22 +65,103 @@
           "position": 0
         }
       ],
-      "analysis_summary": "本週 BDUK 星系有機流量大幅躍升，成長動能強勁，顯示品牌在搜尋市場的曝光基礎正在快速建立。隨著本週新增 53 頁優質內容落地，整體內容佈局已達到新的里程碑，為後續持續獲客奠定堅實基礎。",
+      "analysis_summary": "本週 BDUK 星系的有機流量實現了爆發性增長，成果令人振奮，充分展現了前期內容佈局的強勁成效。隨著本週新增 53 頁優質內容的持續擴充，品牌在搜尋市場的競爭力正穩步提升。",
       "next_direction": [
         {
           "title": "內容深度強化",
-          "why": "深化核心主題的內容厚度，能有效提升品牌在目標市場的專業權威形象，吸引更高意圖的潛在客戶。",
-          "action": "我們正針對高商業價值的核心主題進行內容升級，確保每個頁面都能精準回應目標受眾的需求。"
+          "why": "高品質、有深度的內容能有效提升使用者停留時間，進而鞏固品牌在目標市場的權威地位，吸引更高價值的潛在客戶。",
+          "action": "我們正針對核心主題進行內容深度優化，確保每一頁面都能充分回應目標受眾的需求與搜尋意圖。"
         },
         {
-          "title": "品牌聲量擴展",
-          "why": "提升品牌在相關話題的曝光廣度，有助於觸及更多潛在客群並建立市場心佔率。",
-          "action": "我們正規劃多元的內容主題矩陣，讓品牌在更廣泛的搜尋情境下被目標用戶發現。"
+          "title": "品牌曝光擴大",
+          "why": "提升品牌在搜尋結果中的能見度，能讓更多潛在客戶在決策初期便接觸到您的品牌，有助於縮短銷售轉換週期。",
+          "action": "我們正積極拓展品牌在相關領域的搜尋版圖，布局更廣泛的關鍵字覆蓋範圍。"
         },
         {
-          "title": "流量轉化優化",
-          "why": "將持續增長的有機流量導入有效的轉化路徑，能直接將 SEO 成果轉換為具體的業務成長。",
-          "action": "我們正在優化關鍵頁面的用戶體驗與行動呼籲設計，以最大化每位訪客的商業貢獻。"
+          "title": "競爭優勢鞏固",
+          "why": "在流量高速成長的關鍵時期持續鞏固領先地位，能有效防止競爭對手趁隙搶佔市場份額，保護您的業務增長成果。",
+          "action": "我們正持續監測市場動態並優化內容策略，確保 BDUK 在競爭激烈的搜尋市場中維持領先優勢。"
+        }
+      ]
+    },
+    "spheretap": {
+      "id": "spheretap",
+      "name": "Spheretap",
+      "color": "#1a56db",
+      "metrics": {
+        "organic_sessions_7d": 1474,
+        "organic_sessions_prev_7d": 1242,
+        "organic_sessions_wow_pct": 18.7,
+        "impressions_7d": 0,
+        "impressions_wow_pct": 0,
+        "avg_position": 0,
+        "content_pages_total": 804,
+        "content_pages_new_7d": 30,
+        "sites_total": 16,
+        "sites_active": 7
+      },
+      "trend_4w": [
+        3,
+        732,
+        1232,
+        1300
+      ],
+      "trend_4w_labels": [
+        "5/18週",
+        "5/25週",
+        "6/1週",
+        "6/8週"
+      ],
+      "top_sites": [
+        {
+          "domain": "verifiedplays.com",
+          "sessions_7d": 5,
+          "sessions_wow_pct": 66.7,
+          "highlight": "本週流量成長最快"
+        },
+        {
+          "domain": "spheretap.com",
+          "sessions_7d": 1463,
+          "sessions_wow_pct": 20,
+          "highlight": "流量持續升溫"
+        },
+        {
+          "domain": "athlete-index.com",
+          "sessions_7d": 1,
+          "sessions_wow_pct": 0,
+          "highlight": "新內容效果顯現"
+        }
+      ],
+      "keyword_snapshot": [
+        {
+          "keyword": "香港娛樂平台推薦",
+          "position": 0
+        },
+        {
+          "keyword": "香港賽馬技術分析",
+          "position": 0
+        },
+        {
+          "keyword": "電競博彩平台評測",
+          "position": 0
+        }
+      ],
+      "analysis_summary": "本週 Spheretap 的有機流量強勁成長近兩成，顯示網站在目標受眾中的自然觸及正持續擴大。我們同步完成了大量新內容布局，為下一階段的品牌曝光與排名提升奠定了扎實基礎。",
+      "next_direction": [
+        {
+          "title": "內容深度優化",
+          "why": "高品質、具深度的內容能有效建立品牌權威，吸引更精準的潛在客戶並提升轉換意願。",
+          "action": "我們正針對現有頁面進行內容強化，使其更能滿足目標受眾的核心需求與搜尋意圖。"
+        },
+        {
+          "title": "關鍵詞排名衝刺",
+          "why": "提升核心關鍵詞的搜尋排名，能直接帶來更穩定、高意圖的自然流量，降低對付費廣告的依賴。",
+          "action": "我們正集中資源強化與業務最相關的主力關鍵詞，推動其在搜尋結果中的可見度提升。"
+        },
+        {
+          "title": "品牌曝光擴大",
+          "why": "透過多元渠道提升品牌在網路上的知名度，有助於建立用戶信任感並形成長期的自然流量紅利。",
+          "action": "我們正積極佈局外部優質媒體與相關平台的品牌提及，強化 Spheretap 的整體線上影響力。"
         }
       ]
     }
