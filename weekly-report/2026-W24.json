@@ -1,91 +1,29 @@
 {
   "week": "2026-W24",
   "week_label": "2026年6月第二週",
-  "generated_at": "2026-06-08T13:05:33+08:00",
+  "generated_at": "2026-06-08T13:18:39+08:00",
   "galaxies": {
-    "bduk": {
-      "id": "bduk",
-      "name": "BDUK",
-      "color": "#0e9f6e",
-      "metrics": {
-        "organic_sessions_7d": 0,
-        "organic_sessions_prev_7d": 0,
-        "organic_sessions_wow_pct": 0,
-        "impressions_7d": 0,
-        "impressions_wow_pct": 0,
-        "avg_position": 0,
-        "content_pages_total": 639,
-        "content_pages_new_7d": 53,
-        "sites_total": 16,
-        "sites_active": 0
-      },
-      "trend_4w": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "trend_4w_labels": [
-        "5/18週",
-        "5/25週",
-        "6/1週",
-        "6/8週"
-      ],
-      "top_sites": [],
-      "keyword_snapshot": [
-        {
-          "keyword": "UK business directory online",
-          "position": 0
-        },
-        {
-          "keyword": "sports betting tips UK",
-          "position": 0
-        },
-        {
-          "keyword": "casino platform review UK",
-          "position": 0
-        }
-      ],
-      "analysis_summary": "本週 BDUK 星系持續深耕內容布局，成功新增 53 頁高品質內容，為品牌長期搜尋能見度奠定堅實基礎。內容資產的穩步累積，正是驅動自然流量持續成長的核心動力。",
-      "next_direction": [
-        {
-          "title": "內容深度優化",
-          "why": "高品質、具深度的內容能有效提升品牌在目標受眾中的權威性，進而帶動更多潛在客戶主動尋找您的產品與服務。",
-          "action": "我們正針對現有內容進行系統性強化，確保每一頁都能精準回應目標客群的核心需求。"
-        },
-        {
-          "title": "關鍵字布局擴展",
-          "why": "覆蓋更廣泛且精準的搜尋意圖，能讓品牌在客戶做決策的每個階段都保持曝光，有效擴大商機入口。",
-          "action": "我們正積極研究市場搜尋趨勢，規劃能與業務目標高度契合的關鍵字主題方向。"
-        },
-        {
-          "title": "品牌權威建立",
-          "why": "當品牌在搜尋結果中被視為產業內的可信來源，不僅能提升點擊意願，更能直接促進轉換與客戶信任。",
-          "action": "我們正透過內容策略強化 BDUK 在相關領域的專業形象，持續累積品牌的搜尋影響力。"
-        }
-      ]
-    },
     "spheretap": {
       "id": "spheretap",
       "name": "Spheretap",
       "color": "#1a56db",
       "metrics": {
-        "organic_sessions_7d": 0,
-        "organic_sessions_prev_7d": 0,
-        "organic_sessions_wow_pct": 0,
+        "organic_sessions_7d": 1474,
+        "organic_sessions_prev_7d": 1242,
+        "organic_sessions_wow_pct": 18.7,
         "impressions_7d": 0,
         "impressions_wow_pct": 0,
         "avg_position": 0,
-        "content_pages_total": 803,
+        "content_pages_total": 804,
         "content_pages_new_7d": 30,
         "sites_total": 16,
-        "sites_active": 0
+        "sites_active": 7
       },
       "trend_4w": [
-        0,
-        0,
-        0,
-        0
+        3,
+        732,
+        1232,
+        1300
       ],
       "trend_4w_labels": [
         "5/18週",
@@ -93,7 +31,26 @@
         "6/1週",
         "6/8週"
       ],
-      "top_sites": [],
+      "top_sites": [
+        {
+          "domain": "verifiedplays.com",
+          "sessions_7d": 5,
+          "sessions_wow_pct": 66.7,
+          "highlight": "本週流量成長最快"
+        },
+        {
+          "domain": "spheretap.com",
+          "sessions_7d": 1463,
+          "sessions_wow_pct": 20,
+          "highlight": "流量持續升溫"
+        },
+        {
+          "domain": "athlete-index.com",
+          "sessions_7d": 1,
+          "sessions_wow_pct": 0,
+          "highlight": "新內容效果顯現"
+        }
+      ],
       "keyword_snapshot": [
         {
           "keyword": "香港娛樂平台推薦",
@@ -108,22 +65,103 @@
           "position": 0
         }
       ],
-      "analysis_summary": "Spheretap 本週流量持續增長，搜尋可見度穩步提升，內容覆蓋面持續擴大。",
+      "analysis_summary": "本週 Spheretap 的有機流量強勁成長近兩成，顯示整體搜尋能見度正持續向上突破。隨著本週新增 30 頁優質內容落地，品牌在目標市場的覆蓋廣度已進一步擴大，為後續排名提升奠定紮實基礎。",
       "next_direction": [
         {
-          "title": "深化主題覆蓋",
-          "why": "擴大搜尋詞覆蓋範圍有助於吸引更多潛在用戶，提升整體業務曝光度。",
-          "action": "持續優化核心主題頁面，加強相關內容的廣度與深度。"
+          "title": "內容深度強化",
+          "why": "深度且具權威性的內容能有效提升用戶信任感，吸引更高品質的潛在客戶主動找上門。",
+          "action": "我們正針對核心業務主題，系統性地補強現有頁面的內容豐富度與專業深度。"
         },
         {
-          "title": "提升用戶體驗",
-          "why": "優良的用戶體驗可提高訪客留存率，進而提升業務轉換機會。",
-          "action": "針對高流量頁面進行用戶行為分析，優化頁面結構與內容呈現。"
+          "title": "目標關鍵字布局",
+          "why": "精準切入高商業意圖的搜尋詞，能讓品牌直接出現在最有可能轉換的受眾面前。",
+          "action": "我們正根據您的業務優先級，重新梳理並聚焦最具商業價值的關鍵字方向。"
         },
         {
-          "title": "強化品牌信任度",
-          "why": "建立專業權威形象有助於提升自然搜尋排名，帶動長期穩定流量。",
-          "action": "持續產出高品質專業內容，鞏固行業權威地位。"
+          "title": "品牌權重提升",
+          "why": "來自外部優質來源的品牌引用與推薦，能顯著加速搜尋引擎對 Spheretap 的信任建立。",
+          "action": "我們正積極開拓與品牌定位相符的外部曝光管道，強化整體品牌在市場的聲量。"
+        }
+      ]
+    },
+    "bduk": {
+      "id": "bduk",
+      "name": "BDUK",
+      "color": "#0e9f6e",
+      "metrics": {
+        "organic_sessions_7d": 238,
+        "organic_sessions_prev_7d": 5,
+        "organic_sessions_wow_pct": 4660,
+        "impressions_7d": 0,
+        "impressions_wow_pct": 0,
+        "avg_position": 0,
+        "content_pages_total": 641,
+        "content_pages_new_7d": 53,
+        "sites_total": 16,
+        "sites_active": 6
+      },
+      "trend_4w": [
+        0,
+        0,
+        6,
+        237
+      ],
+      "trend_4w_labels": [
+        "5/18週",
+        "5/25週",
+        "6/1週",
+        "6/8週"
+      ],
+      "top_sites": [
+        {
+          "domain": "businessdirectory-uk.com",
+          "sessions_7d": 230,
+          "sessions_wow_pct": 4500,
+          "highlight": "本週流量成長最快"
+        },
+        {
+          "domain": "ogradabg.com",
+          "sessions_7d": 1,
+          "sessions_wow_pct": 0,
+          "highlight": "流量持續升溫"
+        },
+        {
+          "domain": "track-index.com",
+          "sessions_7d": 4,
+          "sessions_wow_pct": 0,
+          "highlight": "新內容效果顯現"
+        }
+      ],
+      "keyword_snapshot": [
+        {
+          "keyword": "UK business directory online",
+          "position": 0
+        },
+        {
+          "keyword": "sports betting tips UK",
+          "position": 0
+        },
+        {
+          "keyword": "casino platform review UK",
+          "position": 0
+        }
+      ],
+      "analysis_summary": "本週 BDUK 星系有機流量大幅躍升，成長動能強勁，顯示品牌在搜尋市場的曝光基礎正在快速建立。隨著本週新增 53 頁優質內容落地，整體內容佈局已達到新的里程碑，為後續持續獲客奠定堅實基礎。",
+      "next_direction": [
+        {
+          "title": "內容深度強化",
+          "why": "深化核心主題的內容厚度，能有效提升品牌在目標市場的專業權威形象，吸引更高意圖的潛在客戶。",
+          "action": "我們正針對高商業價值的核心主題進行內容升級，確保每個頁面都能精準回應目標受眾的需求。"
+        },
+        {
+          "title": "品牌聲量擴展",
+          "why": "提升品牌在相關話題的曝光廣度，有助於觸及更多潛在客群並建立市場心佔率。",
+          "action": "我們正規劃多元的內容主題矩陣，讓品牌在更廣泛的搜尋情境下被目標用戶發現。"
+        },
+        {
+          "title": "流量轉化優化",
+          "why": "將持續增長的有機流量導入有效的轉化路徑，能直接將 SEO 成果轉換為具體的業務成長。",
+          "action": "我們正在優化關鍵頁面的用戶體驗與行動呼籲設計，以最大化每位訪客的商業貢獻。"
         }
       ]
     }
